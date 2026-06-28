@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auto Connect | Parent Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary": "#D4A373", // Soft caramel/peach
+                "on-primary": "#FFFFFF",
+                "secondary": "#A98467", // Warm wood/earth
+                "tertiary": "#CCD5AE", // Calming sage
+                "background": "#FAFAF5", // Off-white/beige sanctuary
+                "surface": "#F2E8CF", // Soft cream
+                "surface-container-lowest": "#FFFFFF",
+                "surface-container-low": "#FEFAE0",
+                "surface-container": "#F5EBE0",
+                "surface-container-high": "#E9EDC9",
+                "on-surface": "#432818", // Deep warm brown
+                "on-surface-variant": "#6D6875",
+                "outline": "#DDBEA9",
+                "error": "#E5989B"
+            },
+            "borderRadius": {
+                "DEFAULT": "1.5rem",
+                "lg": "2.5rem",
+                "xl": "4rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Quicksand"],
+                "body": ["Instrument Sans"],
+                "label": ["Instrument Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Instrument Sans', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Quicksand', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .sanctuary-gradient {
+            background: linear-gradient(135deg, #F5EBE0 0%, #E3D5CA 100%);
+        }
+        .mindful-accent {
+            background: linear-gradient(135deg, #D4A373 0%, #A98467 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 250, 240, 0.6);
+            backdrop-filter: blur(16px);
+            border-left: 1px solid rgba(212, 163, 115, 0.1);
+        }
+        .sidebar-item-active {
+            background-color: #F5EBE0;
+            color: #6D6875;
+            box-shadow: 0 4px 12px rgba(169, 132, 103, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- Sidebar Navigation Shell -->
+<aside class="h-full w-72 fixed left-0 top-0 flex flex-col py-8 bg-white border-r border-outline/20 z-30">
+<div class="px-8 mb-12">
+<h1 class="text-2xl font-bold text-primary tracking-tight">Auto Connect</h1>
+<p class="text-[10px] font-bold text-secondary/60 tracking-[0.2em] uppercase">Mindful AAC Support</p>
+</div>
+<nav class="flex-1 space-y-2 px-4">
+<a class="flex items-center gap-4 sidebar-item-active rounded-2xl px-5 py-3.5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="dashboard">dashboard</span>
+<span class="font-semibold">Sanctuary</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/70 px-5 py-3.5 hover:bg-surface-container transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-medium text-sm">Our Circle</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/70 px-5 py-3.5 hover:bg-surface-container transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-medium text-sm">Stories</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/70 px-5 py-3.5 hover:bg-surface-container transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-medium text-sm">Symbols</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/70 px-5 py-3.5 hover:bg-surface-container transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-medium text-sm">Growth</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant/70 px-5 py-3.5 hover:bg-surface-container transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="spa">spa</span>
+<span class="font-medium text-sm">AI Whisper</span>
+</a>
+</nav>
+<div class="mt-auto px-6">
+<div class="bg-surface-container rounded-3xl p-4 flex items-center gap-3">
+<img alt="Therapist Profile Avatar" class="w-10 h-10 rounded-full object-cover border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaImLDxpOeo8kXocp0DmfUHD-diNmFH3UC7Yer5isYtGQ8Q_FdRM-rRDLGh1wzsspnjKlsi8shs8qQggKrQZB3gnNz4pqpv1kVrn28g0ZOnaxeE8y0g-R40vWmnYf_7yTOnj2c69OjjV_kiGtpbFoYbyuLiGDWV0spFlOCew2-Fo0SMFmJOtSnwRpuKq2LUMykCI8jeLdn9K05C8ZLsiKvAlH_3F-fuAapyyDfWHcuOcDllhIMsGR-Fgpqfq6xC_mfd0mKX_8ViqSS"/>
+<div>
+<p class="text-sm font-bold text-on-surface">Sarah Johnson</p>
+<p class="text-[10px] text-secondary/70 font-medium">Gentle Caregiver</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-72 mr-80 pt-10 px-12 pb-28">
+<!-- Top Area: Child Selector & Header -->
+<header class="flex justify-between items-center mb-12">
+<div>
+<h2 class="text-3xl font-bold tracking-tight mb-2 text-on-surface">Warmest welcome, Sarah</h2>
+<p class="text-secondary/80 font-medium">Breathe. Today Leo is finding his voice.</p>
+</div>
+<div class="flex items-center gap-3 bg-white p-1.5 rounded-full shadow-sm border border-outline/10">
+<button class="flex items-center gap-2.5 px-6 py-2.5 mindful-accent text-white rounded-full shadow-md transition-transform active:scale-95">
+<img alt="Leo" class="w-6 h-6 rounded-full object-cover border border-white/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUSd2n5DfsM7JRaLPW90NsVrK_W4xqHKbqmoLTMfRHt6W9x7p_BniP4FHO-2j20FFFF8vuYAs9-fQkREzAdRY3IWEeSg87PsQMNM3P5BqdCFqGrFvsKq1-qs7DHiTETXRLpOzTcoAerg0dY_buC-iyk0kWHkNgu2a6AIIgMsSPTJVGiyV2UpCCXXALTviY900zrr0uPUbQo0WfXZgWujAj1trgAj_wv5PjK9JKKKU6B1aOMCPnQqvD0_d-ZJOIAn9PNKFU66743gT-"/>
+<span class="font-bold text-sm">Leo</span>
+</button>
+<button class="flex items-center gap-2.5 px-6 py-2.5 text-on-surface-variant/60 hover:bg-surface-container-low rounded-full transition-colors">
+<img alt="Maya" class="w-6 h-6 rounded-full object-cover grayscale opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSpQt3FzJQvlpwBDLWtdgI5S3YCjOb_E1s6kLdIC54wLVBF_ADwVtXHU-54rOt-KOFeyr7quBs85lHKHiagp44wDfUErAjVcY3DfFJXLgxWbhpUf2bc4JtH9qRa939JnqjtURYwyUaVP2POOyjNiFf1p9UXRw6uZm4hRaFsbsLm6T1TSCvBzloCNZ5WtQk3g70d44m6-vXuY99TvlCsjLly1u4h4s0kHoA32ZqT8T5ZO0bur3H3NHSTX9G_5R-y_wAoDtMLHKktvX8"/>
+<span class="font-medium text-sm">Maya</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</button>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Progress Gauge Card -->
+<div class="col-span-8 bg-white rounded-[2.5rem] p-10 shadow-[0_30px_60px_rgba(169,132,103,0.08)] relative overflow-hidden group border border-outline/10">
+<div class="flex justify-between items-start mb-12">
+<div>
+<span class="text-[0.625rem] font-bold uppercase tracking-[0.2em] text-primary mb-2 block">Steady Progress</span>
+<h3 class="text-2xl font-bold">Vocabulary Blooms</h3>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-4xl font-bold text-tertiary-dim text-secondary">+12%</span>
+<span class="text-xs text-secondary/50 font-medium">gentle increase</span>
+</div>
+</div>
+<div class="flex items-center gap-16">
+<!-- Gauge Visualization -->
+<div class="relative w-52 h-52 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container" cx="104" cy="104" fill="transparent" r="88" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-tertiary" cx="104" cy="104" fill="transparent" r="88" stroke="currentColor" stroke-dasharray="552" stroke-dashoffset="160" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-4xl font-bold text-on-surface">72</span>
+<span class="text-[10px] font-bold text-secondary/40 uppercase tracking-widest">Words Today</span>
+</div>
+</div>
+<div class="flex-1 space-y-8">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 rounded-2xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="wb_sunny">wb_sunny</span>
+</div>
+<div>
+<p class="text-sm font-bold">Golden Hour</p>
+<p class="text-xs text-secondary/60">Leo thrives best during 4:00 PM sunlight</p>
+</div>
+</div>
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</div>
+<div>
+<p class="text-sm font-bold">New Connection</p>
+<p class="text-xs text-secondary/60">Expressing "Joy" with confidence now</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Background decoration -->
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-surface-container-low/40 rounded-full blur-3xl"></div>
+</div>
+<!-- AI Suggestions Block -->
+<div class="col-span-4 mindful-accent rounded-[2.5rem] p-10 text-white relative overflow-hidden shadow-xl shadow-secondary/20">
+<span class="material-symbols-outlined text-4xl mb-8 opacity-70" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="text-xl font-bold mb-4">Mindful Guidance</h3>
+<p class="text-white/80 text-sm leading-relaxed mb-10">
+                Leo is showing curiosity today. Gently introduce "Asking for Help" during snack time to build trust.
+            </p>
+<button class="w-full py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm font-bold hover:bg-white/20 transition-all active:scale-95">
+                Practice Guide
+            </button>
+<div class="absolute top-0 right-0 p-6">
+<div class="w-2.5 h-2.5 bg-tertiary rounded-full animate-pulse shadow-[0_0_15px_rgba(204,213,174,0.6)]"></div>
+</div>
+</div>
+<!-- History of Phrases -->
+<div class="col-span-12 bg-white/50 border border-outline/10 rounded-[2.5rem] p-10">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-bold text-on-surface">Recent Moments</h3>
+<button class="text-primary text-sm font-bold hover:underline">View Journal</button>
+</div>
+<div class="grid grid-cols-3 gap-8">
+<!-- Phrase Card 1 -->
+<div class="bg-white p-7 rounded-3xl shadow-sm border border-outline/5 hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-5">
+<span class="text-[10px] font-bold text-secondary/40">10:45 AM</span>
+<span class="px-3 py-1 bg-tertiary/20 text-secondary text-[9px] font-bold uppercase tracking-wider rounded-full">Natural Flow</span>
+</div>
+<div class="flex flex-wrap gap-2.5 mb-5">
+<span class="px-5 py-2.5 bg-surface-container rounded-full text-xs font-semibold text-on-surface/80">I want</span>
+<span class="px-5 py-2.5 bg-surface-container rounded-full text-xs font-semibold text-on-surface/80">apple</span>
+<span class="px-5 py-2.5 bg-surface-container rounded-full text-xs font-semibold text-on-surface/80">please</span>
+</div>
+<p class="text-[10px] text-secondary/50 italic font-medium">Independently expressed</p>
+</div>
+<!-- Phrase Card 2 -->
+<div class="bg-white p-7 rounded-3xl shadow-sm border border-outline/5 hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-5">
+<span class="text-[10px] font-bold text-secondary/40">09:12 AM</span>
+<span class="px-3 py-1 bg-primary/10 text-primary text-[9px] font-bold uppercase tracking-wider rounded-full">Supported</span>
+</div>
+<div class="flex flex-wrap gap-2.5 mb-5">
+<span class="px-5 py-2.5 bg-surface-container rounded-full text-xs font-semibold text-on-surface/80">more</span>
+<span class="px-5 py-2.5 bg-surface-container rounded-full text-xs font-semibold text-on-surface/80">blocks</span>
+</div>
+<p class="text-[10px] text-secondary/50 italic font-medium">Guided by warm prompt</p>
+</div>
+<!-- Phrase Card 3 -->
+<div class="bg-white p-7 rounded-3xl shadow-sm border border-outline/5 hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-5">
+<span class="text-[10px] font-bold text-secondary/40">08:30 AM</span>
+<span class="px-3 py-1 bg-tertiary/20 text-secondary text-[9px] font-bold uppercase tracking-wider rounded-full">Natural Flow</span>
+</div>
+<div class="flex flex-wrap gap-2.5 mb-5">
+<span class="px-5 py-2.5 bg-surface-container rounded-full text-xs font-semibold text-on-surface/80">good</span>
+<span class="px-5 py-2.5 bg-surface-container rounded-full text-xs font-semibold text-on-surface/80">morning</span>
+</div>
+<p class="text-[10px] text-secondary/50 italic font-medium">Spontaneous heart-to-heart</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Right Side: Chat Assistant Panel -->
+<aside class="w-80 fixed right-0 top-0 h-full glass-panel flex flex-col z-30">
+<div class="p-8 border-b border-outline/10">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-9 h-9 rounded-full mindful-accent flex items-center justify-center text-white shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="support_agent">support_agent</span>
+</div>
+<h3 class="font-bold text-on-surface">Sanctuary Guide</h3>
+</div>
+<p class="text-[11px] text-secondary/70 leading-relaxed font-medium">I'm here to support your journey with Leo. Just ask.</p>
+</div>
+<!-- Chat Area -->
+<div class="flex-1 overflow-y-auto p-6 space-y-8">
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="psychology">psychology</span>
+</div>
+<div class="bg-white p-4 rounded-3xl rounded-tl-none shadow-sm text-[13px] leading-relaxed text-on-surface-variant border border-outline/5">
+                Hello Sarah. I noticed Leo is using more descriptors today. Shall we explore some gentle ways to practice colors during play?
+            </div>
+</div>
+<div class="flex flex-row-reverse gap-3">
+<div class="w-8 h-8 rounded-full mindful-accent shrink-0 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-xs text-white" data-icon="person">person</span>
+</div>
+<div class="mindful-accent text-white p-4 rounded-3xl rounded-tr-none shadow-md text-[13px] leading-relaxed">
+                Yes, please. He's finding colors a bit challenging lately.
+            </div>
+</div>
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="psychology">psychology</span>
+</div>
+<div class="bg-white p-4 rounded-3xl rounded-tl-none shadow-sm text-[13px] leading-relaxed text-on-surface-variant border border-outline/5">
+                I've softened the "Colors" symbols for a more mindful experience. Try the 'Rainbow Seek' game I've prepared for you!
+            </div>
+</div>
+</div>
+<!-- Message Input -->
+<div class="p-6">
+<div class="relative">
+<input class="w-full bg-surface-container border-none rounded-full py-4 pl-6 pr-14 text-[13px] focus:ring-2 focus:ring-primary/20 placeholder:text-secondary/40 text-on-surface" placeholder="What's on your mind?" type="text"/>
+<button class="absolute right-2 top-2 w-10 h-10 mindful-accent text-white rounded-full flex items-center justify-center shadow-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-lg" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Bottom Action Bar (Floating for Focus) -->
+<div class="fixed bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-3 bg-white/90 backdrop-blur-2xl rounded-full p-2.5 shadow-[0_20px_50px_rgba(169,132,103,0.15)] border border-outline/20 z-40">
+<button class="flex items-center gap-2.5 px-6 py-3.5 hover:bg-surface-container rounded-full transition-colors text-on-surface-variant/80">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="text-xs font-bold">Journal</span>
+</button>
+<button class="flex items-center gap-2.5 px-6 py-3.5 hover:bg-surface-container rounded-full transition-colors text-on-surface-variant/80">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="text-xs font-bold">Safe Space</span>
+</button>
+<div class="w-px h-8 bg-outline/20 mx-1"></div>
+<button class="flex items-center gap-3.5 px-8 py-3.5 mindful-accent text-white rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="graphic_eq">graphic_eq</span>
+<span class="text-xs font-bold tracking-widest uppercase">Speak Mode</span>
+</button>
+</div>
+</body></html>

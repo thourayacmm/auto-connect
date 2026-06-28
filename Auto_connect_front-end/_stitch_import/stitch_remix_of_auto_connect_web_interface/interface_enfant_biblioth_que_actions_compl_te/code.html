@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-low": "#fff1e8",
+            "on-primary-fixed-variant": "#004c6e",
+            "primary-fixed-dim": "#89ceff",
+            "on-primary-container": "#0073a5",
+            "on-secondary-fixed-variant": "#005321",
+            "on-surface": "#231a12",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#653e00",
+            "tertiary-fixed": "#ffddb8",
+            "secondary": "#006e2f",
+            "surface-bright": "#fff8f5",
+            "secondary-fixed": "#6bff8f",
+            "outline-variant": "#c3c7cb",
+            "on-error-container": "#93000a",
+            "surface-container": "#fdebde",
+            "primary-container": "#e3f1ff",
+            "inverse-on-surface": "#ffeee1",
+            "surface": "#fff8f5",
+            "on-surface-variant": "#43474b",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#89ceff",
+            "surface-container-high": "#f7e5d8",
+            "secondary-container": "#6bff8f",
+            "tertiary-container": "#ffecda",
+            "secondary-fixed-dim": "#4ae176",
+            "inverse-surface": "#392e26",
+            "outline": "#73787b",
+            "error-container": "#ffdad6",
+            "on-primary": "#ffffff",
+            "on-secondary-container": "#007432",
+            "tertiary-fixed-dim": "#ffb95f",
+            "primary-fixed": "#c9e6ff",
+            "on-primary-fixed": "#001e2f",
+            "primary": "#006591",
+            "surface-dim": "#e8d7ca",
+            "on-background": "#231a12",
+            "background": "#fff8f5",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "surface-variant": "#f1dfd3",
+            "tertiary": "#855300",
+            "error": "#ba1a1a",
+            "surface-tint": "#006591",
+            "on-tertiary-container": "#986000",
+            "surface-container-highest": "#f1dfd3",
+            "on-tertiary-fixed": "#2a1700",
+            "on-secondary-fixed": "#002109"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container">
+<!-- TopAppBar (The Anchor) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#fff8f5] dark:bg-slate-950 flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-4">
+<h1 class="text-2xl font-bold text-[#006591] dark:text-[#E0F2FE]">Sanctuary AAC</h1>
+<nav class="hidden md:flex gap-6 items-center ml-8">
+<span class="text-[#231a12] opacity-70 font-['Plus_Jakarta_Sans'] text-lg font-bold tracking-tight">Library</span>
+<span class="material-symbols-outlined text-outline opacity-40">chevron_right</span>
+<span class="text-[#006591] font-bold border-b-2 border-[#006591] font-['Plus_Jakarta_Sans'] text-lg tracking-tight">Actions</span>
+</nav>
+</div>
+<!-- AAC Sentence Builder / Expression Bar -->
+<div class="flex-1 max-w-2xl mx-12 h-14 bg-surface-container-lowest border border-outline-variant/10 shadow-sm rounded-full flex items-center px-6 gap-3 backdrop-blur-xl">
+<div class="flex items-center gap-2 overflow-x-auto scrollbar-hide flex-1">
+<div class="bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full text-sm font-bold flex items-center gap-2">
+<span>I</span>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-sm font-bold flex items-center gap-2">
+<span>want</span>
+</div>
+<div class="animate-pulse w-2 h-6 bg-primary/20 rounded-full"></div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-[#fdebde] rounded-full text-[#006591] transition-colors">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+</button>
+<button class="p-2 hover:bg-[#fdebde] rounded-full text-[#006591] transition-colors">
+<span class="material-symbols-outlined" data-icon="backspace">backspace</span>
+</button>
+<button class="p-2 hover:bg-[#fdebde] rounded-full text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col pt-20 pb-8 bg-[#fff1e8] dark:bg-slate-900 h-full w-64 rounded-r-[3rem] z-40 hidden md:flex">
+<div class="px-8 py-6">
+<h2 class="text-xl font-extrabold text-[#006591] font-['Plus_Jakarta_Sans']">Categories</h2>
+<p class="text-sm font-medium opacity-60 text-on-surface">Browse words</p>
+</div>
+<nav class="flex flex-col gap-1 flex-1">
+<a class="text-[#231a12] opacity-60 mx-2 px-4 py-3 hover:bg-[#fdebde] rounded-full transition-all duration-300 ease-in-out flex items-center gap-3" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium">Home</span>
+</a>
+<a class="text-[#231a12] opacity-60 mx-2 px-4 py-3 hover:bg-[#fdebde] rounded-full transition-all duration-300 ease-in-out flex items-center gap-3" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium">People</span>
+</a>
+<a class="bg-[#fdebde] dark:bg-slate-800 text-[#006591] rounded-full mx-2 px-4 py-3 transition-all duration-300 ease-in-out flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium">Actions</span>
+</a>
+<a class="text-[#231a12] opacity-60 mx-2 px-4 py-3 hover:bg-[#fdebde] rounded-full transition-all duration-300 ease-in-out flex items-center gap-3" href="#">
+<span class="material-symbols-outlined">mood</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium">Feelings</span>
+</a>
+<a class="text-[#231a12] opacity-60 mx-2 px-4 py-3 hover:bg-[#fdebde] rounded-full transition-all duration-300 ease-in-out flex items-center gap-3" href="#">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium">Food</span>
+</a>
+</nav>
+<div class="px-6">
+<div class="p-4 bg-surface-container-lowest/50 rounded-xl">
+<p class="text-xs font-bold text-primary uppercase tracking-tighter mb-2">Daily Progress</p>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-28 md:pl-64 pb-32 px-6">
+<!-- Category Header -->
+<header class="mb-8 max-w-6xl mx-auto">
+<div class="flex items-end justify-between">
+<div>
+<h2 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Actions</h2>
+<p class="text-lg text-on-surface-variant max-w-lg">Things you can do. Tap a card to add it to your sentence above.</p>
+</div>
+<div class="flex gap-2 p-1.5 bg-surface-container-low rounded-full">
+<button class="px-6 py-2 bg-surface-container-lowest text-on-surface shadow-sm rounded-full text-sm font-bold">Grid</button>
+<button class="px-6 py-2 text-on-surface-variant hover:bg-surface-container rounded-full text-sm font-bold transition-colors">List</button>
+</div>
+</div>
+</header>
+<!-- Asymmetric Bento Grid for Actions -->
+<section class="max-w-6xl mx-auto">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<!-- Core Verbs (Featured) -->
+<button class="col-span-2 row-span-2 bg-primary-container hover:bg-[#d0e6ff] transition-all p-8 rounded-xl flex flex-col items-center justify-center text-center group active:scale-95 duration-100">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span class="text-2xl font-black text-on-primary-container tracking-tight">go</span>
+</button>
+<button class="col-span-2 row-span-1 bg-secondary-container hover:bg-[#52f07a] transition-all p-6 rounded-xl flex items-center justify-center gap-4 group active:scale-95 duration-100">
+<span class="material-symbols-outlined text-4xl text-on-secondary-container">front_hand</span>
+<span class="text-xl font-bold text-on-secondary-container tracking-tight">stop</span>
+</button>
+<!-- Dynamic Grid of Action Pictograms -->
+<!-- Row 1 Items -->
+<button class="bg-surface-container-lowest hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center group active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-primary mb-3">help_center</span>
+<span class="text-sm font-bold text-on-surface">help</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center group active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-primary mb-3">visibility</span>
+<span class="text-sm font-bold text-on-surface">look</span>
+</button>
+<!-- Movement Group -->
+<div class="col-span-full py-4 mt-4 mb-2">
+<h3 class="text-sm font-black uppercase tracking-[0.2em] text-outline opacity-60">Movement</h3>
+</div>
+<button class="bg-surface-container-low hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-primary mb-2">directions_walk</span>
+<span class="text-sm font-bold text-on-surface">walk</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-primary mb-2">directions_run</span>
+<span class="text-sm font-bold text-on-surface">run</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-primary mb-2">pedal_bike</span>
+<span class="text-sm font-bold text-on-surface">ride</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-primary mb-2">call_received</span>
+<span class="text-sm font-bold text-on-surface">come</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-primary mb-2">logout</span>
+<span class="text-sm font-bold text-on-surface">leave</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-primary mb-2">bolt</span>
+<span class="text-sm font-bold text-on-surface">hurry</span>
+</button>
+<!-- Daily Living Group -->
+<div class="col-span-full py-4 mt-6 mb-2">
+<h3 class="text-sm font-black uppercase tracking-[0.2em] text-outline opacity-60">Daily Living</h3>
+</div>
+<button class="bg-tertiary-container hover:bg-[#fcd3aa] transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-tertiary mb-2">cleaning_services</span>
+<span class="text-sm font-bold text-on-tertiary-container">clean</span>
+</button>
+<button class="bg-tertiary-container hover:bg-[#fcd3aa] transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-tertiary mb-2">bathtub</span>
+<span class="text-sm font-bold text-on-tertiary-container">bathe</span>
+</button>
+<button class="bg-tertiary-container hover:bg-[#fcd3aa] transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-tertiary mb-2">bed</span>
+<span class="text-sm font-bold text-on-tertiary-container">sleep</span>
+</button>
+<button class="bg-tertiary-container hover:bg-[#fcd3aa] transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-tertiary mb-2">restaurant</span>
+<span class="text-sm font-bold text-on-tertiary-container">eat</span>
+</button>
+<button class="bg-tertiary-container hover:bg-[#fcd3aa] transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-tertiary mb-2">local_drink</span>
+<span class="text-sm font-bold text-on-tertiary-container">drink</span>
+</button>
+<button class="bg-tertiary-container hover:bg-[#fcd3aa] transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-tertiary mb-2">skillet</span>
+<span class="text-sm font-bold text-on-tertiary-container">cook</span>
+</button>
+<!-- Social & Emotions Group -->
+<div class="col-span-full py-4 mt-6 mb-2">
+<h3 class="text-sm font-black uppercase tracking-[0.2em] text-outline opacity-60">Social &amp; Feelings</h3>
+</div>
+<button class="bg-[#ffe7e7] hover:bg-[#ffd1d1] transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-[#ba1a1a] mb-2" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-sm font-bold text-[#ba1a1a]">love</span>
+</button>
+<button class="bg-[#ffe7e7] hover:bg-[#ffd1d1] transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-[#ba1a1a] mb-2">mood</span>
+<span class="text-sm font-bold text-[#ba1a1a]">smile</span>
+</button>
+<button class="bg-[#ffe7e7] hover:bg-[#ffd1d1] transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-[#ba1a1a] mb-2">groups</span>
+<span class="text-sm font-bold text-[#ba1a1a]">share</span>
+</button>
+<button class="bg-[#ffe7e7] hover:bg-[#ffd1d1] transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-[#ba1a1a] mb-2">child_care</span>
+<span class="text-sm font-bold text-[#ba1a1a]">hug</span>
+</button>
+<button class="bg-[#ffe7e7] hover:bg-[#ffd1d1] transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-[#ba1a1a] mb-2">celebration</span>
+<span class="text-sm font-bold text-[#ba1a1a]">celebrate</span>
+</button>
+<button class="bg-[#ffe7e7] hover:bg-[#ffd1d1] transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95">
+<span class="material-symbols-outlined text-3xl text-[#ba1a1a] mb-2">chat</span>
+<span class="text-sm font-bold text-[#ba1a1a]">tell</span>
+</button>
+<!-- Communication & Thought Group -->
+<div class="col-span-full py-4 mt-6 mb-2">
+<h3 class="text-sm font-black uppercase tracking-[0.2em] text-outline opacity-60">Communication</h3>
+</div>
+<button class="bg-surface-container-highest hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant mb-2">psychology</span>
+<span class="text-sm font-bold text-on-surface">think</span>
+</button>
+<button class="bg-surface-container-highest hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant mb-2">record_voice_over</span>
+<span class="text-sm font-bold text-on-surface">say</span>
+</button>
+<button class="bg-surface-container-highest hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant mb-2">question_mark</span>
+<span class="text-sm font-bold text-on-surface">ask</span>
+</button>
+<button class="bg-surface-container-highest hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant mb-2">hearing</span>
+<span class="text-sm font-bold text-on-surface">listen</span>
+</button>
+<button class="bg-surface-container-highest hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant mb-2">menu_book</span>
+<span class="text-sm font-bold text-on-surface">read</span>
+</button>
+<button class="bg-surface-container-highest hover:bg-surface-container transition-all p-6 rounded-xl flex flex-col items-center justify-center active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant mb-2">edit</span>
+<span class="text-sm font-bold text-on-surface">write</span>
+</button>
+<!-- State/Linking Group -->
+<div class="col-span-full py-4 mt-6 mb-2">
+<h3 class="text-sm font-black uppercase tracking-[0.2em] text-outline opacity-60">Helper Verbs</h3>
+</div>
+<button class="bg-surface-container-lowest hover:bg-surface-container transition-all p-6 rounded-xl flex items-center justify-center border border-outline-variant/20 active:scale-95">
+<span class="text-lg font-black text-primary">can</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container transition-all p-6 rounded-xl flex items-center justify-center border border-outline-variant/20 active:scale-95">
+<span class="text-lg font-black text-primary">will</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container transition-all p-6 rounded-xl flex items-center justify-center border border-outline-variant/20 active:scale-95">
+<span class="text-lg font-black text-primary">is</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container transition-all p-6 rounded-xl flex items-center justify-center border border-outline-variant/20 active:scale-95">
+<span class="text-lg font-black text-primary">am</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container transition-all p-6 rounded-xl flex items-center justify-center border border-outline-variant/20 active:scale-95">
+<span class="text-lg font-black text-primary">do</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container transition-all p-6 rounded-xl flex items-center justify-center border border-outline-variant/20 active:scale-95">
+<span class="text-lg font-black text-primary">need</span>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile & Floating Utility) -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8">
+<div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] rounded-full shadow-[0_24px_48px_-12px_rgba(35,26,18,0.06)] flex justify-around items-center py-2 px-6">
+<button class="flex flex-col items-center justify-center bg-gradient-to-br from-[#006591] to-[#0073a5] text-white rounded-full p-4 scale-110 shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="record_voice_over" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Speak</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#231a12] opacity-50 p-4 hover:opacity-100 transition-opacity active:scale-90">
+<span class="material-symbols-outlined" data-icon="layers_clear">layers_clear</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Clear</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#231a12] opacity-50 p-4 hover:opacity-100 transition-opacity active:scale-90">
+<span class="material-symbols-outlined" data-icon="backspace">backspace</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Delete</span>
+</button>
+<!-- Tone Selector - Tactile Dropdown Style -->
+<div class="relative group">
+<button class="flex flex-col items-center justify-center text-[#231a12] opacity-50 p-4 hover:opacity-100 transition-opacity active:scale-90">
+<span class="material-symbols-outlined" data-icon="sentiment_satisfied">sentiment_satisfied</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Tone</span>
+</button>
+<!-- Tooltip/Menu on Hover -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 bg-surface-container-lowest shadow-xl rounded-2xl p-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
+<button class="w-10 h-10 rounded-full hover:bg-surface-container transition-colors flex items-center justify-center text-xl">😊</button>
+<button class="w-10 h-10 rounded-full hover:bg-surface-container transition-colors flex items-center justify-center text-xl">🤔</button>
+<button class="w-10 h-10 rounded-full hover:bg-surface-container transition-colors flex items-center justify-center text-xl">📢</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

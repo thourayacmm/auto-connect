@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-secondary": "#ffffff",
+                  "primary-fixed": "#c9e6ff",
+                  "outline": "#73787b",
+                  "secondary-container": "#6bff8f",
+                  "inverse-on-surface": "#ffeee1",
+                  "secondary": "#006e2f",
+                  "on-tertiary": "#ffffff",
+                  "on-error-container": "#93000a",
+                  "error-container": "#ffdad6",
+                  "tertiary": "#855300",
+                  "tertiary-fixed-dim": "#ffb95f",
+                  "on-tertiary-fixed-variant": "#653e00",
+                  "inverse-primary": "#89ceff",
+                  "surface-dim": "#e8d7ca",
+                  "on-secondary-fixed": "#002109",
+                  "surface-tint": "#006591",
+                  "surface-container-high": "#f7e5d8",
+                  "inverse-surface": "#392e26",
+                  "tertiary-fixed": "#ffddb8",
+                  "secondary-fixed-dim": "#4ae176",
+                  "on-tertiary-fixed": "#2a1700",
+                  "surface-container-low": "#fff1e8",
+                  "surface-container": "#fdebde",
+                  "on-background": "#231a12",
+                  "on-surface-variant": "#43474b",
+                  "surface-container-lowest": "#ffffff",
+                  "primary-container": "#e3f1ff",
+                  "surface-variant": "#f1dfd3",
+                  "on-secondary-container": "#007432",
+                  "outline-variant": "#c3c7cb",
+                  "surface": "#fff8f5",
+                  "on-primary": "#ffffff",
+                  "on-primary-fixed": "#001e2f",
+                  "surface-container-highest": "#f1dfd3",
+                  "surface-bright": "#fff8f5",
+                  "error": "#ba1a1a",
+                  "on-secondary-fixed-variant": "#005321",
+                  "on-primary-fixed-variant": "#004c6e",
+                  "background": "#fff8f5",
+                  "tertiary-container": "#ffecda",
+                  "primary-fixed-dim": "#89ceff",
+                  "on-error": "#ffffff",
+                  "on-tertiary-container": "#986000",
+                  "secondary-fixed": "#6bff8f",
+                  "primary": "#006591",
+                  "on-surface": "#231a12",
+                  "on-primary-container": "#0073a5"
+          },
+          "borderRadius": {
+                  "DEFAULT": "1.5rem",
+                  "lg": "2rem",
+                  "xl": "3rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Plus Jakarta Sans"],
+                  "body": ["Plus Jakarta Sans"],
+                  "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #fff8f5;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .card-shadow {
+      box-shadow: 0 10px 40px -12px rgba(0, 101, 145, 0.08);
+    }
+    .card-shadow-active {
+      box-shadow: 0 12px 48px -8px rgba(0, 101, 145, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar Section -->
+<header class="flex justify-between items-center w-full sticky top-0 z-50 bg-surface/80 backdrop-blur-md px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-extrabold text-primary tracking-tight">Sanctuary AAC</span>
+</div>
+<div class="flex gap-2">
+<button class="material-symbols-outlined text-primary hover:bg-surface-container transition-colors p-2.5 rounded-full" data-icon="help_outline">help_outline</button>
+<button class="material-symbols-outlined text-primary hover:bg-surface-container transition-colors p-2.5 rounded-full" data-icon="settings">settings</button>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center px-6 pt-10 pb-32 max-w-6xl mx-auto w-full">
+<!-- Hero Text -->
+<div class="text-center mb-16">
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-4">Choose your grid size</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mx-auto leading-relaxed">Select the layout that best fits your communication needs. You can change this anytime in settings.</p>
+</div>
+<!-- Selection Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+<!-- Small Grid Card -->
+<button class="group flex flex-col bg-surface-container-low hover:bg-white transition-all duration-500 rounded-[2rem] p-8 text-left border-2 border-transparent card-shadow hover:card-shadow-active active:scale-[0.98]">
+<div class="mb-8 w-full aspect-[4/3] bg-white rounded-2xl p-6 flex flex-col gap-2 items-center justify-center border border-surface-variant/30">
+<div class="grid grid-cols-4 gap-2 w-full h-full">
+<div class="bg-primary/10 rounded-md"></div><div class="bg-primary/10 rounded-md"></div><div class="bg-primary/10 rounded-md"></div><div class="bg-primary/10 rounded-md"></div>
+<div class="bg-primary/10 rounded-md"></div><div class="bg-primary/10 rounded-md"></div><div class="bg-primary/10 rounded-md"></div><div class="bg-primary/10 rounded-md"></div>
+<div class="bg-primary/10 rounded-md"></div><div class="bg-primary/10 rounded-md"></div><div class="bg-primary/10 rounded-md"></div><div class="bg-primary/10 rounded-md"></div>
+<div class="bg-primary/10 rounded-md"></div><div class="bg-primary/10 rounded-md"></div><div class="bg-primary/10 rounded-md"></div><div class="bg-primary/10 rounded-md"></div>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-extrabold text-on-surface mb-1">Small</h3>
+<p class="text-primary font-bold text-sm tracking-wide uppercase">Beginner</p>
+</div>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors text-3xl" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</div>
+<div class="space-y-3">
+<p class="text-on-surface font-semibold text-base">Grille 4x4 (16 pictogrammes)</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Focuses on essential core vocabulary with large, easy-to-target buttons.</p>
+</div>
+</button>
+<!-- Medium Grid Card (Featured/Recommended) -->
+<button class="group flex flex-col bg-white transition-all duration-500 rounded-[2rem] p-8 text-left border-[3px] border-primary card-shadow-active active:scale-[0.98] relative">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary text-[11px] font-black px-5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>RECOMMENDED</span>
+</div>
+<div class="mb-8 w-full aspect-[4/3] bg-primary-container/40 rounded-2xl p-6 flex flex-col gap-1 items-center justify-center border border-primary/10">
+<div class="grid grid-cols-7 gap-1.5 w-full h-full">
+<script>
+              document.write(Array(35).fill('<div class="bg-primary/20 rounded-sm"></div>').join(''));
+            </script>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-extrabold text-on-surface mb-1">Medium</h3>
+<p class="text-primary font-bold text-sm tracking-wide uppercase">Intermediate</p>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="space-y-3">
+<p class="text-on-surface font-semibold text-base">Grille 7x5 (35 pictogrammes)</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">The perfect balance between expressive range and visual clarity for most users.</p>
+</div>
+</button>
+<!-- Large Grid Card -->
+<button class="group flex flex-col bg-surface-container-low hover:bg-white transition-all duration-500 rounded-[2rem] p-8 text-left border-2 border-transparent card-shadow hover:card-shadow-active active:scale-[0.98]">
+<div class="mb-8 w-full aspect-[4/3] bg-white rounded-2xl p-6 flex flex-col gap-1 items-center justify-center border border-surface-variant/30">
+<div class="grid grid-cols-10 gap-1 w-full h-full">
+<script>
+              document.write(Array(60).fill('<div class="bg-primary/10 rounded-[1px]"></div>').join(''));
+            </script>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-2xl font-extrabold text-on-surface mb-1">Large</h3>
+<p class="text-primary font-bold text-sm tracking-wide uppercase">Advanced</p>
+</div>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary transition-colors text-3xl" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</div>
+<div class="space-y-3">
+<p class="text-on-surface font-semibold text-base">Grille 10x6 (60 pictogrammes)</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Ideal for users requiring a high level of vocabulary access on a single page.</p>
+</div>
+</button>
+</div>
+<!-- Confirm Action -->
+<div class="mt-20 w-full max-w-md flex flex-col items-center">
+<button class="w-full bg-primary hover:bg-[#004c6e] text-on-primary py-5 px-10 rounded-full text-xl font-extrabold transition-all shadow-xl hover:shadow-2xl active:scale-95 flex items-center justify-center gap-3">
+<span>Apply Selected Grid</span>
+<span class="material-symbols-outlined font-bold" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<div class="mt-8 flex items-center gap-2.5 px-6 py-2.5 bg-primary/5 rounded-full border border-primary/10">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="info_i">info</span>
+<p class="text-on-surface-variant text-sm font-medium">
+          This layout will be applied to all your boards
+        </p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Section -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 py-4 bg-white/90 backdrop-blur-2xl rounded-t-[2.5rem] shadow-[0_-8px_40px_rgba(0,0,0,0.08)] border-t border-surface-variant/20 pb-safe-bottom">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-2xl mb-1 group-hover:scale-110 transition-transform" data-icon="record_voice_over">record_voice_over</span>
+<span class="text-[11px] font-bold tracking-wide">SPEAK</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-2xl mb-1 group-hover:scale-110 transition-transform" data-icon="grid_view">grid_view</span>
+<span class="text-[11px] font-bold tracking-wide">BOARDS</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-primary px-8 py-2.5 rounded-full transition-all scale-105 shadow-sm" href="#">
+<span class="material-symbols-outlined text-2xl mb-0.5" data-icon="aspect_ratio" style="font-variation-settings: 'FILL' 1;">aspect_ratio</span>
+<span class="text-[11px] font-black tracking-wide">GRID SIZE</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-2xl mb-1 group-hover:scale-110 transition-transform" data-icon="person">person</span>
+<span class="text-[11px] font-bold tracking-wide">PROFILE</span>
+</a>
+</nav>
+</body></html>

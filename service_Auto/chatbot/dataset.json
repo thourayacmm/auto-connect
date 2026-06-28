@@ -1,0 +1,1009 @@
+{
+  "faq": [
+    {
+      "id": 1,
+      "question": "Qu'est-ce que l'autisme ?",
+      "answer": "L'autisme est un trouble du neurodeveloppement qui peut modifier la communication, les interactions sociales, les interets et la sensibilite sensorielle. Chaque enfant est different: l'objectif est de comprendre ses besoins et de lui proposer des supports adaptes."
+    },
+    {
+      "id": 2,
+      "question": "Quels sont les signes de l'autisme ?",
+      "answer": "Les signes peuvent inclure peu de contact visuel, des difficultes a communiquer, des gestes repetitifs, une forte sensibilite aux bruits ou aux changements, et un besoin de routine. Un avis professionnel est recommande si ces signes inquietent la famille."
+    },
+    {
+      "id": 3,
+      "question": "A quel age detecter l'autisme ?",
+      "answer": "Les premiers signes peuvent apparaitre avant 3 ans, parfois des 18 mois. Plus le reperage est precoce, plus l'enfant peut beneficier rapidement d'un accompagnement adapte."
+    },
+    {
+      "id": 4,
+      "question": "L'autisme est-il une maladie ?",
+      "answer": "Non. L'autisme n'est pas une maladie contagieuse ni une maladie a guerir. C'est un fonctionnement neurodeveloppemental different qui necessite parfois des adaptations, de la comprehension et un accompagnement personnalise."
+    },
+    {
+      "id": 5,
+      "question": "Peut-on guerir de l'autisme ?",
+      "answer": "On ne guerit pas de l'autisme, mais un accompagnement regulier peut aider l'enfant a communiquer, gagner en autonomie et mieux vivre les situations du quotidien. Les progres dependent du profil, du rythme et du soutien propose."
+    },
+    {
+      "id": 6,
+      "question": "Pourquoi mon enfant evite le contact visuel ?",
+      "answer": "Le contact visuel peut etre fatiguant ou trop intense pour certains enfants autistes. Il vaut mieux encourager la communication sans forcer le regard: accepter un geste, un pictogramme, un mot ou une orientation du corps."
+    },
+    {
+      "id": 7,
+      "question": "Pourquoi mon enfant repete les memes gestes ?",
+      "answer": "Les gestes repetitifs peuvent aider l'enfant a se calmer, se concentrer ou exprimer une emotion. Il faut observer le contexte: si le geste est sans danger, on peut le respecter; s'il gene ou blesse, on propose une alternative plus sure."
+    },
+    {
+      "id": 8,
+      "question": "Pourquoi mon enfant ne parle pas ?",
+      "answer": "Certains enfants ont un retard de langage ou utilisent surtout une communication non verbale. Les pictogrammes, les gestes, l'imitation, la synthese vocale et des phrases tres courtes peuvent aider a developper l'expression."
+    },
+    {
+      "id": 9,
+      "question": "Mon enfant ne repond pas a son nom, pourquoi ?",
+      "answer": "Cela peut venir d'une difficulte d'attention, d'une surcharge sensorielle ou d'une maniere differente de traiter les sons. Essayez d'appeler doucement, de vous placer dans son champ visuel et d'associer son nom a une activite positive."
+    },
+    {
+      "id": 10,
+      "question": "Pourquoi mon enfant aime la routine ?",
+      "answer": "La routine rend la journee plus previsible et peut reduire l'anxiete. Un emploi du temps visuel aide l'enfant a comprendre ce qui va se passer et a mieux accepter les transitions."
+    },
+    {
+      "id": 11,
+      "question": "Comment aider mon enfant a parler ?",
+      "answer": "Commencez par des mots utiles du quotidien comme boire, manger, encore, aide-moi ou stop. Associez le mot a un geste ou un pictogramme, repetez souvent et valorisez chaque tentative de communication."
+    },
+    {
+      "id": 12,
+      "question": "Comment ameliorer la communication ?",
+      "answer": "Utilisez des phrases courtes, des pictogrammes visibles et des choix limites. Par exemple: montrer deux images et demander 'tu veux eau ou pomme ?'. L'important est de donner a l'enfant un moyen clair d'exprimer un besoin."
+    },
+    {
+      "id": 13,
+      "question": "Comment gerer une crise ?",
+      "answer": "Restez calme, diminuez le bruit et la lumiere, eloignez les dangers et parlez peu. Apres la crise, cherchez le declencheur possible: fatigue, frustration, attente, douleur, changement ou surcharge sensorielle."
+    },
+    {
+      "id": 14,
+      "question": "Que faire en cas de crise ?",
+      "answer": "Mettez l'enfant en securite, reduisez les stimulations et laissez-lui le temps de retrouver son calme. Evitez les longues explications pendant la crise; utilisez plutot une voix douce et des supports simples comme 'pause' ou 'calme'."
+    },
+    {
+      "id": 15,
+      "question": "Comment calmer un enfant autiste ?",
+      "answer": "Proposez un espace calme, une respiration guidee, un objet rassurant ou une activite sensorielle connue. Chaque enfant a ses strategies: notez ce qui fonctionne pour pouvoir le reutiliser."
+    },
+    {
+      "id": 16,
+      "question": "Qu'est-ce qu'une surcharge sensorielle ?",
+      "answer": "Une surcharge sensorielle arrive quand le cerveau recoit trop d'informations: bruit, lumiere, foule, odeurs ou toucher. L'enfant peut pleurer, crier, fuir, se figer ou devenir agite parce qu'il n'arrive plus a traiter les stimuli."
+    },
+    {
+      "id": 17,
+      "question": "Pourquoi mon enfant est sensible au bruit ?",
+      "answer": "Certains sons peuvent etre perçus comme tres forts ou douloureux. Vous pouvez prevenir l'enfant avant un bruit, utiliser un casque anti-bruit et choisir des lieux plus calmes quand c'est possible."
+    },
+    {
+      "id": 18,
+      "question": "Comment reduire les stimuli ?",
+      "answer": "Diminuez le volume, limitez les lumieres fortes, reduisez les objets visibles et proposez des pauses. Un coin calme avec peu de distractions peut aider l'enfant a se reguler."
+    },
+    {
+      "id": 19,
+      "question": "Pourquoi mon enfant refuse certains vetements ?",
+      "answer": "Cela peut etre lie a une sensibilite tactile: etiquette, couture, texture ou pression du tissu. Essayez des vetements doux, sans etiquettes, et proposez progressivement les nouvelles textures."
+    },
+    {
+      "id": 20,
+      "question": "Comment gerer la sensibilite sensorielle ?",
+      "answer": "Observez les stimuli difficiles puis adaptez l'environnement: casque, lumiere douce, pauses, vetements confortables, routine stable. L'objectif n'est pas de forcer, mais d'aider l'enfant a tolerer progressivement."
+    },
+    {
+      "id": 21,
+      "question": "Qu'est-ce que la therapie ABA ?",
+      "answer": "L'ABA est une approche d'apprentissage basee sur l'observation du comportement, les objectifs progressifs et le renforcement positif. Elle doit etre adaptee a l'enfant et respectueuse de son bien-etre."
+    },
+    {
+      "id": 22,
+      "question": "Qu'est-ce que l'orthophonie ?",
+      "answer": "L'orthophonie accompagne la communication, le langage oral, la comprehension et parfois l'utilisation de supports alternatifs comme les pictogrammes. Elle peut aider l'enfant a mieux exprimer ses besoins."
+    },
+    {
+      "id": 23,
+      "question": "Qu'est-ce que l'ergotherapie ?",
+      "answer": "L'ergotherapie aide l'enfant a developper son autonomie dans les gestes du quotidien: s'habiller, manger, ecrire, jouer ou gerer les sensations. Elle propose des adaptations concretes."
+    },
+    {
+      "id": 24,
+      "question": "Pourquoi suivre une therapie ?",
+      "answer": "Une therapie peut aider a travailler la communication, l'autonomie, la regulation emotionnelle et les apprentissages. Les objectifs doivent etre clairs, realistes et partages avec la famille."
+    },
+    {
+      "id": 25,
+      "question": "Quel therapeute consulter ?",
+      "answer": "Selon les besoins, on peut consulter un orthophoniste, psychologue, ergotherapeute, pedopsychiatre ou specialiste du developpement. Le medecin ou l'equipe scolaire peut aider a orienter la famille."
+    },
+    {
+      "id": 26,
+      "question": "Quel est le role des parents ?",
+      "answer": "Les parents observent, rassurent, encouragent et appliquent les strategies au quotidien. Leur role est essentiel car ils connaissent les preferences, les difficultes et les progres de l'enfant."
+    },
+    {
+      "id": 27,
+      "question": "Comment aider mon enfant a l'ecole ?",
+      "answer": "Partagez les besoins de l'enfant avec l'enseignant, utilisez des supports visuels et preparez les changements. Des consignes courtes, un planning visuel et des pauses peuvent faciliter la journee scolaire."
+    },
+    {
+      "id": 28,
+      "question": "Comment structurer la journee ?",
+      "answer": "Utilisez un planning visuel avec les moments importants: reveil, repas, ecole, jeu, devoirs, bain et coucher. Retirez ou cochez les images au fur et a mesure pour montrer l'avancement."
+    },
+    {
+      "id": 29,
+      "question": "Pourquoi utiliser des pictogrammes ?",
+      "answer": "Les pictogrammes rendent les mots visibles et plus faciles a comprendre. Ils aident l'enfant a exprimer un besoin, faire un choix, anticiper une activite ou construire une phrase."
+    },
+    {
+      "id": 30,
+      "question": "Comment ameliorer les interactions sociales ?",
+      "answer": "Commencez par des jeux courts et previsibles avec une seule personne. Utilisez des tours de role simples, des images d'emotions et beaucoup de valorisation."
+    },
+    {
+      "id": 31,
+      "question": "Qu'est-ce qu'Auto Connect ?",
+      "answer": "Auto Connect est une application de communication alternative et augmentee. Elle aide l'enfant a utiliser des pictogrammes, construire des phrases, ecouter une voix synthetique et suivre ses progres avec les parents et therapeutes."
+    },
+    {
+      "id": 32,
+      "question": "Pourquoi utiliser Auto Connect ?",
+      "answer": "Auto Connect structure les activites de communication, facilite l'utilisation des pictogrammes et aide les adultes a suivre les progres. L'application peut proposer des suggestions adaptees au profil de l'enfant."
+    },
+    {
+      "id": 33,
+      "question": "Comment fonctionne l'application ?",
+      "answer": "L'enfant selectionne des pictogrammes pour exprimer une phrase. Les parents et therapeutes peuvent suivre l'historique, adapter les contenus, consulter les statistiques et recevoir des recommandations."
+    },
+    {
+      "id": 34,
+      "question": "Qui peut utiliser l'application ?",
+      "answer": "Auto Connect peut etre utilise par les enfants, les parents, les therapeutes et les administrateurs. Chaque role a un espace adapte: communication, suivi, gestion des pictogrammes ou analyse."
+    },
+    {
+      "id": 35,
+      "question": "Quels sont les avantages d'Auto Connect ?",
+      "answer": "L'application favorise la communication, l'autonomie, la personnalisation des pictogrammes et le suivi des progres. Elle permet aussi de garder une coherence entre la maison, l'ecole et les seances."
+    },
+    {
+      "id": 36,
+      "question": "Comment suivre les progres ?",
+      "answer": "Observez les phrases produites, les pictogrammes frequents, la duree des sessions et les nouvelles competences. Dans Auto Connect, l'historique et les statistiques aident a voir l'evolution sur plusieurs jours."
+    },
+    {
+      "id": 37,
+      "question": "Comment motiver un enfant ?",
+      "answer": "Choisissez des activites liees a ses interets, proposez des objectifs courts et felicitez chaque tentative. Une recompense simple, une pause ou un jeu prefere peut renforcer la motivation."
+    },
+    {
+      "id": 38,
+      "question": "Pourquoi mon enfant evite les autres ?",
+      "answer": "Il peut etre anxieux, fatigue, surcharge ou ne pas comprendre les codes sociaux. Proposez des interactions courtes, previsibles et guidees, sans forcer le contact."
+    },
+    {
+      "id": 39,
+      "question": "Comment encourager les jeux ?",
+      "answer": "Proposez un jeu simple, montrez l'action, attendez une reaction puis imitez l'enfant. Les jeux avec tour de role, bulles, voitures ou puzzles sont souvent utiles pour commencer."
+    },
+    {
+      "id": 40,
+      "question": "Quels jeux utiliser ?",
+      "answer": "Utilisez des jeux courts, visuels et motivants: encastrements, tri de couleurs, bulles, musique, memory, imitation, jeux sensoriels ou petites histoires avec pictogrammes."
+    },
+    {
+      "id": 41,
+      "question": "Qu'est-ce que la communication non verbale ?",
+      "answer": "La communication non verbale utilise les gestes, regards, expressions, images, pointages ou comportements. Elle est importante: un enfant peut communiquer meme sans parler."
+    },
+    {
+      "id": 42,
+      "question": "Comment enseigner les emotions ?",
+      "answer": "Utilisez des images de visages, des pictogrammes et des situations concretes: content, triste, peur, colere, fatigue. Associez l'emotion a une action possible comme demander une pause ou de l'aide."
+    },
+    {
+      "id": 43,
+      "question": "Pourquoi mon enfant ne comprend pas les emotions ?",
+      "answer": "Les expressions du visage et les signaux sociaux peuvent etre difficiles a interpreter. Il faut rendre les emotions explicites avec des mots simples, des images et des exemples du quotidien."
+    },
+    {
+      "id": 44,
+      "question": "Comment developper l'autonomie ?",
+      "answer": "Decoupez chaque tache en petites etapes visuelles: se laver les mains, s'habiller, ranger un jouet. Aidez au debut, puis reduisez progressivement l'aide quand l'enfant reussit."
+    },
+    {
+      "id": 45,
+      "question": "Pourquoi mon enfant refuse le changement ?",
+      "answer": "Le changement peut provoquer de l'anxiete parce qu'il rend la situation moins previsible. Preparez-le avec un planning, une image, un minuteur ou une phrase courte avant la transition."
+    },
+    {
+      "id": 46,
+      "question": "Comment introduire un changement ?",
+      "answer": "Annoncez le changement a l'avance, montrez-le sur un support visuel et gardez une partie de la routine stable. Commencez par de petits changements puis augmentez progressivement."
+    },
+    {
+      "id": 47,
+      "question": "Qu'est-ce qu'un emploi du temps visuel ?",
+      "answer": "Un emploi du temps visuel est un planning compose d'images ou de pictogrammes. Il montre les activites dans l'ordre, aide l'enfant a anticiper la journee et reduit l'anxiete liee aux transitions."
+    },
+    {
+      "id": 48,
+      "question": "Comment gerer les transitions ?",
+      "answer": "Prevenez avant de changer d'activite, utilisez un minuteur ou une image 'maintenant/apres', puis felicitez l'enfant quand il passe a l'etape suivante. Les transitions sont plus faciles quand elles sont previsibles."
+    },
+    {
+      "id": 49,
+      "question": "Pourquoi mon enfant crie ?",
+      "answer": "Un cri peut exprimer un besoin, une douleur, une frustration, une surcharge ou une difficulte a communiquer. Cherchez le contexte et proposez un pictogramme comme 'stop', 'aide', 'pause' ou 'j'ai mal'."
+    },
+    {
+      "id": 50,
+      "question": "Comment comprendre ses besoins ?",
+      "answer": "Observez ce qui se passe juste avant le comportement: lieu, bruit, fatigue, faim, attente, refus ou changement. Utilisez des choix visuels pour aider l'enfant a exprimer ce qu'il veut."
+    },
+    {
+      "id": 51,
+      "question": "Comment ameliorer la concentration ?",
+      "answer": "Proposez des activites courtes, un espace calme et une consigne a la fois. Augmentez la duree progressivement et alternez travail, pause et renforcement positif."
+    },
+    {
+      "id": 52,
+      "question": "Pourquoi mon enfant est hyperactif ?",
+      "answer": "L'agitation peut etre liee au besoin de mouvement, a l'anxiete, a la fatigue ou a une surcharge. Des pauses motrices, une routine claire et des activites structurees peuvent aider."
+    },
+    {
+      "id": 53,
+      "question": "Comment gerer l'hyperactivite ?",
+      "answer": "Integrez des mouvements reguliers: marcher, pousser, porter, sauter, etirez-vous. Alternez ensuite avec une activite courte et calme, en donnant une consigne simple."
+    },
+    {
+      "id": 54,
+      "question": "Quels outils numeriques utiliser ?",
+      "answer": "Les outils utiles sont les applications de pictogrammes, les minuteurs visuels, les agendas images et les supports de synthese vocale. L'outil doit rester simple, stable et adapte au niveau de l'enfant."
+    },
+    {
+      "id": 55,
+      "question": "Pourquoi utiliser un chatbot ?",
+      "answer": "Un chatbot peut donner rapidement des conseils pratiques, proposer des idees d'activites et orienter vers les ressources du dataset. Il ne remplace pas un professionnel, mais il aide a structurer les questions."
+    },
+    {
+      "id": 56,
+      "question": "Comment securiser l'environnement ?",
+      "answer": "Retirez les objets dangereux, limitez l'acces aux zones risquees et organisez l'espace avec des reperes visuels. Un environnement clair reduit les comportements impulsifs et l'anxiete."
+    },
+    {
+      "id": 57,
+      "question": "Pourquoi mon enfant se balance ?",
+      "answer": "Le balancement peut etre une maniere de se calmer ou de rechercher une sensation corporelle. Si ce n'est pas dangereux, il peut etre respecte; sinon proposez une alternative sure comme un coussin, une chaise adaptee ou une pause sensorielle."
+    },
+    {
+      "id": 58,
+      "question": "Comment reduire les comportements repetitifs ?",
+      "answer": "Cherchez d'abord leur fonction: se calmer, eviter, demander ou s'occuper. Proposez une alternative acceptable et renforcez les moments ou l'enfant utilise une autre strategie."
+    },
+    {
+      "id": 59,
+      "question": "Comment aider a dormir ?",
+      "answer": "Mettez en place une routine stable: repas, toilette, histoire calme, lumiere douce et coucher a heure reguliere. Evitez les ecrans avant le sommeil et utilisez un pictogramme pour chaque etape."
+    },
+    {
+      "id": 60,
+      "question": "Pourquoi mon enfant dort mal ?",
+      "answer": "Le sommeil peut etre perturbe par l'anxiete, les sensibilites sensorielles, les changements ou certaines habitudes. Si les troubles persistent, il est important d'en parler a un professionnel de sante."
+    },
+    {
+      "id": 61,
+      "question": "Comment ameliorer l'alimentation ?",
+      "answer": "Introduisez les aliments progressivement: regarder, toucher, sentir, gouter une petite quantite. Gardez des aliments connus dans l'assiette et valorisez chaque etape sans forcer."
+    },
+    {
+      "id": 62,
+      "question": "Pourquoi mon enfant refuse de manger ?",
+      "answer": "Le refus peut etre lie a la texture, l'odeur, la couleur, la temperature ou la routine alimentaire. Observez les aliments acceptes et introduisez les nouveautes tres progressivement."
+    },
+    {
+      "id": 63,
+      "question": "Comment gerer les sorties ?",
+      "answer": "Preparez la sortie avec des images, expliquez la duree et prevoyez une pause. Emportez un objet rassurant, un casque anti-bruit ou des pictogrammes pour demander aide, pause ou retour."
+    },
+    {
+      "id": 64,
+      "question": "Pourquoi mon enfant fuit les lieux publics ?",
+      "answer": "Les lieux publics peuvent etre bruyants, lumineux, imprevisibles et fatigants. L'enfant peut fuir pour echapper a la surcharge. Il faut preparer, raccourcir et rendre la sortie plus previsible."
+    },
+    {
+      "id": 65,
+      "question": "Comment preparer une sortie ?",
+      "answer": "Montrez une image du lieu, expliquez les etapes et annoncez la fin de la sortie. Vous pouvez utiliser une sequence visuelle: voiture, magasin, caisse, maison."
+    },
+    {
+      "id": 66,
+      "question": "Comment enseigner les regles ?",
+      "answer": "Formulez une regle courte et positive: 'on marche' plutot que 'ne cours pas'. Ajoutez une image, repetez dans le meme contexte et felicitez quand la regle est respectee."
+    },
+    {
+      "id": 67,
+      "question": "Pourquoi mon enfant ne suit pas les consignes ?",
+      "answer": "La consigne peut etre trop longue, abstraite ou donnee dans un moment de surcharge. Essayez une seule instruction, accompagnee d'un geste ou d'un pictogramme."
+    },
+    {
+      "id": 68,
+      "question": "Comment simplifier les consignes ?",
+      "answer": "Utilisez des phrases courtes: 'prends chaussures', 'assis', 'viens'. Donnez une consigne a la fois, montrez l'action attendue et laissez du temps pour repondre."
+    },
+    {
+      "id": 69,
+      "question": "Comment ameliorer la memoire ?",
+      "answer": "Repetez souvent, utilisez des images et reliez l'information a une routine. Les chansons, jeux de tri et sequences visuelles peuvent renforcer la memorisation."
+    },
+    {
+      "id": 70,
+      "question": "Comment gerer la frustration ?",
+      "answer": "Apprenez a l'enfant des moyens simples pour dire 'stop', 'encore', 'aide' ou 'pause'. Anticipez les attentes difficiles et felicitez quand il utilise un outil de communication au lieu de crier."
+    },
+    {
+      "id": 71,
+      "question": "Pourquoi mon enfant se met en colere ?",
+      "answer": "La colere peut venir d'une frustration, d'une incomprehension, d'une douleur ou d'un changement. Cherchez le declencheur et proposez une facon plus simple d'exprimer le besoin."
+    },
+    {
+      "id": 72,
+      "question": "Comment eviter les crises ?",
+      "answer": "On ne peut pas toujours les eviter, mais on peut reduire les risques: routine claire, pauses, preparation des changements, choix limites et pictogrammes pour demander de l'aide."
+    },
+    {
+      "id": 73,
+      "question": "Comment utiliser Auto Connect au quotidien ?",
+      "answer": "Integrez Auto Connect dans des moments reels: repas, habillage, jeu, sortie et coucher. Commencez par quelques pictogrammes utiles, puis ajoutez progressivement de nouveaux mots."
+    },
+    {
+      "id": 74,
+      "question": "Comment personnaliser l'application ?",
+      "answer": "Adaptez les pictogrammes aux besoins de l'enfant: objets preferes, personnes proches, lieux familiers et routines. Gardez une grille simple au debut puis augmentez le nombre d'images."
+    },
+    {
+      "id": 75,
+      "question": "Comment impliquer les therapeutes ?",
+      "answer": "Partagez les progres, les phrases frequentes et les difficultes observees. Le therapeute peut aider a choisir les objectifs, ajuster les pictogrammes et proposer des exercices."
+    },
+    {
+      "id": 76,
+      "question": "Comment mesurer les resultats ?",
+      "answer": "Comparez les donnees sur plusieurs jours: nombre de phrases, autonomie, pictogrammes utilises, crises reduites ou demandes plus claires. Les progres peuvent etre petits mais importants."
+    },
+    {
+      "id": 77,
+      "question": "Pourquoi utiliser des recompenses ?",
+      "answer": "Une recompense renforce un comportement positif et motive l'enfant a recommencer. Elle peut etre sociale, comme feliciter, ou concrete, comme une activite preferee."
+    },
+    {
+      "id": 78,
+      "question": "Comment choisir les activites ?",
+      "answer": "Choisissez selon les interets, le niveau et l'objectif de l'enfant. Une activite efficace est courte, claire, motivante et permet de pratiquer un mot ou une competence precise."
+    },
+    {
+      "id": 79,
+      "question": "Pourquoi mon enfant est isole ?",
+      "answer": "L'isolement peut venir de l'anxiete sociale, de la fatigue, d'interets differents ou d'une difficulte a comprendre les autres. Proposez des interactions progressives et respectez son besoin de pause."
+    },
+    {
+      "id": 80,
+      "question": "Comment encourager la socialisation ?",
+      "answer": "Commencez avec une personne bienveillante et une activite partagee courte. Utilisez des scripts visuels comme 'bonjour', 'a moi', 'a toi', 'encore' et valorisez les essais."
+    },
+    {
+      "id": 81,
+      "question": "Comment gerer les emotions ?",
+      "answer": "Aidez l'enfant a nommer l'emotion avec un pictogramme puis proposez une action: pause, respiration, calin, objet calme ou demander de l'aide. Repetez ces strategies hors crise."
+    },
+    {
+      "id": 82,
+      "question": "Pourquoi mon enfant rit sans raison ?",
+      "answer": "Le rire peut etre lie a une emotion interne, une stimulation sensorielle, une pensee amusante ou une tension. Observez le contexte avant de conclure; si cela inquiete, demandez conseil a un professionnel."
+    },
+    {
+      "id": 83,
+      "question": "Comment apprendre a attendre ?",
+      "answer": "Utilisez un minuteur visuel et commencez par quelques secondes. Felicitez l'attente reussie, puis augmentez progressivement la duree avec une activite simple."
+    },
+    {
+      "id": 84,
+      "question": "Comment ameliorer l'attention ?",
+      "answer": "Installez l'enfant dans un endroit calme, reduisez les distractions et proposez une activite courte. Donnez une consigne claire et terminez par une reussite."
+    },
+    {
+      "id": 85,
+      "question": "Pourquoi mon enfant ignore les autres ?",
+      "answer": "Il peut ne pas comprendre l'intention de l'autre, etre concentre sur une activite ou se sentir surcharge. Approchez doucement, utilisez son interet et proposez une interaction simple."
+    },
+    {
+      "id": 86,
+      "question": "Comment enseigner le langage ?",
+      "answer": "Modelisez le mot dans une situation naturelle: dire 'eau' en montrant l'eau, puis attendre. Ajoutez progressivement deux mots: 'veux eau', 'encore jeu'."
+    },
+    {
+      "id": 87,
+      "question": "Comment utiliser les images ?",
+      "answer": "Associez chaque image a un mot et a une action reelle. Montrez l'image, dites le mot, aidez l'enfant a choisir, puis donnez la consequence attendue."
+    },
+    {
+      "id": 88,
+      "question": "Pourquoi mon enfant prefere jouer seul ?",
+      "answer": "Le jeu seul peut etre plus previsible et moins fatigant. Respectez ce besoin tout en proposant de courts moments de jeu partage autour de ses interets."
+    },
+    {
+      "id": 89,
+      "question": "Comment encourager le partage ?",
+      "answer": "Utilisez des tours tres courts avec un objet motivant: 'a toi', 'a moi'. Felicitez chaque echange et augmentez la duree seulement quand l'enfant est a l'aise."
+    },
+    {
+      "id": 90,
+      "question": "Comment ameliorer la comprehension ?",
+      "answer": "Utilisez des mots simples, des gestes et des images. Verifiez la comprehension en demandant une action concrete plutot qu'une reponse verbale."
+    },
+    {
+      "id": 91,
+      "question": "Comment adapter l'ecole ?",
+      "answer": "L'ecole peut etre adaptee avec un planning visuel, des consignes simplifiees, un coin calme, des pauses et des supports de communication. La collaboration famille-ecole est essentielle."
+    },
+    {
+      "id": 92,
+      "question": "Pourquoi mon enfant a du retard scolaire ?",
+      "answer": "Le retard peut etre lie a la communication, l'attention, la comprehension, la motricite ou l'anxiete. Une evaluation aide a identifier les besoins et les adaptations."
+    },
+    {
+      "id": 93,
+      "question": "Comment collaborer avec les enseignants ?",
+      "answer": "Partagez les strategies qui fonctionnent a la maison, les pictogrammes utiles et les difficultes observees. Un cahier de liaison ou un suivi dans l'application peut aider."
+    },
+    {
+      "id": 94,
+      "question": "Comment gerer les devoirs ?",
+      "answer": "Faites des sessions courtes, separees par des pauses. Commencez par une tache facile, utilisez un minuteur et terminez par une reussite pour garder la motivation."
+    },
+    {
+      "id": 95,
+      "question": "Comment utiliser la technologie ?",
+      "answer": "La technologie doit servir un objectif clair: communiquer, organiser, apprendre ou suivre les progres. Limitez les distractions et choisissez des outils simples comme Auto Connect, minuteurs visuels ou applications educatives."
+    },
+    {
+      "id": 96,
+      "question": "Comment suivre le comportement ?",
+      "answer": "Notez la situation, le comportement, la consequence et ce qui a aide. Ces observations permettent de comprendre les declencheurs et de choisir de meilleures strategies."
+    },
+    {
+      "id": 97,
+      "question": "Comment ameliorer la relation parent-enfant ?",
+      "answer": "Passez du temps positif sans objectif de performance: jouer, regarder un livre, imiter l'enfant ou partager une activite qu'il aime. La relation se renforce par la securite et la confiance."
+    },
+    {
+      "id": 98,
+      "question": "Comment reduire le stress ?",
+      "answer": "Creez un environnement previsible, proposez des pauses et utilisez des supports visuels. Pour les parents aussi, demander de l'aide et partager les responsabilites peut reduire la charge."
+    },
+    {
+      "id": 99,
+      "question": "Pourquoi mon enfant est anxieux ?",
+      "answer": "L'anxiete peut venir de l'inconnu, du bruit, des changements, des attentes sociales ou d'une difficulte a comprendre la situation. La preparation visuelle et les routines peuvent l'apaiser."
+    },
+    {
+      "id": 100,
+      "question": "Comment rassurer mon enfant ?",
+      "answer": "Parlez doucement, montrez ce qui va se passer et utilisez une routine connue. Un objet rassurant, un pictogramme 'calme' ou une pause dans un espace securisant peut aider."
+    },
+    {
+      "id": 101,
+      "question": "Comment utiliser ce chatbot ?",
+      "answer": "Posez une question courte et concrete sur l'autisme, les pictogrammes, les routines, les crises, l'ecole ou Auto Connect. Le chatbot recherche la reponse la plus proche dans le dataset et propose un conseil pratique adapte au contexte."
+    },
+    {
+      "id": 102,
+      "question": "Comment commencer avec les pictogrammes ?",
+      "answer": "Commencez avec 4 a 6 pictogrammes tres utiles comme boire, manger, aide, pause, encore et fini. Utilisez-les dans de vraies situations et gardez la meme image pour le meme mot afin de creer un repere stable."
+    },
+    {
+      "id": 103,
+      "question": "Combien de pictogrammes afficher au debut ?",
+      "answer": "Au debut, affichez peu de pictogrammes pour eviter la surcharge. Une grille de 4 a 8 images peut suffire, puis vous pouvez augmenter progressivement quand l'enfant reconnait et utilise les images."
+    },
+    {
+      "id": 104,
+      "question": "Comment choisir les premiers pictogrammes ?",
+      "answer": "Choisissez des pictogrammes lies aux besoins quotidiens et aux motivations de l'enfant: eau, biscuit, jouet, maman, papa, toilettes, aide et stop. Les mots utiles donnent rapidement du sens a l'outil."
+    },
+    {
+      "id": 105,
+      "question": "Comment apprendre a demander de l'aide ?",
+      "answer": "Placez le pictogramme 'aide' dans les activites difficiles. Quand l'enfant bloque, montrez l'image, dites 'aide', puis aidez-le tout de suite. Il comprend ainsi que ce pictogramme produit une reponse utile."
+    },
+    {
+      "id": 106,
+      "question": "Comment apprendre a dire stop ?",
+      "answer": "Le pictogramme 'stop' doit etre respecte quand il est utilise. Entrainez-le dans des jeux simples, par exemple bulles ou musique: l'enfant montre 'stop', l'activite s'arrete, puis il peut demander 'encore'."
+    },
+    {
+      "id": 107,
+      "question": "Comment encourager une phrase avec deux mots ?",
+      "answer": "Modelisez des phrases simples comme 'veux eau', 'encore jeu' ou 'aide moi'. Ne demandez pas tout de suite une phrase parfaite; valorisez l'association de deux pictogrammes et reformulez oralement."
+    },
+    {
+      "id": 108,
+      "question": "Comment passer d'un mot a une phrase ?",
+      "answer": "Ajoutez un mot fonctionnel devant le pictogramme connu: 'je veux' + biscuit, 'encore' + musique, 'pas' + bruit. Auto Connect peut aider a construire ces petites sequences visuelles."
+    },
+    {
+      "id": 109,
+      "question": "Comment utiliser la synthese vocale ?",
+      "answer": "La synthese vocale permet a l'enfant d'entendre la phrase construite. Apres la selection des pictogrammes, lancez la voix, puis donnez la consequence concrete pour renforcer le lien entre message et action."
+    },
+    {
+      "id": 110,
+      "question": "Pourquoi repeter les memes pictogrammes ?",
+      "answer": "La repetition aide l'enfant a memoriser le sens et l'effet du pictogramme. Reprendre les memes mots dans plusieurs contextes renforce la comprehension et augmente les chances d'utilisation spontanee."
+    },
+    {
+      "id": 111,
+      "question": "Comment eviter que la grille soit trop chargee ?",
+      "answer": "Regroupez les pictogrammes par categorie, retirez ceux qui ne sont pas utiles pour la situation et gardez une taille d'image confortable. Une grille claire aide l'enfant a chercher plus facilement."
+    },
+    {
+      "id": 112,
+      "question": "Comment organiser les categories de pictogrammes ?",
+      "answer": "Vous pouvez organiser les categories par besoins, emotions, actions, lieux, personnes et nourriture. Gardez les pictogrammes essentiels toujours au meme endroit pour faciliter l'autonomie."
+    },
+    {
+      "id": 113,
+      "question": "Comment introduire une nouvelle categorie ?",
+      "answer": "Introduisez une seule nouvelle categorie a la fois, avec peu d'images. Expliquez-la dans une situation concrete, par exemple la categorie nourriture pendant le repas ou emotions apres une activite."
+    },
+    {
+      "id": 114,
+      "question": "Comment travailler les emotions avec Auto Connect ?",
+      "answer": "Utilisez les pictogrammes content, triste, peur, colere et fatigue dans des moments reels. Apres l'emotion, proposez une action: pause, aide, calin, respirer ou espace calme."
+    },
+    {
+      "id": 115,
+      "question": "Comment aider l'enfant a dire qu'il a mal ?",
+      "answer": "Ajoutez un pictogramme 'j'ai mal' et des images du corps. Entrainez l'enfant a montrer la zone douloureuse avec une image ou un geste, puis prenez toujours la demande au serieux."
+    },
+    {
+      "id": 116,
+      "question": "Comment preparer une visite chez le medecin ?",
+      "answer": "Creez une sequence visuelle: voiture, salle d'attente, medecin, examen, retour maison. Expliquez les etapes avant la visite et prevoyez un objet rassurant ou un casque si l'environnement est stressant."
+    },
+    {
+      "id": 117,
+      "question": "Comment preparer une rentree scolaire ?",
+      "answer": "Montrez des photos de l'ecole, de la classe et de l'enseignant si possible. Preparez un planning visuel des premieres journees et repetez les routines importantes avant la rentree."
+    },
+    {
+      "id": 118,
+      "question": "Comment aider pendant la recreation ?",
+      "answer": "La recreation peut etre bruyante et imprevisible. Proposez une zone calme, un adulte referent, des pictogrammes pour demander pause ou aide, et des jeux simples avec des regles visuelles."
+    },
+    {
+      "id": 119,
+      "question": "Comment communiquer avec l'enseignant ?",
+      "answer": "Partagez les pictogrammes utilises a la maison, les declencheurs connus et les strategies efficaces. Un court bilan regulier permet d'ajuster les supports entre la maison et l'ecole."
+    },
+    {
+      "id": 120,
+      "question": "Comment utiliser Auto Connect a l'ecole ?",
+      "answer": "Auto Connect peut servir a demander de l'aide, choisir une activite, exprimer une emotion ou construire une phrase. Il faut garder les pictogrammes scolaires simples et accessibles pendant la journee."
+    },
+    {
+      "id": 121,
+      "question": "Comment creer une routine du matin ?",
+      "answer": "Utilisez une sequence d'images: se lever, toilettes, s'habiller, petit dejeuner, se laver les dents, cartable, depart. Cochez chaque etape pour montrer que la routine avance."
+    },
+    {
+      "id": 122,
+      "question": "Comment creer une routine du soir ?",
+      "answer": "Preparez une routine stable: diner, bain, pyjama, dents, histoire, lumiere douce, coucher. Les memes pictogrammes chaque soir aident l'enfant a anticiper et a se calmer."
+    },
+    {
+      "id": 123,
+      "question": "Comment gerer le bain ?",
+      "answer": "Annoncez les etapes du bain avec des images: deshabiller, eau, savon, rincer, serviette, pyjama. Si l'enfant est sensible, adaptez la temperature, le bruit de l'eau et la texture des produits."
+    },
+    {
+      "id": 124,
+      "question": "Comment aider au brossage des dents ?",
+      "answer": "Decoupez l'action en petites etapes visuelles et utilisez un minuteur court. Vous pouvez commencer par quelques secondes puis augmenter doucement, en felicitation chaque progression."
+    },
+    {
+      "id": 125,
+      "question": "Comment apprendre a s'habiller ?",
+      "answer": "Montrez les vetements dans l'ordre: sous-vetement, pantalon, t-shirt, chaussettes, chaussures. Aidez physiquement au debut puis diminuez l'aide quand l'enfant devient plus autonome."
+    },
+    {
+      "id": 126,
+      "question": "Comment apprendre la proprete ?",
+      "answer": "Utilisez une routine visuelle pour les toilettes: aller, baisser, s'asseoir, attendre, s'essuyer, tirer la chasse, laver les mains. Gardez un rythme regulier et valorisez les essais."
+    },
+    {
+      "id": 127,
+      "question": "Comment gerer l'attente dans une file ?",
+      "answer": "Preparez l'attente avec un minuteur, un pictogramme 'attendre' et une petite activite calme. Commencez par de courtes durees et felicitez quand l'enfant reste dans la file."
+    },
+    {
+      "id": 128,
+      "question": "Comment utiliser un minuteur visuel ?",
+      "answer": "Le minuteur montre combien de temps reste avant un changement. Expliquez 'quand c'est fini, on passe a l'activite suivante' et associez-le a une image maintenant/apres."
+    },
+    {
+      "id": 129,
+      "question": "Comment annoncer la fin d'une activite ?",
+      "answer": "Prevenez avant la fin avec un pictogramme 'bientot fini' ou un minuteur. Proposez ensuite l'image de l'activite suivante pour rendre la transition plus previsible."
+    },
+    {
+      "id": 130,
+      "question": "Comment gerer un refus d'activite ?",
+      "answer": "Cherchez pourquoi l'enfant refuse: fatigue, peur, difficulte, manque d'interet ou surcharge. Proposez un choix limite, reduisez la demande ou commencez par une etape plus facile."
+    },
+    {
+      "id": 131,
+      "question": "Comment proposer un choix ?",
+      "answer": "Presentez deux options visuelles et nommez-les clairement. Par exemple: 'pomme ou yaourt ?'. Quand l'enfant choisit, donnez l'objet choisi pour renforcer le pouvoir de communication."
+    },
+    {
+      "id": 132,
+      "question": "Comment eviter les questions trop ouvertes ?",
+      "answer": "Les questions ouvertes peuvent etre difficiles. Remplacez 'tu veux quoi ?' par deux choix visuels ou une question simple comme 'tu veux eau ?'."
+    },
+    {
+      "id": 133,
+      "question": "Comment aider un enfant non verbal ?",
+      "answer": "Donnez-lui un moyen de communication fiable: pictogrammes, gestes, objets, pointage ou synthese vocale. Parlez-lui normalement et valorisez toutes les formes de communication."
+    },
+    {
+      "id": 134,
+      "question": "Comment reagir quand l'enfant pointe ?",
+      "answer": "Quand l'enfant pointe, nommez ce qu'il montre et repondez si possible. Vous pouvez ajouter le pictogramme correspondant pour transformer le pointage en communication plus precise."
+    },
+    {
+      "id": 135,
+      "question": "Comment encourager l'imitation ?",
+      "answer": "Imitez d'abord l'enfant pour entrer dans son jeu, puis proposez une action simple a imiter. Les gestes, sons, mouvements et petits jeux repetitifs sont de bons supports."
+    },
+    {
+      "id": 136,
+      "question": "Comment travailler le tour de role ?",
+      "answer": "Utilisez des images 'a moi' et 'a toi' pendant un jeu motivant. Commencez avec des tours tres courts, puis augmentez la duree quand l'enfant comprend la sequence."
+    },
+    {
+      "id": 137,
+      "question": "Comment apprendre a demander encore ?",
+      "answer": "Choisissez une activite que l'enfant aime, arretez-la quelques secondes, montrez 'encore', puis relancez l'activite quand il utilise le pictogramme ou le geste."
+    },
+    {
+      "id": 138,
+      "question": "Comment apprendre a dire fini ?",
+      "answer": "Utilisez le pictogramme 'fini' a la fin des repas, jeux ou exercices. Dites le mot, rangez l'objet et montrez l'activite suivante pour donner du sens a la fin."
+    },
+    {
+      "id": 139,
+      "question": "Comment travailler les couleurs ?",
+      "answer": "Associez chaque couleur a un objet reel et a une image. Demandez des choix simples comme 'rouge ou bleu ?' et utilisez des activites de tri courtes."
+    },
+    {
+      "id": 140,
+      "question": "Comment travailler les animaux ?",
+      "answer": "Utilisez des images, sons et figurines si possible. Associez l'animal a son nom, son cri et une action simple pour rendre l'apprentissage plus concret."
+    },
+    {
+      "id": 141,
+      "question": "Comment travailler les aliments ?",
+      "answer": "Pendant le repas, montrez les pictogrammes des aliments reels. L'enfant peut demander, refuser, choisir ou commenter avec des images comme pomme, pain, eau, encore ou fini."
+    },
+    {
+      "id": 142,
+      "question": "Comment travailler les lieux ?",
+      "answer": "Utilisez des photos ou pictogrammes des lieux familiers: maison, ecole, parc, toilettes, medecin. Associez chaque lieu a une routine ou a un deplacement reel."
+    },
+    {
+      "id": 143,
+      "question": "Comment travailler les personnes ?",
+      "answer": "Ajoutez les personnes importantes: maman, papa, enseignant, therapeute, frere, soeur. Les photos peuvent etre plus faciles au debut que les pictogrammes generiques."
+    },
+    {
+      "id": 144,
+      "question": "Comment gerer une hypersensibilite a la lumiere ?",
+      "answer": "Diminuez les lumieres fortes, evitez les clignotements et proposez des lunettes adaptees si necessaire. Un espace avec lumiere douce peut aider l'enfant a se reguler."
+    },
+    {
+      "id": 145,
+      "question": "Comment gerer une hypersensibilite au toucher ?",
+      "answer": "Respectez les refus de contact et prevenez avant de toucher l'enfant. Proposez des textures tolerables et evitez les vetements ou activites qui provoquent une reaction forte."
+    },
+    {
+      "id": 146,
+      "question": "Comment gerer les odeurs difficiles ?",
+      "answer": "Certaines odeurs peuvent etre envahissantes. Identifiez les odeurs problematiques, aerez l'espace et preparez l'enfant avant les lieux comme cantine, magasin ou salle de bain."
+    },
+    {
+      "id": 147,
+      "question": "Comment aider pendant les repas bruyants ?",
+      "answer": "Installez l'enfant dans un coin plus calme, reduisez les stimulations et autorisez une pause si necessaire. Un casque anti-bruit ou une place stable peut ameliorer le repas."
+    },
+    {
+      "id": 148,
+      "question": "Comment preparer une fete d'anniversaire ?",
+      "answer": "Expliquez les etapes avec des images: arriver, dire bonjour, jouer, gateau, cadeau, retour. Prevoyez un coin calme et une duree limitee si l'enfant fatigue vite."
+    },
+    {
+      "id": 149,
+      "question": "Comment gerer les vacances ?",
+      "answer": "Les vacances changent les reperes. Preparez un planning simple, gardez quelques routines stables et montrez des photos des lieux avant le depart."
+    },
+    {
+      "id": 150,
+      "question": "Comment preparer un trajet en voiture ?",
+      "answer": "Montrez la destination, expliquez la duree et prevoyez une activite calme. Une sequence visuelle depart, route, pause, arrivee peut rassurer l'enfant."
+    },
+    {
+      "id": 151,
+      "question": "Comment preparer un trajet en bus ?",
+      "answer": "Expliquez les etapes: attendre, monter, s'asseoir, rester calme, descendre. Les pictogrammes attente, bruit, stop et arrivee peuvent aider pendant le trajet."
+    },
+    {
+      "id": 152,
+      "question": "Comment gerer un changement d'emploi du temps ?",
+      "answer": "Montrez le changement avec une image speciale et expliquez ce qui reste pareil. Une phrase simple comme 'aujourd'hui, pas parc, apres maison' peut aider."
+    },
+    {
+      "id": 153,
+      "question": "Comment utiliser une carte maintenant apres ?",
+      "answer": "La carte maintenant/apres montre l'activite en cours puis l'activite suivante. Elle aide a accepter une demande car l'enfant voit ce qui arrivera ensuite."
+    },
+    {
+      "id": 154,
+      "question": "Comment aider quand l'enfant perseverre sur un sujet ?",
+      "answer": "Reconnaissez son interet, puis fixez un temps limite ou un moment dedie. Utilisez ensuite un pictogramme transition pour passer doucement a une autre activite."
+    },
+    {
+      "id": 155,
+      "question": "Comment utiliser les interets specifiques ?",
+      "answer": "Les interets de l'enfant peuvent motiver les apprentissages. Utilisez-les pour travailler les demandes, les couleurs, les nombres, les tours de role ou les phrases."
+    },
+    {
+      "id": 156,
+      "question": "Comment aider un enfant qui echolalie ?",
+      "answer": "L'echolalie peut etre une tentative de communication. Reformulez en phrase utile: si l'enfant repete 'tu veux eau ?', vous pouvez modeliser 'je veux eau'."
+    },
+    {
+      "id": 157,
+      "question": "Comment repondre a une echolalie ?",
+      "answer": "Cherchez le sens possible derriere la repetition: demande, stress, souvenir ou besoin de temps. Repondez avec des mots simples et proposez le pictogramme correspondant."
+    },
+    {
+      "id": 158,
+      "question": "Comment travailler la comprehension des consignes scolaires ?",
+      "answer": "Transformez les consignes en etapes visuelles. Par exemple: ouvrir cahier, prendre crayon, entourer, ranger. Une consigne imagee est souvent plus accessible."
+    },
+    {
+      "id": 159,
+      "question": "Comment aider pour les devoirs de lecture ?",
+      "answer": "Utilisez des sessions tres courtes avec images et pauses. Lisez une petite partie, associez les mots importants a des pictogrammes, puis terminez par une reussite."
+    },
+    {
+      "id": 160,
+      "question": "Comment aider pour les mathematiques ?",
+      "answer": "Utilisez des objets concrets, images et manipulations. Les quantites sont plus faciles a comprendre quand l'enfant peut toucher, compter et voir les elements."
+    },
+    {
+      "id": 161,
+      "question": "Comment suivre les mots appris ?",
+      "answer": "Notez les pictogrammes utilises spontanement, ceux qui demandent de l'aide et ceux qui ne sont pas compris. Auto Connect peut aider a observer les frequences d'utilisation."
+    },
+    {
+      "id": 162,
+      "question": "Comment savoir si un pictogramme est compris ?",
+      "answer": "Un pictogramme est mieux compris si l'enfant l'utilise dans plusieurs contextes ou reagit correctement quand vous le montrez. Testez sans pression et observez les reponses."
+    },
+    {
+      "id": 163,
+      "question": "Comment corriger une phrase sans decourager ?",
+      "answer": "Ne dites pas seulement 'non'. Reformulez positivement: l'enfant dit 'moi pomme', vous dites 'je veux une pomme' puis vous valorisez la demande."
+    },
+    {
+      "id": 164,
+      "question": "Comment utiliser la correction IA ?",
+      "answer": "La correction IA peut reformuler une phrase produite avec pictogrammes et texte. Utilisez-la comme modele, puis relisez la phrase avec l'enfant avant de la valider."
+    },
+    {
+      "id": 165,
+      "question": "Comment interpreter les recommandations IA ?",
+      "answer": "Les recommandations IA sont des suggestions basees sur les donnees disponibles. Elles doivent etre verifiees par l'adulte et adaptees au contexte reel de l'enfant."
+    },
+    {
+      "id": 166,
+      "question": "Comment utiliser les statistiques IA ?",
+      "answer": "Les statistiques aident a reperer les pictogrammes frequents, les categories peu utilisees et les progres. Utilisez-les pour choisir un petit objectif de la prochaine seance."
+    },
+    {
+      "id": 167,
+      "question": "Comment choisir un objectif de communication ?",
+      "answer": "Choisissez un objectif concret et mesurable, par exemple demander de l'aide trois fois dans la journee ou utiliser deux pictogrammes pour demander une boisson."
+    },
+    {
+      "id": 168,
+      "question": "Comment travailler un objectif trop difficile ?",
+      "answer": "Decoupez l'objectif en etapes plus petites. Si 'faire une phrase' est trop difficile, commencez par choisir un pictogramme, puis deux, puis une phrase courte."
+    },
+    {
+      "id": 169,
+      "question": "Comment valoriser les progres ?",
+      "answer": "Felicitez l'effort de maniere precise: 'tu as demande aide avec l'image'. Montrez aussi les progres aux parents ou therapeutes pour renforcer la motivation."
+    },
+    {
+      "id": 170,
+      "question": "Comment eviter de trop aider ?",
+      "answer": "Donnez d'abord du temps a l'enfant pour repondre. Si besoin, proposez une aide legere comme montrer la zone, puis reduisez progressivement l'aide quand il reussit."
+    },
+    {
+      "id": 171,
+      "question": "Comment utiliser l'attente active ?",
+      "answer": "Apres une question ou un choix, attendez quelques secondes sans repeter trop vite. Ce temps permet a l'enfant de traiter l'information et de repondre."
+    },
+    {
+      "id": 172,
+      "question": "Comment aider un enfant qui se fatigue vite ?",
+      "answer": "Reduisez la duree des activites, alternez avec des pauses et gardez un objectif simple. La qualite de l'echange compte plus que la duree."
+    },
+    {
+      "id": 173,
+      "question": "Comment reconnaitre une surcharge avant la crise ?",
+      "answer": "Les signes peuvent etre agitation, mains sur les oreilles, fuite, pleurs, regard fuyant ou refus soudain. Agissez tot avec une pause, un espace calme ou une demande reduite."
+    },
+    {
+      "id": 174,
+      "question": "Comment creer un coin calme ?",
+      "answer": "Choisissez un endroit peu bruyant avec peu d'objets, une lumiere douce et des outils rassurants. Le coin calme doit etre presente comme une aide, pas comme une punition."
+    },
+    {
+      "id": 175,
+      "question": "Comment utiliser un objet sensoriel ?",
+      "answer": "Un objet sensoriel peut aider l'enfant a se reguler. Choisissez-le selon ses preferences et fixez des regles simples pour l'utiliser sans interrompre toute l'activite."
+    },
+    {
+      "id": 176,
+      "question": "Comment gerer les comportements dangereux ?",
+      "answer": "Mettez d'abord l'enfant et les autres en securite. Notez les declencheurs, reduisez les risques et demandez l'aide d'un professionnel si le comportement se repete ou s'aggrave."
+    },
+    {
+      "id": 177,
+      "question": "Comment reagir si l'enfant se tape ?",
+      "answer": "Protegez-le calmement, reduisez les stimulations et cherchez la cause: douleur, frustration, surcharge ou demande impossible. Proposez un moyen de communication comme 'mal', 'pause' ou 'aide'."
+    },
+    {
+      "id": 178,
+      "question": "Comment reagir si l'enfant mord ?",
+      "answer": "Restez calme, securisez la situation et observez le contexte. Certains enfants mordent par surcharge, besoin sensoriel ou frustration; une alternative sure et une demande visuelle peuvent aider."
+    },
+    {
+      "id": 179,
+      "question": "Comment reagir si l'enfant jette les objets ?",
+      "answer": "Retirez les objets dangereux, gardez une consigne courte et proposez une alternative comme lancer une balle dans un panier. Cherchez si le comportement exprime stop, colere ou besoin de mouvement."
+    },
+    {
+      "id": 180,
+      "question": "Comment aider un enfant qui refuse de sortir ?",
+      "answer": "Preparez la sortie avec des images, reduisez la duree et proposez un choix rassurant. Commencez par une sortie tres courte et valorisez le retour au calme."
+    },
+    {
+      "id": 181,
+      "question": "Comment aider un enfant qui refuse d'entrer en classe ?",
+      "answer": "Preparez l'arrivee avec une sequence visuelle et un adulte referent. Une transition calme, un objet rassurant et une premiere activite connue peuvent faciliter l'entree."
+    },
+    {
+      "id": 182,
+      "question": "Comment apprendre a demander une pause ?",
+      "answer": "Ajoutez un pictogramme 'pause' accessible. Quand l'enfant montre des signes de fatigue, guidez-le vers ce pictogramme puis offrez une courte pause pour renforcer son utilisation."
+    },
+    {
+      "id": 183,
+      "question": "Comment eviter la dependance aux recompenses ?",
+      "answer": "Au debut, les recompenses peuvent aider. Ensuite, espacez-les progressivement et remplacez-les par des felicitations, de l'autonomie ou le plaisir naturel de reussir."
+    },
+    {
+      "id": 184,
+      "question": "Comment aider la generalisation ?",
+      "answer": "Travaillez le meme pictogramme dans plusieurs lieux et avec plusieurs personnes. Par exemple 'eau' a la maison, a l'ecole et au parc aide a comprendre que le mot reste le meme."
+    },
+    {
+      "id": 185,
+      "question": "Comment impliquer les freres et soeurs ?",
+      "answer": "Expliquez les pictogrammes de base aux freres et soeurs et proposez des jeux simples avec tour de role. Ils peuvent participer sans devenir responsables de l'accompagnement."
+    },
+    {
+      "id": 186,
+      "question": "Comment expliquer l'autisme a la famille ?",
+      "answer": "Expliquez que l'enfant percoit et traite certaines informations differemment. Donnez des exemples concrets de ce qui aide: routine, patience, pictogrammes, calme et consignes simples."
+    },
+    {
+      "id": 187,
+      "question": "Comment gerer les remarques des autres ?",
+      "answer": "Preparez une phrase simple: 'mon enfant a besoin de temps et de calme'. Vous n'etes pas oblige de tout expliquer; la priorite reste le bien-etre de l'enfant."
+    },
+    {
+      "id": 188,
+      "question": "Comment aider les parents a rester patients ?",
+      "answer": "Fixez de petits objectifs, acceptez les jours difficiles et demandez du soutien. Noter les progres aide a voir les avancees meme quand elles semblent lentes."
+    },
+    {
+      "id": 189,
+      "question": "Comment travailler avec un therapeute a distance ?",
+      "answer": "Partagez les observations, captures de progres et questions precises. Une seance a distance fonctionne mieux avec des objectifs courts et des supports prepares a l'avance."
+    },
+    {
+      "id": 190,
+      "question": "Comment choisir la taille de la grille ?",
+      "answer": "Choisissez une grille selon l'attention, la vision et le niveau de l'enfant. Si l'enfant cherche difficilement, reduisez le nombre d'images; s'il maitrise, ajoutez progressivement."
+    },
+    {
+      "id": 191,
+      "question": "Comment savoir si la grille doit changer ?",
+      "answer": "Si l'enfant utilise souvent les memes pictogrammes et cherche facilement, vous pouvez ajouter des images. S'il se perd ou se frustre, simplifiez la grille."
+    },
+    {
+      "id": 192,
+      "question": "Comment personnaliser une voix ?",
+      "answer": "Choisissez une voix claire, agreable et adaptee a la langue de l'enfant. Testez le volume et la vitesse pour que la phrase soit facile a entendre."
+    },
+    {
+      "id": 193,
+      "question": "Comment utiliser plusieurs langues ?",
+      "answer": "Gardez les pictogrammes stables et associez-les aux mots de chaque langue selon le contexte familial. Evitez de melanger trop de langues dans une meme consigne au debut."
+    },
+    {
+      "id": 194,
+      "question": "Comment corriger les erreurs de selection ?",
+      "answer": "Si l'enfant choisit une image incorrecte, reformulez doucement et montrez le bon choix sans punir. L'erreur fait partie de l'apprentissage."
+    },
+    {
+      "id": 195,
+      "question": "Comment eviter que l'enfant appuie au hasard ?",
+      "answer": "Reduisez le nombre de pictogrammes, augmentez leur taille et proposez des choix utiles. Observez si l'enfant appuie au hasard par jeu, fatigue ou incomprehension."
+    },
+    {
+      "id": 196,
+      "question": "Comment utiliser l'historique des phrases ?",
+      "answer": "L'historique montre les phrases produites et les besoins frequents. Utilisez-le pour choisir les prochains pictogrammes, preparer une seance ou partager les progres avec le therapeute."
+    },
+    {
+      "id": 197,
+      "question": "Comment proteger les donnees de l'enfant ?",
+      "answer": "Limitez l'acces aux personnes autorisees, utilisez des comptes separes et evitez de partager des informations sensibles inutilement. Les donnees de l'enfant doivent rester confidentielles."
+    },
+    {
+      "id": 198,
+      "question": "Comment faire une seance courte efficace ?",
+      "answer": "Choisissez un objectif, deux ou trois pictogrammes et une activite motivante. Une seance de 5 minutes bien ciblee peut etre plus utile qu'une longue seance fatigante."
+    },
+    {
+      "id": 199,
+      "question": "Comment terminer une seance positivement ?",
+      "answer": "Terminez par une reussite facile, felicitez l'enfant et montrez le pictogramme 'fini'. Cela aide a garder une association positive avec l'activite."
+    },
+    {
+      "id": 200,
+      "question": "Comment utiliser Auto Connect avec les parents et therapeutes ?",
+      "answer": "Les parents peuvent observer les besoins du quotidien et les therapeutes peuvent ajuster les objectifs. Auto Connect sert de lien entre les observations, les pictogrammes, les phrases et les recommandations."
+    },
+    {
+      "id": 201,
+      "question": "Comment savoir quoi travailler ensuite ?",
+      "answer": "Regardez les besoins frequents, les pictogrammes deja maitrises et les situations difficiles. Travaillez ensuite un petit objectif utile, comme demander aide, exprimer une emotion ou construire une phrase de deux mots."
+    }
+  ]
+}

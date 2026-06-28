@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tactile Talk - Favorites</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#fff1e8",
+                        "primary-fixed": "#c9e6ff",
+                        "on-error": "#ffffff",
+                        "on-background": "#231a12",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fff8f5",
+                        "surface-bright": "#fff8f5",
+                        "primary-fixed-dim": "#89ceff",
+                        "on-secondary-container": "#007432",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#73787b",
+                        "secondary-container": "#6bff8f",
+                        "secondary": "#006e2f",
+                        "on-primary-container": "#0073a5",
+                        "secondary-fixed-dim": "#4ae176",
+                        "surface-dim": "#e8d7ca",
+                        "on-tertiary-container": "#986000",
+                        "tertiary-container": "#ffecda",
+                        "on-tertiary-fixed": "#2a1700",
+                        "inverse-on-surface": "#ffeee1",
+                        "surface-tint": "#006591",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#f7e5d8",
+                        "on-secondary-fixed-variant": "#005321",
+                        "on-primary-fixed-variant": "#004c6e",
+                        "tertiary": "#855300",
+                        "surface-container-highest": "#f1dfd3",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#392e26",
+                        "surface-container": "#fdebde",
+                        "on-surface": "#231a12",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "outline-variant": "#c3c7cb",
+                        "on-primary-fixed": "#001e2f",
+                        "secondary-fixed": "#6bff8f",
+                        "inverse-primary": "#89ceff",
+                        "surface": "#fff8f5",
+                        "on-secondary-fixed": "#002109",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "tertiary-fixed": "#ffddb8",
+                        "primary-container": "#e3f1ff",
+                        "on-surface-variant": "#43474b",
+                        "primary": "#006591",
+                        "surface-variant": "#f1dfd3",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .symbol-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fff8f5;
+        }
+        .breathable-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body class="text-on-background antialiased overflow-hidden h-screen flex flex-col">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 bg-orange-50/80 dark:bg-slate-950/80 backdrop-blur-lg docked full-width h-20 shadow-xl shadow-stone-200/20 dark:shadow-none">
+<div class="flex items-center gap-6">
+<span class="text-2xl font-black text-sky-900 dark:text-sky-100">Tactile Talk</span>
+<nav class="hidden md:flex items-center gap-8 text-stone-500 font-semibold">
+<span class="text-sky-800 border-b-4 border-sky-600 pb-1">Favorites</span>
+<span class="hover:text-sky-700 transition-colors cursor-pointer">Sentence Builder</span>
+<span class="hover:text-sky-700 transition-colors cursor-pointer">History</span>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="flex items-center bg-surface-container-low rounded-full px-4 py-2 border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface-variant mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Search pictograms..." type="text"/>
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="keyboard">keyboard</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-3 rounded-full hover:bg-orange-100 transition-colors text-sky-700"><span class="material-symbols-outlined" data-icon="volume_up">volume_up</span></button>
+<button class="p-3 rounded-full hover:bg-orange-100 transition-colors text-sky-700"><span class="material-symbols-outlined" data-icon="backspace">backspace</span></button>
+<button class="p-3 rounded-full hover:bg-orange-100 transition-colors text-error"><span class="material-symbols-outlined" data-icon="delete_sweep">delete_sweep</span></button>
+</div>
+</div>
+</header>
+<div class="flex flex-1 pt-20 overflow-hidden">
+<!-- Side Navigation Shell -->
+<aside class="fixed left-0 top-20 h-[calc(100vh-5rem)] flex flex-col py-8 bg-orange-50 dark:bg-slate-950 rounded-r-[3rem] w-72 shadow-stone-200/20 z-40">
+<div class="px-8 mb-8">
+<h2 class="text-xl font-bold text-sky-900 dark:text-sky-100">Library</h2>
+<p class="text-stone-500 text-sm">Browse Categories</p>
+</div>
+<nav class="flex flex-col gap-1 overflow-y-auto">
+<div class="mx-2 px-6 py-4 flex items-center gap-4 text-stone-600 hover:bg-orange-200/50 rounded-full cursor-pointer transition-all">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-medium">Home</span>
+</div>
+<div class="mx-2 px-6 py-4 flex items-center gap-4 bg-[#fdebde] text-sky-900 rounded-full cursor-pointer active:translate-x-1 transition-transform">
+<span class="material-symbols-outlined symbol-fill" data-icon="star">star</span>
+<span class="font-medium text-lg">Favorites</span>
+</div>
+<div class="mx-2 px-6 py-4 flex items-center gap-4 text-stone-600 hover:bg-orange-200/50 rounded-full cursor-pointer transition-all">
+<span class="material-symbols-outlined" data-icon="mood">mood</span>
+<span class="font-medium">Feelings</span>
+</div>
+<div class="mx-2 px-6 py-4 flex items-center gap-4 text-stone-600 hover:bg-orange-200/50 rounded-full cursor-pointer transition-all">
+<span class="material-symbols-outlined" data-icon="directions_run">directions_run</span>
+<span class="font-medium">Actions</span>
+</div>
+<div class="mx-2 px-6 py-4 flex items-center gap-4 text-stone-600 hover:bg-orange-200/50 rounded-full cursor-pointer transition-all">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-medium">People</span>
+</div>
+<div class="mx-2 px-6 py-4 flex items-center gap-4 text-stone-600 hover:bg-orange-200/50 rounded-full cursor-pointer transition-all">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-medium">Food</span>
+</div>
+<div class="mx-2 px-6 py-4 flex items-center gap-4 text-stone-600 hover:bg-orange-200/50 rounded-full cursor-pointer transition-all">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-medium">Settings</span>
+</div>
+</nav>
+<div class="mt-auto px-8 py-6">
+<div class="flex items-center gap-3 p-3 bg-surface-container rounded-2xl">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Portrait of a smiling young boy with soft lighting, warm tones, high quality photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLDSugwRUrz7wKAUiYO--2WfblZ2uVU6JZXhgO41jS59tlm1cp9F1J43gUp7wEvyBvvo9sgA4dA0G7hYOBzydmPPYu70qntveqU07fjN2QsyQCj4KqbzuVeTpIhs4clBGC9T8wFzyqpZzMWWPSUuBrrF2MItY_icRvGSp8RU6uZY01GvO4Abrc8GibdKJD_u6orxEQDN14eRrWKB1YxCqyOJEIY9YYDPPf_r-9h34WI4hrZLbYs62uhiR2zPGwj5a-M1nhGEVqQFkv"/>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Leo's Tablet</p>
+<p class="text-[10px] text-on-surface-variant">Active Now</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-72 flex-1 flex flex-col h-full bg-background relative overflow-y-auto">
+<!-- Context Bar & Sentence Area -->
+<div class="sticky top-0 z-30 p-6 space-y-4 bg-background/90 backdrop-blur-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-stone-500 font-medium">
+<span>Pictograms</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-bold">Favorites</span>
+</div>
+<div class="flex gap-2 p-1 bg-surface-container-low rounded-full">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-xl hover:bg-surface-container transition-all">😊</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-xl hover:bg-surface-container transition-all">☹️</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-xl hover:bg-surface-container transition-all">🤔</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-xl hover:bg-surface-container transition-all">😮</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-xl hover:bg-surface-container transition-all">😠</button>
+</div>
+</div>
+<!-- Sentence Bar -->
+<div class="flex items-center gap-4 bg-surface-container-lowest rounded-full p-2 pl-6 shadow-sm border border-outline-variant/10">
+<div class="flex flex-1 items-center gap-3 overflow-x-auto whitespace-nowrap scrollbar-hide py-2">
+<span class="text-xl font-medium text-stone-400">Build your message here...</span>
+</div>
+<button class="flex items-center gap-2 px-8 py-4 bg-gradient-to-br from-primary to-on-primary-container text-white rounded-full font-bold text-lg shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="campaign">campaign</span>
+                        Speak
+                    </button>
+</div>
+</div>
+<!-- Pictogram Grid -->
+<div class="px-8 pb-32">
+<div class="breathable-grid">
+<!-- Fav Cards (Generated based on request) -->
+<script>
+                        const favorites = [
+                            { label: "that's cool", icon: "thumb_up", color: "bg-sky-100 text-sky-800" },
+                            { label: "good idea", icon: "lightbulb", color: "bg-amber-100 text-amber-800" },
+                            { label: "too good", icon: "stars", color: "bg-emerald-100 text-emerald-800" },
+                            { label: "that's great", icon: "verified", color: "bg-sky-100 text-sky-800" },
+                            { label: "woohoo", icon: "celebration", color: "bg-purple-100 text-purple-800" },
+                            { label: "it's a joke", icon: "theater_comedy", color: "bg-pink-100 text-pink-800" },
+                            { label: "that's funny", icon: "sentiment_very_satisfied", color: "bg-yellow-100 text-yellow-800" },
+                            { label: "i'm just", icon: "person", color: "bg-stone-100 text-stone-800" },
+                            { label: "really?", icon: "question_mark", color: "bg-orange-100 text-orange-800" },
+                            { label: "yeah", icon: "check_circle", color: "bg-green-100 text-green-800" },
+                            { label: "probably", icon: "dynamic_form", color: "bg-blue-100 text-blue-800" },
+                            { label: "bla bla bla", icon: "forum", color: "bg-stone-100 text-stone-800" },
+                            { label: "boring!", icon: "sentiment_dissatisfied", color: "bg-gray-100 text-gray-800" },
+                            { label: "I love it", icon: "favorite", color: "bg-red-100 text-red-800" },
+                            { label: "hey wait a minute", icon: "back_hand", color: "bg-orange-100 text-orange-800" },
+                            { label: "I like to", icon: "add_reaction", color: "bg-teal-100 text-teal-800" },
+                            { label: "I don't like it", icon: "thumb_down", color: "bg-red-50 text-red-700" },
+                            { label: "I can't believe that!", icon: "shocked_face", color: "bg-indigo-100 text-indigo-800" },
+                            { label: "oh no! not", icon: "cancel", color: "bg-red-50 text-red-800" },
+                            { label: "uh oh", icon: "warning", color: "bg-amber-50 text-amber-900" },
+                            { label: "oops", icon: "healing", color: "bg-orange-50 text-orange-700" },
+                            { label: "hot mess", icon: "cyclone", color: "bg-rose-100 text-rose-800" },
+                            { label: "I have had enough", icon: "front_hand", color: "bg-orange-100 text-orange-900" },
+                            { label: "don't disturb me", icon: "do_not_disturb_on", color: "bg-slate-100 text-slate-800" },
+                            { label: "I can do it myself", icon: "accessibility_new", color: "bg-green-100 text-green-900" },
+                            { label: "too bad", icon: "heart_broken", color: "bg-slate-100 text-slate-700" },
+                            { label: "please stop talking", icon: "block", color: "bg-red-50 text-red-900" },
+                            { label: "I disagree", icon: "dangerous", color: "bg-orange-100 text-orange-900" },
+                            { label: "waw!", icon: "auto_awesome", color: "bg-violet-100 text-violet-800" },
+                            { label: "wow!", icon: "explosion", color: "bg-yellow-100 text-yellow-900" },
+                            { label: "that's", icon: "point_scan", color: "bg-stone-100 text-stone-700" },
+                            { label: "yay!", icon: "temp_preferences_custom", color: "bg-lime-100 text-lime-800" },
+                            { label: "totally agree", icon: "handshake", color: "bg-teal-100 text-teal-900" },
+                            { label: "maybe", icon: "help", color: "bg-sky-50 text-sky-700" },
+                            { label: "actually", icon: "info", color: "bg-blue-50 text-blue-900" },
+                            { label: "whatever", icon: "shortcut", color: "bg-slate-200 text-slate-900" },
+                            { label: "well", icon: "more_horiz", color: "bg-stone-200 text-stone-800" },
+                            { label: "oh no!", icon: "error", color: "bg-red-100 text-red-900" },
+                            { label: "that is crazy", icon: "psychology", color: "bg-fuchsia-100 text-fuchsia-800" },
+                            { label: "that sucks", icon: "mood_bad", color: "bg-stone-200 text-stone-900" },
+                            { label: "that's terrible", icon: "report", color: "bg-red-200 text-red-950" },
+                            { label: "no way!", icon: "do_not_disturb_off", color: "bg-orange-200 text-orange-950" },
+                            { label: "of course", icon: "task_alt", color: "bg-emerald-100 text-emerald-950" },
+                            { label: "what do you mean?", icon: "quiz", color: "bg-sky-100 text-sky-900" },
+                            { label: "boo", icon: "ghost", color: "bg-slate-300 text-slate-900" },
+                            { label: "buzz off", icon: "pest_control", color: "bg-amber-200 text-amber-950" },
+                            { label: "dude!", icon: "sentiment_satisfied", color: "bg-blue-100 text-blue-900" },
+                            { label: "LOL", icon: "sentiment_very_satisfied", color: "bg-yellow-100 text-yellow-950" },
+                            { label: "OMG", icon: "surprised_face", color: "bg-purple-200 text-purple-950" }
+                        ];
+
+                        favorites.forEach(item => {
+                            document.write(`
+                                <button class="flex flex-col items-center justify-center gap-3 p-4 bg-surface-container-low rounded-xl shadow-sm hover:bg-surface-container transition-all active:scale-95 group border border-transparent hover:border-outline-variant/30">
+                                    <div class="w-16 h-16 rounded-2xl ${item.color} flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                                        <span class="material-symbols-outlined text-4xl" data-icon="${item.icon}">${item.icon}</span>
+                                    </div>
+                                    <span class="text-sm font-bold text-center leading-tight min-h-[2.5rem] flex items-center uppercase tracking-tighter">${item.label}</span>
+                                </button>
+                            `);
+                        });
+                    </script>
+</div>
+</div>
+<!-- Floating Quick Bar -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-surface-container-lowest/80 backdrop-blur-xl px-6 py-4 rounded-full shadow-2xl border border-white/50 z-50">
+<button class="flex flex-col items-center gap-1 group">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined symbol-fill" data-icon="undo">undo</span>
+</div>
+<span class="text-[10px] font-bold">Undo</span>
+</button>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<button class="flex flex-col items-center gap-1 group">
+<div class="w-12 h-12 rounded-full bg-primary-container text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</div>
+<span class="text-[10px] font-bold">History</span>
+</button>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<button class="flex flex-col items-center gap-1 group">
+<div class="w-14 h-14 rounded-full bg-gradient-to-tr from-primary to-sky-400 text-white flex items-center justify-center shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl symbol-fill" data-icon="mic">mic</span>
+</div>
+<span class="text-[10px] font-bold">Listen</span>
+</button>
+</div>
+</main>
+</div>
+</body></html>

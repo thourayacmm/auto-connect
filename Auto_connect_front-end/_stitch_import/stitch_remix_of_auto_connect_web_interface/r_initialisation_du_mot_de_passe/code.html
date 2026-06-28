@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auto Connect - Réinitialiser le mot de passe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#00266e",
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-error-container": "#570008",
+                        "surface": "#f3f7fb",
+                        "surface-variant": "#d7dee3",
+                        "secondary": "#006947",
+                        "tertiary": "#815100",
+                        "secondary-container": "#69f6b8",
+                        "on-surface": "#2a2f32",
+                        "on-surface-variant": "#575c60",
+                        "outline-variant": "#a9aeb1",
+                        "on-error": "#ffefee",
+                        "background": "#f3f7fb",
+                        "inverse-surface": "#0a0f12",
+                        "inverse-primary": "#618bff",
+                        "error-dim": "#9f0519",
+                        "on-tertiary-fixed-variant": "#563400",
+                        "on-secondary-container": "#005a3c",
+                        "error": "#b31b25",
+                        "tertiary-fixed-dim": "#e79400",
+                        "secondary-dim": "#005c3d",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#73777b",
+                        "surface-container-low": "#ecf1f6",
+                        "primary-fixed": "#7b9cff",
+                        "on-primary-fixed": "#000000",
+                        "on-primary": "#f1f2ff",
+                        "on-background": "#2a2f32",
+                        "tertiary-fixed": "#f8a010",
+                        "surface-container-highest": "#d7dee3",
+                        "on-primary-container": "#001e5a",
+                        "primary-dim": "#0046bb",
+                        "surface-dim": "#ced5db",
+                        "primary-container": "#7b9cff",
+                        "error-container": "#fb5151",
+                        "tertiary-dim": "#714600",
+                        "surface-container": "#e3e9ee",
+                        "secondary-fixed-dim": "#58e7ab",
+                        "on-tertiary-container": "#4a2c00",
+                        "on-tertiary": "#fff0e3",
+                        "on-secondary": "#c8ffe0",
+                        "surface-container-high": "#dde3e8",
+                        "surface-bright": "#f3f7fb",
+                        "surface-tint": "#0050d4",
+                        "on-secondary-fixed": "#00452d",
+                        "secondary-fixed": "#69f6b8",
+                        "tertiary-container": "#f8a010",
+                        "on-secondary-fixed-variant": "#006544",
+                        "primary-fixed-dim": "#658eff",
+                        "inverse-on-surface": "#999da1",
+                        "primary": "#0050d4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .vitality-gradient {
+            background: linear-gradient(135deg, #0050d4 0%, #7b9cff 100%);
+        }
+        .soft-peach-surface {
+            background-color: #fff8f5; /* Light peach tone as requested */
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="soft-peach-surface font-body text-on-surface min-h-screen flex flex-col">
+<!-- Top Navigation Suppression: Not rendered for transactional screen as per Mandate -->
+<main class="flex-grow flex items-center justify-center p-6 relative overflow-hidden">
+<!-- Abstract Decorative Background Elements (Asymmetry Mandate) -->
+<div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primary-container/10 blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-secondary-container/10 blur-3xl"></div>
+<div class="w-full max-w-md z-10">
+<!-- Branding Header -->
+<div class="text-center mb-10">
+<div class="inline-flex items-center justify-center w-20 h-20 rounded-xl vitality-gradient mb-6 shadow-[0_20px_40px_rgba(0,80,212,0.15)]">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<h1 class="font-headline font-extrabold text-2xl tracking-tight text-on-surface">Auto Connect</h1>
+</div>
+<!-- Central Reset Card -->
+<section class="bg-surface-container-lowest rounded-xl p-8 md:p-10 shadow-[0_20px_40px_rgba(42,47,50,0.04)]">
+<div class="space-y-2 mb-8">
+<h2 class="font-headline font-bold text-xl text-on-surface">Réinitialiser le mot de passe</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        Entrez votre adresse email pour recevoir un lien de réinitialisation
+                    </p>
+</div>
+<form class="space-y-6">
+<!-- Email Input Group -->
+<div class="space-y-2">
+<label class="font-label text-[11px] font-bold uppercase tracking-wider text-on-surface-variant ml-1" for="email">
+                            Adresse Email
+                        </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim/30 text-on-surface placeholder:text-outline transition-all" id="email" name="email" placeholder="nom@exemple.fr" required="" type="email"/>
+</div>
+</div>
+<!-- Primary Action -->
+<button class="w-full h-14 vitality-gradient text-on-primary font-bold rounded-full flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-[0_10px_20px_rgba(0,80,212,0.1)]" type="submit">
+<span>Envoyer le lien</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<!-- Navigation Link -->
+<div class="mt-10 text-center">
+<a class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+                        Retour à la connexion
+                    </a>
+</div>
+</section>
+<!-- Support/Help Footer -->
+<div class="mt-12 flex flex-col items-center gap-4">
+<p class="text-xs text-on-surface-variant">Besoin d'aide ?</p>
+<div class="flex gap-6">
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined text-[16px] text-primary">support_agent</span>
+<span class="text-xs font-semibold text-on-surface-variant">Support 24/7</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Suppression: Transactional/Task-focused screens exclude navigation shell as per "The Destination Rule" -->
+</body></html>

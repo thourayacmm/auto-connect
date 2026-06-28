@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tactile Talk - Feelings</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#43627e",
+                        secondary: "#41665b",
+                        background: "#fff8f1",
+                        surface: "#fff8f1",
+                        "on-background": "#3e310e",
+                        "surface-container": "#ffecc6",
+                        "interactive-light": "#E0F2FE",
+                        "primary-fixed": "#b5d5f6",
+                        "surface-variant": "#f7e0af",
+                        "surface-tint": "#43627e",
+                        error: "#a83836",
+                        "on-surface-variant": "#6e5d37",
+                        "tertiary-fixed-dim": "#d9d0ed",
+                        "on-secondary-fixed": "#21463c",
+                        tertiary: "#625b74",
+                        "primary-container": "#b5d5f6",
+                        "on-tertiary-fixed": "#423c53",
+                        "surface-container-high": "#fbe6bb",
+                        "surface-bright": "#fff8f1",
+                        "surface-dim": "#eed8a8",
+                        "on-primary-fixed-variant": "#34536f",
+                        "on-secondary-fixed-variant": "#3e6358",
+                        "inverse-on-surface": "#a89c83",
+                        "on-surface": "#3e310e",
+                        "on-secondary-container": "#34594e",
+                        "outline-variant": "#c5b082",
+                        "on-primary": "#f6f9ff",
+                        "tertiary-container": "#e7defc",
+                        "secondary-container": "#c3ebdd",
+                        "error-dim": "#67040d",
+                        "inverse-surface": "#130d02",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-dim": "#355a4f",
+                        "on-error": "#fff7f6",
+                        "on-tertiary-fixed-variant": "#5e5870",
+                        "primary-fixed-dim": "#a7c7e7",
+                        "on-secondary": "#e4fff4",
+                        "tertiary-fixed": "#e7defc",
+                        "tertiary-dim": "#565068",
+                        "error-container": "#fa746f",
+                        "inverse-primary": "#b5d5f6",
+                        "surface-container-highest": "#f7e0af",
+                        "on-primary-fixed": "#143751",
+                        "surface-container-low": "#fff2dc",
+                        "primary-dim": "#365671",
+                        "secondary-fixed-dim": "#b5ddcf",
+                        "on-tertiary-container": "#544e66",
+                        "secondary-fixed": "#c3ebdd",
+                        outline: "#8b7950",
+                        "on-tertiary": "#fdf7ff",
+                        "on-primary-container": "#2a4a65",
+                        "on-error-container": "#6e0a12"
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        lg: "2rem",
+                        xl: "3rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Plus Jakarta Sans"],
+                        body: ["Plus Jakarta Sans"],
+                        label: ["Plus Jakarta Sans"],
+                        display: "Plus Jakarta Sans"
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .symbol-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .pictogram-card:active { transform: scale(0.92); }
+        .sidebar-item-active { background-color: #E0F2FE; color: #0369A1; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .success-gradient { background: linear-gradient(135deg, #10B981 0%, #34D399 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen antialiased overflow-hidden flex flex-col">
+<!-- Top Navigation -->
+<header class="bg-white/80 backdrop-blur-md flex justify-between items-center px-8 w-full z-40 top-0 h-16 border-b border-orange-100 flex-shrink-0">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 mr-4">
+<button class="p-2 text-slate-500 hover:bg-interactive-light rounded-full transition-all" title="Go Back">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-interactive-light rounded-full transition-all" title="Home">
+<span class="material-symbols-outlined">home</span>
+</button>
+</div>
+<span class="text-2xl font-black text-primary tracking-tight">Tactile Talk</span>
+<div class="hidden md:flex ml-8 items-center gap-6">
+<span class="text-slate-400 hover:text-primary transition-all cursor-pointer font-semibold">Favorites</span>
+<span class="text-primary border-b-2 border-primary font-semibold cursor-pointer">Pictograms</span>
+<span class="text-slate-400 hover:text-primary transition-all cursor-pointer">History</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-400 hover:bg-interactive-light rounded-full transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-400 hover:bg-interactive-light rounded-full transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary/20 flex items-center justify-center overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLDSugwRUrz7wKAUiYO--2WfblZ2uVU6JZXhgO41jS59tlm1cp9F1J43gUp7wEvyBvvo9sgA4dA0G7hYOBzydmPPYu70qntveqU07fjN2QsyQCj4KqbzuVeTpIhs4clBGC9T8wFzyqpZzMWWPSUuBrrF2MItY_icRvGSp8RU6uZY01GvO4Abrc8GibdKJD_u6orxEQDN14eRrWKB1YxCqyOJEIY9YYDPPf_r-9h34WI4hrZLbYs62uhiR2zPGwj5a-M1nhGEVqQFkv"/>
+</div>
+</div>
+</header>
+<!-- Sentence Builder Section -->
+<section class="bg-white/90 backdrop-blur-md border-b border-orange-100 px-8 py-4 flex-shrink-0 shadow-sm z-30">
+<div class="max-w-[1600px] mx-auto flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<div class="flex-1 flex items-center bg-orange-50/50 rounded-full h-16 px-6 gap-4 border border-orange-100/50">
+<span class="text-slate-400 font-medium">Build your message here...</span>
+<div class="flex-grow"></div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 px-4 py-2 text-slate-500 hover:text-rose-500 hover:bg-rose-50 rounded-full transition-all">
+<span class="material-symbols-outlined text-[20px]">delete_sweep</span>
+<span class="text-xs font-bold uppercase tracking-wider">Clear</span>
+</button>
+<button class="flex items-center gap-1 px-4 py-2 text-slate-500 hover:text-orange-500 hover:bg-orange-50 rounded-full transition-all">
+<span class="material-symbols-outlined text-[20px]">backspace</span>
+<span class="text-xs font-bold uppercase tracking-wider">Delete</span>
+</button>
+</div>
+</div>
+<button class="success-gradient flex items-center justify-center gap-4 text-white rounded-full px-12 h-16 shadow-[0_10px_25px_-5px_rgba(16,185,129,0.4)] active:scale-95 transition-all min-w-[200px]">
+<span class="material-symbols-outlined !text-4xl" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+<span class="text-xl font-black uppercase tracking-[0.2em]">Speak</span>
+</button>
+</div>
+<div class="flex items-center gap-3 overflow-x-auto pb-1 no-scrollbar">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest mr-2">Quick Expressions:</span>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 text-amber-600 border border-amber-100 hover:bg-amber-100 transition-colors">
+<span class="text-lg">😊</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-colors">
+<span class="text-lg">☹️</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100 hover:bg-indigo-100 transition-colors">
+<span class="text-lg">🤔</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 text-orange-600 border border-orange-100 hover:bg-orange-100 transition-colors">
+<span class="text-lg">😮</span>
+</button>
+</div>
+</div>
+</section>
+<div class="flex flex-1 overflow-hidden">
+<!-- Sidebar -->
+<aside class="h-full w-72 bg-white/50 backdrop-blur-sm border-r border-orange-100 flex flex-col py-6">
+<div class="px-6 mb-8">
+<h2 class="text-xl font-extrabold text-slate-800 tracking-tight">Library</h2>
+<p class="text-xs text-primary font-bold uppercase tracking-widest mt-1">Categories</p>
+</div>
+<nav class="space-y-1 px-3">
+<div class="flex items-center gap-3 text-slate-500 px-5 py-3 hover:bg-interactive-light rounded-full transition-colors cursor-pointer">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-medium">Pictograms</span>
+</div>
+<div class="flex items-center gap-3 text-slate-500 px-5 py-3 hover:bg-interactive-light rounded-full transition-colors cursor-pointer">
+<span class="material-symbols-outlined">star</span>
+<span class="font-medium">Favorites</span>
+</div>
+<div class="flex items-center gap-3 sidebar-item-active rounded-full px-5 py-3 transition-all cursor-pointer">
+<span class="material-symbols-outlined symbol-fill">mood</span>
+<span class="font-bold">Emotions</span>
+</div>
+<div class="flex items-center gap-3 text-slate-500 px-5 py-3 hover:bg-interactive-light rounded-full transition-colors cursor-pointer">
+<span class="material-symbols-outlined">directions_run</span>
+<span class="font-medium">Actions</span>
+</div>
+<div class="flex items-center gap-3 text-slate-500 px-5 py-3 hover:bg-interactive-light rounded-full transition-colors cursor-pointer">
+<span class="material-symbols-outlined">group</span>
+<span class="font-medium">People</span>
+</div>
+<div class="flex items-center gap-3 text-slate-500 px-5 py-3 hover:bg-interactive-light rounded-full transition-colors cursor-pointer">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="font-medium">Food</span>
+</div>
+</nav>
+<div class="mt-auto px-6 space-y-4 pt-6 border-t border-orange-100">
+<button class="w-full flex items-center justify-between bg-white border border-orange-100 p-4 rounded-3xl hover:bg-orange-50 transition-colors group">
+<div class="flex flex-col items-start">
+<span class="text-xs font-bold text-primary">ADVANCED SEARCH</span>
+<span class="text-[10px] text-slate-500 text-left">Find hard-to-reach items</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">manage_search</span>
+</button>
+<div class="bg-secondary/10 p-4 rounded-3xl">
+<p class="text-xs font-bold text-secondary mb-1">SERENE TIP</p>
+<p class="text-xs text-slate-600 leading-relaxed">Tap a card to build your sentence. We're here with you.</p>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto relative no-scrollbar">
+<!-- Breadcrumb & Search -->
+<div class="mb-6 flex items-center gap-2 text-sm text-slate-500">
+<span>Pictograms</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-bold">Emotions</span>
+</div>
+<div class="mb-10 max-w-2xl">
+<div class="relative group flex items-center gap-3">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+</div>
+<input class="block w-full pl-12 pr-4 py-4 bg-white border border-orange-100 rounded-full focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-slate-700 shadow-sm" placeholder="Search for pictograms (e.g., 'medicine', 'outside')..." type="text"/>
+<button class="flex-shrink-0 w-14 h-14 bg-white border border-orange-100 rounded-full flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all shadow-sm active:scale-95 group/keyboard">
+<span class="material-symbols-outlined !text-2xl group-hover/keyboard:scale-110 transition-transform">keyboard</span>
+</button>
+</div>
+</div>
+<!-- Positive Feelings Section -->
+<div class="mb-12">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-amber-500 symbol-fill text-3xl">sentiment_very_satisfied</span>
+<h3 class="text-2xl font-extrabold text-slate-800 tracking-tight">Positive Feelings</h3>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">sentiment_very_satisfied</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Happy</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-sky-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">sentiment_satisfied</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Good</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-amber-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">celebration</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Excited</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-purple-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Proud</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-teal-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Calm</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-orange-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">mood</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Silly</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-rose-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Loved</span>
+</button>
+</div>
+</div>
+<!-- Negative Feelings Section -->
+<div class="pb-32">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-rose-500 symbol-fill text-3xl">sentiment_very_dissatisfied</span>
+<h3 class="text-2xl font-extrabold text-slate-800 tracking-tight">Negative Feelings</h3>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-blue-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">mood_bad</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Sad</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-rose-600 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">sentiment_very_dissatisfied</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Angry</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-red-700 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">do_not_disturb_on</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Frustrated</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-indigo-300 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Tired</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-orange-600 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Scared</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-slate-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">sentiment_dissatisfied</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Bored</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-red-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">personal_injury</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Hurt / Pain</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-amber-600 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">error</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Worried</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-indigo-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">theater_comedy</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Confused</span>
+</button>
+</div>
+</div>
+<!-- Floating Quick Bar -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+<div class="bg-white/80 backdrop-blur-md border border-orange-100 shadow-2xl rounded-full px-6 py-3 flex items-center gap-6">
+<button class="flex flex-col items-center gap-1 group">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined symbol-fill">undo</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Undo</span>
+</button>
+<div class="w-px h-8 bg-orange-100"></div>
+<button class="flex flex-col items-center gap-1 group">
+<div class="w-12 h-12 rounded-full bg-primary-container text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">History</span>
+</button>
+<div class="w-px h-8 bg-orange-100"></div>
+<button class="flex flex-col items-center gap-1 group">
+<div class="w-14 h-14 rounded-full bg-gradient-to-tr from-primary to-sky-400 text-white flex items-center justify-center shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl symbol-fill">mic</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Listen</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer Status Bar -->
+<footer class="h-12 bg-white/80 border-t border-orange-100 px-8 flex items-center justify-between flex-shrink-0 z-40">
+<div class="flex gap-8">
+<button class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Library Synced</span>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Session: 08:24</span>
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+</div>
+</footer>
+</body></html>

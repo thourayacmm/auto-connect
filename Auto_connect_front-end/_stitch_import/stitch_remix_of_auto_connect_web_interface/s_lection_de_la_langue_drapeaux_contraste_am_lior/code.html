@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-error-container": "#93000a",
+                "surface-variant": "#f1dfd3",
+                "on-secondary-fixed": "#002109",
+                "surface-container-highest": "#f1dfd3",
+                "primary-container": "#e3f1ff",
+                "on-tertiary-fixed": "#2a1700",
+                "on-tertiary-container": "#986000",
+                "on-primary-container": "#0073a5",
+                "on-tertiary-fixed-variant": "#653e00",
+                "primary-fixed-dim": "#89ceff",
+                "error-container": "#ffdad6",
+                "on-surface": "#231a12",
+                "on-primary": "#ffffff",
+                "on-surface-variant": "#43474b",
+                "inverse-surface": "#392e26",
+                "surface": "#fff8f5",
+                "on-secondary": "#ffffff",
+                "primary-fixed": "#c9e6ff",
+                "secondary-container": "#6bff8f",
+                "on-secondary-container": "#007432",
+                "tertiary": "#855300",
+                "secondary-fixed": "#6bff8f",
+                "inverse-primary": "#89ceff",
+                "on-primary-fixed-variant": "#004c6e",
+                "on-error": "#ffffff",
+                "on-background": "#231a12",
+                "outline-variant": "#c3c7cb",
+                "secondary-fixed-dim": "#4ae176",
+                "primary": "#006591",
+                "tertiary-fixed": "#ffddb8",
+                "secondary": "#006e2f",
+                "outline": "#73787b",
+                "on-secondary-fixed-variant": "#005321",
+                "background": "#fff8f5",
+                "surface-container-low": "#fff1e8",
+                "error": "#ba1a1a",
+                "inverse-on-surface": "#ffeee1",
+                "surface-container-lowest": "#ffffff",
+                "surface-container": "#fdebde",
+                "surface-dim": "#e8d7ca",
+                "surface-container-high": "#f7e5d8",
+                "surface-tint": "#006591",
+                "on-primary-fixed": "#001e2f",
+                "tertiary-fixed-dim": "#ffb95f",
+                "tertiary-container": "#ffecda",
+                "surface-bright": "#fff8f5",
+                "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Plus Jakarta Sans"],
+                "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-editorial-tight {
+            letter-spacing: -0.02em;
+        }
+        .tonal-shift {
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Anchor (As specified in JSON) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 w-full bg-[#fff8f5] dark:bg-stone-950 font-['Plus_Jakarta_Sans'] tracking-tight">
+<div class="text-2xl font-bold text-[#006591] dark:text-[#0ea5e9]">Lumina AAC</div>
+<div class="flex gap-4">
+<button class="p-2 rounded-full hover:bg-[#fdebde] dark:hover:bg-stone-800 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#006591] dark:text-[#0ea5e9]" data-icon="language">language</span>
+</button>
+<button class="p-2 rounded-full hover:bg-[#fdebde] dark:hover:bg-stone-800 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#006591] dark:text-[#0ea5e9]" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-12">
+<!-- Welcome Header -->
+<div class="text-center max-w-2xl mb-16 space-y-4">
+<h1 class="text-4xl md:text-5xl font-extrabold text-editorial-tight text-on-surface">
+                Choisissez votre langue
+            </h1>
+<p class="text-2xl font-medium text-primary opacity-80 text-editorial-tight">
+                Choose your language
+            </p>
+</div>
+<!-- Language Selection Grid (Tactile Empathy Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+<!-- French Option -->
+<button class="group relative flex flex-col items-center p-12 rounded-xl tonal-shift active:scale-[0.98] transition-all duration-300 bg-surface-variant/40 hover:bg-surface-variant/60">
+<div class="w-24 h-24 mb-8 bg-surface-container-lowest rounded-full flex items-center justify-center shadow-sm"><img alt="Flag of France" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ90ygxF_ylPrmTPEPGVByFScXdsJeBMChqcsSzws2kwXRgo7CasC6JkLpHmdi_4SssTmK07u5mK0UFyTRabM-il7g1kmPdYxNJFGIzQAirRHB6mr4Hy4LqUFH-GuClUbv7Le5Z1x601nU67Gg07RtoVlpkvfUr5po04ssgUp9Ci_8SOeHvnoPMkHpLbZt11p-zr70SxvFG8VSW8vB2m6ldhjDWSarq-Mkz1jRspLQMmcSg6mGwLcz3DDB54TeVvMMCCjVtsxE8YtP"/></div>
+<h2 class="text-3xl font-bold text-on-surface mb-2">Français</h2>
+<p class="text-lg text-on-surface font-semibold">French</p>
+<!-- Decoration -->
+<div class="absolute top-4 right-4 opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-4xl" data-icon="translate">translate</span>
+</div>
+</button>
+<!-- English Option -->
+<button class="group relative flex flex-col items-center p-12 rounded-xl tonal-shift active:scale-[0.98] transition-all duration-300 bg-surface-variant/40 hover:bg-surface-variant/60">
+<div class="w-24 h-24 mb-8 bg-surface-container-lowest rounded-full flex items-center justify-center shadow-sm"><img alt="Flag of United Kingdom" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOodzsf2I5vSAISgal9U8au94yW7dPli6Ym5-0isw9Q9OkEEQ3bo4S-5HM8e1-6ZGfPD-xEVuXEsdNsAX4w_kE8Qy8IeNvyYX1cY5-DLoT2kK9BArCtzhTPLeAeaZbji4mMSifv2K6mwGzb4auItHzitjWNqxFe5bq2qzuhTuUd1c5iPhD_xihcG8Fp6ploc-RBhFyA4BbTWc_m7OKRq4UaHWTiEwa3LCdL8o12ymnKiCEucii8LJu6beexBgYVqtbWFAfZcludsa7"/></div>
+<h2 class="text-3xl font-bold text-on-surface mb-2">English</h2>
+<p class="text-lg text-on-surface font-semibold">Anglais</p>
+<!-- Decoration -->
+<div class="absolute top-4 right-4 opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-4xl" data-icon="language">language</span>
+</div>
+</button>
+</div>
+<!-- Secondary Information / Help -->
+<div class="mt-20 flex flex-col items-center">
+<div class="p-8 bg-secondary-container/20 rounded-lg flex items-center gap-6 max-w-lg">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="info">info</span>
+</div>
+<p class="text-on-secondary-container font-medium text-sm leading-relaxed">
+                    Vous pourrez changer de langue à tout moment dans les réglages de Lumina AAC.
+                </p>
+</div>
+<button class="mt-12 text-primary font-bold text-lg hover:underline underline-offset-8 transition-all">
+                Besoin d'aide ? / Need help?
+            </button>
+</div>
+</main>
+<!-- Visual Background Element (Soft Peach/Orange Tonal Shift) -->
+<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-surface-container rounded-full blur-[120px] opacity-40"></div>
+<div class="absolute bottom-[-5%] right-[-5%] w-[30%] h-[30%] bg-secondary-container rounded-full blur-[100px] opacity-20"></div>
+</div>
+<!-- Bottom Navigation (Filtered: Not visible on this specific transactional screen) -->
+<!-- The BottomNavBar is suppressed as this is a focused language selection task -->
+</body></html>

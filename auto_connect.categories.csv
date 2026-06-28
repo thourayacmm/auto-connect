@@ -1,0 +1,6 @@
+_id,name,__v,color,createdAt,description,icon,isActive,order,updatedAt
+69f3e8cf8fd7c094eaeb23d6,Besoins essentiels,0,#93c5fd,2026-04-30T23:42:07.688Z,"Eau, toilettes, faim",,true,1,2026-05-28T15:21:01.718Z
+69f3e8cf8fd7c094eaeb23d7,Emotions,0,#86efac,2026-04-30T23:42:07.880Z,"Heureux, triste, peur",,true,2,2026-05-28T15:21:01.904Z
+69f3e8cf8fd7c094eaeb23d8,Actions,0,#f9a8d4,2026-04-30T23:42:07.883Z,"Manger, boire, jouer",,true,3,2026-05-28T15:21:01.908Z
+69f3e8cf8fd7c094eaeb23d9,Ecole,0,#fcd34d,2026-04-30T23:42:07.886Z,"Classe, livre, ecrire",,true,4,2026-05-28T15:21:01.912Z
+6a047a032978c9dfad2f59df,mange,0,#d7f4ff,2026-05-13T13:17:55.164Z,General,,true,0,2026-05-13T13:17:55.164Z

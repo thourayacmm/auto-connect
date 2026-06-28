@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Child's Information - KindVoice</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#6bff8f",
+                    "surface-bright": "#fff8f5",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "tertiary-container": "#ffecda",
+                    "surface-tint": "#006591",
+                    "surface-variant": "#f1dfd3",
+                    "primary-container": "#e3f1ff",
+                    "on-surface": "#231a12",
+                    "surface-container-highest": "#f1dfd3",
+                    "surface": "#fff8f5",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#fff1e8",
+                    "inverse-on-surface": "#ffeee1",
+                    "outline": "#73787b",
+                    "primary-fixed-dim": "#89ceff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#c9e6ff",
+                    "outline-variant": "#c3c7cb",
+                    "on-secondary-container": "#007432",
+                    "surface-dim": "#e8d7ca",
+                    "on-tertiary-container": "#986000",
+                    "secondary-fixed": "#6bff8f",
+                    "on-tertiary-fixed": "#2a1700",
+                    "inverse-surface": "#392e26",
+                    "surface-container-high": "#f7e5d8",
+                    "secondary-fixed-dim": "#4ae176",
+                    "inverse-primary": "#89ceff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#001e2f",
+                    "background": "#fff8f5",
+                    "primary": "#006591",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#ffddb8",
+                    "tertiary": "#855300",
+                    "on-secondary-fixed-variant": "#005321",
+                    "on-primary-container": "#0073a5",
+                    "error": "#ba1a1a",
+                    "surface-container": "#fdebde",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-error": "#ffffff",
+                    "secondary": "#006e2f",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#002109",
+                    "on-background": "#231a12",
+                    "on-surface-variant": "#43474b",
+                    "tertiary-fixed-dim": "#ffb95f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-pill { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- Top Navigation Anchor -->
+<header class="flex justify-between items-center w-full px-6 py-8 bg-surface-container-low tonal-shift no-border">
+<div class="flex items-center gap-4">
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-2xl font-black tracking-tighter text-on-surface">KindVoice</h1>
+</div>
+<div class="hidden md:flex items-center gap-8 font-semibold text-primary">
+<span>Progress: 60%</span>
+</div>
+</header>
+<main class="max-w-2xl mx-auto px-6 py-12">
+<!-- Editorial Header Section -->
+<section class="mb-12">
+<h2 class="text-[2.5rem] font-bold leading-tight tracking-tight mb-4 text-on-surface">Tell us about your child</h2>
+<p class="text-lg text-on-surface-variant font-medium opacity-80">This helps us personalize the KindVoice experience and select the perfect conversational tone.</p>
+</section>
+<!-- Form Canvas -->
+<form class="space-y-12">
+<!-- Basic Details Bento Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Name Input -->
+<div class="flex flex-col gap-3 group">
+<label class="text-sm font-bold uppercase tracking-widest text-primary ml-4">Child's Name</label>
+<div class="relative">
+<input class="w-full px-8 py-5 rounded-xl border-none bg-surface-container-low focus:ring-4 focus:ring-primary/10 transition-all text-lg font-semibold placeholder:text-on-surface-variant/40" placeholder="e.g. Leo" required="" type="text"/>
+</div>
+</div>
+<!-- Age Input -->
+<div class="flex flex-col gap-3 group">
+<label class="text-sm font-bold uppercase tracking-widest text-primary ml-4">Age (1-16 years)</label>
+<div class="relative">
+<input class="w-full px-8 py-5 rounded-xl border-none bg-surface-container-low focus:ring-4 focus:ring-primary/10 transition-all text-lg font-semibold placeholder:text-on-surface-variant/40" max="16" min="1" placeholder="4" required="" type="number"/>
+</div>
+</div>
+</div>
+<!-- Sex Selection -->
+<div class="flex flex-col gap-4">
+<label class="text-sm font-bold uppercase tracking-widest text-primary ml-4">Sex</label>
+<div class="flex p-2 bg-surface-container-low rounded-full w-full md:w-fit gap-2">
+<button class="flex-1 md:w-32 py-3 rounded-full bg-surface-container text-on-surface font-bold transition-all hover:bg-surface-container-high" type="button">Girl</button>
+<button class="flex-1 md:w-32 py-3 rounded-full bg-primary text-on-primary font-bold shadow-lg shadow-primary/20 scale-105" type="button">Boy</button>
+<button class="flex-1 md:w-32 py-3 rounded-full text-on-surface-variant font-medium hover:bg-surface-container-high transition-colors" type="button">Other</button>
+</div>
+</div>
+<!-- Add Another Child Button -->
+<div class="flex justify-center pb-6 border-b border-surface-variant/30">
+<button class="flex items-center gap-2 px-8 py-3 rounded-full bg-surface-container text-primary font-bold hover:bg-surface-container-high transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-xl">person_add</span>
+                    Add another child
+                </button>
+</div>
+<!-- Mandatory Voice Selection -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between ml-4">
+<label class="text-sm font-bold uppercase tracking-widest text-primary">Which voice would you prefer?</label>
+<span class="text-xs font-bold text-on-surface-variant/60">MANDATORY</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Checkbox Voice Option: Man -->
+<label class="relative flex items-center gap-4 p-6 rounded-2xl bg-surface-container-low border-2 border-transparent hover:bg-surface-container cursor-pointer transition-all has-[:checked]:border-primary has-[:checked]:bg-surface-container-lowest">
+<div class="relative flex items-center justify-center">
+<input class="peer w-6 h-6 rounded border-2 border-outline-variant text-primary focus:ring-primary focus:ring-offset-0 transition-all cursor-pointer" name="voice_pref" required="" type="checkbox" value="man"/>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-bold text-on-surface">Man</span>
+<span class="text-sm text-on-surface-variant">Deep and reassuring</span>
+</div>
+</label>
+<!-- Checkbox Voice Option: Woman -->
+<label class="relative flex items-center gap-4 p-6 rounded-2xl bg-surface-container-low border-2 border-transparent hover:bg-surface-container cursor-pointer transition-all has-[:checked]:border-primary has-[:checked]:bg-surface-container-lowest">
+<div class="relative flex items-center justify-center">
+<input class="peer w-6 h-6 rounded border-2 border-outline-variant text-primary focus:ring-primary focus:ring-offset-0 transition-all cursor-pointer" name="voice_pref" type="checkbox" value="woman"/>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-bold text-on-surface">Woman</span>
+<span class="text-sm text-on-surface-variant">Soft and empathetic</span>
+</div>
+</label>
+</div>
+</div>
+</form>
+</main>
+<!-- Persistent Action Shell -->
+<footer class="fixed bottom-0 left-0 w-full z-50 px-6 pb-10 pt-6 bg-surface/80 backdrop-blur-xl">
+<div class="max-w-2xl mx-auto flex items-center justify-between">
+<div class="hidden md:block">
+<p class="text-on-surface-variant text-sm font-medium">All data is securely encrypted.</p>
+</div>
+<button class="w-full md:w-auto px-12 py-5 rounded-full bg-gradient-to-br from-primary to-on-primary-container text-on-primary font-bold text-lg shadow-xl shadow-primary/20 active:scale-95 transition-all flex items-center justify-center gap-3">
+                Continue to Dashboard
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</footer>
+<!-- Decorative Soft Glow Backgrounds -->
+<div class="fixed -z-10 top-0 right-0 w-[600px] h-[600px] bg-primary-container/20 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="fixed -z-10 bottom-0 left-0 w-[400px] h-[400px] bg-secondary-container/10 blur-[100px] rounded-full pointer-events-none"></div>
+</body></html>

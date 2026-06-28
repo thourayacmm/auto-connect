@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tactile Sanctuary - Quantity Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#fff1e8",
+                        "primary-fixed": "#c9e6ff",
+                        "on-primary-fixed-variant": "#004c6e",
+                        "surface-variant": "#f1dfd3",
+                        "secondary": "#006e2f",
+                        "on-tertiary-fixed": "#2a1700",
+                        "surface-tint": "#006591",
+                        "on-tertiary-container": "#986000",
+                        "on-secondary-container": "#007432",
+                        "on-primary-container": "#0073a5",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "secondary-fixed": "#6bff8f",
+                        "secondary-fixed-dim": "#4ae176",
+                        "on-background": "#231a12",
+                        "surface-container-high": "#f7e5d8",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "surface": "#fff8f5",
+                        "on-surface": "#231a12",
+                        "tertiary-fixed": "#ffddb8",
+                        "outline": "#73787b",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#001e2f",
+                        "inverse-surface": "#392e26",
+                        "inverse-on-surface": "#ffeee1",
+                        "on-surface-variant": "#43474b",
+                        "primary-container": "#e3f1ff",
+                        "surface-container-highest": "#f1dfd3",
+                        "error-container": "#ffdad6",
+                        "primary": "#006591",
+                        "surface-container": "#fdebde",
+                        "surface-bright": "#fff8f5",
+                        "inverse-primary": "#89ceff",
+                        "on-secondary-fixed-variant": "#005321",
+                        "primary-fixed-dim": "#89ceff",
+                        "tertiary": "#855300",
+                        "surface-dim": "#e8d7ca",
+                        "outline-variant": "#c3c7cb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#002109",
+                        "secondary-container": "#6bff8f",
+                        "on-error-container": "#93000a",
+                        "background": "#fff8f5",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#ffecda"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f5;
+            color: #231a12;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .tonal-shift-bg-orange { background-color: #fff1e8; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="min-h-screen overflow-x-hidden">
+<!-- Top Navigation Anchor (from JSON) -->
+<header class="fixed top-0 w-full rounded-b-[3rem] bg-[#ffffffcc] dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_24px_24px_rgba(35,26,18,0.04)] flex justify-between items-center px-8 h-20 z-50">
+<div class="flex items-center gap-6">
+<span class="text-2xl font-bold text-[#006591] dark:text-[#0073a5] tracking-tight">Tactile Sanctuary</span>
+<nav class="hidden md:flex gap-8 items-center">
+<span class="text-[#231a12] opacity-70 hover:opacity-80 transition-opacity cursor-pointer">Home</span>
+<span class="text-[#231a12] opacity-70 hover:opacity-80 transition-opacity cursor-pointer">Feelings</span>
+<span class="text-[#231a12] opacity-70 hover:opacity-80 transition-opacity cursor-pointer">Actions</span>
+<span class="text-[#006591] font-bold hover:opacity-80 transition-opacity cursor-pointer">Library</span>
+</nav>
+</div>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-[#006591] p-2 hover:bg-surface-container rounded-full transition-colors scale-95 active:duration-150">volume_up</button>
+<button class="material-symbols-outlined text-[#006591] p-2 hover:bg-surface-container rounded-full transition-colors scale-95 active:duration-150">backspace</button>
+<button class="material-symbols-outlined text-[#006591] p-2 hover:bg-surface-container rounded-full transition-colors scale-95 active:duration-150">delete_sweep</button>
+</div>
+</header>
+<!-- Side Navigation Anchor (from JSON) -->
+<aside class="fixed left-0 top-20 bottom-0 w-24 hidden md:flex flex-col items-center py-8 z-40 bg-[#fff8f5] dark:bg-slate-950 rounded-r-[3rem]">
+<div class="flex flex-col gap-10">
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="text-[#231a12] opacity-60 p-4 hover:bg-[#fff1e8] rounded-full transition-all duration-200">
+<span class="material-symbols-outlined text-3xl">home</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="text-[#231a12] opacity-60 p-4 hover:bg-[#fff1e8] rounded-full transition-all duration-200">
+<span class="material-symbols-outlined text-3xl">sentiment_satisfied</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="text-[#231a12] opacity-60 p-4 hover:bg-[#fff1e8] rounded-full transition-all duration-200">
+<span class="material-symbols-outlined text-3xl">touch_app</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="bg-[#fdebde] text-[#006591] rounded-full p-4 transition-all duration-200">
+<span class="material-symbols-outlined text-3xl">filter_list</span>
+</div>
+</div>
+</div>
+</aside>
+<main class="pt-24 pb-32 px-6 md:pl-32 md:pr-12 max-w-7xl mx-auto">
+<!-- Expression Bar / Command Bar -->
+<section class="mb-12 sticky top-24 z-30">
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl p-4 rounded-full shadow-[0_24px_24px_rgba(35,26,18,0.06)] border border-white/20 flex flex-col md:flex-row items-center gap-4">
+<div class="flex-grow min-h-[60px] flex items-center px-8 bg-surface-container-low rounded-full">
+<span class="text-on-surface opacity-30 text-lg">Tap symbols below to compose...</span>
+</div>
+<div class="flex gap-2">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:shadow-lg transition-all scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+                        Speak
+                    </button>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-4 rounded-full font-semibold hover:opacity-90 transition-all scale-95 active:scale-90">Clear</button>
+</div>
+</div>
+<!-- Emotional Tone Buttons -->
+<div class="mt-4 flex flex-wrap justify-center gap-3">
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface text-sm font-medium flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-lg text-blue-500">sentiment_dissatisfied</span> Sad
+                </button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface text-sm font-medium flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-lg text-yellow-500">sentiment_satisfied</span> Happy
+                </button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface text-sm font-medium flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-lg text-orange-500">celebration</span> Excited
+                </button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface text-sm font-medium flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-lg text-red-500">mood_bad</span> Angry
+                </button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-on-surface text-sm font-medium flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-lg text-purple-500">settings_suggest</span> Sarcastic
+                </button>
+</div>
+</section>
+<!-- Breadcrumbs & Title -->
+<header class="mb-10">
+<nav class="flex items-center gap-2 text-on-surface/50 text-sm mb-2 font-medium">
+<span>Library</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-bold">Quantity</span>
+</nav>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">Quantity Terms</h1>
+<p class="text-on-surface/60 mt-2 max-w-xl">Choose a word to describe how much or how many.</p>
+</header>
+<!-- Pictogram Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Quantity Cards -->
+<!-- Pattern: Card + Label. Rounding xl (3rem) per design system. -->
+<!-- Extremely -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">speed</span>
+</div>
+<span class="text-on-surface font-bold text-lg">extremely</span>
+</button>
+<!-- Very -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">expand_less</span>
+</div>
+<span class="text-on-surface font-bold text-lg">very</span>
+</button>
+<!-- So -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">keyboard_double_arrow_up</span>
+</div>
+<span class="text-on-surface font-bold text-lg">so</span>
+</button>
+<!-- Too -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<span class="text-on-surface font-bold text-lg">too</span>
+</button>
+<!-- All -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">circle</span>
+</div>
+<span class="text-on-surface font-bold text-lg">all</span>
+</button>
+<!-- More -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95 border-2 border-secondary/20">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-secondary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</div>
+<span class="text-on-surface font-bold text-lg">more</span>
+</button>
+<!-- Average -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">drag_handle</span>
+</div>
+<span class="text-on-surface font-bold text-lg">average</span>
+</button>
+<!-- Moderate -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">horizontal_rule</span>
+</div>
+<span class="text-on-surface font-bold text-lg">moderate</span>
+</button>
+<!-- Kind of -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">opacity</span>
+</div>
+<span class="text-on-surface font-bold text-lg">kind of</span>
+</button>
+<!-- A little -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">brightness_1</span>
+</div>
+<span class="text-on-surface font-bold text-lg">a little</span>
+</button>
+<!-- Less -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95 border-2 border-error/20">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-error">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">remove_circle</span>
+</div>
+<span class="text-on-surface font-bold text-lg">less</span>
+</button>
+<!-- Empty -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl">radio_button_unchecked</span>
+</div>
+<span class="text-on-surface font-bold text-lg">empty</span>
+</button>
+<!-- A bit -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">square</span>
+</div>
+<span class="text-on-surface font-bold text-lg">a bit</span>
+</button>
+<!-- Few -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">circle</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">circle</span>
+</div>
+</div>
+<span class="text-on-surface font-bold text-lg">few</span>
+</button>
+<!-- None -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-error">
+<span class="material-symbols-outlined text-5xl">block</span>
+</div>
+<span class="text-on-surface font-bold text-lg">none</span>
+</button>
+<!-- Extra -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">exposure_plus_1</span>
+</div>
+<span class="text-on-surface font-bold text-lg">extra</span>
+</button>
+<!-- Only -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">filter_1</span>
+</div>
+<span class="text-on-surface font-bold text-lg">only</span>
+</button>
+<!-- Another -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">replay</span>
+</div>
+<span class="text-on-surface font-bold text-lg">another</span>
+</button>
+<!-- Any -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl">help_center</span>
+</div>
+<span class="text-on-surface font-bold text-lg">any</span>
+</button>
+<!-- Some -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">grain</span>
+</div>
+<span class="text-on-surface font-bold text-lg">some</span>
+</button>
+<!-- How much? -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95 border-2 border-primary/20">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl">question_mark</span>
+</div>
+<span class="text-on-surface font-bold text-lg">how much?</span>
+</button>
+<!-- How many -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95 border-2 border-primary/20">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl">format_list_numbered</span>
+</div>
+<span class="text-on-surface font-bold text-lg">how many</span>
+</button>
+<!-- Multiple -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">view_module</span>
+</div>
+<span class="text-on-surface font-bold text-lg">multiple</span>
+</button>
+<!-- Triple -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl">filter_3</span>
+</div>
+<span class="text-on-surface font-bold text-lg">triple</span>
+</button>
+<!-- Double -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl">filter_2</span>
+</div>
+<span class="text-on-surface font-bold text-lg">double</span>
+</button>
+<!-- Spoonful -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl">restaurant</span>
+</div>
+<span class="text-on-surface font-bold text-lg">spoonful</span>
+</button>
+<!-- Handful -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-5xl">front_hand</span>
+</div>
+<span class="text-on-surface font-bold text-lg">handful</span>
+</button>
+<!-- Pinch -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-full aspect-square flex items-center justify-center bg-surface-container-lowest rounded-lg mb-4 text-primary">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">blur_on</span>
+</div>
+<span class="text-on-surface font-bold text-lg">pinch</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-20 bg-surface/90 backdrop-blur-xl border-t-0 shadow-[0_-8px_24px_rgba(35,26,18,0.04)] flex justify-around items-center px-4 z-50 rounded-t-[3rem]">
+<button class="flex flex-col items-center gap-1 text-[#231a12] opacity-60">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#231a12] opacity-60">
+<span class="material-symbols-outlined">sentiment_satisfied</span>
+<span class="text-[10px] font-bold">Feelings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#231a12] opacity-60">
+<span class="material-symbols-outlined">touch_app</span>
+<span class="text-[10px] font-bold">Actions</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#006591]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">filter_list</span>
+<span class="text-[10px] font-bold">Library</span>
+</button>
+</nav>
+</body></html>

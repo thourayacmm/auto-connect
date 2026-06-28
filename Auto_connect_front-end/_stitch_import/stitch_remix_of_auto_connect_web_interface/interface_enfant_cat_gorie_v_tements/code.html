@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffddb8",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#ffecda",
+                    "on-tertiary-container": "#986000",
+                    "surface-dim": "#e8d7ca",
+                    "on-secondary-fixed-variant": "#005321",
+                    "secondary": "#006e2f",
+                    "on-secondary-container": "#007432",
+                    "on-secondary-fixed": "#002109",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#006591",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#ffeee1",
+                    "surface-container-highest": "#f1dfd3",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#fff1e8",
+                    "on-primary-container": "#0073a5",
+                    "primary-fixed-dim": "#89ceff",
+                    "primary-fixed": "#c9e6ff",
+                    "on-primary-fixed": "#001e2f",
+                    "primary-container": "#e3f1ff",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "secondary-fixed-dim": "#4ae176",
+                    "outline-variant": "#c3c7cb",
+                    "on-tertiary-fixed": "#2a1700",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#f7e5d8",
+                    "surface-container": "#fdebde",
+                    "surface-variant": "#f1dfd3",
+                    "on-surface-variant": "#43474b",
+                    "secondary-container": "#6bff8f",
+                    "inverse-primary": "#89ceff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#6bff8f",
+                    "on-background": "#231a12",
+                    "inverse-surface": "#392e26",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#73787b",
+                    "surface-bright": "#fff8f5",
+                    "on-surface": "#231a12",
+                    "on-primary": "#ffffff",
+                    "surface": "#fff8f5",
+                    "tertiary": "#855300",
+                    "primary": "#006591",
+                    "background": "#fff8f5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .tonal-shift { transition: background-color 0.3s ease; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="w-full top-0 px-6 py-4 bg-[#fff8f5] dark:bg-slate-950 sticky z-50">
+<div class="flex justify-between items-center w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold text-[#006591] dark:text-[#0073a5] font-headline tracking-tight">Tactile Sanctuary</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:opacity-80 transition-opacity" href="#">Library</a>
+<a class="text-[#006591] font-bold border-b-2 border-[#006591] transition-opacity" href="#">Clothes</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-opacity p-2">settings</button>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="close-up portrait of a smiling child with soft natural lighting and a warm blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDruBuAkahLA7eBXJRpYPDga7SFbXZUen-UJrfeEBsDmOgA0J6YDU7RseG2TgHNXcQWx4yim524c-4u3IZFpVxq2uDqq5vvkimfw0siw_tz-rUk1_9x7mrCJVm8zI0qZ4uhSPDHz0PiCwL09MXTqVCDcX4KmiiCQ8yykkwAjtW19Cdbo5bPdRe1qD3dO925bR_RSxOUCkkkc0WALfKStK-CePoECDPB4TdiCsMitCWa2yOHspSax02PVEsmVM3rSfQRlaiAflI5o_qH"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-screen-xl mx-auto px-6 pt-4">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-6 text-on-surface-variant">
+<span class="text-sm font-medium">Library</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-sm font-bold text-primary">Clothes</span>
+</nav>
+<!-- Sentence Builder Canvas -->
+<section class="bg-surface-container-lowest rounded-xl p-6 mb-8 min-h-[140px] flex items-center gap-4 backdrop-blur-xl border-none shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+<div class="flex-grow flex flex-wrap gap-4 items-center">
+<div class="bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-bold text-lg flex items-center gap-2 shadow-sm animate-pulse">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    I want to wear
+                </div>
+<!-- Placeholder for selected items -->
+<div class="border-2 border-dashed border-outline-variant w-32 h-14 rounded-full flex items-center justify-center text-outline">
+<span class="material-symbols-outlined">add</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-3 shrink-0">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+                    Speak
+                </button>
+<button class="bg-surface-container text-on-surface-variant px-6 py-4 rounded-full font-bold hover:bg-surface-container-high active:scale-95 transition-all">
+                    Clear
+                </button>
+<button class="bg-error-container text-on-error-container px-4 py-4 rounded-full font-bold hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined">backspace</span>
+</button>
+</div>
+</section>
+<!-- Emotional Tones Row -->
+<section class="mb-10">
+<h2 class="text-on-surface-variant text-sm font-bold uppercase tracking-widest mb-4 px-2">Voice Tone</h2>
+<div class="flex flex-wrap gap-4">
+<button class="flex items-center gap-3 bg-surface-container-low px-6 py-3 rounded-full hover:bg-surface-container-high transition-colors">
+<span class="text-2xl">😢</span>
+<span class="font-semibold">Sad</span>
+</button>
+<button class="flex items-center gap-3 bg-secondary-container text-on-secondary-container px-6 py-3 rounded-full border-2 border-secondary/20 shadow-sm">
+<span class="text-2xl">😊</span>
+<span class="font-semibold">Happy</span>
+</button>
+<button class="flex items-center gap-3 bg-surface-container-low px-6 py-3 rounded-full hover:bg-surface-container-high transition-colors">
+<span class="text-2xl">🤩</span>
+<span class="font-semibold">Excited</span>
+</button>
+<button class="flex items-center gap-3 bg-surface-container-low px-6 py-3 rounded-full hover:bg-surface-container-high transition-colors">
+<span class="text-2xl">😡</span>
+<span class="font-semibold">Angry</span>
+</button>
+<button class="flex items-center gap-3 bg-surface-container-low px-6 py-3 rounded-full hover:bg-surface-container-high transition-colors">
+<span class="text-2xl">🤨</span>
+<span class="font-semibold">Sarcastic</span>
+</button>
+</div>
+</section>
+<!-- Main Grid (Clothes) -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 mb-12">
+<!-- Item 1 -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-5xl text-primary" style="font-variation-settings: 'FILL' 0;">checkroom</span>
+</div>
+<span class="font-bold text-lg">Shirt</span>
+</button>
+<!-- Item 2 -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-5xl text-primary">bottom_panel_open</span>
+</div>
+<span class="font-bold text-lg">Pants</span>
+</button>
+<!-- Item 3 -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-5xl text-primary">apparel</span>
+</div>
+<span class="font-bold text-lg">Dress</span>
+</button>
+<!-- Item 4 -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-5xl text-primary">steps</span>
+</div>
+<span class="font-bold text-lg">Shoes</span>
+</button>
+<!-- Item 5 -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-5xl text-primary">footprint</span>
+</div>
+<span class="font-bold text-lg">Socks</span>
+</button>
+<!-- Item 6 -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-5xl text-primary">top_panel_open</span>
+</div>
+<span class="font-bold text-lg">Jacket</span>
+</button>
+<!-- Item 7 -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-5xl text-primary">detector_status</span>
+</div>
+<span class="font-bold text-lg">Hat</span>
+</button>
+<!-- Item 8 -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-5xl text-primary">styler</span>
+</div>
+<span class="font-bold text-lg">Scarf</span>
+</button>
+<!-- Item 9 -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-5xl text-primary">bedtime</span>
+</div>
+<span class="font-bold text-lg">Pajamas</span>
+</button>
+<!-- Item 10 -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-5xl text-primary">beach_access</span>
+</div>
+<span class="font-bold text-lg">Swimsuit</span>
+</button>
+<!-- Item 11 -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-5xl text-primary">unfold_more_double</span>
+</div>
+<span class="font-bold text-lg">Skirt</span>
+</button>
+<!-- Item 12 -->
+<button class="group flex flex-col items-center bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all active:scale-95">
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-5xl text-primary">width_normal</span>
+</div>
+<span class="font-bold text-lg">Sweater</span>
+</button>
+</div>
+<!-- Favorites Bar (Anchored above BottomNavBar) -->
+<section class="bg-tertiary-container rounded-xl p-4 mb-24 flex items-center gap-6 overflow-x-auto no-scrollbar">
+<div class="shrink-0 flex items-center gap-2 text-on-tertiary-container font-bold px-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                Favorites
+            </div>
+<div class="flex gap-4">
+<button class="bg-white/60 hover:bg-white px-4 py-2 rounded-full font-medium text-on-surface whitespace-nowrap transition-colors">Blue Hoodie</button>
+<button class="bg-white/60 hover:bg-white px-4 py-2 rounded-full font-medium text-on-surface whitespace-nowrap transition-colors">Cool Sneakers</button>
+<button class="bg-white/60 hover:bg-white px-4 py-2 rounded-full font-medium text-on-surface whitespace-nowrap transition-colors">Rain Boots</button>
+<button class="bg-white/60 hover:bg-white px-4 py-2 rounded-full font-medium text-on-surface whitespace-nowrap transition-colors">Soft Scarf</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#ffffff]/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-2xl rounded-t-[3rem] tonal-shift shadow-[0_-4px_24px_rgba(0,0,0,0.04)]">
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 hover:bg-[#fff1e8] dark:hover:bg-slate-800 transition-all duration-200 scale-98">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-medium mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 hover:bg-[#fff1e8] dark:hover:bg-slate-800 transition-all duration-200 scale-98">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-medium mt-1">Favorites</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-[#fdebde] dark:bg-slate-800 text-[#006591] rounded-[2rem] px-6 py-2 transition-all duration-200 scale-98">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-medium mt-1">Categories</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 hover:bg-[#fff1e8] dark:hover:bg-slate-800 transition-all duration-200 scale-98">
+<span class="material-symbols-outlined text-2xl">history</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-medium mt-1">History</span>
+</button>
+</nav>
+</body></html>

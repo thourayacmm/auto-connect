@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>I want to eat - Places</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#006e2f",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#f7e5d8",
+                    "on-tertiary-fixed": "#2a1700",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#f1dfd3",
+                    "tertiary": "#855300",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#002109",
+                    "on-background": "#231a12",
+                    "primary-container": "#e3f1ff",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "tertiary-container": "#ffecda",
+                    "on-secondary-fixed-variant": "#005321",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#f1dfd3",
+                    "background": "#fff8f5",
+                    "on-primary-fixed": "#001e2f",
+                    "inverse-on-surface": "#ffeee1",
+                    "surface-dim": "#e8d7ca",
+                    "secondary-container": "#6bff8f",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#ffddb8",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#fdebde",
+                    "on-secondary-container": "#007432",
+                    "on-tertiary-container": "#986000",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "secondary-fixed-dim": "#4ae176",
+                    "surface-tint": "#006591",
+                    "primary-fixed-dim": "#89ceff",
+                    "on-surface-variant": "#43474b",
+                    "surface-bright": "#fff8f5",
+                    "surface-container-low": "#fff1e8",
+                    "on-primary-container": "#0073a5",
+                    "surface": "#fff8f5",
+                    "secondary-fixed": "#6bff8f",
+                    "primary": "#006591",
+                    "on-surface": "#231a12",
+                    "inverse-surface": "#392e26",
+                    "outline-variant": "#c3c7cb",
+                    "outline": "#73787b",
+                    "inverse-primary": "#89ceff",
+                    "primary-fixed": "#c9e6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-surface-container-low {
+            background-color: #fff1e8;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- Top Bar (Sentence Builder) -->
+<header class="fixed top-0 left-72 right-0 z-50 bg-white/80 backdrop-blur-md px-8 py-4 flex flex-col gap-3 shadow-[0_24px_48px_-12px_rgba(35,26,18,0.06)] rounded-b-[3rem]">
+<div class="flex items-center justify-between gap-6">
+<!-- Sentence Bar -->
+<div class="flex-grow h-16 bg-surface-container-low rounded-full px-6 flex items-center gap-3 border-2 border-primary/10">
+<span class="text-on-surface-variant font-medium text-lg italic">Tap words to build a sentence...</span>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold flex items-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined">volume_up</span>
+                    Speak
+                </button>
+<button class="bg-surface-container-high text-on-surface px-6 py-4 rounded-full font-semibold active:scale-95 transition-all">
+                    Clear
+                </button>
+<button class="bg-error-container text-on-error-container p-4 rounded-full active:scale-95 transition-all">
+<span class="material-symbols-outlined">backspace</span>
+</button>
+</div>
+</div>
+<!-- Tone Emojis Row -->
+<div class="flex justify-center gap-6 py-1">
+<button class="text-3xl hover:scale-125 transition-transform">😊</button>
+<button class="text-3xl hover:scale-125 transition-transform">☹️</button>
+<button class="text-3xl hover:scale-125 transition-transform">🤩</button>
+<button class="text-3xl hover:scale-125 transition-transform">😡</button>
+<button class="text-3xl hover:scale-125 transition-transform">🤔</button>
+<button class="text-3xl hover:scale-125 transition-transform">😴</button>
+</div>
+</header>
+<!-- Side Navigation Bar -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-[#fff1e8] flex flex-col py-12 gap-4 rounded-r-[3rem] z-[60]">
+<div class="px-8 mb-8">
+<h1 class="text-xl font-black text-[#006591]">I want to eat</h1>
+<p class="text-[#231a12]/60 text-sm font-medium">Choose a word</p>
+</div>
+<nav class="flex flex-col gap-2 flex-grow overflow-y-auto">
+<!-- Labels modified for prompt instructions vs JSON: Prompt asks for Core Words, Needs, Emotions, Actions, Places. JSON had Actions, People, Places, Feelings. We reconcile using Prompt Hierarchy -->
+<a class="text-[#231a12] opacity-70 mx-4 py-4 px-6 flex items-center gap-4 hover:bg-[#fdebde] rounded-full transition-all group" href="#">
+<span class="material-symbols-outlined">bolt</span>
+<span class="font-medium text-sm">Core Words</span>
+</a>
+<a class="text-[#231a12] opacity-70 mx-4 py-4 px-6 flex items-center gap-4 hover:bg-[#fdebde] rounded-full transition-all group" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-medium text-sm">Needs</span>
+</a>
+<a class="text-[#231a12] opacity-70 mx-4 py-4 px-6 flex items-center gap-4 hover:bg-[#fdebde] rounded-full transition-all group" href="#">
+<span class="material-symbols-outlined">mood</span>
+<span class="font-medium text-sm">Emotions</span>
+</a>
+<a class="text-[#231a12] opacity-70 mx-4 py-4 px-6 flex items-center gap-4 hover:bg-[#fdebde] rounded-full transition-all group" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="font-medium text-sm">Actions</span>
+</a>
+<!-- Active Tab -->
+<a class="bg-[#006591] text-white rounded-full mx-4 py-4 px-6 shadow-lg shadow-[#006591]/20 flex items-center gap-4 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-medium text-sm">Places</span>
+</a>
+</nav>
+<div class="px-8 mt-auto">
+<button class="w-full bg-secondary-container text-on-secondary-container py-4 rounded-full font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add_circle</span>
+                Add New
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-72 pt-48 px-12 pb-12">
+<!-- Breadcrumb Path -->
+<div class="mb-8 flex items-center gap-2 text-on-surface-variant/60 font-semibold text-sm tracking-wide">
+<span>Pictograms</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary">Places</span>
+</div>
+<!-- Places Pictogram Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+<!-- Individual Cards -->
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-blue-500" style="font-variation-settings: 'FILL' 1">home</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Home</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-amber-600" style="font-variation-settings: 'FILL' 1">school</span>
+</div>
+<span class="font-bold text-lg text-on-surface">school</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-emerald-500" style="font-variation-settings: 'FILL' 1">meeting_room</span>
+</div>
+<span class="font-bold text-lg text-on-surface">classroom</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-orange-500" style="font-variation-settings: 'FILL' 1">toys</span>
+</div>
+<span class="font-bold text-lg text-on-surface">playground</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-green-600" style="font-variation-settings: 'FILL' 1">park</span>
+</div>
+<span class="font-bold text-lg text-on-surface">park</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-red-500" style="font-variation-settings: 'FILL' 1">local_hospital</span>
+</div>
+<span class="font-bold text-lg text-on-surface">hospital</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-rose-400" style="font-variation-settings: 'FILL' 1">medical_services</span>
+</div>
+<span class="font-bold text-lg text-on-surface">clinic</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-teal-500" style="font-variation-settings: 'FILL' 1">prescriptions</span>
+</div>
+<span class="font-bold text-lg text-on-surface">pharmacy</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-indigo-500" style="font-variation-settings: 'FILL' 1">shopping_cart</span>
+</div>
+<span class="font-bold text-lg text-on-surface">supermarket</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-lime-600" style="font-variation-settings: 'FILL' 1">storefront</span>
+</div>
+<span class="font-bold text-lg text-on-surface">grocery store</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-orange-400" style="font-variation-settings: 'FILL' 1">restaurant</span>
+</div>
+<span class="font-bold text-lg text-on-surface">restaurant</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-brown-500" style="font-variation-settings: 'FILL' 1; color: #795548;">local_cafe</span>
+</div>
+<span class="font-bold text-lg text-on-surface">café</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-yellow-600" style="font-variation-settings: 'FILL' 1">bakery_dining</span>
+</div>
+<span class="font-bold text-lg text-on-surface">bakery</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-purple-500" style="font-variation-settings: 'FILL' 1">library_books</span>
+</div>
+<span class="font-bold text-lg text-on-surface">library</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-emerald-700" style="font-variation-settings: 'FILL' 1">cruelty_free</span>
+</div>
+<span class="font-bold text-lg text-on-surface">zoo</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-yellow-700" style="font-variation-settings: 'FILL' 1; color: #8d6e63;">agriculture</span>
+</div>
+<span class="font-bold text-lg text-on-surface">farm</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-sky-400" style="font-variation-settings: 'FILL' 1">beach_access</span>
+</div>
+<span class="font-bold text-lg text-on-surface">beach</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-blue-600" style="font-variation-settings: 'FILL' 1">pool</span>
+</div>
+<span class="font-bold text-lg text-on-surface">swimming pool</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-yellow-500" style="font-variation-settings: 'FILL' 1">directions_bus</span>
+</div>
+<span class="font-bold text-lg text-on-surface">bus stop</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-zinc-600" style="font-variation-settings: 'FILL' 1">train</span>
+</div>
+<span class="font-bold text-lg text-on-surface">train station</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-blue-800" style="font-variation-settings: 'FILL' 1">flight</span>
+</div>
+<span class="font-bold text-lg text-on-surface">airport</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-rose-600" style="font-variation-settings: 'FILL' 1">directions_car</span>
+</div>
+<span class="font-bold text-lg text-on-surface">car</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-zinc-500" style="font-variation-settings: 'FILL' 1">add_road</span>
+</div>
+<span class="font-bold text-lg text-on-surface">road</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-slate-500" style="font-variation-settings: 'FILL' 1">edit_road</span>
+</div>
+<span class="font-bold text-lg text-on-surface">street</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-cyan-600" style="font-variation-settings: 'FILL' 1">apartment</span>
+</div>
+<span class="font-bold text-lg text-on-surface">city</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-pink-400" style="font-variation-settings: 'FILL' 1">villa</span>
+</div>
+<span class="font-bold text-lg text-on-surface">house</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-purple-400" style="font-variation-settings: 'FILL' 1">bed</span>
+</div>
+<span class="font-bold text-lg text-on-surface">bedroom</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-cyan-500" style="font-variation-settings: 'FILL' 1">bathtub</span>
+</div>
+<span class="font-bold text-lg text-on-surface">bathroom</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-amber-500" style="font-variation-settings: 'FILL' 1">countertops</span>
+</div>
+<span class="font-bold text-lg text-on-surface">kitchen</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-orange-600" style="font-variation-settings: 'FILL' 1">shopping_bag</span>
+</div>
+<span class="font-bold text-lg text-on-surface">shop</span>
+</button>
+<button class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center gap-4 hover:bg-surface-container transition-all active:scale-[0.97] group border-b-4 border-transparent hover:border-primary/20">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-5xl text-fuchsia-500" style="font-variation-settings: 'FILL' 1">local_mall</span>
+</div>
+<span class="font-bold text-lg text-on-surface">mall</span>
+</button>
+</div>
+</main>
+<!-- Floating Background Decorative Elements -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 opacity-30">
+<div class="absolute top-[10%] right-[5%] w-64 h-64 bg-primary-container rounded-full blur-[100px]"></div>
+<div class="absolute bottom-[10%] left-[20%] w-96 h-96 bg-tertiary-container rounded-full blur-[120px]"></div>
+</div>
+</body></html>

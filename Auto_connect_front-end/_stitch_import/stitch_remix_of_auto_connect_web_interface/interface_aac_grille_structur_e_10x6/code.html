@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#f1dfd3",
+                    "secondary-container": "#6bff8f",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#392e26",
+                    "on-secondary-container": "#007432",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#0073a5",
+                    "on-background": "#231a12",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#ffecda",
+                    "surface-container-high": "#f7e5d8",
+                    "error-container": "#ffdad6",
+                    "primary": "#006591",
+                    "surface-tint": "#006591",
+                    "secondary-fixed": "#6bff8f",
+                    "on-surface": "#231a12",
+                    "background": "#fff8f5",
+                    "surface-container": "#fdebde",
+                    "on-primary-fixed": "#001e2f",
+                    "tertiary": "#855300",
+                    "primary-fixed": "#c9e6ff",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "tertiary-fixed": "#ffddb8",
+                    "secondary-fixed-dim": "#4ae176",
+                    "outline-variant": "#c3c7cb",
+                    "error": "#ba1a1a",
+                    "surface": "#fff8f5",
+                    "primary-container": "#e3f1ff",
+                    "on-secondary-fixed-variant": "#005321",
+                    "surface-dim": "#e8d7ca",
+                    "outline": "#73787b",
+                    "on-tertiary-container": "#986000",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "surface-bright": "#fff8f5",
+                    "inverse-primary": "#89ceff",
+                    "surface-variant": "#f1dfd3",
+                    "primary-fixed-dim": "#89ceff",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "on-surface-variant": "#43474b",
+                    "secondary": "#006e2f",
+                    "surface-container-low": "#fff1e8",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#ffeee1",
+                    "on-secondary-fixed": "#002109",
+                    "on-tertiary-fixed": "#2a1700",
+                    /* Fitzgerald Color Code Tokens */
+                    "aac-people": "#FEF9C3",   /* Soft Yellow */
+                    "aac-action": "#DCFCE7",   /* Soft Green */
+                    "aac-noun": "#FFEDD5",     /* Soft Orange */
+                    "aac-adj": "#E0F2FE",      /* Soft Blue */
+                    "aac-social": "#FCE7F3",   /* Soft Pink/Purple */
+                    "aac-nav": "#F3F4F6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .aac-grid-button {
+            aspect-ratio: 1/1;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 8px;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+        .aac-grid-button:active {
+            transform: scale(0.95);
+            box-shadow: none;
+        }
+        .aac-grid-button .material-symbols-outlined {
+            font-size: 32px;
+            color: rgba(0,0,0,0.7);
+        }
+        .aac-grid-button span:not(.material-symbols-outlined) {
+            color: rgba(0,0,0,0.8);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar (Preserved) -->
+<header class="fixed top-0 w-full z-50 bg-[#fff1e8] shadow-sm flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<h1 class="text-2xl font-bold text-[#006591] tracking-tight">Tactile Sanctuary</h1>
+<nav class="hidden md:flex gap-6 ml-8">
+<a class="text-[#006591] font-bold" href="#">Board</a>
+<a class="text-slate-500 hover:bg-[#fdebde] transition-colors px-3 py-1 rounded-full" href="#">Edit</a>
+<a class="text-slate-500 hover:bg-[#fdebde] transition-colors px-3 py-1 rounded-full" href="#">Profiles</a>
+</nav>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative flex items-center bg-surface-container-lowest rounded-full px-4 py-2 border border-outline-variant/15">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm ml-2 w-32 md:w-64" placeholder="Find a word..." type="text"/>
+<span class="material-symbols-outlined text-primary cursor-pointer">keyboard</span>
+</div>
+<div class="flex items-center gap-2 ml-4">
+<button class="p-2 text-slate-500 hover:bg-[#fdebde] rounded-full transition-colors"><span class="material-symbols-outlined">favorite</span></button>
+<button class="p-2 text-slate-500 hover:bg-[#fdebde] rounded-full transition-colors"><span class="material-symbols-outlined">settings</span></button>
+<div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden">
+<img alt="Child profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRKTVIVz58m_pq8rA2SagvJBaDIrL-DjZ_GSQHB8y0j6WUvI8gxl0CeC_9C_cq4LsSFacjirTCewV3Uysb28_az_kV-dPS14hSOCSx1DtWAAhak50i50KzmDOFLV83X8D2_wwUH-nAQ_EyopTMCjPMFvP10D2qOJTEKmnmtzc6lZdU2eo0XWVZNd51H3HzaVixpfhorqOTA78MrXl5WNA6Y2Vl9cBhTHQBebRm-uTWO3OXD04pHhHIIX6y7zSO9gdQNiI658bJVL-C"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-44 px-6 max-w-[1600px] mx-auto flex gap-6">
+<div class="flex-grow">
+<!-- Sentence Building Bar -->
+<section class="mb-6 sticky top-24 z-40">
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl rounded-2xl p-3 shadow-[0_4px_24px_rgba(35,26,18,0.06)] flex items-center gap-4">
+<div class="flex-grow flex items-center gap-3 px-6 overflow-x-auto min-h-[64px] scrollbar-hide">
+<!-- Placeholder for building sentence -->
+</div>
+<div class="flex items-center gap-2 pr-2">
+<button class="bg-secondary-container text-on-secondary-container hover:opacity-80 px-8 py-4 rounded-xl font-bold flex items-center gap-2 transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined">volume_up</span>
+                        Speak
+                    </button>
+<button class="p-4 text-outline hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">backspace</span>
+</button>
+<button class="p-4 text-error hover:bg-error-container/20 rounded-full transition-colors">
+<span class="material-symbols-outlined">delete_sweep</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 10x6 Grid Communication Board (Fitzgerald Color Coded) -->
+<div class="grid grid-cols-10 gap-3">
+<!-- Row 1 -->
+<button class="aac-grid-button bg-aac-social rounded-2xl"><span class="material-symbols-outlined">check_circle</span><span class="text-xs font-bold uppercase">yes</span></button>
+<button class="aac-grid-button bg-aac-people rounded-2xl"><span class="material-symbols-outlined">help</span><span class="text-xs font-bold uppercase">who</span></button>
+<button class="aac-grid-button bg-aac-people rounded-2xl"><span class="material-symbols-outlined">person</span><span class="text-xs font-bold uppercase">I</span></button>
+<button class="aac-grid-button bg-aac-social rounded-2xl"><span class="material-symbols-outlined">block</span><span class="text-xs font-bold uppercase">don't</span></button>
+<button class="aac-grid-button bg-aac-social rounded-2xl"><span class="material-symbols-outlined">medical_services</span><span class="text-xs font-bold uppercase">help</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">replay</span><span class="text-xs font-bold uppercase">turn</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">open_in_full</span><span class="text-xs font-bold uppercase">open</span></button>
+<button class="aac-grid-button bg-aac-adj rounded-2xl"><span class="material-symbols-outlined">text_fields</span><span class="text-xs font-bold uppercase">a</span></button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl"><span class="material-symbols-outlined">location_on</span><span class="text-xs font-bold uppercase">here</span></button>
+<button class="aac-grid-button bg-aac-adj rounded-2xl"><span class="material-symbols-outlined">shuffle</span><span class="text-xs font-bold uppercase">different</span></button>
+<!-- Row 2 -->
+<button class="aac-grid-button bg-aac-social rounded-2xl"><span class="material-symbols-outlined">done_all</span><span class="text-xs font-bold uppercase text-center">all done</span></button>
+<button class="aac-grid-button bg-aac-people rounded-2xl"><span class="material-symbols-outlined">quiz</span><span class="text-xs font-bold uppercase">what</span></button>
+<button class="aac-grid-button bg-aac-people rounded-2xl"><span class="material-symbols-outlined">person_pin</span><span class="text-xs font-bold uppercase">you</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">play_arrow</span><span class="text-xs font-bold uppercase">do</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">move_to_inbox</span><span class="text-xs font-bold uppercase">put</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">download</span><span class="text-xs font-bold uppercase">get</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">build</span><span class="text-xs font-bold uppercase">make</span></button>
+<button class="aac-grid-button bg-aac-adj rounded-2xl"><span class="material-symbols-outlined">article</span><span class="text-xs font-bold uppercase">the</span></button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl"><span class="material-symbols-outlined">pin_drop</span><span class="text-xs font-bold uppercase">there</span></button>
+<button class="aac-grid-button bg-aac-adj rounded-2xl"><span class="material-symbols-outlined">format_list_bulleted</span><span class="text-xs font-bold uppercase">some</span></button>
+<!-- Row 3 -->
+<button class="aac-grid-button bg-aac-adj rounded-2xl"><span class="material-symbols-outlined">add_circle</span><span class="text-xs font-bold uppercase text-center leading-tight">something else</span></button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl"><span class="material-symbols-outlined">schedule</span><span class="text-xs font-bold uppercase">when</span></button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl"><span class="material-symbols-outlined">radio_button_checked</span><span class="text-xs font-bold uppercase">it</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">check</span><span class="text-xs font-bold uppercase">is</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">directions_walk</span><span class="text-xs font-bold uppercase">go</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">stop_circle</span><span class="text-xs font-bold uppercase">stop</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">login</span><span class="text-xs font-bold uppercase">come</span></button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl"><span class="material-symbols-outlined">arrow_forward</span><span class="text-xs font-bold uppercase">to</span></button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl"><span class="material-symbols-outlined">logout</span><span class="text-xs font-bold uppercase">out</span></button>
+<button class="aac-grid-button bg-aac-social rounded-2xl"><span class="material-symbols-outlined">cancel</span><span class="text-xs font-bold uppercase">not</span></button>
+<!-- Row 4 -->
+<button class="aac-grid-button bg-aac-social rounded-2xl"><span class="material-symbols-outlined">warning</span><span class="text-xs font-bold uppercase text-center leading-tight">something's wrong</span></button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl"><span class="material-symbols-outlined">map</span><span class="text-xs font-bold uppercase">where</span></button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl"><span class="material-symbols-outlined">ads_click</span><span class="text-xs font-bold uppercase">that</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">check_box</span><span class="text-xs font-bold uppercase">can</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">favorite</span><span class="text-xs font-bold uppercase">want</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">local_cafe</span><span class="text-xs font-bold uppercase">drink</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">restaurant</span><span class="text-xs font-bold uppercase">eat</span></button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl"><span class="material-symbols-outlined">location_searching</span><span class="text-xs font-bold uppercase">at</span></button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl"><span class="material-symbols-outlined">input</span><span class="text-xs font-bold uppercase">in</span></button>
+<button class="aac-grid-button bg-aac-adj rounded-2xl"><span class="material-symbols-outlined">add</span><span class="text-xs font-bold uppercase">more</span></button>
+<!-- Row 5 -->
+<button class="aac-grid-button bg-aac-people rounded-2xl"><span class="material-symbols-outlined">groups</span><span class="text-xs font-bold uppercase">let's</span></button>
+<button class="aac-grid-button bg-aac-people rounded-2xl"><span class="material-symbols-outlined">help_center</span><span class="text-xs font-bold uppercase">why</span></button>
+<button class="aac-grid-button bg-aac-people rounded-2xl"><span class="material-symbols-outlined">man</span><span class="text-xs font-bold uppercase">he</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">update</span><span class="text-xs font-bold uppercase">will</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">visibility</span><span class="text-xs font-bold uppercase">look</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">chat</span><span class="text-xs font-bold uppercase">say</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">videogame_asset</span><span class="text-xs font-bold uppercase">play</span></button>
+<button class="aac-grid-button bg-aac-adj rounded-2xl"><span class="material-symbols-outlined">add_link</span><span class="text-xs font-bold uppercase">and</span></button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl"><span class="material-symbols-outlined">touch_app</span><span class="text-xs font-bold uppercase">on</span></button>
+<button class="aac-grid-button bg-aac-adj rounded-2xl"><span class="material-symbols-outlined">equalizer</span><span class="text-xs font-bold uppercase">same</span></button>
+<!-- Row 6 -->
+<button class="aac-grid-button bg-aac-social rounded-2xl"><span class="material-symbols-outlined">cancel</span><span class="text-xs font-bold uppercase">no</span></button>
+<button class="aac-grid-button bg-aac-people rounded-2xl"><span class="material-symbols-outlined">psychology</span><span class="text-xs font-bold uppercase">how</span></button>
+<button class="aac-grid-button bg-aac-people rounded-2xl"><span class="material-symbols-outlined">woman</span><span class="text-xs font-bold uppercase">she</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">star</span><span class="text-xs font-bold uppercase">shall</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">thumb_up</span><span class="text-xs font-bold uppercase">like</span></button>
+<button class="aac-grid-button bg-aac-action rounded-2xl"><span class="material-symbols-outlined">mood</span><span class="text-xs font-bold uppercase">feel</span></button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl"><span class="material-symbols-outlined">timer</span><span class="text-xs font-bold uppercase">now</span></button>
+<button class="aac-grid-button bg-aac-adj rounded-2xl"><span class="material-symbols-outlined">volunteer_activism</span><span class="text-xs font-bold uppercase">for</span></button>
+<button class="aac-grid-button bg-aac-social rounded-2xl"><span class="material-symbols-outlined">power_settings_new</span><span class="text-xs font-bold uppercase">off</span></button>
+<button class="aac-grid-button bg-aac-adj rounded-2xl"><span class="material-symbols-outlined">select_all</span><span class="text-xs font-bold uppercase">all</span></button>
+</div>
+</div>
+<!-- Sidebar (Right) -->
+<aside class="w-48 flex flex-col gap-3 pt-[88px]">
+<button class="aac-grid-button bg-aac-noun rounded-2xl w-full aspect-auto py-6">
+<span class="material-symbols-outlined">category</span>
+<span class="text-xs font-extrabold uppercase tracking-wider">THINGS</span>
+</button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl w-full aspect-auto py-6">
+<span class="material-symbols-outlined">accessibility_new</span>
+<span class="text-xs font-extrabold uppercase tracking-wider">BODY PARTS</span>
+</button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl w-full aspect-auto py-6">
+<span class="material-symbols-outlined">lunch_dining</span>
+<span class="text-xs font-extrabold uppercase tracking-wider">FOOD</span>
+</button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl w-full aspect-auto py-6">
+<span class="material-symbols-outlined">checkroom</span>
+<span class="text-xs font-extrabold uppercase tracking-wider">CLOTHES</span>
+</button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl w-full aspect-auto py-6">
+<span class="material-symbols-outlined">directions_bus</span>
+<span class="text-xs font-extrabold uppercase tracking-wider">TRANSPORT</span>
+</button>
+<button class="aac-grid-button bg-aac-noun rounded-2xl w-full aspect-auto py-6">
+<span class="material-symbols-outlined">forum</span>
+<span class="text-xs font-extrabold uppercase tracking-wider">TOPICS</span>
+</button>
+</aside>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#ffffff]/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(35,26,18,0.08)]">
+<!-- Main Categories Row -->
+<div class="flex overflow-x-auto scrollbar-hide py-2 px-4 gap-2">
+<button class="flex-shrink-0 px-4 py-2 bg-aac-social rounded-full text-[10px] font-bold uppercase whitespace-nowrap">QUICK</button>
+<button class="flex-shrink-0 px-4 py-2 bg-aac-people rounded-full text-[10px] font-bold uppercase whitespace-nowrap border-2 border-primary">QUESTIONS</button>
+<button class="flex-shrink-0 px-4 py-2 bg-aac-people rounded-full text-[10px] font-bold uppercase whitespace-nowrap">PEOPLE</button>
+<button class="flex-shrink-0 px-4 py-2 bg-aac-action rounded-full text-[10px] font-bold uppercase whitespace-nowrap">ACTIONS</button>
+<button class="flex-shrink-0 px-4 py-2 bg-aac-adj rounded-full text-[10px] font-bold uppercase whitespace-nowrap">SPECIAL INTEREST</button>
+<button class="flex-shrink-0 px-4 py-2 bg-aac-adj rounded-full text-[10px] font-bold uppercase whitespace-nowrap">FEELINGS</button>
+<button class="flex-shrink-0 px-4 py-2 bg-aac-noun rounded-full text-[10px] font-bold uppercase whitespace-nowrap">TIME</button>
+<button class="flex-shrink-0 px-4 py-2 bg-aac-adj rounded-full text-[10px] font-bold uppercase whitespace-nowrap">SHORT WORDS</button>
+<button class="flex-shrink-0 px-4 py-2 bg-aac-noun rounded-full text-[10px] font-bold uppercase whitespace-nowrap">PLACES</button>
+<button class="flex-shrink-0 px-4 py-2 bg-aac-adj rounded-full text-[10px] font-bold uppercase whitespace-nowrap">DESCRIBE</button>
+<button class="flex-shrink-0 px-4 py-2 bg-aac-adj rounded-full text-[10px] font-bold uppercase whitespace-nowrap">QUANTITY</button>
+</div>
+<!-- Emotional Tones -->
+<div class="flex justify-around items-end pb-4 px-4 mt-1">
+<button class="flex flex-col items-center justify-center text-[#231a12] p-2 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-xl">sentiment_very_dissatisfied</span>
+<span class="text-[10px] font-semibold">Sad</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-gradient-to-br from-[#006591] to-[#0073a5] text-white rounded-full p-2 w-12 h-12 shadow-md mb-1">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">sentiment_satisfied</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#231a12] p-2 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-xl">celebration</span>
+<span class="text-[10px] font-semibold">Excited</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#231a12] p-2 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-xl">mood_bad</span>
+<span class="text-[10px] font-semibold">Angry</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#231a12] p-2 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-xl">theater_comedy</span>
+<span class="text-[10px] font-semibold">Sarcastic</span>
+</button>
+</div>
+</nav>
+</body></html>

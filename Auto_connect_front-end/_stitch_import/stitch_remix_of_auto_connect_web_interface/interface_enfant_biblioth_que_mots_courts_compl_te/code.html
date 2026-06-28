@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Short Words - AAC Interface</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#89ceff",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#c9e6ff",
+                      "on-secondary-fixed-variant": "#005321",
+                      "surface-dim": "#e8d7ca",
+                      "tertiary": "#855300",
+                      "on-surface-variant": "#43474b",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#ffb95f",
+                      "surface-variant": "#f1dfd3",
+                      "on-surface": "#231a12",
+                      "inverse-on-surface": "#ffeee1",
+                      "surface-container-low": "#fff1e8",
+                      "on-secondary-fixed": "#002109",
+                      "secondary-fixed-dim": "#4ae176",
+                      "surface-tint": "#006591",
+                      "outline-variant": "#c3c7cb",
+                      "on-primary-container": "#0073a5",
+                      "inverse-surface": "#392e26",
+                      "secondary": "#006e2f",
+                      "primary-fixed-dim": "#89ceff",
+                      "on-tertiary-container": "#986000",
+                      "surface-container-high": "#f7e5d8",
+                      "on-secondary": "#ffffff",
+                      "surface": "#fff8f5",
+                      "tertiary-fixed": "#ffddb8",
+                      "secondary-fixed": "#6bff8f",
+                      "on-background": "#231a12",
+                      "on-tertiary-fixed-variant": "#653e00",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#004c6e",
+                      "secondary-container": "#6bff8f",
+                      "on-primary": "#ffffff",
+                      "surface-bright": "#fff8f5",
+                      "surface-container-highest": "#f1dfd3",
+                      "primary": "#006591",
+                      "tertiary-container": "#ffecda",
+                      "outline": "#73787b",
+                      "on-secondary-container": "#007432",
+                      "surface-container-lowest": "#ffffff",
+                      "background": "#fff8f5",
+                      "on-primary-fixed": "#001e2f",
+                      "primary-container": "#e3f1ff",
+                      "on-tertiary-fixed": "#2a1700",
+                      "surface-container": "#fdebde"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "display": ["Plus Jakarta Sans"],
+                      "body": ["Plus Jakarta Sans"],
+                      "label": ["Plus Jakarta Sans"]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface overflow-hidden">
+<!-- Top Navigation Area (Shell) -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-orange-50/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-xl shadow-orange-900/5 rounded-b-[3rem]">
+<div class="flex items-center gap-6 w-full">
+<h1 class="text-xl font-extrabold text-sky-900 dark:text-sky-100 shrink-0">Short Words</h1>
+<!-- AAC Expression Bar -->
+<div class="flex-grow flex items-center bg-surface-container-lowest border-2 border-primary-container h-16 rounded-full px-6 shadow-sm overflow-x-auto no-scrollbar gap-4">
+<span class="text-on-surface-variant font-medium opacity-50">Tap words to build a sentence...</span>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center gap-3">
+<button class="bg-gradient-to-br from-primary to-on-primary-container text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-primary/20 active:scale-95 transition-all">
+                    Speak
+                </button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-4 rounded-full font-bold active:scale-95 transition-all">
+                    Clear
+                </button>
+<button class="bg-error-container text-on-error-container px-4 py-4 rounded-full active:scale-95 transition-all">
+<span class="material-symbols-outlined">backspace</span>
+</button>
+</div>
+<!-- Emotional Tone Cluster -->
+<div class="flex items-center gap-1 bg-surface-container-low p-2 rounded-full">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white transition-colors text-xl">😊</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white transition-colors text-xl">☹️</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white transition-colors text-xl">🤩</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white transition-colors text-xl">🤨</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white transition-colors text-xl">😠</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white transition-colors text-xl">🙄</button>
+</div>
+</div>
+</header>
+<div class="flex h-screen pt-28">
+<!-- Sidebar Navigation -->
+<aside class="fixed left-0 h-full w-64 bg-orange-50 dark:bg-stone-950 flex flex-col pt-6 pb-8 border-r-0 rounded-r-[3rem] shadow-2xl shadow-black/5 z-40">
+<div class="px-8 mb-8">
+<h2 class="text-lg font-black text-sky-900 dark:text-sky-100">Categories</h2>
+<p class="text-xs font-semibold text-orange-900/50 uppercase tracking-widest">Browse Words</p>
+</div>
+<nav class="flex-grow space-y-2 px-2 overflow-y-auto no-scrollbar">
+<a class="flex items-center gap-3 text-orange-900/70 dark:text-stone-400 px-6 py-4 mx-2 hover:bg-orange-100 dark:hover:bg-stone-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">bolt</span>
+<span class="font-semibold text-sm">Quick Fire</span>
+</a>
+<a class="flex items-center gap-3 text-orange-900/70 dark:text-stone-400 px-6 py-4 mx-2 hover:bg-orange-100 dark:hover:bg-stone-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-semibold text-sm">People</span>
+</a>
+<a class="flex items-center gap-3 text-orange-900/70 dark:text-stone-400 px-6 py-4 mx-2 hover:bg-orange-100 dark:hover:bg-stone-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">play_arrow</span>
+<span class="font-semibold text-sm">Actions</span>
+</a>
+<a class="flex items-center gap-3 text-orange-900/70 dark:text-stone-400 px-6 py-4 mx-2 hover:bg-orange-100 dark:hover:bg-stone-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">face</span>
+<span class="font-semibold text-sm">Feelings</span>
+</a>
+<a class="flex items-center gap-3 text-orange-900/70 dark:text-stone-400 px-6 py-4 mx-2 hover:bg-orange-100 dark:hover:bg-stone-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-semibold text-sm">Places</span>
+</a>
+<div class="h-px bg-orange-200/50 my-4 mx-6"></div>
+<a class="flex items-center gap-3 bg-orange-200/50 dark:bg-sky-900/30 text-sky-900 dark:text-sky-200 rounded-full px-6 py-4 mx-2 font-bold transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-semibold text-sm">Short Words</span>
+</a>
+</nav>
+<div class="mt-auto px-6">
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center gap-3 border border-orange-100">
+<img alt="User profile" class="w-10 h-10 rounded-full bg-orange-200 object-cover" data-alt="Close up portrait of a smiling child with bright expressive eyes in soft warm indoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDHRgZrbe36WjtJ0GHGObfeQj4nDqr3ObKVfdSibhban7dp3aFKvk8r8Ph_xdLaE1lQ3RK4aj1tv52PN5qFElYOQ5DmK94UACvkejJeA_6TsJrFfrV0FygscOCKp3ctpeiygpSEk9yILJTpjpnKXRaqmeIq4y79VO37ELFQ9Pm7WdJsjsmP-xBEi84jPkL_FSI4e5uLZWk-OgrpX14JLXpLPf587wVGKihb7Q4XrUfATr3ztKWdHNmfuBID0rQaTjebxlDPorhEUtg"/>
+<div>
+<p class="text-xs font-bold text-on-surface">Alex M.</p>
+<p class="text-[10px] text-on-surface-variant opacity-60">Level 4 Communicator</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-grow ml-64 p-8 overflow-y-auto bg-surface">
+<!-- Breadcrumbs & Search -->
+<div class="flex items-center justify-between mb-8">
+<nav class="flex items-center gap-2 text-on-surface-variant font-semibold">
+<span class="opacity-40">Pictograms</span>
+<span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+<span class="text-primary">Short Words</span>
+</nav>
+<div class="relative w-72">
+<input class="w-full bg-surface-container-low border-none rounded-full px-6 py-3 text-sm focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search words..." type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-2 text-on-surface-variant opacity-50">
+<span class="material-symbols-outlined text-xl">keyboard</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid of Pictograms -->
+<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4">
+<!-- Macro for generating the pictogram cards -->
+<!-- Word: anyway, somehow, except, therefore, whether, unless, besides, those, these, then, than, among, still, as, either, neither, much, almost, enough, again, while, until, it, that, this, before, after, since, yet, so, too, very, just, instead, else, however, though, soon, ready, later, now, without, within, an, about, a, of, the, but, to, or, and, at, for, by, from, also, if, off, in, on, over, under, because, here, there, out, near, far, not, more, all, only, up, down, left, right, another, other, any, every -->
+<!-- We apply vibrant flag-inspired colors as requested -->
+<script>
+                    const words = [
+                        { text: "anyway", icon: "sync_alt", color: "bg-blue-600" },
+                        { text: "somehow", icon: "help_center", color: "bg-red-600" },
+                        { text: "except", icon: "do_not_disturb_on", color: "bg-green-600" },
+                        { text: "therefore", icon: "double_arrow", color: "bg-yellow-500" },
+                        { text: "whether", icon: "alt_route", color: "bg-blue-700" },
+                        { text: "unless", icon: "block", color: "bg-red-700" },
+                        { text: "besides", icon: "add_circle", color: "bg-green-700" },
+                        { text: "those", icon: "groups", color: "bg-yellow-600" },
+                        { text: "these", icon: "group", color: "bg-blue-500" },
+                        { text: "then", icon: "trending_flat", color: "bg-red-500" },
+                        { text: "than", icon: "compare_arrows", color: "bg-green-500" },
+                        { text: "among", icon: "diversity_3", color: "bg-yellow-400" },
+                        { text: "still", icon: "pause_circle", color: "bg-blue-800" },
+                        { text: "as", icon: "equal", color: "bg-red-800" },
+                        { text: "either", icon: "call_split", color: "bg-green-800" },
+                        { text: "neither", icon: "wrong_location", color: "bg-yellow-700" },
+                        { text: "much", icon: "expand", color: "bg-blue-400" },
+                        { text: "almost", icon: "trending_up", color: "bg-red-400" },
+                        { text: "enough", icon: "done_all", color: "bg-green-400" },
+                        { text: "again", icon: "replay", color: "bg-yellow-300" },
+                        { text: "while", icon: "hourglass_top", color: "bg-blue-600" },
+                        { text: "until", icon: "timer", color: "bg-red-600" },
+                        { text: "it", icon: "radio_button_checked", color: "bg-green-600" },
+                        { text: "that", icon: "pointing_to_directory", color: "bg-yellow-500" },
+                        { text: "this", icon: "touch_app", color: "bg-blue-500" },
+                        { text: "before", icon: "arrow_back", color: "bg-red-500" },
+                        { text: "after", icon: "arrow_forward", color: "bg-green-500" },
+                        { text: "since", icon: "history", color: "bg-yellow-600" },
+                        { text: "yet", icon: "hourglass_bottom", color: "bg-blue-700" },
+                        { text: "so", icon: "priority_high", color: "bg-red-700" },
+                        { text: "too", icon: "exposure_plus_2", color: "bg-green-700" },
+                        { text: "very", icon: "bolt", color: "bg-yellow-500" },
+                        { text: "just", icon: "adjust", color: "bg-blue-600" },
+                        { text: "instead", icon: "switch_left", color: "bg-red-600" },
+                        { text: "else", icon: "shuffle", color: "bg-green-600" },
+                        { text: "however", icon: "turn_slight_right", color: "bg-yellow-600" },
+                        { text: "though", icon: "conversion_path", color: "bg-blue-500" },
+                        { text: "soon", icon: "schedule", color: "bg-red-500" },
+                        { text: "ready", icon: "check_circle", color: "bg-green-500" },
+                        { text: "later", icon: "update", color: "bg-yellow-400" },
+                        { text: "now", icon: "notifications_active", color: "bg-blue-400" },
+                        { text: "without", icon: "do_not_disturb", color: "bg-red-400" },
+                        { text: "within", icon: "inner_sphere", color: "bg-green-400" },
+                        { text: "an", icon: "circle", color: "bg-yellow-300" },
+                        { text: "about", icon: "info", color: "bg-blue-600" },
+                        { text: "a", icon: "fiber_manual_record", color: "bg-red-600" },
+                        { text: "of", icon: "link", color: "bg-green-600" },
+                        { text: "the", icon: "star", color: "bg-yellow-500" },
+                        { text: "but", icon: "backspace", color: "bg-blue-700" },
+                        { text: "to", icon: "login", color: "bg-red-700" },
+                        { text: "or", icon: "alt_route", color: "bg-green-700" },
+                        { text: "and", icon: "add", color: "bg-yellow-600" },
+                        { text: "at", icon: "alternate_email", color: "bg-blue-500" },
+                        { text: "for", icon: "volunteer_activism", color: "bg-red-500" },
+                        { text: "by", icon: "person", color: "bg-green-500" },
+                        { text: "from", icon: "logout", color: "bg-yellow-400" },
+                        { text: "also", icon: "library_add", color: "bg-blue-800" },
+                        { text: "if", icon: "question_mark", color: "bg-red-800" },
+                        { text: "off", icon: "power_settings_new", color: "bg-green-800" },
+                        { text: "in", icon: "input", color: "bg-yellow-700" },
+                        { text: "on", icon: "lightbulb", color: "bg-blue-400" },
+                        { text: "over", icon: "arrow_upward", color: "bg-red-400" },
+                        { text: "under", icon: "arrow_downward", color: "bg-green-400" },
+                        { text: "because", icon: "extension", color: "bg-yellow-300" },
+                        { text: "here", icon: "location_on", color: "bg-blue-600" },
+                        { text: "there", icon: "near_me", color: "bg-red-600" },
+                        { text: "out", icon: "exit_to_app", color: "bg-green-600" },
+                        { text: "near", icon: "pin_drop", color: "bg-yellow-500" },
+                        { text: "far", icon: "wb_sunny", color: "bg-blue-500" },
+                        { text: "not", icon: "cancel", color: "bg-red-500" },
+                        { text: "more", icon: "add_box", color: "bg-green-500" },
+                        { text: "all", icon: "select_all", color: "bg-yellow-600" },
+                        { text: "only", icon: "filter_1", color: "bg-blue-700" },
+                        { text: "up", icon: "expand_less", color: "bg-red-700" },
+                        { text: "down", icon: "expand_more", color: "bg-green-700" },
+                        { text: "left", icon: "chevron_left", color: "bg-yellow-500" },
+                        { text: "right", icon: "chevron_right", color: "bg-blue-600" },
+                        { text: "another", icon: "exposure_plus_1", color: "bg-red-600" },
+                        { text: "other", icon: "category", color: "bg-green-600" },
+                        { text: "any", icon: "apps", color: "bg-yellow-600" },
+                        { text: "every", icon: "view_comfy", color: "bg-blue-500" }
+                    ];
+
+                    const container = document.currentScript.parentElement;
+                    words.forEach(word => {
+                        const btn = document.createElement('button');
+                        btn.className = 'group flex flex-col items-center gap-3 bg-surface-container-lowest p-4 rounded-xl shadow-sm hover:shadow-md hover:bg-white active:scale-95 transition-all aspect-square justify-center border-b-4 border-black/5';
+                        btn.innerHTML = `
+                            <div class="w-12 h-12 ${word.color} rounded-2xl flex items-center justify-center text-white shadow-inner group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined !text-3xl">${word.icon}</span>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-tight text-on-surface-variant truncate w-full text-center">${word.text}</span>
+                        `;
+                        container.appendChild(btn);
+                    });
+                </script>
+</div>
+<!-- Contextual FAB (Hidden as per rule for Details/Specific views, but UI design might benefit from a 'Finish' action) -->
+</main>
+</div>
+<!-- Bottom Indicator / Safe Area -->
+<div class="fixed bottom-0 w-full h-8 bg-surface-container-low/50 backdrop-blur-md pointer-events-none"></div>
+</body></html>

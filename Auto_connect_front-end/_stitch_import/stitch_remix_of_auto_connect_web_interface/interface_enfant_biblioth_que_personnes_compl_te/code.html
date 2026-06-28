@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tactile Sanctuary - People</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#e3f1ff",
+                        "on-secondary-fixed-variant": "#005321",
+                        "surface-bright": "#fff8f5",
+                        "surface-container-low": "#fff1e8",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c3c7cb",
+                        "surface-dim": "#e8d7ca",
+                        "on-secondary-fixed": "#002109",
+                        "on-background": "#231a12",
+                        "inverse-on-surface": "#ffeee1",
+                        "primary-fixed": "#c9e6ff",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#231a12",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "tertiary-fixed": "#ffddb8",
+                        "tertiary-container": "#ffecda",
+                        "on-surface-variant": "#43474b",
+                        "surface": "#fff8f5",
+                        "tertiary": "#855300",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#392e26",
+                        "secondary-fixed": "#6bff8f",
+                        "on-secondary-container": "#007432",
+                        "on-primary-fixed-variant": "#004c6e",
+                        "on-tertiary-container": "#986000",
+                        "surface-tint": "#006591",
+                        "surface-container-high": "#f7e5d8",
+                        "background": "#fff8f5",
+                        "error": "#ba1a1a",
+                        "secondary": "#006e2f",
+                        "secondary-container": "#6bff8f",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#f1dfd3",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#89ceff",
+                        "surface-container": "#fdebde",
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-primary-fixed": "#001e2f",
+                        "on-primary-container": "#0073a5",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#f1dfd3",
+                        "primary": "#006591",
+                        "outline": "#73787b",
+                        "primary-fixed-dim": "#89ceff",
+                        "secondary-fixed-dim": "#4ae176"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .symbol-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        .aac-card {
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            border-radius: 9999px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .aac-card:active {
+            transform: scale(0.92);
+        }
+        .aac-card .material-symbols-outlined {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .aac-card span.text-sm {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container">
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center px-6 h-20 max-w-5xl mx-auto bg-[#ffffffcc] dark:bg-slate-900/80 backdrop-blur-xl rounded-full mt-4 mx-4 shadow-xl shadow-black/5">
+<div class="flex items-center gap-4 flex-1">
+<span class="text-xl font-bold text-[#006591] dark:text-sky-400">Tactile Sanctuary</span>
+<div class="flex-1 max-w-2xl bg-surface-container-lowest rounded-full h-12 flex items-center px-4 gap-3 ring-1 ring-outline-variant/10">
+<div class="flex gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide flex-1 items-center py-1">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm symbol-fill">person</span> I
+                </span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm symbol-fill">favorite</span> Love
+                </span>
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm symbol-fill">family_history</span> Family
+                </span>
+</div>
+<div class="flex gap-2 pl-2 border-l border-outline-variant/20">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors text-[#006591]">
+<span class="material-symbols-outlined symbol-fill">volume_up</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors text-error">
+<span class="material-symbols-outlined">backspace</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 ml-4">
+<div class="flex bg-surface-container-low p-1 rounded-full">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-all">😊</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-all">☹️</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-all">🤩</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-all">🤨</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-all">😠</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-all">😴</button>
+</div>
+</div>
+</header>
+<aside class="fixed left-0 top-0 bottom-0 w-72 flex flex-col py-8 z-40 bg-[#fff1e8] dark:bg-slate-950 rounded-r-[3rem] my-4 shadow-xl shadow-black/5">
+<div class="px-8 mb-10">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined symbol-fill">face</span>
+</div>
+<div>
+<h2 class="text-lg font-extrabold text-[#231a12]">Categories</h2>
+<p class="text-sm opacity-70">Browse words</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-4 py-4 px-8 bg-[#fdebde] text-[#006591] rounded-full mx-2 font-bold translate-x-1 duration-300" href="#">
+<span class="material-symbols-outlined symbol-fill">group</span>
+<span class="font-plus-jakarta text-body-lg font-medium">People</span>
+</a>
+<a class="flex items-center gap-4 py-4 px-8 text-[#231a12] opacity-70 hover:bg-[#fdebde]/50 transition-all mx-2" href="#">
+<span class="material-symbols-outlined">touch_app</span>
+<span class="font-plus-jakarta text-body-lg font-medium">Actions</span>
+</a>
+<a class="flex items-center gap-4 py-4 px-8 text-[#231a12] opacity-70 hover:bg-[#fdebde]/50 transition-all mx-2" href="#">
+<span class="material-symbols-outlined">location_on</span>
+<span class="font-plus-jakarta text-body-lg font-medium">Places</span>
+</a>
+<a class="flex items-center gap-4 py-4 px-8 text-[#231a12] opacity-70 hover:bg-[#fdebde]/50 transition-all mx-2" href="#">
+<span class="material-symbols-outlined">mood</span>
+<span class="font-plus-jakarta text-body-lg font-medium">Feelings</span>
+</a>
+<a class="flex items-center gap-4 py-4 px-8 text-[#231a12] opacity-70 hover:bg-[#fdebde]/50 transition-all mx-2" href="#">
+<span class="material-symbols-outlined">category</span>
+<span class="font-plus-jakarta text-body-lg font-medium">Objects</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full flex items-center justify-center gap-2 py-4 bg-primary text-on-primary rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined">record_voice_over</span>
+            Speak
+        </button>
+</div>
+</aside>
+<main class="pl-80 pt-32 pr-8 pb-12 min-h-screen">
+<div class="max-w-6xl mx-auto space-y-12">
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="h-10 w-1 rounded-full bg-primary"></div>
+<h3 class="text-headline-lg font-extrabold tracking-tight">Pronouns</h3>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+<button class="aac-card bg-primary-container text-on-primary-container hover:bg-primary-container/80">
+<span class="material-symbols-outlined symbol-fill">person</span>
+<span class="text-sm">Me</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">person_pin</span>
+<span class="text-sm">You</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">group_add</span>
+<span class="text-sm">We</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-sm">They</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">man</span>
+<span class="text-sm">He</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">woman</span>
+<span class="text-sm">She</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">help_center</span>
+<span class="text-sm">It</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">public</span>
+<span class="text-sm">Everyone</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">person_off</span>
+<span class="text-sm">No one</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm">Anyone</span>
+</button>
+<button class="aac-card bg-primary text-on-primary shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined symbol-fill">fingerprint</span>
+<span class="text-sm">My/Mine</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">back_hand</span>
+<span class="text-sm">Your</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">diversity_3</span>
+<span class="text-sm">Our</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">person_4</span>
+<span class="text-sm">His</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">person_3</span>
+<span class="text-sm">Her</span>
+</button>
+<button class="aac-card bg-primary-container/30 text-primary hover:bg-primary-container/50">
+<span class="material-symbols-outlined">group_work</span>
+<span class="text-sm">Their</span>
+</button>
+</div>
+</section>
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="h-10 w-1 rounded-full bg-secondary"></div>
+<h3 class="text-headline-lg font-extrabold tracking-tight">Family</h3>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">female</span>
+<span class="text-sm">Mom</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">male</span>
+<span class="text-sm">Dad</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">family_history</span>
+<span class="text-sm">Parents</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">person_apron</span>
+<span class="text-sm">Brother</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">girl</span>
+<span class="text-sm">Sister</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">diversity_1</span>
+<span class="text-sm">Siblings</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">child_care</span>
+<span class="text-sm">Baby</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">child_friendly</span>
+<span class="text-sm">Child</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">boy</span>
+<span class="text-sm">Son</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">girl</span>
+<span class="text-sm">Daughter</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">elderly_woman</span>
+<span class="text-sm">Grandma</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">elderly</span>
+<span class="text-sm">Grandpa</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">face_4</span>
+<span class="text-sm">Aunt</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">face_5</span>
+<span class="text-sm">Uncle</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">emoji_people</span>
+<span class="text-sm">Cousin</span>
+</button>
+<button class="aac-card bg-secondary text-on-secondary shadow-lg shadow-secondary/20">
+<span class="material-symbols-outlined symbol-fill">home_health</span>
+<span class="text-sm">Family</span>
+</button>
+<button class="aac-card bg-secondary-container/20 text-secondary hover:bg-secondary-container/40">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="text-sm">Nanny</span>
+</button>
+</div>
+</section>
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="h-10 w-1 rounded-full bg-tertiary"></div>
+<h3 class="text-headline-lg font-extrabold tracking-tight">Community &amp; Others</h3>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">school</span>
+<span class="text-sm">Teacher</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="text-sm">Tutor</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">group_work</span>
+<span class="text-sm">Classmates</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">sentiment_very_satisfied</span>
+<span class="text-sm">Friends</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">person_3</span>
+<span class="text-sm">Girl</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">person_4</span>
+<span class="text-sm">Boy</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">male</span>
+<span class="text-sm">Man</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">female</span>
+<span class="text-sm">Woman</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">person</span>
+<span class="text-sm">Person</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">face_6</span>
+<span class="text-sm">Teenager</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">house</span>
+<span class="text-sm">Neighbour</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">masks</span>
+<span class="text-sm">Stranger</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">local_library</span>
+<span class="text-sm">Librarian</span>
+</button>
+<button class="aac-card bg-tertiary-container/30 text-tertiary hover:bg-tertiary-container/50">
+<span class="material-symbols-outlined">sports</span>
+<span class="text-sm">Coach</span>
+</button>
+<button class="aac-card bg-tertiary text-on-tertiary shadow-lg shadow-tertiary/20">
+<span class="material-symbols-outlined symbol-fill">record_voice_over</span>
+<span class="text-sm">Speech</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-surface-container-lowest/80 backdrop-blur-md p-2 rounded-full shadow-2xl border border-outline-variant/10 md:hidden">
+<button class="flex items-center gap-2 px-6 py-3 bg-primary text-on-primary rounded-full font-bold">
+<span class="material-symbols-outlined">volume_up</span>
+        Speak
+    </button>
+<button class="w-12 h-12 flex items-center justify-center bg-surface-container rounded-full text-error">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</body></html>

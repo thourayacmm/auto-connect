@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Sanctuary - My Objects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#007432",
+                    "on-surface-variant": "#43474b",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-secondary-fixed": "#002109",
+                    "tertiary-fixed": "#ffddb8",
+                    "surface-variant": "#f1dfd3",
+                    "secondary-fixed": "#6bff8f",
+                    "background": "#fff8f5",
+                    "on-tertiary-fixed": "#2a1700",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#4ae176",
+                    "inverse-on-surface": "#ffeee1",
+                    "surface-dim": "#e8d7ca",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#fff1e8",
+                    "primary-fixed-dim": "#89ceff",
+                    "tertiary": "#855300",
+                    "on-primary-container": "#0073a5",
+                    "on-tertiary-container": "#986000",
+                    "surface-tint": "#006591",
+                    "on-primary-fixed": "#001e2f",
+                    "secondary-container": "#6bff8f",
+                    "tertiary-container": "#ffecda",
+                    "outline-variant": "#c3c7cb",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "surface-container-highest": "#f1dfd3",
+                    "outline": "#73787b",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface": "#fff8f5",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#231a12",
+                    "inverse-surface": "#392e26",
+                    "surface-container": "#fdebde",
+                    "surface-bright": "#fff8f5",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#231a12",
+                    "on-secondary-fixed-variant": "#005321",
+                    "surface-container-high": "#f7e5d8",
+                    "primary-container": "#e3f1ff",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#89ceff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#c9e6ff",
+                    "secondary": "#006e2f",
+                    "primary": "#006591"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#fff8f5] shadow-sm flex justify-between items-center w-full px-6 py-4 h-24">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black text-[#006591]">My Sanctuary</span>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 font-['Plus_Jakarta_Sans'] text-lg font-bold tracking-tight hover:bg-[#fdebde] transition-colors px-3 py-1 rounded-lg" href="#">Home</a>
+<a class="text-[#006591] border-b-2 border-[#006591] font-['Plus_Jakarta_Sans'] text-lg font-bold tracking-tight" href="#">My Objects</a>
+<a class="text-slate-500 font-['Plus_Jakarta_Sans'] text-lg font-bold tracking-tight hover:bg-[#fdebde] transition-colors px-3 py-1 rounded-lg" href="#">Feelings</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="p-3 rounded-full hover:bg-[#fdebde] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#006591]">emoji_emotions</span>
+</button>
+<button class="p-3 rounded-full hover:bg-[#fdebde] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#006591]">volume_up</span>
+</button>
+<button class="p-3 rounded-full hover:bg-[#fdebde] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#006591]">backspace</span>
+</button>
+</div>
+</div>
+</header>
+<div class="flex pt-24 min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 flex flex-col py-8 gap-4 z-40 h-screen w-64 bg-[#fff1e8] rounded-r-[3rem] pt-32 hidden md:flex">
+<div class="px-8 mb-6">
+<h2 class="text-[#006591] text-xl font-bold">Categories</h2>
+<p class="text-[#006591] text-sm font-semibold opacity-70">Speak your mind</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="text-[#006591] opacity-70 hover:opacity-100 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#fdebde] rounded-full transition-all duration-300" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-semibold">Home</span>
+</a>
+<a class="bg-[#006591] text-white rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">category</span>
+<span class="font-semibold">My Objects</span>
+</a>
+<a class="text-[#006591] opacity-70 hover:opacity-100 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#fdebde] rounded-full transition-all duration-300" href="#">
+<span class="material-symbols-outlined">mood</span>
+<span class="font-semibold">Feelings</span>
+</a>
+<a class="text-[#006591] opacity-70 hover:opacity-100 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#fdebde] rounded-full transition-all duration-300" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-semibold">People</span>
+</a>
+<a class="text-[#006591] opacity-70 hover:opacity-100 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#fdebde] rounded-full transition-all duration-300" href="#">
+<span class="material-symbols-outlined">touch_app</span>
+<span class="font-semibold">Actions</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 p-8 lg:p-12">
+<!-- Breadcrumbs & Emotional Tone Bar -->
+<div class="mb-10 space-y-6">
+<nav class="flex items-center gap-2 text-on-surface-variant font-medium">
+<span class="hover:text-primary cursor-pointer">Pictograms</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-bold">My Objects</span>
+</nav>
+<div class="bg-surface-container-low rounded-full p-4 inline-flex items-center gap-8 shadow-sm">
+<button class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-3xl hover:bg-white active:scale-90 transition-all shadow-sm">😊</button>
+<button class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-3xl hover:bg-white active:scale-90 transition-all shadow-sm">☹️</button>
+<button class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-3xl hover:bg-white active:scale-90 transition-all shadow-sm">🤩</button>
+<button class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-3xl hover:bg-white active:scale-90 transition-all shadow-sm">😡</button>
+<button class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-3xl hover:bg-white active:scale-90 transition-all shadow-sm">🙄</button>
+</div>
+</div>
+<!-- Bento Grid of Pictograms -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<!-- Phone -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">smartphone</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">phone</span>
+</button>
+<!-- TV -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">tv</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">TV</span>
+</button>
+<!-- Ipad -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">tablet</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">Ipad</span>
+</button>
+<!-- Keys -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">vpn_key</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">keys</span>
+</button>
+<!-- Towel -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">checkroom</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">towel</span>
+</button>
+<!-- Headphones -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">headphones</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">headphones</span>
+</button>
+<!-- Bed -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">bed</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">bed</span>
+</button>
+<!-- Blanket -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">layers</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">blanket</span>
+</button>
+<!-- Wallet -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">account_balance_wallet</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">wallet</span>
+</button>
+<!-- Money -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">payments</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">money</span>
+</button>
+<!-- Bag -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">shopping_bag</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">bag</span>
+</button>
+<!-- Mask -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">masks</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">mask</span>
+</button>
+<!-- Hairbrush -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">brush</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">hairbrush</span>
+</button>
+<!-- Toothbrush -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">clean_hands</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">toothbrush</span>
+</button>
+<!-- Toys -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">smart_toy</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">toys</span>
+</button>
+<!-- Books -->
+<button class="group flex flex-col items-center justify-center aspect-square bg-surface-container-low rounded-xl p-6 transition-all duration-300 hover:bg-surface-container hover:shadow-lg active:scale-95 border-2 border-transparent hover:border-primary-fixed">
+<span class="material-symbols-outlined text-6xl text-primary mb-4 transition-transform group-hover:scale-110">auto_stories</span>
+<span class="text-xl font-bold tracking-tight text-on-surface">books</span>
+</button>
+</div>
+</main>
+</div>
+<!-- Expression Bar (Floating bottom bar for AAC context) -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] md:w-[60%] lg:w-[40%] bg-white/80 backdrop-blur-xl h-20 rounded-full flex items-center px-8 shadow-2xl border border-white/20 z-50">
+<div class="flex-1 overflow-x-auto whitespace-nowrap scrollbar-hide py-2 flex items-center gap-4">
+<!-- Symbols being built would appear here -->
+<p class="text-on-surface-variant font-medium italic opacity-50">Tap objects to start speaking...</p>
+</div>
+<button class="ml-4 w-14 h-14 bg-gradient-to-br from-primary to-on-primary-container text-white rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-all">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+<!-- Responsive Nav for Mobile -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container-low h-20 flex items-center justify-around px-4 z-[60] shadow-lg">
+<button class="flex flex-col items-center gap-1 text-primary/70">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">category</span>
+<span class="text-[10px] font-bold">Objects</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary/70">
+<span class="material-symbols-outlined">mood</span>
+<span class="text-[10px] font-bold">Feelings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary/70">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-bold">People</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary/70">
+<span class="material-symbols-outlined">touch_app</span>
+<span class="text-[10px] font-bold">Actions</span>
+</button>
+</div>
+</body></html>

@@ -1,0 +1,18 @@
+_id,name,__v,audioUrl,category,createdAt,createdBy,description,imageUrl,isActive,keywords[0],keywords[1],keywords[2],level,updatedAt,ageMin,ageMax
+69f3ec5f8fd7c094eaeb240a,J'ai faim,0,,69f3e8cf8fd7c094eaeb23d6,2026-04-30T23:57:18.949Z,69f3e8ce8fd7c094eaeb23ca,,https://dummyimage.com/256x256/eef6ff/17233c&text=J'ai%20faim,true,faim,manger,,Debutant,2026-05-28T15:21:01.925Z,,
+69f3ec5f8fd7c094eaeb240b,J'ai soif,0,,69f3e8cf8fd7c094eaeb23d6,2026-04-30T23:57:19.418Z,69f3e8ce8fd7c094eaeb23ca,,https://dummyimage.com/256x256/eef6ff/17233c&text=J'ai%20soif,true,soif,boire,eau,Debutant,2026-05-28T15:21:02.050Z,,
+69f3ec5f8fd7c094eaeb240c,Aide-moi,0,,69f3e8cf8fd7c094eaeb23d8,2026-04-30T23:57:19.428Z,69f3e8ce8fd7c094eaeb23ca,,https://dummyimage.com/256x256/eef6ff/17233c&text=Aide-moi,true,aide,demande,,Debutant,2026-05-28T15:21:02.054Z,,
+69f3ec5f8fd7c094eaeb240d,Pause,0,,69f3e8cf8fd7c094eaeb23d8,2026-04-30T23:57:19.439Z,69f3e8ce8fd7c094eaeb23ca,,https://dummyimage.com/256x256/eef6ff/17233c&text=Pause,true,pause,calme,,Debutant,2026-05-28T15:21:02.058Z,,
+69f3ec5f8fd7c094eaeb240e,Je suis content,0,,69f3e8cf8fd7c094eaeb23d7,2026-04-30T23:57:19.450Z,69f3e8ce8fd7c094eaeb23ca,,https://dummyimage.com/256x256/eef6ff/17233c&text=Je%20suis%20content,true,content,joie,,Debutant,2026-05-28T15:21:02.061Z,,
+69f3ec5f8fd7c094eaeb240f,Je suis triste,0,,69f3e8cf8fd7c094eaeb23d7,2026-04-30T23:57:19.461Z,69f3e8ce8fd7c094eaeb23ca,,https://dummyimage.com/256x256/eef6ff/17233c&text=Je%20suis%20triste,true,triste,emotion,,Intermediaire,2026-05-28T15:21:02.065Z,,
+69f3ec5f8fd7c094eaeb2410,Ecole,0,,69f3e8cf8fd7c094eaeb23d9,2026-04-30T23:57:19.468Z,69f3e8ce8fd7c094eaeb23ca,,https://dummyimage.com/256x256/eef6ff/17233c&text=Ecole,true,ecole,classe,,Intermediaire,2026-05-28T15:21:02.068Z,,
+69f3ec5f8fd7c094eaeb2411,Je veux jouer,0,,69f3e8cf8fd7c094eaeb23d8,2026-04-30T23:57:19.473Z,69f3e8ce8fd7c094eaeb23ca,,https://dummyimage.com/256x256/eef6ff/17233c&text=Je%20veux%20jouer,true,jouer,jeu,,Debutant,2026-05-28T15:21:02.071Z,,
+6a047a032978c9dfad2f59e2,cafe,0,,6a047a032978c9dfad2f59df,2026-05-13T13:17:55.344Z,69f3e8ce8fd7c094eaeb23cb,General,https://dummyimage.com/256x256/eef6ff/17233c&text=cafe,true,cafe,mange,General,Intermediaire,2026-05-14T11:38:25.491Z,,
+6a047a1d2978c9dfad2f59e5,cafe,0,,6a047a032978c9dfad2f59df,2026-05-13T13:18:21.257Z,69f3e8ce8fd7c094eaeb23cb,General,https://dummyimage.com/256x256/eef6ff/17233c&text=cafe,true,cafe,mange,General,Debutant,2026-05-28T10:34:46.480Z,,
+6a1866637008adb93139f394,Pomme,0,,6a047a032978c9dfad2f59df,2026-05-28T15:59:31.902Z,69f3e8ce8fd7c094eaeb23cb,Nourriture,https://dummyimage.com/256x256/eef6ff/17233c&text=Pomme,true,pomme,fruit,manger,Intermediaire,2026-05-28T15:59:31.902Z,3,25
+6a1866637008adb93139f395,Boire,0,,6a047a032978c9dfad2f59df,2026-05-28T16:00:00.000Z,69f3e8ce8fd7c094eaeb23cb,Besoins essentiels,https://dummyimage.com/256x256/eef6ff/17233c&text=Boire,true,boire,eau,hydratation,Debutant,2026-05-28T16:00:00.000Z,,
+6a1866637008adb93139f396,Manger,0,,6a047a032978c9dfad2f59df,2026-05-28T16:00:15.000Z,69f3e8ce8fd7c094eaeb23cb,Nourriture,https://dummyimage.com/256x256/eef6ff/17233c&text=Manger,true,manger,nourriture,repas,Debutant,2026-05-28T16:00:15.000Z,,
+6a1866637008adb93139f397,Sandwich,0,,6a047a032978c9dfad2f59df,2026-05-28T16:00:30.000Z,69f3e8ce8fd7c094eaeb23cb,Nourriture,https://dummyimage.com/256x256/eef6ff/17233c&text=Sandwich,true,sandwich,repas,manger,Debutant,2026-05-28T16:00:30.000Z,,
+6a1866637008adb93139f398,Eau,0,,6a047a032978c9dfad2f59df,2026-05-28T16:00:45.000Z,69f3e8ce8fd7c094eaeb23cb,Besoins essentiels,https://dummyimage.com/256x256/eef6ff/17233c&text=Eau,true,eau,boire,rafraichissement,Debutant,2026-05-28T16:00:45.000Z,,
+
+

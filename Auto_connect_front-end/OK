@@ -1,0 +1,15 @@
+
+> auto-connect-frontend@0.0.0 build
+> vite build -
+
+vite v5.4.21 building for production...
+transforming...
+✓ 1709 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                              0.71 kB │ gzip:   0.39 kB
+dist/assets/hero-child-aac-CwCRl-V5.png    461.63 kB
+dist/assets/hero-kids-acc-CXCbzdFV.png   2,293.64 kB
+dist/assets/index-C1voa1CC.css              31.95 kB │ gzip:   6.58 kB
+dist/assets/index-CPdTV5Lr.js              635.71 kB │ gzip: 189.81 kB
+✓ built in 1.37s

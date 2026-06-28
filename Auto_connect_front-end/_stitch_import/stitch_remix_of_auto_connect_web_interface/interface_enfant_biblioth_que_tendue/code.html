@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#0EA5E9", // Light blue
+                    "secondary": "#10B981", // Success green
+                    "background": "#FFF7F0", // Soft peach/orange tint
+                    "surface": "#FFFFFF",
+                    "on-background": "#2D3748",
+                    "surface-container": "#FDF2E9", // Slightly darker peach for containers
+                    "interactive-light": "#E0F2FE" // Pale blue for highlights
+            },
+            "borderRadius": {
+                    "DEFAULT": "1.5rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .pictogram-card:active { transform: scale(0.92); }
+        .success-gradient { background: linear-gradient(135deg, #10B981 0%, #34D399 100%); }
+        .sidebar-item-active { background-color: #E0F2FE; color: #0369A1; }
+        .tone-button:active { transform: scale(0.95); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen selection:bg-interactive-light overflow-hidden flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-white/80 backdrop-blur-md flex justify-between items-center px-8 w-full z-40 top-0 h-16 border-b border-orange-100 flex-shrink-0">
+<div class="flex items-center gap-4">
+<!-- New: Back and Home buttons in Navigation -->
+<div class="flex items-center gap-2 mr-4">
+<button class="p-2 text-slate-500 hover:bg-interactive-light rounded-full transition-all group" title="Go Back">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-interactive-light rounded-full transition-all group" title="Home">
+<span class="material-symbols-outlined">home</span>
+</button>
+</div>
+<span class="text-2xl font-black text-primary tracking-tight">Auto Connect</span>
+<div class="hidden md:flex ml-8 items-center gap-6">
+<span class="text-primary border-b-2 border-primary font-semibold cursor-pointer">Pictograms</span>
+<span class="text-slate-400 hover:text-primary transition-all cursor-pointer">Directory</span>
+<span class="text-slate-400 hover:text-primary transition-all cursor-pointer">Scenarios</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-400 hover:bg-interactive-light rounded-full transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-400 hover:bg-interactive-light rounded-full transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary/20 flex items-center justify-center overflow-hidden">
+<img alt="Therapist Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCscNZBUeEoWKSIxOqnl2u-D1XYZTAcrvmVFY2dZAsl1QUk99EllsAvNRJ6wYwv7OaDd-IP7RB656nAZFjWCWDhlsrUFcq38RfWZeEKHl2rgat4CgJZlJMXZgKvllGI-7QCtxpGFMuTyw_Hoip_9riWxYdPti3vCiKj5n1-82qaOx-Z08roa8qchFs8ST1PoR_gPBStjtX3aqIG0eIrURoc7glHdoKbmEpKcoZyBDzGAdisyy3CHhSnSQDFmyESAwb8VKhKrVq-3l9C"/>
+</div>
+</div>
+</header>
+<!-- Sentence Builder & Tone Selection -->
+<section class="bg-white/90 backdrop-blur-md border-b border-orange-100 px-8 py-4 flex-shrink-0 shadow-sm z-30">
+<div class="max-w-[1600px] mx-auto flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<!-- Phrase building bar -->
+<div class="flex-1 flex items-center bg-orange-50/50 rounded-full h-16 px-6 gap-4 border border-orange-100/50">
+<div class="flex items-center bg-white rounded-full px-5 py-2 shadow-sm border border-orange-100 animate-in fade-in zoom-in duration-300">
+<span class="material-symbols-outlined text-orange-400 mr-2" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-bold text-slate-700">Hungry</span>
+</div>
+<div class="flex items-center bg-white rounded-full px-5 py-2 shadow-sm border border-orange-100 animate-in fade-in zoom-in duration-300">
+<span class="material-symbols-outlined text-cyan-500 mr-2" style="font-variation-settings: 'FILL' 1;">toys</span>
+<span class="font-bold text-slate-700">Play</span>
+</div>
+<div class="flex-grow"></div>
+<div class="flex items-center gap-2 pr-2">
+<button class="flex items-center gap-1 px-4 py-2 text-slate-500 hover:text-rose-500 hover:bg-rose-50 rounded-full transition-all group" title="Clear All">
+<span class="material-symbols-outlined text-[20px]">delete_sweep</span>
+<span class="text-xs font-bold uppercase tracking-wider">Clear</span>
+</button>
+<button class="flex items-center gap-1 px-4 py-2 text-slate-500 hover:text-orange-500 hover:bg-orange-50 rounded-full transition-all group" title="Delete Last">
+<span class="material-symbols-outlined text-[20px]">backspace</span>
+<span class="text-xs font-bold uppercase tracking-wider">Delete</span>
+</button>
+</div>
+</div>
+<!-- Speak Button -->
+<button class="success-gradient flex items-center justify-center gap-4 text-white rounded-full px-12 h-16 shadow-[0_10px_25px_-5px_rgba(16,185,129,0.4)] active:scale-95 transition-all hover:brightness-105 hover:shadow-[0_15px_30px_-5px_rgba(16,185,129,0.5)] min-w-[200px]">
+<span class="material-symbols-outlined !text-4xl" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+<span class="text-xl font-black uppercase tracking-[0.2em]">Speak</span>
+</button>
+</div>
+<!-- Tone Selection Row -->
+<div class="flex items-center gap-3 overflow-x-auto pb-1 no-scrollbar">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest mr-2">Tone:</span>
+<button class="tone-button flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-colors">
+<span class="text-xl leading-none">☹️</span>
+<span class="text-sm font-bold">Sad</span>
+</button>
+<button class="tone-button flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 text-amber-600 border border-amber-100 hover:bg-amber-100 transition-colors">
+<span class="text-xl leading-none">😊</span>
+<span class="text-sm font-bold">Happy</span>
+</button>
+<button class="tone-button flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors">
+<span class="text-xl leading-none">🤩</span>
+<span class="text-sm font-bold">Excited</span>
+</button>
+<button class="tone-button flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 text-rose-600 border border-rose-100 hover:bg-rose-100 transition-colors">
+<span class="text-xl leading-none">😡</span>
+<span class="text-sm font-bold">Angry</span>
+</button>
+<button class="tone-button flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100 hover:bg-indigo-100 transition-colors">
+<span class="text-xl leading-none">😏</span>
+<span class="text-sm font-bold">Sarcastic</span>
+</button>
+</div>
+</div>
+</section>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar -->
+<aside class="h-full w-72 bg-white/50 backdrop-blur-sm border-r border-orange-100 flex flex-col py-6">
+<div class="px-6 mb-8">
+<h2 class="text-xl font-extrabold text-slate-800 tracking-tight">Categories</h2>
+<p class="text-xs text-primary font-bold uppercase tracking-widest mt-1">Pictograms</p>
+</div>
+<nav class="space-y-1 px-3">
+<div class="flex items-center gap-3 sidebar-item-active rounded-full px-5 py-3 transition-all cursor-pointer">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-bold">Core Words</span>
+</div>
+<div class="flex items-center gap-3 text-slate-500 px-5 py-3 hover:bg-interactive-light rounded-full transition-colors cursor-pointer">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-medium">Needs</span>
+</div>
+<div class="flex items-center gap-3 text-slate-500 px-5 py-3 hover:bg-interactive-light rounded-full transition-colors cursor-pointer">
+<span class="material-symbols-outlined">mood</span>
+<span class="font-medium">Emotions</span>
+</div>
+<div class="flex items-center gap-3 text-slate-500 px-5 py-3 hover:bg-interactive-light rounded-full transition-colors cursor-pointer">
+<span class="material-symbols-outlined">directions_run</span>
+<span class="font-medium">Actions</span>
+</div>
+<div class="flex items-center gap-3 text-slate-500 px-5 py-3 hover:bg-interactive-light rounded-full transition-colors cursor-pointer">
+<span class="material-symbols-outlined">location_on</span>
+<span class="font-medium">Places</span>
+</div>
+</nav>
+</aside>
+<!-- Main Communication Canvas -->
+<main class="flex-1 p-8 overflow-y-auto relative no-scrollbar">
+<!-- Main Search Bar -->
+<div class="mb-8 max-w-2xl">
+<div class="relative group flex items-center gap-3">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+</div>
+<input class="block w-full pl-12 pr-4 py-4 bg-white border border-orange-100 rounded-full focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-slate-700 shadow-sm" placeholder="Search for pictograms (e.g., 'medicine', 'outside')..." type="text"/><button class="flex-shrink-0 w-14 h-14 bg-white border border-orange-100 rounded-full flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all shadow-sm active:scale-95 group/keyboard">
+<span class="material-symbols-outlined !text-2xl group-hover/keyboard:scale-110 transition-transform">keyboard</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 pb-32">
+<!-- Pictogram Cards -->
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Drink</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-orange-200/20 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-orange-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Hungry</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-secondary/10 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">sentiment_very_satisfied</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Happy</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-indigo-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-indigo-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">bed</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Sleep</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-red-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-rose-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">block</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Stop</span>
+</button>
+<!-- New Cards -->
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-blue-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-blue-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">soap</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Wash</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-amber-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-amber-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">lunch_dining</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Food</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-indigo-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-indigo-600 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Book</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-pink-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-pink-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">music_note</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Music</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-green-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-green-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">park</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Park</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-amber-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-amber-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Help</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-pink-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-pink-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Home</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-cyan-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-cyan-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">toys</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Play</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-blue-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-blue-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">wc</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Toilet</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-secondary/20 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Yes</span>
+</button>
+<!-- Extended Library Cards -->
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-orange-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-orange-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">deck</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Outside</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-slate-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-slate-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</div>
+<span class="text-xl font-bold text-slate-700">More</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-primary/20 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">pan_tool</span>
+</div>
+<span class="text-xl font-bold text-slate-700">I want</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-teal-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-teal-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">volume_off</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Quiet</span>
+</button>
+<button class="pictogram-card flex flex-col items-center justify-center p-6 bg-white rounded-3xl shadow-[0_10px_30px_rgba(251,146,60,0.05)] hover:shadow-xl hover:shadow-rose-100/30 transition-all border border-orange-50 group aspect-square">
+<div class="mb-4 text-rose-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-6xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<span class="text-xl font-bold text-slate-700">Love</span>
+</button>
+</div>
+<!-- Favorites Sticky Section at the bottom of Main Content -->
+<div class="absolute bottom-6 left-8 right-8 z-20">
+<div class="bg-white/80 backdrop-blur-md border border-orange-100 shadow-2xl rounded-[2.5rem] p-4 flex items-center gap-4 overflow-x-auto no-scrollbar">
+<div class="flex-shrink-0 flex items-center gap-2 px-4 border-r border-orange-100 mr-2">
+<span class="material-symbols-outlined text-rose-400" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-sm font-black text-slate-700 uppercase tracking-widest">Favorites</span>
+</div>
+<div class="flex gap-3">
+<button class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-orange-50 flex items-center justify-center text-primary active:scale-90 transition-transform flex-shrink-0">
+<span class="material-symbols-outlined !text-2xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</button>
+<button class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-orange-50 flex items-center justify-center text-orange-400 active:scale-90 transition-transform flex-shrink-0">
+<span class="material-symbols-outlined !text-2xl" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</button>
+<button class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-orange-50 flex items-center justify-center text-secondary active:scale-90 transition-transform flex-shrink-0">
+<span class="material-symbols-outlined !text-2xl" style="font-variation-settings: 'FILL' 1;">sentiment_very_satisfied</span>
+</button>
+<button class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-orange-50 flex items-center justify-center text-blue-400 active:scale-90 transition-transform flex-shrink-0">
+<span class="material-symbols-outlined !text-2xl" style="font-variation-settings: 'FILL' 1;">wc</span>
+</button>
+<button class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-orange-50 flex items-center justify-center text-rose-400 active:scale-90 transition-transform flex-shrink-0">
+<span class="material-symbols-outlined !text-2xl" style="font-variation-settings: 'FILL' 1;">block</span>
+</button>
+<button class="w-14 h-14 bg-orange-50/50 rounded-2xl border border-dashed border-orange-200 flex items-center justify-center text-orange-300 hover:text-orange-500 hover:bg-orange-50 transition-colors flex-shrink-0">
+<span class="material-symbols-outlined !text-2xl">add</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Secondary Actions -->
+<footer class="h-20 bg-white/80 border-t border-orange-100 px-8 flex items-center justify-between flex-shrink-0 z-40">
+<div class="flex gap-8">
+<button class="flex items-center gap-2 text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold uppercase">Favorites Bar Active</span>
+</button>
+<button class="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">history</span>
+<span class="text-sm font-bold uppercase">Recent</span>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs text-slate-400 font-medium">Session Active: 12m</span>
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auto Connect - AI &amp; Statistics</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#563400",
+                    "primary-fixed-dim": "#658eff",
+                    "on-error": "#ffefee",
+                    "secondary": "#006947",
+                    "on-primary-fixed-variant": "#00266e",
+                    "primary": "#0050d4",
+                    "on-tertiary-container": "#4a2c00",
+                    "on-tertiary": "#fff0e3",
+                    "surface-bright": "#f3f7fb",
+                    "on-tertiary-fixed": "#2a1700",
+                    "inverse-primary": "#618bff",
+                    "on-surface-variant": "#575c60",
+                    "inverse-surface": "#0a0f12",
+                    "on-secondary-fixed": "#00452d",
+                    "on-background": "#2a2f32",
+                    "secondary-dim": "#005c3d",
+                    "surface-dim": "#ced5db",
+                    "on-secondary-container": "#005a3c",
+                    "on-secondary-fixed-variant": "#006544",
+                    "on-primary": "#f1f2ff",
+                    "on-secondary": "#c8ffe0",
+                    "surface-container-low": "#ecf1f6",
+                    "background": "#f3f7fb",
+                    "surface-tint": "#0050d4",
+                    "tertiary-fixed": "#f8a010",
+                    "surface-variant": "#d7dee3",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#e79400",
+                    "surface-container-highest": "#d7dee3",
+                    "surface-container-high": "#dde3e8",
+                    "tertiary": "#815100",
+                    "error": "#b31b25",
+                    "primary-fixed": "#7b9cff",
+                    "secondary-fixed-dim": "#58e7ab",
+                    "secondary-container": "#69f6b8",
+                    "primary-container": "#7b9cff",
+                    "error-container": "#fb5151",
+                    "surface": "#f3f7fb",
+                    "tertiary-container": "#f8a010",
+                    "surface-container": "#e3e9ee",
+                    "secondary-fixed": "#69f6b8",
+                    "on-surface": "#2a2f32",
+                    "on-primary-fixed": "#000000",
+                    "tertiary-dim": "#714600",
+                    "on-primary-container": "#001e5a",
+                    "error-dim": "#9f0519",
+                    "outline-variant": "#a9aeb1",
+                    "inverse-on-surface": "#999da1",
+                    "primary-dim": "#0046bb",
+                    "on-error-container": "#570008",
+                    "outline": "#73777b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f3f7fb; }
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .vitality-gradient {
+            background: linear-gradient(135deg, #0050d4 0%, #7b9cff 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="h-full w-72 fixed left-0 top-0 bg-slate-50 dark:bg-slate-900 flex flex-col py-6 z-30 hidden md:flex">
+<div class="px-8 mb-10">
+<h1 class="text-xl font-bold text-blue-600 dark:text-blue-400 tracking-tight font-headline">Auto Connect</h1>
+<p class="text-xs text-slate-500 font-medium">AAC Support</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 mx-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 mx-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-medium">Directory</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 mx-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-medium">Scenarios</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 mx-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-medium">Pictograms</span>
+</a>
+<a class="flex items-center gap-3 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-2xl px-4 py-3 mx-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+<span class="font-medium">Statistics</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 mx-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="font-medium">AI Guide</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-3">
+<img alt="Therapist Profile" class="w-10 h-10 rounded-full object-cover" data-alt="Professional portrait of a friendly female speech therapist in a bright modern office setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxdZXAK9OLg7XBRYH63VcUxaYCIfRmRaLprjYT_4D7qTCXMP3SrsAFS7qemeEM_-9TlRIO5Oi2Ffa9il6dff8jQ8Q5hUNTVpLUgFtHYxbS9WL9YQHAXR5MLs9MyDebOel3gAYEQh96tk8ORWt4nuodpOgkLnLMVNuRavME3Oxz_yM1mw9KJWzxwGAG0R6PDvy58LioIGbrMeFLUmus-IW9xIFmCUP5htYRmrnnrBYzg7bySfFSFnUxZowF6GhEGdDM1ZGDHUg2NjqD"/>
+<div>
+<p class="text-sm font-bold text-on-surface">Dr. Sarah L.</p>
+<p class="text-[10px] text-outline uppercase tracking-wider">Clinical Lead</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="flex justify-between items-center px-8 w-full z-40 fixed top-0 h-16 bg-white dark:bg-slate-950 shadow-sm dark:shadow-none md:pl-80">
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-low rounded-full px-4 py-2 flex items-center gap-2 w-64 md:w-80">
+<span class="material-symbols-outlined text-outline text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-outline" placeholder="Search analytics..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-all">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="md:pl-72 pt-16 pb-32 md:pb-12 min-h-screen">
+<div class="max-w-7xl mx-auto px-6 py-8">
+<!-- Header Section -->
+<div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-primary font-bold text-xs uppercase tracking-widest mb-2 block">Performance Insight</span>
+<h2 class="text-4xl font-extrabold font-headline text-on-surface tracking-tight">Statistics &amp; AI Guide</h2>
+<p class="text-on-surface-variant mt-2 max-w-lg">Advanced data visualization of communication milestones and AI-driven curriculum adjustments for effective therapy.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container-high text-on-surface px-6 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform">
+                        Export Report
+                    </button>
+<button class="vitality-gradient text-on-primary px-6 py-3 rounded-full font-bold text-sm shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                        Update AI Model
+                    </button>
+</div>
+</div>
+<!-- Bento Grid Dashboard -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Hero Stat Card: Words Learned -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between overflow-hidden relative group">
+<div class="flex justify-between items-start z-10">
+<div>
+<h3 class="text-xl font-bold font-headline mb-1">Words Learned</h3>
+<p class="text-on-surface-variant text-sm">Active vocabulary growth over 30 days</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-3xl font-black text-primary">+124</span>
+<span class="text-xs font-bold text-secondary bg-secondary-container/30 px-2 py-0.5 rounded-full">↑ 14% improvement</span>
+</div>
+</div>
+<!-- Simplified Visual Graph Placeholder -->
+<div class="mt-8 h-48 w-full flex items-end gap-2">
+<div class="flex-1 bg-surface-container-low rounded-t-xl h-1/4 transition-all group-hover:h-1/3"></div>
+<div class="flex-1 bg-surface-container-low rounded-t-xl h-2/5 transition-all group-hover:h-1/2"></div>
+<div class="flex-1 bg-surface-container-low rounded-t-xl h-1/2 transition-all group-hover:h-2/3"></div>
+<div class="flex-1 bg-surface-container-low rounded-t-xl h-3/5 transition-all group-hover:h-4/5"></div>
+<div class="flex-1 bg-primary/20 rounded-t-xl h-2/3 transition-all group-hover:h-3/4"></div>
+<div class="flex-1 vitality-gradient rounded-t-xl h-full shadow-lg"></div>
+</div>
+</div>
+<!-- Secondary Stat: Usage Time -->
+<div class="col-span-12 lg:col-span-4 bg-primary text-on-primary rounded-xl p-8 relative overflow-hidden">
+<div class="vitality-gradient absolute inset-0 opacity-80"></div>
+<div class="relative z-10 flex flex-col h-full">
+<span class="material-symbols-outlined text-4xl mb-4">schedule</span>
+<h3 class="text-lg font-bold font-headline opacity-90">Usage Time</h3>
+<div class="mt-auto">
+<p class="text-5xl font-black mb-2">18.5<span class="text-xl">hrs</span></p>
+<p class="text-sm font-medium opacity-75">Avg. 45 mins per session this week</p>
+</div>
+<div class="mt-6 bg-white/20 h-2 rounded-full overflow-hidden">
+<div class="bg-white h-full w-[72%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- AI Recommendations Section -->
+<div class="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+<div class="md:col-span-2">
+<h3 class="text-2xl font-extrabold font-headline mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">auto_awesome</span>
+                            Recommandations IA
+                        </h3>
+<div class="space-y-4">
+<!-- AI Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 flex flex-col md:flex-row gap-6 hover:shadow-lg transition-all border-l-4 border-primary">
+<div class="w-16 h-16 rounded-2xl bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-lg font-headline">New Scenario: Lunch Selection</h4>
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-1 rounded-full uppercase tracking-tighter">High Relevance</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Based on current usage patterns at noon, introducing a "School Lunch" scenario will help bridge the communication gap during social meal times.</p>
+<div class="mt-4 flex gap-2">
+<button class="text-primary font-bold text-xs flex items-center gap-1 hover:underline">
+                                            Preview Scenario <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- AI Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 flex flex-col md:flex-row gap-6 hover:shadow-lg transition-all border-l-4 border-secondary">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-3xl">palette</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-lg font-headline">Expand Pictograms: Emotions</h4>
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-1 rounded-full uppercase tracking-tighter">Skill Growth</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">The user is successfully expressing "happy" and "sad." AI suggests introducing "frustrated" and "excited" to enhance emotional granularity.</p>
+<div class="mt-4 flex gap-2">
+<button class="text-secondary font-bold text-xs flex items-center gap-1 hover:underline">
+                                            Add to Library <span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Stats / AI Insights -->
+<div class="bg-surface-container-low rounded-xl p-8 flex flex-col">
+<h4 class="text-sm font-bold text-outline uppercase tracking-widest mb-6">Learning Velocity</h4>
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm">
+<span class="text-xl font-bold text-primary">84%</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant">Retention Rate</p>
+<div class="w-32 h-1.5 bg-surface-variant rounded-full mt-1">
+<div class="h-full bg-primary rounded-full w-[84%]"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm">
+<span class="text-xl font-bold text-secondary">62</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant">New Phrases</p>
+<p class="text-[10px] text-secondary font-bold">Ahead of goal</p>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-surface-variant">
+<p class="text-xs italic text-on-surface-variant mb-4">"The user's transition from single words to 2-word combinations is occurring 20% faster than average."</p>
+<img alt="Insight Graphic" class="w-full h-32 object-cover rounded-lg opacity-80" data-alt="Abstract 3D visualization of neural networks and data points in soft blue and mint green tones, clean and futuristic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJmuHEbpbcySlrnZfspu9mZNeeph4WTat1NlXxnIDTZ6NBge3zw9FuHRmbHgluhbzETtPZEAQD7HaVWZ7su0U57nJfsX1o14JjYm9yafrImmtMpUEGgCsS1o2whTst6L5EnxVxCMdFBl38EyBuZytdddBDy7WyW9PIOwvgyBVIpm8m12cZaC6EzKjEZmqgku1vIH5kYvEc5ojM6kU2ArjyXkq8rb62ZjRV9wkVrv7nPqvP1E5UkrvvxsiqruozJL31jaX8O70JQe18"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity / Timeline -->
+<div class="col-span-12 bg-white rounded-xl p-8 mt-4 shadow-sm">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-extrabold font-headline">Recent Milestones</h3>
+<button class="text-primary font-bold text-sm">View full logs</button>
+</div>
+<div class="relative pl-8 space-y-8 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-px before:bg-surface-container-high">
+<div class="relative">
+<div class="absolute -left-10 top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-primary-container/20"></div>
+<div class="flex justify-between">
+<p class="font-bold text-on-surface">First complex sentence formed</p>
+<span class="text-xs text-outline font-medium">2 hours ago</span>
+</div>
+<p class="text-sm text-on-surface-variant mt-1">"I want more apple please" used in Playground scenario.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-10 top-0 w-4 h-4 rounded-full bg-secondary ring-4 ring-secondary-container/20"></div>
+<div class="flex justify-between">
+<p class="font-bold text-on-surface">New Pictogram Mastered</p>
+<span class="text-xs text-outline font-medium">Yesterday</span>
+</div>
+<p class="text-sm text-on-surface-variant mt-1">Correct usage of 'Uncomfortable' in various contexts.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-[3rem] h-28 shadow-[0_-10px_40px_rgba(42,47,50,0.06)]">
+<a class="flex flex-col items-center justify-center text-slate-600 dark:text-slate-400 p-2 hover:scale-105 transition-transform" href="#">
+<span class="material-symbols-outlined">backspace</span>
+<span class="text-xs font-bold font-headline">Clear</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-600 dark:text-slate-400 p-2 hover:scale-105 transition-transform" href="#">
+<span class="material-symbols-outlined">volume_up</span>
+<span class="text-xs font-bold font-headline">Speak</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full p-4 w-16 h-16 shadow-lg shadow-blue-500/30 scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold font-headline">Save</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-600 dark:text-slate-400 p-2 hover:scale-105 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="text-xs font-bold font-headline">Recent</span>
+</a>
+</nav>
+</body></html>

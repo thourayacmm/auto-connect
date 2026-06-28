@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tactile Sanctuary - Food Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#2a1700",
+                    "secondary-container": "#6bff8f",
+                    "error": "#ba1a1a",
+                    "on-surface": "#231a12",
+                    "tertiary": "#855300",
+                    "secondary-fixed": "#6bff8f",
+                    "on-background": "#231a12",
+                    "surface-tint": "#006591",
+                    "secondary": "#006e2f",
+                    "on-secondary-fixed": "#002109",
+                    "surface": "#fff8f5",
+                    "outline-variant": "#c3c7cb",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#001e2f",
+                    "surface-container-highest": "#f1dfd3",
+                    "outline": "#73787b",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "inverse-on-surface": "#ffeee1",
+                    "on-secondary-container": "#007432",
+                    "surface-variant": "#f1dfd3",
+                    "secondary-fixed-dim": "#4ae176",
+                    "inverse-surface": "#392e26",
+                    "background": "#fff8f5",
+                    "surface-container": "#fdebde",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#89ceff",
+                    "tertiary-fixed": "#ffddb8",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-surface-variant": "#43474b",
+                    "surface-container-low": "#fff1e8",
+                    "on-primary-container": "#0073a5",
+                    "surface-bright": "#fff8f5",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#f7e5d8",
+                    "surface-dim": "#e8d7ca",
+                    "on-secondary-fixed-variant": "#005321",
+                    "on-error": "#ffffff",
+                    "primary": "#006591",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#e3f1ff",
+                    "on-tertiary-container": "#986000",
+                    "tertiary-container": "#ffecda",
+                    "primary-fixed-dim": "#89ceff",
+                    "primary-fixed": "#c9e6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-no-borders {
+            border: none !important;
+        }
+        body {
+            background-color: #fff8f5;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #231a12;
+        }
+        ::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f1dfd3;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-48">
+<!-- TopAppBar -->
+<nav class="bg-[#fff1e8]/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full rounded-b-[3rem] shadow-xl shadow-black/5 z-50 flex justify-between items-center px-8 py-4">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-xl font-black text-[#006591] dark:text-sky-300 tracking-tight">Tactile Sanctuary</span>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm font-semibold">
+<span>Library</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-bold">Food</span>
+</div>
+</div>
+</div>
+<!-- Search & Interaction -->
+<div class="flex items-center gap-4 flex-1 max-w-md mx-8">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest border-none rounded-full py-3 pl-12 pr-12 focus:ring-2 focus:ring-surface-tint/20 text-on-surface font-medium" placeholder="Search food..." type="text"/>
+<div class="absolute inset-y-0 right-4 flex items-center">
+<span class="material-symbols-outlined text-on-surface-variant">keyboard</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-3 rounded-full hover:bg-[#fdebde] dark:hover:bg-slate-800 transition-colors text-[#006591] dark:text-sky-400 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">volume_up</span>
+</button>
+<button class="p-3 rounded-full hover:bg-[#fdebde] dark:hover:bg-slate-800 transition-colors text-[#006591] dark:text-sky-400 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">backspace</span>
+</button>
+<button class="p-3 rounded-full hover:bg-[#fdebde] dark:hover:bg-slate-800 transition-colors text-[#006591] dark:text-sky-400 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">delete_forever</span>
+</button>
+</div>
+</nav>
+<!-- Content Canvas -->
+<main class="pt-28 px-8 max-w-7xl mx-auto">
+<!-- Action Bar: Phrase Builder -->
+<section class="mb-10">
+<div class="bg-surface-container-lowest/80 backdrop-blur-md rounded-xl p-4 shadow-sm flex items-center gap-4 min-h-[100px] border-outline-variant/10 border">
+<div class="flex-1 flex gap-3 overflow-x-auto pb-2 items-center px-4">
+<div class="flex flex-col items-center p-3 bg-primary-container rounded-lg min-w-[80px]">
+<span class="material-symbols-outlined text-primary mb-1">person</span>
+<span class="text-xs font-bold text-on-primary-container">I want</span>
+</div>
+<div class="flex flex-col items-center p-3 bg-secondary-container rounded-lg min-w-[80px]">
+<span class="material-symbols-outlined text-on-secondary-container mb-1">restaurant</span>
+<span class="text-xs font-bold text-on-secondary-container">to eat</span>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="h-20 w-32 rounded-full bg-gradient-to-br from-[#006591] to-[#0073a5] text-white flex flex-col items-center justify-center shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl">record_voice_over</span>
+<span class="font-bold text-sm">Speak</span>
+</button>
+<button class="h-20 w-20 rounded-full bg-surface-container-high text-on-surface flex flex-col items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined">clear_all</span>
+<span class="font-bold text-[10px]">Clear</span>
+</button>
+<button class="h-20 w-20 rounded-full bg-error-container text-on-error-container flex flex-col items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined">backspace</span>
+<span class="font-bold text-[10px]">Delete</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Tonal Overlays / Emotions -->
+<section class="mb-10 flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+<button class="flex items-center gap-3 px-6 py-4 rounded-full bg-blue-100 text-blue-800 font-bold shadow-sm hover:shadow-md transition-shadow active:scale-95 whitespace-nowrap">
+<span class="material-symbols-outlined">sentiment_dissatisfied</span>
+<span>Sad</span>
+</button>
+<button class="flex items-center gap-3 px-6 py-4 rounded-full bg-yellow-100 text-yellow-800 font-bold shadow-sm hover:shadow-md transition-shadow active:scale-95 border-2 border-yellow-300 whitespace-nowrap">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sentiment_very_satisfied</span>
+<span>Happy</span>
+</button>
+<button class="flex items-center gap-3 px-6 py-4 rounded-full bg-orange-100 text-orange-800 font-bold shadow-sm hover:shadow-md transition-shadow active:scale-95 whitespace-nowrap">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span>Excited</span>
+</button>
+<button class="flex items-center gap-3 px-6 py-4 rounded-full bg-red-100 text-red-800 font-bold shadow-sm hover:shadow-md transition-shadow active:scale-95 whitespace-nowrap">
+<span class="material-symbols-outlined">sentiment_extremely_dissatisfied</span>
+<span>Angry</span>
+</button>
+<button class="flex items-center gap-3 px-6 py-4 rounded-full bg-purple-100 text-purple-800 font-bold shadow-sm hover:shadow-md transition-shadow active:scale-95 whitespace-nowrap">
+<span class="material-symbols-outlined">theater_comedy</span>
+<span>Sarcastic</span>
+</button>
+</section>
+<!-- Sub-section: Staple Foods & Grains -->
+<div class="mb-12">
+<h2 class="text-xl font-bold text-on-surface-variant mb-6 px-2 flex items-center gap-2">
+<span class="material-symbols-outlined">bakery_dining</span> Staples &amp; Grains
+</h2>
+<div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-amber-600 mb-4" style="font-variation-settings: 'FILL' 1;">breakfast_dining</span>
+<span class="font-bold text-lg text-on-surface">Bread</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-yellow-100 mb-4" style="font-variation-settings: 'FILL' 1;">rice_bowl</span>
+<span class="font-bold text-lg text-on-surface">Rice</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-orange-400 mb-4" style="font-variation-settings: 'FILL' 1;">dinner_dining</span>
+<span class="font-bold text-lg text-on-surface">Pasta</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-yellow-600 mb-4" style="font-variation-settings: 'FILL' 1;">ramen_dining</span>
+<span class="font-bold text-lg text-on-surface">Noodles</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-yellow-700 mb-4" style="font-variation-settings: 'FILL' 1;">bakery_dining</span>
+<span class="font-bold text-lg text-on-surface">Cereal</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-amber-800 mb-4" style="font-variation-settings: 'FILL' 1;">grass</span>
+<span class="font-bold text-lg text-on-surface">Oats</span>
+</button>
+</div>
+</div>
+<!-- Sub-section: Meals & Snacks -->
+<div class="mb-12">
+<h2 class="text-xl font-bold text-on-surface-variant mb-6 px-2 flex items-center gap-2">
+<span class="material-symbols-outlined">fastfood</span> Meals &amp; Snacks
+</h2>
+<div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-orange-600 mb-4" style="font-variation-settings: 'FILL' 1;">local_pizza</span>
+<span class="font-bold text-lg text-on-surface">Pizza</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-amber-700 mb-4" style="font-variation-settings: 'FILL' 1;">lunch_dining</span>
+<span class="font-bold text-lg text-on-surface">Burger</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-amber-800 mb-4" style="font-variation-settings: 'FILL' 1;">toast</span>
+<span class="font-bold text-lg text-on-surface">Sandwich</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-yellow-600 mb-4" style="font-variation-settings: 'FILL' 1;">settings_input_svideo</span>
+<span class="font-bold text-lg text-on-surface">Wrap</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-orange-400 mb-4" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-bold text-lg text-on-surface">Fries</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-yellow-900 mb-4" style="font-variation-settings: 'FILL' 1;">soup_kitchen</span>
+<span class="font-bold text-lg text-on-surface">Soup</span>
+</button>
+</div>
+</div>
+<!-- Sub-section: Proteins & Dairy -->
+<div class="mb-12">
+<h2 class="text-xl font-bold text-on-surface-variant mb-6 px-2 flex items-center gap-2">
+<span class="material-symbols-outlined">set_meal</span> Proteins &amp; Dairy
+</h2>
+<div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-red-700 mb-4" style="font-variation-settings: 'FILL' 1;">kebab_dining</span>
+<span class="font-bold text-lg text-on-surface">Chicken</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-red-900 mb-4" style="font-variation-settings: 'FILL' 1;">flatware</span>
+<span class="font-bold text-lg text-on-surface">Beef</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-pink-700 mb-4" style="font-variation-settings: 'FILL' 1;">egg_alt</span>
+<span class="font-bold text-lg text-on-surface">Pork</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-blue-400 mb-4" style="font-variation-settings: 'FILL' 1;">sailing</span>
+<span class="font-bold text-lg text-on-surface">Fish</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-yellow-500 mb-4" style="font-variation-settings: 'FILL' 1;">egg</span>
+<span class="font-bold text-lg text-on-surface">Eggs</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-yellow-600 mb-4" style="font-variation-settings: 'FILL' 1;">cheese</span>
+<span class="font-bold text-lg text-on-surface">Cheese</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-sky-400 mb-4" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<span class="font-bold text-lg text-on-surface">Milk</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-blue-200 mb-4" style="font-variation-settings: 'FILL' 1;">icecream</span>
+<span class="font-bold text-lg text-on-surface">Yogurt</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-yellow-400 mb-4" style="font-variation-settings: 'FILL' 1;">square</span>
+<span class="font-bold text-lg text-on-surface">Butter</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-amber-900 mb-4" style="font-variation-settings: 'FILL' 1;">fiber_smart_record</span>
+<span class="font-bold text-lg text-on-surface">Nuts</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-green-800 mb-4" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="font-bold text-lg text-on-surface">Beans</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-orange-900 mb-4" style="font-variation-settings: 'FILL' 1;">grain</span>
+<span class="font-bold text-lg text-on-surface">Lentils</span>
+</button>
+</div>
+</div>
+<!-- Sub-section: Fruits -->
+<div class="mb-12">
+<h2 class="text-xl font-bold text-on-surface-variant mb-6 px-2 flex items-center gap-2">
+<span class="material-symbols-outlined">nutrition</span> Fruits
+</h2>
+<div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-red-600 mb-4" style="font-variation-settings: 'FILL' 1;">nutrition</span>
+<span class="font-bold text-lg text-on-surface">Apple</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-yellow-500 mb-4" style="font-variation-settings: 'FILL' 1;">bakery_dining</span>
+<span class="font-bold text-lg text-on-surface">Banana</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-orange-500 mb-4" style="font-variation-settings: 'FILL' 1;">circle</span>
+<span class="font-bold text-lg text-on-surface">Orange</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-red-500 mb-4" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-bold text-lg text-on-surface">Strawberry</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-purple-600 mb-4" style="font-variation-settings: 'FILL' 1;">blur_on</span>
+<span class="font-bold text-lg text-on-surface">Grapes</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-red-400 mb-4" style="font-variation-settings: 'FILL' 1;">pie_chart</span>
+<span class="font-bold text-lg text-on-surface">Watermelon</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-orange-400 mb-4" style="font-variation-settings: 'FILL' 1;">filter_vintage</span>
+<span class="font-bold text-lg text-on-surface">Mango</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-yellow-600 mb-4" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-bold text-lg text-on-surface">Pineapple</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-orange-300 mb-4" style="font-variation-settings: 'FILL' 1;">circle</span>
+<span class="font-bold text-lg text-on-surface">Peach</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-green-300 mb-4" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-bold text-lg text-on-surface">Pear</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-red-800 mb-4" style="font-variation-settings: 'FILL' 1;">radio_button_checked</span>
+<span class="font-bold text-lg text-on-surface">Cherry</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-green-600 mb-4" style="font-variation-settings: 'FILL' 1;">oval</span>
+<span class="font-bold text-lg text-on-surface">Avocado</span>
+</button>
+</div>
+</div>
+<!-- Sub-section: Vegetables -->
+<div class="mb-12">
+<h2 class="text-xl font-bold text-on-surface-variant mb-6 px-2 flex items-center gap-2">
+<span class="material-symbols-outlined">eco</span> Vegetables
+</h2>
+<div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-green-700 mb-4" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-bold text-lg text-on-surface">Salad</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-red-600 mb-4" style="font-variation-settings: 'FILL' 1;">circle</span>
+<span class="font-bold text-lg text-on-surface">Tomato</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-green-500 mb-4" style="font-variation-settings: 'FILL' 1;">remove</span>
+<span class="font-bold text-lg text-on-surface">Cucumber</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-orange-600 mb-4" style="font-variation-settings: 'FILL' 1;">expand_less</span>
+<span class="font-bold text-lg text-on-surface">Carrot</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-green-400 mb-4" style="font-variation-settings: 'FILL' 1;">leafy_green</span>
+<span class="font-bold text-lg text-on-surface">Lettuce</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-purple-300 mb-4" style="font-variation-settings: 'FILL' 1;">circle</span>
+<span class="font-bold text-lg text-on-surface">Onion</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-red-500 mb-4" style="font-variation-settings: 'FILL' 1;">comedy_mask</span>
+<span class="font-bold text-lg text-on-surface">Pepper</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-yellow-600 mb-4" style="font-variation-settings: 'FILL' 1;">grid_goldenratio</span>
+<span class="font-bold text-lg text-on-surface">Corn</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-amber-900 mb-4" style="font-variation-settings: 'FILL' 1;">circle</span>
+<span class="font-bold text-lg text-on-surface">Potatoes</span>
+</button>
+</div>
+</div>
+<!-- Sub-section: Drinks & Treats -->
+<div class="mb-12">
+<h2 class="text-xl font-bold text-on-surface-variant mb-6 px-2 flex items-center gap-2">
+<span class="material-symbols-outlined">icecream</span> Drinks &amp; Treats
+</h2>
+<div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-blue-500 mb-4" style="font-variation-settings: 'FILL' 1;">humidity_mid</span>
+<span class="font-bold text-lg text-on-surface">Water</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-orange-500 mb-4" style="font-variation-settings: 'FILL' 1;">local_drink</span>
+<span class="font-bold text-lg text-on-surface">Juice</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-pink-300 mb-4" style="font-variation-settings: 'FILL' 1;">cake</span>
+<span class="font-bold text-lg text-on-surface">Cake</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-amber-900 mb-4" style="font-variation-settings: 'FILL' 1;">cookie</span>
+<span class="font-bold text-lg text-on-surface">Cookies</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-blue-300 mb-4" style="font-variation-settings: 'FILL' 1;">icecream</span>
+<span class="font-bold text-lg text-on-surface">Ice Cream</span>
+</button>
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-[2rem] hover:bg-surface-container transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-5xl text-amber-950 mb-4" style="font-variation-settings: 'FILL' 1;">grid_on</span>
+<span class="font-bold text-lg text-on-surface">Chocolate</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar with Favorites -->
+<footer class="fixed bottom-0 left-0 w-full z-50">
+<!-- Favorites Bar (Immediate Action Shelf) -->
+<div class="bg-surface-container-highest/60 backdrop-blur-lg px-8 py-3 flex gap-4 items-center justify-center mx-auto max-w-fit rounded-t-xl">
+<span class="text-xs font-bold text-on-surface-variant mr-2 uppercase tracking-widest">Quick:</span>
+<button class="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined">water_full</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined">home_health</span>
+</button>
+</div>
+<!-- Global Navigation -->
+<nav class="bg-[#ffffff]/90 dark:bg-slate-950/90 backdrop-blur-2xl rounded-t-[3rem] shadow-[0_-8px_24px_rgba(35,26,18,0.06)] flex justify-around items-end px-6 pb-4">
+<div class="flex flex-col items-center justify-center text-[#231a12]/50 dark:text-slate-500 p-2 hover:text-[#006591] dark:hover:text-sky-300 cursor-pointer">
+<span class="material-symbols-outlined">home</span>
+<span class="font-plus-jakarta-sans text-[12px] font-semibold">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#006591] to-[#0073a5] text-white rounded-full p-3 w-16 h-16 -translate-y-4 shadow-lg">
+<span class="material-symbols-outlined text-2xl">mood</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold">Feelings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#231a12]/50 dark:text-slate-500 p-2 hover:text-[#006591] dark:hover:text-sky-300 cursor-pointer">
+<span class="material-symbols-outlined">group</span>
+<span class="font-plus-jakarta-sans text-[12px] font-semibold">People</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#231a12]/50 dark:text-slate-500 p-2 hover:text-[#006591] dark:hover:text-sky-300 cursor-pointer">
+<span class="material-symbols-outlined">location_on</span>
+<span class="font-plus-jakarta-sans text-[12px] font-semibold">Places</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#231a12]/50 dark:text-slate-500 p-2 hover:text-[#006591] dark:hover:text-sky-300 cursor-pointer">
+<span class="material-symbols-outlined">star</span>
+<span class="font-plus-jakarta-sans text-[12px] font-semibold">Favorites</span>
+</div>
+</nav>
+</footer>
+</body></html>

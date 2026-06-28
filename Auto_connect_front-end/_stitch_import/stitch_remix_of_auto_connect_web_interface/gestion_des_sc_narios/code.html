@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auto Connect - Scenarios Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#563400",
+                    "primary-fixed-dim": "#658eff",
+                    "on-error": "#ffefee",
+                    "secondary": "#006947",
+                    "on-primary-fixed-variant": "#00266e",
+                    "primary": "#0050d4",
+                    "on-tertiary-container": "#4a2c00",
+                    "on-tertiary": "#fff0e3",
+                    "surface-bright": "#f3f7fb",
+                    "on-tertiary-fixed": "#2a1700",
+                    "inverse-primary": "#618bff",
+                    "on-surface-variant": "#575c60",
+                    "inverse-surface": "#0a0f12",
+                    "on-secondary-fixed": "#00452d",
+                    "on-background": "#2a2f32",
+                    "secondary-dim": "#005c3d",
+                    "surface-dim": "#ced5db",
+                    "on-secondary-container": "#005a3c",
+                    "on-secondary-fixed-variant": "#006544",
+                    "on-primary": "#f1f2ff",
+                    "on-secondary": "#c8ffe0",
+                    "surface-container-low": "#ecf1f6",
+                    "background": "#f3f7fb",
+                    "surface-tint": "#0050d4",
+                    "tertiary-fixed": "#f8a010",
+                    "surface-variant": "#d7dee3",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#e79400",
+                    "surface-container-highest": "#d7dee3",
+                    "surface-container-high": "#dde3e8",
+                    "tertiary": "#815100",
+                    "error": "#b31b25",
+                    "primary-fixed": "#7b9cff",
+                    "secondary-fixed-dim": "#58e7ab",
+                    "secondary-container": "#69f6b8",
+                    "primary-container": "#7b9cff",
+                    "error-container": "#fb5151",
+                    "surface": "#f3f7fb",
+                    "tertiary-container": "#f8a010",
+                    "surface-container": "#e3e9ee",
+                    "secondary-fixed": "#69f6b8",
+                    "on-surface": "#2a2f32",
+                    "on-primary-fixed": "#000000",
+                    "tertiary-dim": "#714600",
+                    "on-primary-container": "#001e5a",
+                    "error-dim": "#9f0519",
+                    "outline-variant": "#a9aeb1",
+                    "inverse-on-surface": "#999da1",
+                    "primary-dim": "#0046bb",
+                    "on-error-container": "#570008",
+                    "outline": "#73777b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body": [
+                            "Inter"
+                    ],
+                    "label": [
+                            "Inter"
+                    ]
+          }
+        },
+      }
+    }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f3f7fb; }
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .vitality-gradient { background: linear-gradient(135deg, #0050d4 0%, #7b9cff 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-hidden">
+<aside class="h-full w-72 fixed left-0 top-0 bg-slate-50 dark:bg-slate-900 flex flex-col py-6 z-50">
+<div class="px-6 mb-10">
+<h1 class="text-xl font-bold text-blue-600 dark:text-blue-400 tracking-tight font-headline">Auto Connect</h1>
+<p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mt-1">AAC Support</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 mx-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 mx-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-medium">Directory</span>
+</a>
+<a class="flex items-center gap-3 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-2xl px-4 py-3 mx-2" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-medium">Scenarios</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 mx-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-medium">Pictograms</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 mx-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-medium">Statistics</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 mx-2 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="font-medium">AI Guide</span>
+</a>
+</nav>
+<div class="mt-auto px-6 pt-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up portrait of a professional female therapist smiling warmly in a clinical yet friendly office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzUSjA1QdOMlcVpvMK2GrSBfR4dOHfxSwAO7q4zs0dKCWXpa7ePCAp1Al0NCgapC5EJ6NSSGqz9U2_mOgEoZgF-s3oG5NNTI0YZ3ITXOnqkgiwp1hEdqgGBCRIVlPpKR3bFTH16l-nzWHWKryAf_pwwL0WWlUIOEujwMY401W8N4luLKuCe4LhcHVGKI6Gfyfrj5fQ1ymK3X4eaJPZHT2b0I3IOB3z42UoQ892SzwtMKqDkBnqf1ICuLAW3Q9pXjeg2XjHx0IVc6iX"/>
+</div>
+<div>
+<p class="text-sm font-bold font-headline">Dr. Sarah Chen</p>
+<p class="text-[10px] uppercase tracking-wider text-slate-500">Lead Pathologist</p>
+</div>
+</div>
+</aside>
+<main class="ml-72 min-h-screen flex flex-col">
+<header class="h-16 flex justify-between items-center px-8 w-full z-40 bg-white dark:bg-slate-950 shadow-sm dark:shadow-none sticky top-0">
+<div class="flex items-center gap-6 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full text-sm focus:ring-2 focus:ring-primary-fixed-dim/30 transition-all" placeholder="Search scenarios..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<div class="p-8 space-y-8 flex-1 overflow-y-auto">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="text-4xl font-extrabold font-headline text-on-surface tracking-tight">Active Scenarios</h2>
+<p class="text-on-surface-variant mt-2 font-medium">Design and manage empathetic communication pathways.</p>
+</div>
+<button class="px-8 py-3 vitality-gradient text-on-primary rounded-full font-bold flex items-center gap-2 shadow-lg hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    Create New Scenario
+                </button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_20px_40px_rgba(42,47,50,0.06)] hover:ring-2 hover:ring-primary transition-all group cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-blue-50 text-primary rounded-2xl">
+<span class="material-symbols-outlined text-3xl" data-icon="restaurant">restaurant</span>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container/20 text-secondary text-[10px] font-bold uppercase rounded-full">Beginner</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase rounded-full">Age 4-7</span>
+</div>
+</div>
+<h3 class="text-xl font-bold font-headline mb-2">Requesting Lunch</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Helping children express hunger and specific food preferences during school lunch hours.</p>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold">SJ</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold">MK</div>
+</div>
+<button class="px-5 py-2 bg-surface-container-high rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-colors">Edit</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_20px_40px_rgba(42,47,50,0.06)] hover:ring-2 hover:ring-primary transition-all group cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-blue-50 text-primary rounded-2xl">
+<span class="material-symbols-outlined text-3xl" data-icon="park">park</span>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-tertiary-container/20 text-tertiary text-[10px] font-bold uppercase rounded-full">Advanced</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase rounded-full">Age 8-12</span>
+</div>
+</div>
+<h3 class="text-xl font-bold font-headline mb-2">Playground Social</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Complex turn-taking and initiation of play with peers in an outdoor setting.</p>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold">AL</div>
+</div>
+<button class="px-5 py-2 bg-surface-container-high rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-colors">Edit</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_20px_40px_rgba(42,47,50,0.06)] hover:ring-2 hover:ring-primary transition-all group cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-blue-50 text-primary rounded-2xl">
+<span class="material-symbols-outlined text-3xl" data-icon="medical_services">medical_services</span>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container/20 text-secondary text-[10px] font-bold uppercase rounded-full">Beginner</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase rounded-full">All Ages</span>
+</div>
+</div>
+<h3 class="text-xl font-bold font-headline mb-2">Feeling Unwell</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Identifying body parts and intensity of pain to communicate health distress to caregivers.</p>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold">TH</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold">+3</div>
+</div>
+<button class="px-5 py-2 bg-surface-container-high rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-colors">Edit</button>
+</div>
+</div>
+</div>
+<div class="mt-12 bg-surface-container-low rounded-xl p-8 space-y-8">
+<div class="flex items-center justify-between">
+<div>
+<span class="label-sm text-[0.6875rem] font-bold uppercase tracking-widest text-primary block mb-2">Scenario Builder</span>
+<h3 class="text-2xl font-bold font-headline">Requesting Lunch: Sequence Editor</h3>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2 bg-white text-on-surface rounded-full text-sm font-bold shadow-sm">Save Draft</button>
+<button class="px-6 py-2 vitality-gradient text-on-primary rounded-full text-sm font-bold shadow-md">Publish Update</button>
+</div>
+</div>
+<div class="flex items-start gap-8">
+<div class="flex-1 space-y-6">
+<div class="relative pl-12 before:content-[''] before:absolute before:left-[19px] before:top-10 before:bottom-0 before:w-0.5 before:bg-surface-variant">
+<div class="bg-white p-6 rounded-lg shadow-sm mb-4 relative">
+<div class="absolute -left-12 top-2 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold font-headline text-lg">1</div>
+<div class="flex gap-4 items-center mb-4">
+<div class="w-16 h-16 bg-surface-container-low rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="waving_hand">waving_hand</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-lg">Initiation</h4>
+<p class="text-sm text-on-surface-variant">Attract attention of the adult.</p>
+</div>
+</div>
+<div class="flex gap-2 p-2 bg-surface-container-low rounded-lg">
+<div class="bg-white p-2 rounded shadow-sm flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="person">person</span>
+<span class="text-[10px] font-bold">TEACHER</span>
+</div>
+<div class="bg-white p-2 rounded shadow-sm flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="front_hand">front_hand</span>
+<span class="text-[10px] font-bold">WAVE</span>
+</div>
+<button class="w-10 flex items-center justify-center border-2 border-dashed border-surface-variant rounded-lg text-surface-variant hover:text-primary hover:border-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm mb-4 relative">
+<div class="absolute -left-12 top-2 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold font-headline text-lg">2</div>
+<div class="flex gap-4 items-center mb-4">
+<div class="w-16 h-16 bg-surface-container-low rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="restaurant">restaurant</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-lg">The Request</h4>
+<p class="text-sm text-on-surface-variant">Communicating the core need (I am hungry).</p>
+</div>
+</div>
+<div class="flex gap-2 p-2 bg-surface-container-low rounded-lg">
+<div class="bg-white p-2 rounded shadow-sm flex flex-col items-center gap-1 border-2 border-primary ring-2 ring-primary/20">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="face">face</span>
+<span class="text-[10px] font-bold">I WANT</span>
+</div>
+<div class="bg-white p-2 rounded shadow-sm flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="lunch_dining">lunch_dining</span>
+<span class="text-[10px] font-bold">FOOD</span>
+</div>
+<button class="w-10 flex items-center justify-center border-2 border-dashed border-surface-variant rounded-lg text-surface-variant">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<div class="bg-white/50 p-6 rounded-lg border-2 border-dashed border-surface-variant flex flex-col items-center justify-center text-on-surface-variant group hover:bg-white hover:border-primary hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-4xl mb-2" data-icon="add_circle">add_circle</span>
+<span class="font-bold">Add Step to Sequence</span>
+</div>
+</div>
+</div>
+<div class="w-80 space-y-6">
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<h4 class="font-bold font-headline mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+                                Quick Pictograms
+                            </h4>
+<div class="grid grid-cols-3 gap-3">
+<div class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center cursor-pointer hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="apple">ios</span>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center cursor-pointer hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="water_drop">water_drop</span>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center cursor-pointer hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="mood">mood</span>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center cursor-pointer hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="mood_bad">mood_bad</span>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center cursor-pointer hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="home">home</span>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-xl flex items-center justify-center cursor-pointer hover:bg-primary-container/20 transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="school">school</span>
+</div>
+</div>
+<button class="w-full mt-6 py-3 border-2 border-surface-container-high rounded-full text-sm font-bold text-on-surface-variant hover:bg-surface-container-high transition-colors">Browse Library</button>
+</div>
+<div class="bg-secondary-container/10 p-6 rounded-lg relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-8xl" data-icon="lightbulb">lightbulb</span>
+</div>
+<h4 class="font-bold font-headline mb-2 text-secondary-dim flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="tips_and_updates">tips_and_updates</span>
+                                AI Suggestion
+                            </h4>
+<p class="text-sm text-secondary-dim leading-relaxed">Consider adding a "Wait" step between initiation and the request to practice patience and turn-taking.</p>
+<button class="mt-4 text-xs font-bold text-secondary uppercase tracking-wider flex items-center gap-1 hover:underline">Apply Suggestion</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-xl h-28 shadow-[0_-10px_40px_rgba(42,47,50,0.06)] md:hidden">
+<button class="flex flex-col items-center justify-center text-slate-600 dark:text-slate-400 p-2 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="backspace">backspace</span>
+<span class="text-[10px] font-bold font-headline mt-1">Clear</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full p-4 w-16 h-16 shadow-lg shadow-blue-500/30 hover:scale-105 transition-transform active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="volume_up" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+<span class="text-[10px] font-bold font-headline mt-1">Speak</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-600 dark:text-slate-400 p-2 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="text-[10px] font-bold font-headline mt-1">Save</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-600 dark:text-slate-400 p-2 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[10px] font-bold font-headline mt-1">Recent</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,22 @@
+_id,kid,scoreType,value,explanation,basedOn.phraseCount,basedOn.distinctPictograms,createdBy,createdAt,updatedAt,__v
+6a185d5f56e82dc7db3eb3fd,69f3e8ce8fd7c094eaeb23d0,ai-score,58,Premiere demande simple validee avec soutien parental.,1,1,ai,2026-05-22T15:21:02.983Z,2026-05-22T15:21:02.983Z,0
+6a185d5f56e82dc7db3eb3fe,69f3e8ce8fd7c094eaeb23d0,ai-score,64,Meilleure autonomie sur le pictogramme d'aide.,1,1,ai,2026-05-23T15:21:02.983Z,2026-05-23T15:21:02.983Z,0
+6a185d5f56e82dc7db3eb3ff,69f3e8ce8fd7c094eaeb23d0,ai-score,67,Demande de jeu comprise et validee rapidement.,1,1,ai,2026-05-24T15:21:02.983Z,2026-05-24T15:21:02.983Z,0
+6a185d5f56e82dc7db3eb400,69f3e8ce8fd7c094eaeb23d0,ai-score,71,Expression emotionnelle reussie pendant scenario guide.,1,1,ai,2026-05-25T15:21:02.983Z,2026-05-25T15:21:02.983Z,0
+6a185d5f56e82dc7db3eb401,69f3e8ce8fd7c094eaeb23d0,ai-score,74,Association de deux notions dans le contexte scolaire.,1,2,ai,2026-05-26T15:21:02.983Z,2026-05-26T15:21:02.983Z,0
+6a185d5f56e82dc7db3eb402,69f3e8ce8fd7c094eaeb23d0,ai-score,79,Bonne combinaison de besoins et demande d'aide avec guidance legere.,1,2,ai,2026-05-27T15:21:02.983Z,2026-05-27T15:21:02.983Z,0
+6a185d5f56e82dc7db3eb414,69f3e8cf8fd7c094eaeb23d1,ai-score,73,Aya verbalise une emotion avec support scenario.,1,2,ai,2026-05-24T15:21:03.081Z,2026-05-24T15:21:03.081Z,0
+6a185d5f56e82dc7db3eb415,69f3e8cf8fd7c094eaeb23d1,ai-score,77,Aya reformule une emotion puis demande de l'aide.,1,2,ai,2026-05-26T15:21:03.081Z,2026-05-26T15:21:03.081Z,0
+6a185d5f56e82dc7db3eb416,69f3e8cf8fd7c094eaeb23d1,ai-score,82,Aya combine jeu et emotion positive dans une phrase plus longue.,1,2,ai,2026-05-27T15:21:03.081Z,2026-05-27T15:21:03.081Z,0
+6a185d5f56e82dc7db3eb426,69f3e8cf8fd7c094eaeb23d2,ai-score,49,Nour commence a pointer le bon pictogramme besoin.,1,1,ai,2026-05-25T15:21:03.109Z,2026-05-25T15:21:03.109Z,0
+6a185d5f56e82dc7db3eb427,69f3e8cf8fd7c094eaeb23d2,ai-score,56,Demande de boisson mieux comprise en seance guidee.,1,1,ai,2026-05-26T15:21:03.109Z,2026-05-26T15:21:03.109Z,0
+6a185d5f56e82dc7db3eb428,69f3e8cf8fd7c094eaeb23d2,ai-score,62,Nour commence a demander de l'aide avec moins de guidance.,1,1,ai,2026-05-27T15:21:03.109Z,2026-05-27T15:21:03.109Z,0
+6a185d5f56e82dc7db3eb437,69f3e8cf8fd7c094eaeb23d3,ai-score,52,Premiers essais de demande d'aide stabilises.,1,1,ai,2026-05-25T15:21:03.123Z,2026-05-25T15:21:03.123Z,0
+6a185d5f56e82dc7db3eb438,69f3e8cf8fd7c094eaeb23d3,ai-score,57,Meilleure regulation grace au pictogramme Pause.,1,1,ai,2026-05-26T15:21:03.123Z,2026-05-26T15:21:03.123Z,0
+6a185d5f56e82dc7db3eb439,69f3e8cf8fd7c094eaeb23d3,ai-score,61,Association de besoin et demande d'aide plus autonome.,1,2,ai,2026-05-27T15:21:03.123Z,2026-05-27T15:21:03.123Z,0
+6a185d5f56e82dc7db3eb449,69f3e8cf8fd7c094eaeb23d4,ai-score,69,"Bonne comprehension de la routine, expression encore breve.",1,2,ai,2026-05-24T15:21:03.135Z,2026-05-24T15:21:03.135Z,0
+6a185d5f56e82dc7db3eb44a,69f3e8cf8fd7c094eaeb23d4,ai-score,74,Lina formule mieux son emotion et sa demande d'aide.,1,2,ai,2026-05-26T15:21:03.135Z,2026-05-26T15:21:03.135Z,0
+6a185d5f56e82dc7db3eb44b,69f3e8cf8fd7c094eaeb23d4,ai-score,78,Bonne generalisation d'une phrase emotionnelle contextualisee.,1,2,ai,2026-05-27T15:21:03.135Z,2026-05-27T15:21:03.135Z,0
+6a185d5f56e82dc7db3eb45b,69f3e8cf8fd7c094eaeb23d5,ai-score,84,Adam contextualise deja ses demandes avec peu d'aide.,1,2,ai,2026-05-24T15:21:03.173Z,2026-05-24T15:21:03.173Z,0
+6a185d5f56e82dc7db3eb45c,69f3e8cf8fd7c094eaeb23d5,ai-score,87,Expression emotionnelle et demande de pause bien structurees.,1,2,ai,2026-05-26T15:21:03.173Z,2026-05-26T15:21:03.173Z,0
+6a185d5f56e82dc7db3eb45d,69f3e8cf8fd7c094eaeb23d5,ai-score,91,Production complexe avec bonne autonomie et bonne precision.,1,3,ai,2026-05-27T15:21:03.173Z,2026-05-27T15:21:03.173Z,0

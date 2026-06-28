@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auto Connect - Scenarios Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#E69B73", // Soft Peach
+                    "secondary": "#FFF5F0", // Very Light Peach
+                    "on-surface": "#4A3E38", // Deep Warm Grey/Brown for readability
+                    "on-surface-variant": "#8B7E74", // Muted Warm Grey
+                    "surface": "#FCF6F2", // Calm background peach-white
+                    "surface-container": "#F5EBE4", // Slightly darker soft peach container
+                    "surface-container-low": "#FAF4F0",
+                    "surface-container-highest": "#EDE0D4",
+                    "surface-container-lowest": "#FFFFFF",
+                    "outline": "#E8DDD5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "1.5rem",
+                    "xl": "2rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #FCF6F2; color: #4A3E38; }
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .active-nav { background: #FFF5F0; color: #E69B73; }
+        .primary-gradient { background: linear-gradient(135deg, #E69B73 0%, #F2B28F 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-hidden">
+<aside class="h-full w-72 fixed left-0 top-0 bg-white border-r border-outline flex flex-col py-8 z-50">
+<div class="px-8 mb-12">
+<h1 class="text-xl font-extrabold text-primary tracking-tight font-headline">Auto Connect</h1>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-1 opacity-60">AAC Support</p>
+</div>
+<nav class="flex-1 space-y-1 px-4">
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 rounded-xl hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-semibold text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 rounded-xl hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-semibold text-sm">Directory</span>
+</a>
+<a class="flex items-center gap-3 active-nav px-4 py-3 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-semibold text-sm">Scenarios</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 rounded-xl hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-semibold text-sm">Pictograms</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 rounded-xl hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-semibold text-sm">Statistics</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 rounded-xl hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="font-semibold text-sm">AI Guide</span>
+</a>
+</nav>
+<div class="mt-auto px-8 pt-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center overflow-hidden border border-outline">
+<img alt="Dr. Sarah Chen" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzUSjA1QdOMlcVpvMK2GrSBfR4dOHfxSwAO7q4zs0dKCWXpa7ePCAp1Al0NCgapC5EJ6NSSGqz9U2_mOgEoZgF-s3oG5NNTI0YZ3ITXOnqkgiwp1hEdqgGBCRIVlPpKR3bFTH16l-nzWHWKryAf_pwwL0WWlUIOEujwMY401W8N4luLKuCe4LhcHVGKI6Gfyfrj5fQ1ymK3X4eaJPZHT2b0I3IOB3z42UoQ892SzwtMKqDkBnqf1ICuLAW3Q9pXjeg2XjHx0IVc6iX"/>
+</div>
+<div>
+<p class="text-sm font-bold font-headline">Dr. Sarah Chen</p>
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-medium">Lead Pathologist</p>
+</div>
+</div>
+</aside>
+<main class="ml-72 min-h-screen flex flex-col">
+<header class="h-16 flex justify-between items-center px-10 w-full z-40 bg-surface/80 backdrop-blur-md sticky top-0">
+<div class="flex items-center gap-6 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/50" data-icon="search">search</span>
+<input class="w-full pl-11 pr-4 py-2.5 bg-white border border-outline rounded-full text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none" placeholder="Search scenarios..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-white border border-transparent hover:border-outline transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-white border border-transparent hover:border-outline transition-all">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<div class="p-10 space-y-10 flex-1 overflow-y-auto">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="text-3xl font-extrabold font-headline text-on-surface tracking-tight">Active Scenarios</h2>
+<p class="text-on-surface-variant mt-1 font-medium">Design and manage empathetic communication pathways.</p>
+</div>
+<button class="px-8 py-3.5 primary-gradient text-white rounded-full font-bold flex items-center gap-2 shadow-lg shadow-primary/10 hover:shadow-primary/20 transition-all hover:-translate-y-0.5 active:translate-y-0">
+<span class="material-symbols-outlined text-xl" data-icon="add">add</span>
+                Create New Scenario
+            </button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-white p-7 rounded-xl shadow-sm border border-outline hover:border-primary/30 transition-all group cursor-pointer hover:shadow-md">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3.5 bg-secondary text-primary rounded-2xl">
+<span class="material-symbols-outlined text-3xl" data-icon="restaurant">restaurant</span>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-green-50 text-green-600 text-[10px] font-bold uppercase rounded-full tracking-wider border border-green-100">Beginner</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-[10px] font-bold uppercase rounded-full tracking-wider">Age 4-7</span>
+</div>
+</div>
+<h3 class="text-xl font-bold font-headline mb-2 text-on-surface">Requesting Lunch</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Helping children express hunger and specific food preferences during school lunch hours.</p>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold">SJ</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold">MK</div>
+</div>
+<button class="px-6 py-2 bg-surface-container text-on-surface text-sm font-bold rounded-full hover:bg-primary hover:text-white transition-all">Edit</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-7 rounded-xl shadow-sm border border-outline hover:border-primary/30 transition-all group cursor-pointer hover:shadow-md">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3.5 bg-secondary text-primary rounded-2xl">
+<span class="material-symbols-outlined text-3xl" data-icon="park">park</span>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-amber-50 text-amber-600 text-[10px] font-bold uppercase rounded-full tracking-wider border border-amber-100">Advanced</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-[10px] font-bold uppercase rounded-full tracking-wider">Age 8-12</span>
+</div>
+</div>
+<h3 class="text-xl font-bold font-headline mb-2 text-on-surface">Playground Social</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Complex turn-taking and initiation of play with peers in an outdoor setting.</p>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold">AL</div>
+</div>
+<button class="px-6 py-2 bg-surface-container text-on-surface text-sm font-bold rounded-full hover:bg-primary hover:text-white transition-all">Edit</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-7 rounded-xl shadow-sm border border-outline hover:border-primary/30 transition-all group cursor-pointer hover:shadow-md">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3.5 bg-secondary text-primary rounded-2xl">
+<span class="material-symbols-outlined text-3xl" data-icon="medical_services">medical_services</span>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-green-50 text-green-600 text-[10px] font-bold uppercase rounded-full tracking-wider border border-green-100">Beginner</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-[10px] font-bold uppercase rounded-full tracking-wider">All Ages</span>
+</div>
+</div>
+<h3 class="text-xl font-bold font-headline mb-2 text-on-surface">Feeling Unwell</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Identifying body parts and intensity of pain to communicate health distress to caregivers.</p>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold">TH</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold">+3</div>
+</div>
+<button class="px-6 py-2 bg-surface-container text-on-surface text-sm font-bold rounded-full hover:bg-primary hover:text-white transition-all">Edit</button>
+</div>
+</div>
+</div>
+<div class="mt-12 bg-surface-container rounded-2xl p-10 space-y-8">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-[11px] font-bold uppercase tracking-[0.15em] text-primary block mb-2">Scenario Builder</span>
+<h3 class="text-2xl font-bold font-headline text-on-surface">Requesting Lunch: Sequence Editor</h3>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 bg-white text-on-surface-variant border border-outline rounded-full text-sm font-bold shadow-sm hover:bg-surface-container-low transition-colors">Save Draft</button>
+<button class="px-8 py-2.5 primary-gradient text-white rounded-full text-sm font-bold shadow-md hover:shadow-lg transition-all">Publish Update</button>
+</div>
+</div>
+<div class="flex items-start gap-10">
+<div class="flex-1 space-y-6">
+<div class="relative pl-14 before:content-[''] before:absolute before:left-[23px] before:top-12 before:bottom-0 before:w-0.5 before:bg-outline">
+<!-- Step 1 -->
+<div class="bg-white p-7 rounded-xl shadow-sm border border-outline mb-6 relative">
+<div class="absolute -left-[54px] top-1.5 w-11 h-11 rounded-full primary-gradient text-white flex items-center justify-center font-bold font-headline text-lg shadow-md border-4 border-surface-container">1</div>
+<div class="flex gap-5 items-center mb-5">
+<div class="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="waving_hand">waving_hand</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-lg text-on-surface">Initiation</h4>
+<p class="text-sm text-on-surface-variant">Attract attention of the adult.</p>
+</div>
+</div>
+<div class="flex gap-3 p-3 bg-surface-container/50 rounded-xl">
+<div class="bg-white p-3 rounded-lg shadow-sm border border-outline flex flex-col items-center gap-1.5 w-20">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="person">person</span>
+<span class="text-[9px] font-bold text-on-surface-variant">TEACHER</span>
+</div>
+<div class="bg-white p-3 rounded-lg shadow-sm border border-outline flex flex-col items-center gap-1.5 w-20">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="front_hand">front_hand</span>
+<span class="text-[9px] font-bold text-on-surface-variant">WAVE</span>
+</div>
+<button class="w-14 flex items-center justify-center border-2 border-dashed border-outline rounded-lg text-on-surface-variant/30 hover:text-primary hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-white p-7 rounded-xl shadow-sm border border-outline mb-6 relative">
+<div class="absolute -left-[54px] top-1.5 w-11 h-11 rounded-full primary-gradient text-white flex items-center justify-center font-bold font-headline text-lg shadow-md border-4 border-surface-container">2</div>
+<div class="flex gap-5 items-center mb-5">
+<div class="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="restaurant">restaurant</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-lg text-on-surface">The Request</h4>
+<p class="text-sm text-on-surface-variant">Communicating the core need (I am hungry).</p>
+</div>
+</div>
+<div class="flex gap-3 p-3 bg-surface-container/50 rounded-xl">
+<div class="bg-white p-3 rounded-lg shadow-sm border-2 border-primary flex flex-col items-center gap-1.5 w-20 ring-4 ring-primary/5">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="face">face</span>
+<span class="text-[9px] font-bold text-primary">I WANT</span>
+</div>
+<div class="bg-white p-3 rounded-lg shadow-sm border border-outline flex flex-col items-center gap-1.5 w-20">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="lunch_dining">lunch_dining</span>
+<span class="text-[9px] font-bold text-on-surface-variant">FOOD</span>
+</div>
+<button class="w-14 flex items-center justify-center border-2 border-dashed border-outline rounded-lg text-on-surface-variant/30">
+<span class="material-symbols-outlined text-xl" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<div class="bg-white/40 p-8 rounded-xl border-2 border-dashed border-outline flex flex-col items-center justify-center text-on-surface-variant/60 group hover:bg-white hover:border-primary/50 hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="add_circle">add_circle</span>
+<span class="font-bold text-sm">Add Step to Sequence</span>
+</div>
+</div>
+</div>
+<div class="w-80 space-y-6">
+<div class="bg-white p-7 rounded-xl shadow-sm border border-outline">
+<h4 class="font-bold font-headline mb-5 flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                            Quick Pictograms
+                        </h4>
+<div class="grid grid-cols-3 gap-3">
+<div class="aspect-square bg-surface-container rounded-xl flex items-center justify-center cursor-pointer hover:bg-secondary transition-colors group">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant group-hover:text-primary" data-icon="apple">ios</span>
+</div>
+<div class="aspect-square bg-surface-container rounded-xl flex items-center justify-center cursor-pointer hover:bg-secondary transition-colors group">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant group-hover:text-primary" data-icon="water_drop">water_drop</span>
+</div>
+<div class="aspect-square bg-surface-container rounded-xl flex items-center justify-center cursor-pointer hover:bg-secondary transition-colors group">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant group-hover:text-primary" data-icon="mood">mood</span>
+</div>
+<div class="aspect-square bg-surface-container rounded-xl flex items-center justify-center cursor-pointer hover:bg-secondary transition-colors group">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant group-hover:text-primary" data-icon="mood_bad">mood_bad</span>
+</div>
+<div class="aspect-square bg-surface-container rounded-xl flex items-center justify-center cursor-pointer hover:bg-secondary transition-colors group">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant group-hover:text-primary" data-icon="home">home</span>
+</div>
+<div class="aspect-square bg-surface-container rounded-xl flex items-center justify-center cursor-pointer hover:bg-secondary transition-colors group">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant group-hover:text-primary" data-icon="school">school</span>
+</div>
+</div>
+<button class="w-full mt-6 py-3 border border-outline rounded-full text-sm font-bold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all">Browse Library</button>
+</div>
+<div class="bg-primary/10 p-7 rounded-xl border border-primary/20 relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 opacity-[0.05]">
+<span class="material-symbols-outlined text-9xl text-primary" data-icon="lightbulb">lightbulb</span>
+</div>
+<h4 class="font-bold font-headline mb-2 text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-xl" data-icon="tips_and_updates">tips_and_updates</span>
+                            AI Suggestion
+                        </h4>
+<p class="text-[13px] text-on-surface-variant leading-relaxed">Consider adding a "Wait" step between initiation and the request to practice patience and turn-taking.</p>
+<button class="mt-4 text-[11px] font-bold text-primary uppercase tracking-wider flex items-center gap-1.5 hover:underline">Apply Suggestion <span class="material-symbols-outlined text-xs">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-6 bg-white/90 backdrop-blur-xl border-t border-outline rounded-t-3xl h-24 shadow-2xl md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="backspace">backspace</span>
+<span class="text-[10px] font-bold font-headline mt-1">Clear</span>
+</button>
+<button class="flex flex-col items-center justify-center primary-gradient text-white rounded-full p-4 w-16 h-16 -mt-10 shadow-xl shadow-primary/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl" data-icon="volume_up" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="text-[10px] font-bold font-headline mt-1">Save</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[10px] font-bold font-headline mt-1">Recent</span>
+</button>
+</nav>
+</body></html>

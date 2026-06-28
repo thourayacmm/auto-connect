@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Speech to Text (Vosk + FastAPI)</title>
+</head>
+<body>
+    <h2>🎤 Speech to Text (Browser)</h2>
+
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+
+    <p><b>Résultat :</b></p>
+    <div id="output"></div>
+
+    <script>
+        let ws;
+        let audioContext;
+        let processor;
+        let input;
+
+        async function start() {
+            ws = new WebSocket("ws://localhost:8000/ws");
+
+            ws.onmessage = (event) => {
+                document.getElementById("output").innerText = event.data;
+            };
+
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+            audioContext = new AudioContext({ sampleRate: 16000 });
+
+            input = audioContext.createMediaStreamSource(stream);
+            processor = audioContext.createScriptProcessor(4096, 1, 1);
+
+            input.connect(processor);
+            processor.connect(audioContext.destination);
+
+            processor.onaudioprocess = (e) => {
+                let float32 = e.inputBuffer.getChannelData(0);
+
+                // Convert Float32 → Int16
+                let int16 = new Int16Array(float32.length);
+                for (let i = 0; i < float32.length; i++) {
+                    int16[i] = Math.max(-1, Math.min(1, float32[i])) * 32767;
+                }
+
+                if (ws.readyState === WebSocket.OPEN) {
+                    ws.send(int16.buffer);
+                }
+            };
+        }
+
+        function stop() {
+            if (processor) processor.disconnect();
+            if (input) input.disconnect();
+            if (audioContext) audioContext.close();
+            if (ws) ws.close();
+        }
+    </script>
+</body>
+</html>

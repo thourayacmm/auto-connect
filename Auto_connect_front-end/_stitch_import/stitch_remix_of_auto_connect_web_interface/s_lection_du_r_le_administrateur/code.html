@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Role Selection - Gentle Guardian</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#80e9d9",
+                    "on-error": "#fff7f6",
+                    "on-tertiary-fixed": "#00364f",
+                    "secondary-fixed": "#8ff8e7",
+                    "on-secondary-container": "#005e55",
+                    "on-primary-fixed-variant": "#6d3700",
+                    "inverse-on-surface": "#a19c94",
+                    "tertiary-fixed-dim": "#92c7ed",
+                    "tertiary-dim": "#1c5879",
+                    "tertiary": "#2c6485",
+                    "on-secondary-fixed": "#004a42",
+                    "surface-container-low": "#faf3e7",
+                    "on-tertiary-fixed-variant": "#165474",
+                    "tertiary-container": "#a0d5fb",
+                    "on-secondary": "#e2fff8",
+                    "primary-fixed-dim": "#f2a160",
+                    "surface-bright": "#fff8f0",
+                    "error-dim": "#821a01",
+                    "on-surface-variant": "#645f52",
+                    "surface-dim": "#e2d9c8",
+                    "error": "#aa371c",
+                    "surface-container": "#f5ede0",
+                    "primary-fixed": "#ffaf71",
+                    "primary": "#8f4f14",
+                    "surface-variant": "#eae2d2",
+                    "surface": "#fff8f0",
+                    "on-error-container": "#671200",
+                    "surface-container-high": "#efe7d9",
+                    "background": "#fff8f0",
+                    "secondary-container": "#8ff8e7",
+                    "on-tertiary-container": "#034b6a",
+                    "surface-container-highest": "#eae2d2",
+                    "on-primary-container": "#603000",
+                    "tertiary-fixed": "#a0d5fb",
+                    "secondary": "#006b61",
+                    "primary-container": "#ffaf71",
+                    "outline-variant": "#b9b1a3",
+                    "primary-dim": "#804307",
+                    "inverse-primary": "#ffab69",
+                    "error-container": "#fa7150",
+                    "surface-tint": "#8f4f14",
+                    "on-background": "#363227",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#fff7f4",
+                    "on-surface": "#363227",
+                    "on-primary-fixed": "#411e00",
+                    "inverse-surface": "#100e09",
+                    "outline": "#807a6d",
+                    "on-secondary-fixed-variant": "#00695f",
+                    "on-tertiary": "#f5f9ff",
+                    "secondary-dim": "#005e54"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-icon { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden">
+<nav class="bg-[#fff8f0] dark:bg-stone-950 w-full h-16 flex justify-between items-center px-8 w-full max-w-7xl mx-auto sticky top-0 z-50 transition-all ease-in-out duration-300">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold text-[#363227] dark:text-[#faf3e7]">Auto Connect</span>
+<div class="hidden md:flex gap-6 font-['Plus_Jakarta_Sans'] antialiased">
+<a class="text-[#363227] dark:text-[#eae2d2] opacity-70 hover:text-[#8f4f14] transition-colors duration-300" href="#">Dashboard</a>
+<a class="text-[#363227] dark:text-[#eae2d2] opacity-70 hover:text-[#8f4f14] transition-colors duration-300" href="#">Users</a>
+<a class="text-[#8f4f14] dark:text-[#ffaf71] font-bold border-b-2 border-[#8f4f14] pb-1 transition-colors duration-300" href="#">Roles</a>
+<a class="text-[#363227] dark:text-[#eae2d2] opacity-70 hover:text-[#8f4f14] transition-colors duration-300" href="#">Settings</a>
+</div>
+</div>
+<div class="flex items-center gap-4 text-[#8f4f14] dark:text-[#ffaf71]">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-80">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-80">help_outline</span>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-variant">
+<img alt="Administrator profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional woman with a calm expression in a brightly lit modern office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7daEDeLMp3NeWiqw-DyFPdyxh1v2uAOibOYDFvFS3NuwqDeSK2HxeTNwjVigSFF1C3-q3g0IzK54vFX4V2n82w6SxCMyOV0E7EenonFVULV7UbU4vgn4-3fD7xFBkGzAoQ1NSKUwC7kUzUKxcyJoFpDN1q22V5xR7j4jC-I-53IKCaBOMBL-uPG6Io1m2igOPZPYs0DVX3S7WOBBiTxZ-sPeLDGMjHEXhVnaxlP1eujxM9C6oepnyZLnvMGzlNncAHSXnAjyC-DP4"/>
+</div>
+</div>
+</nav>
+<div class="flex min-h-screen">
+<aside class="hidden lg:flex flex-col w-72 h-screen py-8 gap-4 bg-[#faf3e7] dark:bg-stone-900 sticky top-0 shadow-[32px_0_32px_rgba(54,50,39,0.05)] rounded-r-[3rem] font-['Plus_Jakarta_Sans'] text-sm font-medium transition-all ease-in-out duration-300">
+<div class="px-8 mb-4">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+</div>
+<div>
+<h3 class="text-lg font-black text-[#363227]">Admin Panel</h3>
+<p class="text-xs opacity-60">Role Management</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-6 py-3 text-[#363227] dark:text-[#eae2d2] opacity-60 mx-2 hover:bg-[#eae2d2]/50 dark:hover:bg-stone-800/50 rounded-full transition-all duration-300" href="#">
+<span class="material-symbols-outlined">person</span>
+<span>User Access</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 bg-[#eae2d2] dark:bg-stone-800 text-[#8f4f14] dark:text-[#ffaf71] rounded-full mx-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
+<span>SLP Portal</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-[#363227] dark:text-[#eae2d2] opacity-60 mx-2 hover:bg-[#eae2d2]/50 dark:hover:bg-stone-800/50 rounded-full transition-all duration-300" href="#">
+<span class="material-symbols-outlined">back_hand</span>
+<span>OT Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-[#363227] dark:text-[#eae2d2] opacity-60 mx-2 hover:bg-[#eae2d2]/50 dark:hover:bg-stone-800/50 rounded-full transition-all duration-300" href="#">
+<span class="material-symbols-outlined">school</span>
+<span>Educator Tools</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-[#363227] dark:text-[#eae2d2] opacity-60 mx-2 hover:bg-[#eae2d2]/50 dark:hover:bg-stone-800/50 rounded-full transition-all duration-300" href="#">
+<span class="material-symbols-outlined">family_restroom</span>
+<span>Family Links</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-[#363227] dark:text-[#eae2d2] opacity-60 mx-2 hover:bg-[#eae2d2]/50 dark:hover:bg-stone-800/50 rounded-full transition-all duration-300" href="#">
+<span class="material-symbols-outlined">more_horiz</span>
+<span>Specialists</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full py-4 px-6 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold flex items-center justify-center gap-2 shadow-sm hover:opacity-90 transition-all">
+<span class="material-symbols-outlined">add</span>
+                    Add New Role
+                </button>
+</div>
+</aside>
+<main class="flex-1 px-8 lg:px-16 py-12 lg:py-20 max-w-7xl mx-auto">
+<header class="mb-16 text-center lg:text-left max-w-3xl">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-on-surface mb-6 tracking-tight leading-tight">
+                    Choose the role that describes you
+                </h1>
+<p class="text-lg md:text-xl text-on-surface-variant font-medium leading-relaxed">
+                    Select your primary profile to personalize your Gentle Guardian experience and access tailored tools for your journey.
+                </p>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- AAC User -->
+<div class="group relative bg-surface-container-low p-8 rounded-xl flex flex-col items-center text-center hover:bg-surface-container-highest transition-all duration-500 cursor-pointer">
+<div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center mb-6 text-on-secondary-container transition-transform duration-500 group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">mood</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-3">AAC User</h3>
+<p class="text-on-surface-variant leading-relaxed">Communicate and express yourself with our intuitive interface tools.</p>
+</div>
+<!-- Speech Language Pathologist -->
+<div class="group relative bg-surface-container-low p-8 rounded-xl flex flex-col items-center text-center hover:bg-surface-container-highest transition-all duration-500 cursor-pointer">
+<div class="w-20 h-20 rounded-full bg-primary-container flex items-center justify-center mb-6 text-on-primary-container transition-transform duration-500 group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-3">Speech Language Pathologist</h3>
+<p class="text-on-surface-variant leading-relaxed">Manage patient therapies, track progress, and customize vocabulary sets.</p>
+</div>
+<!-- Occupational Therapist -->
+<div class="group relative bg-surface-container-low p-8 rounded-xl flex flex-col items-center text-center hover:bg-surface-container-highest transition-all duration-500 cursor-pointer">
+<div class="w-20 h-20 rounded-full bg-tertiary-container flex items-center justify-center mb-6 text-on-tertiary-container transition-transform duration-500 group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">back_hand</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-3">Occupational Therapist</h3>
+<p class="text-on-surface-variant leading-relaxed">Adapt motor-access settings and monitor physical interaction goals.</p>
+</div>
+<!-- Special Educator -->
+<div class="group relative bg-surface-container-low p-8 rounded-xl flex flex-col items-center text-center hover:bg-surface-container-highest transition-all duration-500 cursor-pointer">
+<div class="w-20 h-20 rounded-full bg-secondary-fixed-dim flex items-center justify-center mb-6 text-on-secondary-fixed transition-transform duration-500 group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-3">Special Educator</h3>
+<p class="text-on-surface-variant leading-relaxed">Integrate AAC tools into classroom routines and learning activities.</p>
+</div>
+<!-- Parent -->
+<div class="group relative bg-surface-container-low p-8 rounded-xl flex flex-col items-center text-center hover:bg-surface-container-highest transition-all duration-500 cursor-pointer">
+<div class="w-20 h-20 rounded-full bg-[#f2a160] flex items-center justify-center mb-6 text-[#411e00] transition-transform duration-500 group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-3">Parent</h3>
+<p class="text-on-surface-variant leading-relaxed">Stay connected with your child's progress and support daily use.</p>
+</div>
+<!-- Others -->
+<div class="group relative bg-surface-container-low p-8 rounded-xl flex flex-col items-center text-center hover:bg-surface-container-highest transition-all duration-500 cursor-pointer">
+<div class="w-20 h-20 rounded-full bg-surface-variant flex items-center justify-center mb-6 text-on-surface-variant transition-transform duration-500 group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">more_horiz</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-3">Others</h3>
+<p class="text-on-surface-variant leading-relaxed">Support specialists, caregivers, and extended community members.</p>
+</div>
+</div>
+<section class="mt-24 bg-surface-container rounded-xl p-12 relative overflow-hidden">
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-xl text-center md:text-left">
+<span class="inline-block px-4 py-1.5 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold tracking-wider mb-6">GUIDANCE</span>
+<h2 class="text-3xl font-bold text-on-surface mb-4">Not sure which one to pick?</h2>
+<p class="text-on-surface-variant text-lg">Our onboarding assistant can help you determine the best role based on your goals and daily activities. It only takes a minute.</p>
+<div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-xl font-bold shadow-lg hover:opacity-90 transition-all">Start Assistant</button>
+<button class="px-8 py-4 bg-surface-container-lowest text-on-surface rounded-xl font-bold hover:bg-white transition-all">Learn more about roles</button>
+</div>
+</div>
+<div class="w-full md:w-1/3 aspect-square relative rounded-xl overflow-hidden shadow-xl">
+<img alt="Professional consultant" class="w-full h-full object-cover" data-alt="A friendly professional counselor smiling warmly in a bright modern office with indoor plants and soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXh1TdvNt166qvOZ6Q1cXrIa_gbtjL35axctMtflW1eM88KIGkRi8GBResSN6fCt4LFEWY2fQdbKfPcBh99xxxqvnK-qoGDOBDRYon5YMEZ3lUiO54tQJVDdmmy2AyHMscLIhLOQqwAQZ_rHfxi8as9dheYtMuciGFkjZPWJQS9eIgWG58I3BrX0xmPY0su1T_lEGCEFGQIvepUYzplTnSX8Nw9Jod5nRPSLjPuffXwSsexhv77X7Z8o3wDYPAm7nmzVvEVBba0gmI"/>
+</div>
+</div>
+<!-- Abstract decorative element -->
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl"></div>
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl"></div>
+</section>
+</main>
+</div>
+<!-- Mobile Bottom Nav -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-20 bg-surface-bright flex items-center justify-around px-4 z-50 shadow-[0_-8px_32px_rgba(0,0,0,0.05)]">
+<div class="flex flex-col items-center gap-1 text-[#8f4f14]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[10px] font-bold">Dashboard</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-50">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px]">Users</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#8f4f14]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">assignment_ind</span>
+<span class="text-[10px] font-bold">Roles</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-50">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px]">Settings</span>
+</div>
+</nav>
+</body></html>

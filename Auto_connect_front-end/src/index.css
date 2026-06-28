@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ══════════════════════════════════════════════════════════
+   CSS Variables
+   ══════════════════════════════════════════════════════════ */
+:root {
+  --bg-body:      #f7fcff;
+  --bg-surface:   #ffffff;
+  --bg-elevated:  #ffffff;
+  --bg-subtle:    #f0f7ff;
+  --border-color: rgba(123,200,246,0.25);
+  --text-primary: #24334b;
+  --text-muted:   #64748b;
+  --text-faint:   #94a3b8;
+  --shadow-card:  0 12px 30px rgba(73,103,145,0.10);
+  --shadow-soft:  0 18px 50px rgba(87,125,179,0.12);
+  --glass-bg:     rgba(255,255,255,0.82);
+  --glass-border: rgba(255,255,255,0.65);
+}
+
+html.dark {
+  --bg-body:      #0d1117;
+  --bg-surface:   #161b22;
+  --bg-elevated:  #1c2333;
+  --bg-subtle:    #21262d;
+  --border-color: rgba(48,54,61,0.85);
+  --text-primary: #e6edf3;
+  --text-muted:   #8b949e;
+  --text-faint:   #6e7681;
+  --shadow-card:  0 8px 24px rgba(0,0,0,0.45);
+  --shadow-soft:  0 18px 50px rgba(0,0,0,0.6);
+  --glass-bg:     rgba(22,27,34,0.95);
+  --glass-border: rgba(48,54,61,0.8);
+}
+
+/* ══════════════════════════════════════════════════════════
+   Base
+   ══════════════════════════════════════════════════════════ */
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background: var(--bg-body);
+  color: var(--text-primary);
+}
+
+html:not(.dark) body {
+  background:
+    radial-gradient(circle at top left,  rgba(123,200,246,0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(201,194,255,0.20), transparent 32%),
+    #f7fcff;
+}
+
+html.dark body {
+  background:
+    radial-gradient(circle at top left,  rgba(31,111,235,0.07), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(163,113,247,0.05), transparent 30%),
+    #0d1117;
+}
+
+#root { min-height: 100vh; }
+* { box-sizing: border-box; }
+
+/* ══════════════════════════════════════════════════════════
+   Component Classes
+   ══════════════════════════════════════════════════════════ */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-color: var(--glass-border);
+}
+
+.section-shell {
+  background: var(--bg-surface);
+  border-radius: 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.focus-ring { @apply focus:outline-none; }
+.focus-ring:focus { box-shadow: 0 0 0 4px rgba(123,200,246,0.3); }
+html.dark .focus-ring:focus { box-shadow: 0 0 0 4px rgba(88,166,255,0.25); }
+
+.text-themed-primary  { color: var(--text-primary); }
+.text-themed-muted    { color: var(--text-muted); }
+.text-themed-faint    { color: var(--text-faint); }
+.border-themed        { border-color: var(--border-color); }
+.bg-themed-surface    { background: var(--bg-surface); }
+.bg-themed-elevated   { background: var(--bg-elevated); }
+.bg-themed-subtle     { background: var(--bg-subtle); }
+
+/* Smooth transitions */
+.glass-panel, .section-shell, button, a, input, select, textarea, header, aside {
+  transition: background-color 0.25s ease, border-color 0.25s ease,
+              color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ══════════════════════════════════════════════════════════
+   LIGHT MODE — ensure all text is visible
+   ══════════════════════════════════════════════════════════ */
+.text-ink       { color: #24334b; }
+.text-slate-500 { color: #64748b; }
+.text-slate-600 { color: #475569; }
+.text-slate-400 { color: #94a3b8; }
+.bg-slate-50    { background: #f8fafc; }
+.bg-slate-100   { background: #f1f5f9; }
+.bg-white       { background: #ffffff; }
+
+input, textarea, select {
+  color: #24334b;
+  background: #ffffff;
+}
+input::placeholder,
+textarea::placeholder { color: #94a3b8; }
+
+/* ══════════════════════════════════════════════════════════
+   DARK MODE — complete overrides for every Tailwind class
+   ══════════════════════════════════════════════════════════ */
+
+/* Text */
+html.dark .text-ink        { color: #e6edf3; }
+html.dark .text-slate-700  { color: #c9d1d9; }
+html.dark .text-slate-600  { color: #8b949e; }
+html.dark .text-slate-500  { color: #8b949e; }
+html.dark .text-slate-400  { color: #6e7681; }
+html.dark .text-slateBlue  { color: #58a6ff; }
+
+/* Surfaces */
+html.dark .bg-white        { background: #161b22 !important; }
+html.dark .bg-slate-50     { background: #21262d !important; }
+html.dark .bg-slate-100    { background: #2d333b !important; }
+html.dark .bg-white\/80    { background: rgba(22,27,34,0.9) !important; }
+html.dark .bg-white\/90    { background: rgba(22,27,34,0.95) !important; }
+
+/* Borders */
+html.dark .border-white\/60   { border-color: rgba(48,54,61,0.7); }
+html.dark .border-white\/10   { border-color: rgba(48,54,61,0.4); }
+html.dark .border-softBlue\/20 { border-color: rgba(88,166,255,0.2); }
+html.dark .border-softBlue\/10 { border-color: rgba(88,166,255,0.1); }
+
+/* Blue tints */
+html.dark .bg-softBlue\/10  { background: rgba(88,166,255,0.08); }
+html.dark .bg-softBlue\/15  { background: rgba(88,166,255,0.12); }
+html.dark .bg-softBlue\/20  { background: rgba(88,166,255,0.15); }
+html.dark .bg-lilac\/20     { background: rgba(163,113,247,0.08); }
+html.dark .bg-lilac\/35     { background: rgba(163,113,247,0.15); }
+html.dark .bg-peach\/40     { background: rgba(255,200,140,0.08); }
+html.dark .bg-success\/15   { background: rgba(91,191,138,0.12); }
+html.dark .bg-success\/10   { background: rgba(91,191,138,0.08); }
+
+/* Shadows */
+html.dark .shadow-card { box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+html.dark .shadow-soft { box-shadow: 0 18px 50px rgba(0,0,0,0.55); }
+html.dark .shadow-sm   { box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+
+/* Hovers */
+html.dark .hover\:bg-white:hover        { background: #21262d !important; }
+html.dark .hover\:bg-slate-100:hover    { background: #2d333b !important; }
+html.dark .hover\:bg-softBlue\/10:hover { background: rgba(88,166,255,0.1) !important; }
+
+/* Gradient hero */
+html.dark .bg-hero-glow {
+  background:
+    radial-gradient(circle at top left,  rgba(31,111,235,0.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(163,113,247,0.13), transparent 30%),
+    #161b22;
+}
+
+/* Inputs in dark */
+html.dark input,
+html.dark textarea,
+html.dark select {
+  color: #e6edf3 !important;
+  background: #0d1117 !important;
+  border-color: rgba(48,54,61,0.9) !important;
+}
+html.dark input::placeholder,
+html.dark textarea::placeholder { color: #6e7681 !important; }
+
+/* Scrollbar */
+html.dark ::-webkit-scrollbar       { width: 5px; height: 5px; }
+html.dark ::-webkit-scrollbar-track { background: #0d1117; }
+html.dark ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+html.dark ::-webkit-scrollbar-thumb:hover { background: #484f58; }
+
+/* ══════════════════════════════════════════════════════════
+   Dark mode — Chart.js canvas readability
+   ══════════════════════════════════════════════════════════ */
+html.dark canvas { filter: brightness(0.92) contrast(1.05); }
+
+/* ══════════════════════════════════════════════════════════
+   Theme Toggle Button
+   ══════════════════════════════════════════════════════════ */
+.theme-toggle-btn {
+  position: relative;
+  width: 44px; height: 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #cbd5e1;
+  flex-shrink: 0;
+}
+html.dark .theme-toggle-btn {
+  background: linear-gradient(135deg, #1f6feb, #7c3aed);
+}
+.theme-toggle-knob {
+  position: absolute;
+  top: 3px; left: 3px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; line-height: 1;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+html.dark .theme-toggle-knob { transform: translateX(20px); }
+
+/* ══════════════════════════════════════════════════════════
+   Login panel role buttons — dark mode
+   ══════════════════════════════════════════════════════════ */
+html.dark .border-softBlue\/20:not(.bg-slateBlue) {
+  background: #1c2333 !important;
+  color: #8b949e !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   Existing ChatbotPanel dark patches
+   ══════════════════════════════════════════════════════════ */
+html.dark .bg-slate-50\/60 { background: rgba(33,38,45,0.7) !important; }
+html.dark .bg-slate-50\/80 { background: rgba(33,38,45,0.85) !important; }

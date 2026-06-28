@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#231a12",
+                    "on-surface": "#231a12",
+                    "tertiary-container": "#ffecda",
+                    "secondary": "#006e2f",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "surface-bright": "#fff8f5",
+                    "tertiary": "#855300",
+                    "inverse-primary": "#89ceff",
+                    "on-secondary-fixed-variant": "#005321",
+                    "outline": "#73787b",
+                    "inverse-on-surface": "#ffeee1",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#e3f1ff",
+                    "error": "#ba1a1a",
+                    "surface": "#fff8f5",
+                    "surface-container": "#fdebde",
+                    "primary-fixed": "#c9e6ff",
+                    "secondary-fixed": "#6bff8f",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "on-surface-variant": "#43474b",
+                    "on-primary-fixed": "#001e2f",
+                    "tertiary-fixed": "#ffddb8",
+                    "on-secondary-container": "#007432",
+                    "surface-container-highest": "#f1dfd3",
+                    "surface-container-low": "#fff1e8",
+                    "surface-container-high": "#f7e5d8",
+                    "inverse-surface": "#392e26",
+                    "background": "#fff8f5",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "surface-tint": "#006591",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#e8d7ca",
+                    "on-tertiary-container": "#986000",
+                    "surface-variant": "#f1dfd3",
+                    "secondary-fixed-dim": "#4ae176",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c3c7cb",
+                    "on-secondary-fixed": "#002109",
+                    "on-tertiary-fixed": "#2a1700",
+                    "primary": "#006591",
+                    "primary-fixed-dim": "#89ceff",
+                    "on-primary-container": "#0073a5",
+                    "secondary-container": "#6bff8f",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .tap-highlight-none { -webkit-tap-highlight-color: transparent; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface overflow-hidden">
+<!-- Top AppBar (from JSON) -->
+<header class="bg-orange-50/80 dark:bg-slate-950/80 backdrop-blur-xl fixed top-0 w-full shadow-sm dark:shadow-none z-50 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-bold text-sky-800 dark:text-sky-300 font-['Plus_Jakarta_Sans'] tracking-tight headline-lg">SereneAAC</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-white/40 dark:hover:bg-slate-800 transition-colors scale-95 active:scale-90 transition-transform duration-200">
+                Express
+            </button>
+<button class="text-sky-700 dark:text-sky-400 p-2 rounded-full hover:bg-white/40 transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'opsz' 32;">add_circle</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="close-up portrait of a smiling child with soft natural lighting and warm background colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsuiVWP7yz0u1Sie4wbRnGM2UQDl7kYvuIfuy4wSZFXAbxMuYOmB577V1XYmc5FuDl9egiEgtek6Qo8dAl9NrOWLlBWrfPkzUt48M_f41o1XxwolIwVcuoOOwelAkg6Hv7urhHOi4H6XNJmwTj00ZqiMXmCcqog4jDdOkRYhSFnFS7unbL5dUSZmhZSuR-YxEloV14N2AZntNPX595fRCWHB-5bM1OCnnBSUAJpokf6DN0g_-3u5mryITHpXiWDqoJ8U2tb0li2GiL"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas (Background Screen) -->
+<main class="pt-24 pb-32 px-6 min-h-screen">
+<!-- Sentence Builder Bar -->
+<div class="max-w-4xl mx-auto mb-8">
+<div class="bg-surface-container-lowest/80 backdrop-blur-md rounded-full p-4 flex items-center gap-4 shadow-sm">
+<div class="flex-1 flex gap-3 overflow-x-auto py-1 px-2 scrollbar-hide">
+<div class="flex flex-col items-center gap-1 min-w-[80px]">
+<div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600 text-3xl">person</span>
+</div>
+<span class="text-xs font-bold">Je</span>
+</div>
+<div class="flex flex-col items-center gap-1 min-w-[80px]">
+<div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-green-600 text-3xl">favorite</span>
+</div>
+<span class="text-xs font-bold">Veux</span>
+</div>
+<div class="flex flex-col items-center gap-1 min-w-[80px]">
+<div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600 text-3xl">restaurant</span>
+</div>
+<span class="text-xs font-bold">Manger</span>
+</div>
+</div>
+<button class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">volume_up</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid of Pictograms -->
+<div class="max-w-4xl mx-auto grid grid-cols-3 md:grid-cols-4 gap-6">
+<!-- Pictogram Card Example 1 -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center gap-3 aspect-square shadow-sm transition-transform hover:scale-105">
+<div class="flex-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-blue-500" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<span class="font-bold text-lg">Eau</span>
+</div>
+<!-- Pictogram Card Example 2 -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center gap-3 aspect-square shadow-sm transition-transform hover:scale-105">
+<div class="flex-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-orange-500" style="font-variation-settings: 'FILL' 1;">ios</span>
+</div>
+<span class="font-bold text-lg">Pomme</span>
+</div>
+<!-- Pictogram Card Example 3 -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center gap-3 aspect-square shadow-sm transition-transform hover:scale-105">
+<div class="flex-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-purple-500" style="font-variation-settings: 'FILL' 1;">bed</span>
+</div>
+<span class="font-bold text-lg">Dormir</span>
+</div>
+<!-- Pictogram Card Example 4 -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center gap-3 aspect-square shadow-sm transition-transform hover:scale-105">
+<div class="flex-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-yellow-500" style="font-variation-settings: 'FILL' 1;">sunny</span>
+</div>
+<span class="font-bold text-lg">Dehors</span>
+</div>
+<!-- Pictogram Card Example 5 -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center gap-3 aspect-square shadow-sm transition-transform hover:scale-105">
+<div class="flex-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-red-500" style="font-variation-settings: 'FILL' 1;">mood</span>
+</div>
+<span class="font-bold text-lg">Content</span>
+</div>
+<!-- Empty Slot -->
+<div class="border-4 border-dashed border-outline-variant/30 rounded-xl p-4 flex flex-col items-center justify-center aspect-square opacity-50">
+<span class="material-symbols-outlined text-4xl">add</span>
+</div>
+</div>
+</main>
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-6 sm:p-12">
+<!-- Backdrop -->
+<div class="absolute inset-0 bg-on-background/20 backdrop-blur-md"></div>
+<!-- Modal Card -->
+<div class="relative w-full max-w-2xl bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden flex flex-col max-h-[921px]">
+<!-- Header -->
+<div class="px-8 pt-8 pb-4">
+<h2 class="text-3xl font-extrabold text-on-surface tracking-tight font-headline">Ajouter un Pictogramme</h2>
+<p class="text-on-surface-variant mt-2">Personnalisez votre communication avec une nouvelle icône.</p>
+</div>
+<!-- Content (Scrollable) -->
+<div class="flex-1 overflow-y-auto px-8 py-4 space-y-8">
+<!-- Name Field -->
+<div class="space-y-3">
+<label class="block text-sm font-bold uppercase tracking-wider text-on-surface-variant">Nom du pictogramme</label>
+<input class="w-full h-14 bg-surface-container-low border-none rounded-lg px-6 text-lg focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline-variant" placeholder="Ex: Jouet, Bisou, Parc..." type="text"/>
+</div>
+<!-- Category Selector -->
+<div class="space-y-4">
+<label class="block text-sm font-bold uppercase tracking-wider text-on-surface-variant">Catégorie</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+<button class="flex flex-col items-center gap-2 p-4 rounded-lg bg-surface-container text-primary border-2 border-primary/20 shadow-sm">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+<span class="text-xs font-bold">Needs</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-4 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-2xl">mood</span>
+<span class="text-xs font-bold">Emotions</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-4 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-2xl">directions_run</span>
+<span class="text-xs font-bold">Actions</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-4 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-2xl">location_on</span>
+<span class="text-xs font-bold">Places</span>
+</button>
+</div>
+</div>
+<!-- Layout Split: Image & Color -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Image Upload -->
+<div class="space-y-3">
+<label class="block text-sm font-bold uppercase tracking-wider text-on-surface-variant">Image ou Symbole</label>
+<div class="h-48 bg-surface-container-low rounded-xl flex flex-col items-center justify-center border-2 border-dashed border-outline-variant group hover:border-primary/40 transition-colors cursor-pointer">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">image</span>
+</div>
+<span class="text-sm font-semibold text-on-surface-variant">Télécharger une photo</span>
+</div>
+</div>
+<!-- Color Picker & Sound -->
+<div class="space-y-8">
+<div class="space-y-3">
+<label class="block text-sm font-bold uppercase tracking-wider text-on-surface-variant">Couleur de fond</label>
+<div class="flex flex-wrap gap-3">
+<button class="w-10 h-10 rounded-full bg-blue-100 ring-4 ring-offset-2 ring-primary transition-all"></button>
+<button class="w-10 h-10 rounded-full bg-green-100 ring-offset-2 hover:ring-2 hover:ring-outline-variant transition-all"></button>
+<button class="w-10 h-10 rounded-full bg-orange-100 ring-offset-2 hover:ring-2 hover:ring-outline-variant transition-all"></button>
+<button class="w-10 h-10 rounded-full bg-purple-100 ring-offset-2 hover:ring-2 hover:ring-outline-variant transition-all"></button>
+<button class="w-10 h-10 rounded-full bg-red-100 ring-offset-2 hover:ring-2 hover:ring-outline-variant transition-all"></button>
+</div>
+</div>
+<div class="space-y-3">
+<label class="block text-sm font-bold uppercase tracking-wider text-on-surface-variant">Son associé</label>
+<button class="w-full py-4 px-6 bg-secondary-container text-on-secondary-container rounded-full font-bold flex items-center justify-center gap-3 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">mic</span>
+                                Enregistrer le son
+                            </button>
+<button class="w-full text-primary font-bold text-sm text-center">Ou sélectionner un fichier audio</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Buttons -->
+<div class="p-8 bg-surface-container-low/50 flex flex-col-reverse sm:flex-row gap-4">
+<button class="flex-1 h-14 rounded-full font-bold text-on-surface-variant hover:bg-surface-container transition-colors">
+                    Annuler
+                </button>
+<button class="flex-1 h-14 rounded-full font-bold bg-primary text-white shadow-lg shadow-primary/25 active:scale-95 transition-transform">
+                    Enregistrer
+                </button>
+</div>
+</div>
+</div>
+<!-- BottomNavBar (from JSON) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-[0_-4px_24px_rgba(0,0,0,0.04)] rounded-t-[3rem]">
+<a class="flex flex-col items-center justify-center bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-100 rounded-full px-6 py-2 transition-all active:scale-95 tap-highlight-none" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-semibold">Talk</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:opacity-80 transition-all active:scale-95 tap-highlight-none" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-semibold">Categories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:opacity-80 transition-all active:scale-95 tap-highlight-none" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-semibold">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:opacity-80 transition-all active:scale-95 tap-highlight-none" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-semibold">Settings</span>
+</a>
+</nav>
+</body></html>

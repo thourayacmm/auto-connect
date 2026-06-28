@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Account | The Gentle Guardian</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#2a1700",
+                    "secondary-fixed": "#69f6b8",
+                    "on-error-container": "#570008",
+                    "inverse-surface": "#0a0f12",
+                    "surface-container-low": "#ecf1f6",
+                    "error-container": "#fb5151",
+                    "primary-fixed-dim": "#658eff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#00266e",
+                    "primary-dim": "#0046bb",
+                    "on-tertiary-fixed-variant": "#563400",
+                    "primary-fixed": "#7b9cff",
+                    "error": "#b31b25",
+                    "on-surface-variant": "#575c60",
+                    "surface-variant": "#d7dee3",
+                    "on-primary": "#f1f2ff",
+                    "secondary": "#006947",
+                    "surface-bright": "#f3f7fb",
+                    "on-secondary-fixed": "#00452d",
+                    "outline-variant": "#a9aeb1",
+                    "tertiary-dim": "#714600",
+                    "error-dim": "#9f0519",
+                    "primary": "#0050d4",
+                    "surface-dim": "#ced5db",
+                    "tertiary": "#815100",
+                    "surface-container-high": "#dde3e8",
+                    "on-primary-fixed": "#000000",
+                    "tertiary-container": "#f8a010",
+                    "secondary-dim": "#005c3d",
+                    "surface": "#f3f7fb",
+                    "on-primary-container": "#001e5a",
+                    "secondary-fixed-dim": "#58e7ab",
+                    "outline": "#73777b",
+                    "primary-container": "#7b9cff",
+                    "inverse-primary": "#618bff",
+                    "on-tertiary": "#fff0e3",
+                    "on-background": "#2a2f32",
+                    "on-error": "#ffefee",
+                    "on-secondary": "#c8ffe0",
+                    "on-tertiary-container": "#4a2c00",
+                    "surface-container": "#e3e9ee",
+                    "surface-container-highest": "#d7dee3",
+                    "tertiary-fixed-dim": "#e79400",
+                    "on-surface": "#2a2f32",
+                    "on-secondary-fixed-variant": "#006544",
+                    "background": "#f3f7fb",
+                    "tertiary-fixed": "#f8a010",
+                    "secondary-container": "#69f6b8",
+                    "inverse-on-surface": "#999da1",
+                    "surface-tint": "#0050d4",
+                    "on-secondary-container": "#005a3c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>body {
+        font-family: 'Inter', sans-serif;
+        background-color: #FFF5F0;
+      }
+      h1, h2, h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      .vitality-gradient {
+        background: linear-gradient(135deg, #0050d4 0%, #7b9cff 100%);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .ambient-shadow {
+        box-shadow: 0 20px 40px rgba(42, 47, 50, 0.06);
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.8);
+      }</style>
+</head>
+<body class="text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col" style="background-color: #FFF5F0;">
+<!-- TopAppBar Navigation Shell Suppressed for Transactional Flow per Hierarchy -->
+<header class="w-full flex justify-between items-center px-8 py-6">
+<div class="text-xl font-extrabold text-primary tracking-tight">Auto Connect</div>
+<div class="hidden md:flex items-center gap-6">
+<span class="text-sm font-label tracking-wide text-on-surface-variant">Already have an account?</span>
+<a class="text-sm font-semibold text-primary hover:text-primary-dim transition-colors" href="#">Log In</a>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center px-4 py-12">
+<!-- Asymmetric Background Element -->
+<div class="absolute top-0 right-0 -z-10 w-1/3 h-1/2 bg-surface-container-low rounded-bl-xl opacity-50"></div>
+<div class="bottom-0 left-0 -z-10 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl fixed"></div>
+<div class="w-full max-w-[540px] relative">
+<!-- Form Card -->
+<div class="bg-surface-container-lowest rounded-lg p-10 md:p-14 ambient-shadow relative overflow-hidden border border-outline-variant/10">
+<!-- Editorial Header -->
+<div class="mb-10 text-center md:text-left">
+<h1 class="text-3xl md:text-4xl font-bold text-on-surface tracking-tight mb-3">Create an Account</h1>
+<p class="text-on-surface-variant font-body leading-relaxed max-w-sm">
+                        Start your journey toward clearer communication and empowered learning today.
+                    </p>
+</div>
+<!-- Registration Form -->
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- First Name -->
+<div class="space-y-2">
+<label class="block text-[0.6875rem] font-bold uppercase tracking-[0.05em] text-on-surface-variant ml-1">First Name</label>
+<input class="w-full px-5 py-4 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim/30 transition-all text-on-surface placeholder:text-outline" placeholder="Jane" type="text"/>
+</div>
+<!-- Last Name -->
+<div class="space-y-2">
+<label class="block text-[0.6875rem] font-bold uppercase tracking-[0.05em] text-on-surface-variant ml-1">Last Name</label>
+<input class="w-full px-5 py-4 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim/30 transition-all text-on-surface placeholder:text-outline" placeholder="Doe" type="text"/>
+</div>
+</div>
+<!-- Email Address -->
+<div class="space-y-2">
+<label class="block text-[0.6875rem] font-bold uppercase tracking-[0.05em] text-on-surface-variant ml-1">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl">mail</span>
+<input class="w-full pl-12 pr-5 py-4 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim/30 transition-all text-on-surface placeholder:text-outline" placeholder="jane@example.com" type="email"/>
+</div>
+</div>
+<!-- Password -->
+<div class="space-y-2">
+<label class="block text-[0.6875rem] font-bold uppercase tracking-[0.05em] text-on-surface-variant ml-1">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl">lock</span>
+<input class="w-full pl-12 pr-5 py-4 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim/30 transition-all text-on-surface placeholder:text-outline" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Role Dropdown -->
+<div class="space-y-2">
+<label class="block text-[0.6875rem] font-bold uppercase tracking-[0.05em] text-on-surface-variant ml-1">Role</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl">person_search</span>
+<select class="w-full pl-12 pr-10 py-4 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-fixed-dim/30 transition-all text-on-surface appearance-none">
+<option disabled="" selected="" value="">Select your role</option>
+<option value="parent">Parent</option>
+<option value="other">Other</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="pt-4">
+<button class="vitality-gradient w-full py-5 text-on-primary font-bold text-lg rounded-full shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all duration-200" type="submit">
+                            Create Account
+                        </button>
+</div>
+<!-- Mobile Login Link -->
+<div class="md:hidden text-center mt-6">
+<p class="text-sm text-on-surface-variant">
+                            Already have an account? 
+                            <a class="text-primary font-semibold" href="#">Log In</a>
+</p>
+</div>
+</form>
+<!-- Terms Notice -->
+<p class="mt-8 text-center text-xs text-on-surface-variant leading-relaxed">
+                    By creating an account, you agree to our 
+                    <a class="underline hover:text-primary" href="#">Terms of Service</a> and 
+                    <a class="underline hover:text-primary" href="#">Privacy Policy</a>.
+                </p>
+</div>
+<!-- Contextual Decorative Card (Therapist Insight Concept) -->
+</div>
+</main>
+<!-- Footer - Transactional Variant -->
+<footer class="w-full py-8 px-12 bg-surface-container-low mt-auto">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex gap-8">
+<a class="text-sm font-label text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a>
+<a class="text-sm font-label text-on-surface-variant hover:text-primary transition-all" href="#">Terms of Service</a>
+<a class="text-sm font-label text-on-surface-variant hover:text-primary transition-all" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+<!-- Decorative Canvas Elements -->
+</body></html>

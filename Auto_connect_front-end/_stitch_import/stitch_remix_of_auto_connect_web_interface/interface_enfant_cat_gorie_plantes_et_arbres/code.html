@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NatureTalk - Plants and Trees</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#001e2f",
+                    "surface-container": "#fdebde",
+                    "surface-bright": "#fff8f5",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#4ae176",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "outline-variant": "#c3c7cb",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "secondary": "#006e2f",
+                    "outline": "#73787b",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#2a1700",
+                    "on-secondary-fixed": "#002109",
+                    "on-surface-variant": "#43474b",
+                    "primary-container": "#e3f1ff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#c9e6ff",
+                    "on-background": "#231a12",
+                    "surface-dim": "#e8d7ca",
+                    "surface-tint": "#006591",
+                    "on-tertiary-container": "#986000",
+                    "on-surface": "#231a12",
+                    "primary-fixed-dim": "#89ceff",
+                    "tertiary": "#855300",
+                    "primary": "#006591",
+                    "surface-container-highest": "#f1dfd3",
+                    "surface-container-high": "#f7e5d8",
+                    "on-primary-container": "#0073a5",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#007432",
+                    "secondary-fixed": "#6bff8f",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "tertiary-fixed": "#ffddb8",
+                    "surface-variant": "#f1dfd3",
+                    "surface": "#fff8f5",
+                    "surface-container-low": "#fff1e8",
+                    "background": "#fff8f5",
+                    "inverse-primary": "#89ceff",
+                    "inverse-surface": "#392e26",
+                    "secondary-container": "#6bff8f",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#005321",
+                    "tertiary-container": "#ffecda",
+                    "inverse-on-surface": "#ffeee1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-no-borders {
+            border: none !important;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fff8f5;
+        }
+    </style>
+</head>
+<body class="text-on-surface min-h-screen pb-32">
+<!-- TopAppBar & Sentence Builder Shell -->
+<header class="fixed top-0 w-full rounded-b-[3rem] bg-[#ffffff]/80 backdrop-blur-xl z-50 shadow-[0_24px_24px_0_rgba(35,26,18,0.06)] px-6 py-4">
+<div class="flex flex-col gap-4 max-w-5xl mx-auto">
+<!-- App Identity & Search -->
+<div class="flex justify-between items-center">
+<span class="text-xl font-bold text-[#006591] tracking-tight">NatureTalk</span>
+<div class="flex gap-2">
+<button class="p-3 rounded-full hover:bg-[#fdebde] transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[#006591]">volume_up</span>
+</button>
+<button class="p-3 rounded-full hover:bg-[#fdebde] transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[#006591]">search</span>
+</button>
+</div>
+</div>
+<!-- AAC Expression Bar (Sentence Builder) -->
+<div class="flex items-center gap-3 bg-surface-container-lowest border border-outline-variant/15 p-2 rounded-full shadow-sm">
+<div class="flex-grow flex items-center gap-2 overflow-x-auto px-4 min-h-[64px]">
+<!-- Sample active tiles -->
+<div class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-bold flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined text-lg">park</span> Tree
+                    </div>
+</div>
+<div class="flex gap-2 pr-2">
+<button class="bg-[#006591] text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">record_voice_over</span>
+                        Speak
+                    </button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-3 rounded-full font-bold active:scale-95 transition-transform">
+                        Clear
+                    </button>
+<button class="bg-error-container text-on-error-container px-4 py-3 rounded-full font-bold active:scale-95 transition-transform">
+<span class="material-symbols-outlined">backspace</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-52 px-6 max-w-5xl mx-auto">
+<!-- Breadcrumb & Navigation Logic -->
+<nav class="flex items-center gap-3 mb-6 text-on-surface-variant/70 font-medium">
+<span class="hover:text-[#006591] cursor-pointer">Library</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-[#006591] font-bold">Plants and Trees</span>
+</nav>
+<!-- Tone Selector (SideNav Data Mapping) -->
+<section class="mb-10 overflow-x-auto">
+<div class="flex gap-3 pb-2">
+<button class="flex items-center gap-2 bg-[#fdebde] text-[#006591] px-5 py-3 rounded-full font-bold shadow-sm whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined">sentiment_satisfied</span> Happy
+                </button>
+<button class="flex items-center gap-2 bg-surface-container-low text-on-surface-variant/70 px-5 py-3 rounded-full font-medium whitespace-nowrap hover:bg-[#fdebde] active:scale-95 transition-all">
+<span class="material-symbols-outlined">sentiment_dissatisfied</span> Sad
+                </button>
+<button class="flex items-center gap-2 bg-surface-container-low text-on-surface-variant/70 px-5 py-3 rounded-full font-medium whitespace-nowrap hover:bg-[#fdebde] active:scale-95 transition-all">
+<span class="material-symbols-outlined">bolt</span> Excited
+                </button>
+<button class="flex items-center gap-2 bg-surface-container-low text-on-surface-variant/70 px-5 py-3 rounded-full font-medium whitespace-nowrap hover:bg-[#fdebde] active:scale-95 transition-all">
+<span class="material-symbols-outlined">mood_bad</span> Angry
+                </button>
+<button class="flex items-center gap-2 bg-surface-container-low text-on-surface-variant/70 px-5 py-3 rounded-full font-medium whitespace-nowrap hover:bg-[#fdebde] active:scale-95 transition-all">
+<span class="material-symbols-outlined">theater_comedy</span> Sarcastic
+                </button>
+</div>
+</section>
+<!-- Pictogram Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+<!-- Grid Item Template (Tree) -->
+<button class="flex flex-col items-center gap-4 p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(35,26,18,0.04)] hover:shadow-lg hover:bg-white transition-all active:scale-95 group">
+<div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="park">park</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Tree</span>
+</button>
+<!-- Flower -->
+<button class="flex flex-col items-center gap-4 p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(35,26,18,0.04)] hover:shadow-lg hover:bg-white transition-all active:scale-95 group">
+<div class="w-20 h-20 rounded-full bg-pink-100 flex items-center justify-center text-pink-700 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="local_florist">local_florist</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Flower</span>
+</button>
+<!-- Grass -->
+<button class="flex flex-col items-center gap-4 p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(35,26,18,0.04)] hover:shadow-lg hover:bg-white transition-all active:scale-95 group">
+<div class="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="grass">grass</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Grass</span>
+</button>
+<!-- Leaf -->
+<button class="flex flex-col items-center gap-4 p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(35,26,18,0.04)] hover:shadow-lg hover:bg-white transition-all active:scale-95 group">
+<div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center text-green-700 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="eco">eco</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Leaf</span>
+</button>
+<!-- Rose -->
+<button class="flex flex-col items-center gap-4 p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(35,26,18,0.04)] hover:shadow-lg hover:bg-white transition-all active:scale-95 group">
+<div class="w-20 h-20 rounded-full bg-red-100 flex items-center justify-center text-red-700 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="filter_vintage">filter_vintage</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Rose</span>
+</button>
+<!-- Sunflower -->
+<button class="flex flex-col items-center gap-4 p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(35,26,18,0.04)] hover:shadow-lg hover:bg-white transition-all active:scale-95 group">
+<div class="w-20 h-20 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="sunny">sunny</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Sunflower</span>
+</button>
+<!-- Bush -->
+<button class="flex flex-col items-center gap-4 p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(35,26,18,0.04)] hover:shadow-lg hover:bg-white transition-all active:scale-95 group">
+<div class="w-20 h-20 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="forest">forest</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Bush</span>
+</button>
+<!-- Branch -->
+<button class="flex flex-col items-center gap-4 p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(35,26,18,0.04)] hover:shadow-lg hover:bg-white transition-all active:scale-95 group">
+<div class="w-20 h-20 rounded-full bg-green-50 flex items-center justify-center text-green-800 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="account_tree">account_tree</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Branch</span>
+</button>
+<!-- Cactus -->
+<button class="flex flex-col items-center gap-4 p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(35,26,18,0.04)] hover:shadow-lg hover:bg-white transition-all active:scale-95 group">
+<div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="psychiatry">psychiatry</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Cactus</span>
+</button>
+<!-- Palm Tree -->
+<button class="flex flex-col items-center gap-4 p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(35,26,18,0.04)] hover:shadow-lg hover:bg-white transition-all active:scale-95 group">
+<div class="w-20 h-20 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="beach_access">beach_access</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Palm Tree</span>
+</button>
+<!-- Pine -->
+<button class="flex flex-col items-center gap-4 p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(35,26,18,0.04)] hover:shadow-lg hover:bg-white transition-all active:scale-95 group">
+<div class="w-20 h-20 rounded-full bg-primary-container flex items-center justify-center text-[#006591] group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="holiday_village">holiday_village</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Pine</span>
+</button>
+<!-- Fruit Tree -->
+<button class="flex flex-col items-center gap-4 p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(35,26,18,0.04)] hover:shadow-lg hover:bg-white transition-all active:scale-95 group">
+<div class="w-20 h-20 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="nutrition">nutrition</span>
+</div>
+<span class="font-bold text-lg text-on-surface">Fruit Tree</span>
+</button>
+</div>
+</main>
+<!-- Favorites Bar (Bottom UI Anchor) -->
+<section class="fixed bottom-24 left-1/2 -translate-x-1/2 w-[90%] max-w-4xl bg-[#ffffff]/60 backdrop-blur-xl rounded-full p-3 shadow-lg border border-white/40 flex items-center gap-4 z-40">
+<div class="bg-[#006591] p-3 rounded-full text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="flex gap-3 overflow-x-auto no-scrollbar">
+<div class="bg-surface-container px-5 py-2 rounded-full font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">park</span> Tree
+            </div>
+<div class="bg-surface-container px-5 py-2 rounded-full font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">local_florist</span> Flower
+            </div>
+<div class="bg-surface-container px-5 py-2 rounded-full font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">sunny</span> Sunflower
+            </div>
+</div>
+</section>
+<!-- BottomNavBar (Shared Component) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#ffffff]/80 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-12px_24px_0_rgba(35,26,18,0.04)]">
+<div class="flex flex-col items-center justify-center text-[#231a12]/50 px-6 py-2 transition-all active:scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-wider font-bold">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#fdebde] text-[#006591] rounded-[2rem] px-6 py-2 transition-all active:scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">local_florist</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-wider font-bold">Plants</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#231a12]/50 px-6 py-2 transition-all active:scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined mb-1">park</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-wider font-bold">Trees</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#231a12]/50 px-6 py-2 transition-all active:scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined mb-1">psychiatry</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-wider font-bold">Garden</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#231a12]/50 px-6 py-2 transition-all active:scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined mb-1">history</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-wider font-bold">History</span>
+</div>
+</nav>
+</body></html>

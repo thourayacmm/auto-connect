@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auto Connect | Therapist Dashboard</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#E67E22", /* Soft Orange */
+                    "primary-container": "#FFEDD5", /* Peach Tint */
+                    "secondary": "#2D6A4F", /* Calming Green */
+                    "secondary-container": "#D8F3DC",
+                    "tertiary": "#457B9D", /* Calming Blue */
+                    "surface": "#FDFBF7", /* Earthy Neutral White */
+                    "surface-container": "#F5EBE0", /* Warm Neutral */
+                    "surface-container-low": "#FAF3E0",
+                    "surface-container-lowest": "#FFFFFF",
+                    "on-surface": "#432818", /* Deep Earthy Brown */
+                    "on-surface-variant": "#7F5539", /* Lighter Earthy Brown */
+                    "background": "#FDFBF7",
+                    "outline": "#DDB892"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1.25rem",
+                    "lg": "2.25rem",
+                    "xl": "3.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .brand-font { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gentle-gradient {
+            background: linear-gradient(135deg, #E67E22 0%, #FFB347 100%);
+        }
+        .calm-gradient {
+            background: linear-gradient(135deg, #2D6A4F 0%, #52B788 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container/30">
+<!-- Shell Layout -->
+<div class="flex min-h-screen">
+<!-- SideNavBar Component -->
+<aside class="h-full w-72 fixed left-0 top-0 bg-surface-container flex flex-col py-6 z-30 border-r border-outline/20">
+<div class="px-8 mb-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl gentle-gradient flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-primary tracking-tight leading-none">Auto Connect</h1>
+<p class="text-[10px] font-bold text-on-surface-variant/60 tracking-[0.1em] uppercase mt-1">AAC Support</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Dashboard Active -->
+<a class="flex items-center gap-3 bg-primary-container text-primary rounded-2xl px-4 py-3 mx-4 transition-transform scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 mx-4 hover:bg-white/50 transition-colors rounded-2xl" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-medium">Directory</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 mx-4 hover:bg-white/50 transition-colors rounded-2xl" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-medium">Scenarios</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 mx-4 hover:bg-white/50 transition-colors rounded-2xl" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-medium">Pictograms</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 mx-4 hover:bg-white/50 transition-colors rounded-2xl" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-medium">Statistics</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 mx-4 hover:bg-white/50 transition-colors rounded-2xl" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="font-medium">AI Guide</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<div class="bg-surface-container-low rounded-2xl p-4 flex items-center gap-3 border border-outline/10">
+<img class="w-10 h-10 rounded-full object-cover ring-2 ring-primary/20" data-alt="Professional therapist portrait with a kind smile in a modern medical office setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5poIjn4PkqC2j57N0lAQWYZ_8HEOJO-SL0cJ9O1jU3T7mCC3AKhfYqfmQRsA8TT5asZZlT3wd5jk8FegMAF1JeZ3TQgJe7gIytGn-A2yEX2gu084-7Bm0PkoSeXUZ-6pj8OaM-5222zwfgz5w3b6uflzFjCasnCwtLt312dj3PwNldNA7KaK3O92djs-VSsUQHxgyzHT0HDnuFKanD5GvOqeMpujuihIOj286_blfTg8mdqV2xGRFVU_DCr0ZKWbFv3WNV3MuRfo0"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold text-on-surface truncate">Dr. Sarah Chen</p>
+<p class="text-xs text-on-surface-variant truncate">Clinical Lead</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-72 p-8 bg-surface min-h-screen">
+<!-- TopNavBar Style Header (Integrated) -->
+<header class="flex justify-between items-center mb-10">
+<div>
+<h2 class="text-3xl font-extrabold text-on-surface tracking-tight">Therapist Dashboard</h2>
+<p class="text-on-surface-variant font-medium mt-1">Welcome back, Dr. Chen. Let's see how our community is blooming today.</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-low px-5 py-2.5 rounded-full flex items-center gap-3 w-72 border border-outline/20">
+<span class="material-symbols-outlined text-on-surface-variant/50">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-on-surface-variant/40" placeholder="Search patients or sessions..." type="text"/>
+</div>
+<button class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-on-surface-variant shadow-sm hover:bg-primary-container transition-all border border-outline/10">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-on-surface-variant shadow-sm hover:bg-primary-container transition-all border border-outline/10">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<!-- Summary Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-[0_10px_30px_rgba(67,40,24,0.04)] relative overflow-hidden group border border-outline/10">
+<div class="relative z-10">
+<p class="text-[10px] font-bold text-on-surface-variant/60 tracking-widest uppercase mb-2">Total Patients</p>
+<h3 class="text-4xl font-black text-on-surface">42</h3>
+<div class="flex items-center gap-1 text-secondary mt-2">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-xs font-bold">+12% growth</span>
+</div>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-8xl text-primary-container/30 opacity-40 group-hover:opacity-60 transition-opacity">groups</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-[0_10px_30px_rgba(67,40,24,0.04)] relative overflow-hidden group border border-outline/10">
+<div class="relative z-10">
+<p class="text-[10px] font-bold text-on-surface-variant/60 tracking-widest uppercase mb-2">Active Sessions</p>
+<h3 class="text-4xl font-black text-on-surface">18</h3>
+<div class="flex items-center gap-1 text-tertiary mt-2">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="text-xs font-bold">8 scheduled today</span>
+</div>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-8xl text-primary-container/30 opacity-40 group-hover:opacity-60 transition-opacity">forum</span>
+</div>
+<div class="md:col-span-2 calm-gradient p-6 rounded-2xl shadow-lg flex items-center justify-between text-white overflow-hidden relative">
+<div class="relative z-10">
+<h3 class="text-2xl font-extrabold mb-1">Therapy Progress</h3>
+<p class="text-white/90 text-sm font-medium mb-4 max-w-[240px]">Average speech milestone achievement is up by 15% this quarter. Wonderful progress!</p>
+<button class="bg-white/20 backdrop-blur-md text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-white/30 transition-all border border-white/30">View Annual Report</button>
+</div>
+<div class="relative z-10 flex gap-1 items-end h-24">
+<div class="w-2 bg-white/30 rounded-t-full h-[40%]"></div>
+<div class="w-2 bg-white/40 rounded-t-full h-[60%]"></div>
+<div class="w-2 bg-white/60 rounded-t-full h-[50%]"></div>
+<div class="w-2 bg-white/80 rounded-t-full h-[85%]"></div>
+<div class="w-2 bg-white rounded-t-full h-[100%]"></div>
+</div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent)]"></div>
+</div>
+</section>
+<!-- Main Data Section -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+<!-- Progress Charts -->
+<div class="xl:col-span-2 space-y-8">
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline/10">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-extrabold text-on-surface">Session Analytics</h3>
+<div class="flex bg-surface-container-low p-1 rounded-full text-xs font-bold border border-outline/20">
+<button class="px-5 py-1.5 bg-white rounded-full shadow-sm text-primary">Weekly</button>
+<button class="px-5 py-1.5 text-on-surface-variant/60">Monthly</button>
+</div>
+</div>
+<div class="h-64 flex items-end justify-between gap-4 px-2">
+<div class="flex-1 flex flex-col items-center gap-4">
+<div class="w-full bg-surface-container-low rounded-2xl relative h-48 overflow-hidden">
+<div class="absolute bottom-0 w-full bg-tertiary/20 h-[60%] rounded-t-lg"></div>
+<div class="absolute bottom-0 w-full gentle-gradient h-[45%] rounded-t-lg"></div>
+</div>
+<span class="text-xs font-bold text-on-surface-variant/50">Mon</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-4">
+<div class="w-full bg-surface-container-low rounded-2xl relative h-48 overflow-hidden">
+<div class="absolute bottom-0 w-full bg-tertiary/20 h-[75%] rounded-t-lg"></div>
+<div class="absolute bottom-0 w-full gentle-gradient h-[65%] rounded-t-lg"></div>
+</div>
+<span class="text-xs font-bold text-on-surface-variant/50">Tue</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-4">
+<div class="w-full bg-surface-container-low rounded-2xl relative h-48 overflow-hidden">
+<div class="absolute bottom-0 w-full bg-tertiary/20 h-[50%] rounded-t-lg"></div>
+<div class="absolute bottom-0 w-full gentle-gradient h-[30%] rounded-t-lg"></div>
+</div>
+<span class="text-xs font-bold text-on-surface-variant/50">Wed</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-4">
+<div class="w-full bg-surface-container-low rounded-2xl relative h-48 overflow-hidden">
+<div class="absolute bottom-0 w-full bg-tertiary/20 h-[90%] rounded-t-lg"></div>
+<div class="absolute bottom-0 w-full gentle-gradient h-[80%] rounded-t-lg"></div>
+</div>
+<span class="text-xs font-bold text-on-surface-variant/50">Thu</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-4">
+<div class="w-full bg-surface-container-low rounded-2xl relative h-48 overflow-hidden">
+<div class="absolute bottom-0 w-full bg-tertiary/20 h-[70%] rounded-t-lg"></div>
+<div class="absolute bottom-0 w-full gentle-gradient h-[55%] rounded-t-lg"></div>
+</div>
+<span class="text-xs font-bold text-on-surface-variant/50">Fri</span>
+</div>
+</div>
+</div>
+<!-- Additional Context - Asymmetric Block -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white p-6 rounded-2xl border-l-4 border-secondary shadow-sm ring-1 ring-black/5">
+<div class="flex items-start justify-between mb-4">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">emoji_events</span>
+</div>
+<span class="text-[10px] font-black text-secondary tracking-widest bg-secondary-container px-2 py-1 rounded">GOAL MET</span>
+</div>
+<h4 class="font-bold text-on-surface mb-1">Leo Maxwell</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Leo has achieved his 'Complex Sentences' milestone. A wonderful breakthrough!</p>
+</div>
+<div class="bg-white p-6 rounded-2xl border-l-4 border-primary shadow-sm ring-1 ring-black/5">
+<div class="flex items-start justify-between mb-4">
+<div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<span class="text-[10px] font-black text-primary tracking-widest bg-primary-container px-2 py-1 rounded">ATTENTION</span>
+</div>
+<h4 class="font-bold text-on-surface mb-1">Emma Wilson</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Lower interaction scores observed. Let's try more tactile activities next session.</p>
+</div>
+</div>
+</div>
+<!-- Recent Patients List -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl h-full shadow-sm border border-outline/10">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-extrabold text-on-surface">Recent Patients</h3>
+<button class="text-primary font-bold text-sm hover:underline">View All</button>
+</div>
+<div class="space-y-6">
+<!-- Patient Row -->
+<div class="flex items-center gap-4 group cursor-pointer">
+<img class="w-12 h-12 rounded-2xl object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 ring-1 ring-outline/20" data-alt="Close-up of a young girl with bright eyes and a curious expression, warm soft natural lighting in a cozy environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAbOi8H_7Bl-FEEEsYd0O8qiJjgewF98lKR7vDHzsNGPNoNbOOQQA2F7ab1V0ubZNgv69rtZE4BGRwVYStIK810mFHRy8INQ8wKT5UupAwnzM1r4_CMdsZVTvBRKPKrDDdaeiMBAGIYcQLoS7CP52GPJplfzXsPpOpJZ_eAh0NxyiUa55XS9Uow73tFupojSwEuFxx7oI-6Pyy9z8PvmzdqPCanlMbg49Wmw4dxIwHE2aIf3zFYSmGWDcd51bRAIOfJGrL1iabwpVP"/>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface text-sm group-hover:text-primary transition-colors">Maya Rodriguez</h4>
+<p class="text-xs text-on-surface-variant/60">Active 2h ago</p>
+</div>
+<div class="text-right">
+<span class="block px-3 py-1 rounded-full text-[10px] font-black bg-secondary-container text-secondary uppercase tracking-tight">Active</span>
+</div>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<img class="w-12 h-12 rounded-2xl object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 ring-1 ring-outline/20" data-alt="Close-up of a young boy smiling broadly with messy hair, bright vibrant daytime lighting outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7sdDRPLmIIX1aM0_BGw8LofycuJfP1XGQY-K1kPW7ncB0g4Rt3WUS5wPFdS9T-DPEvwTOvJTmeW7Ui66zgcWzZ5iOOSiS-_qRaHiNmTB_zn4helsVl8-zxSjNxQqsn_hVJ6tl15EFYyQmB9hf5QkhpTyWdgxJ5ijHv_DqHR0CQf4QZnyXyDpcF5ne7Wx_0NBdeeBv17lmdAipWwcSTqMZVYOmDlHFX6toCWLdeM-TYf8c-L4yr4XwG85CAQXzL632TjOB3I64jeeH"/>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface text-sm group-hover:text-primary transition-colors">Jamie Smith</h4>
+<p class="text-xs text-on-surface-variant/60">Yesterday</p>
+</div>
+<div class="text-right">
+<span class="block px-3 py-1 rounded-full text-[10px] font-black bg-surface-container text-on-surface-variant/60 uppercase tracking-tight">Offline</span>
+</div>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<img class="w-12 h-12 rounded-2xl object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 ring-1 ring-outline/20" data-alt="Portrait of a young child looking thoughtfully into the distance, soft aesthetic with pastel color tones and bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8n1ig-gFURgElF_cfOCwevqH5WnfCdNVhSr-1HmC-Yh39yW1TYTARWwmhrgWDI_fHwoICSvWsZcLX5Jt95e4CMGhv2Jt1xDxd_8s6REIcetlD6BwfQdsSwkiuICZ901SCmZlUfqsWNmg7YMSRw1m-iiFsJ0JKaCzW2uBwwEEFzslfJ2I-nQ2PSczCPCpaMLNvaEPyiB-U7xFMaOueYDea0SKkAmU6DnM0fvLnKawv6N5FlRcrya2shLK13frScoXvjlEPNbgc4G-1"/>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface text-sm group-hover:text-primary transition-colors">Oliver Blake</h4>
+<p class="text-xs text-on-surface-variant/60">3 days ago</p>
+</div>
+<div class="text-right">
+<span class="block px-3 py-1 rounded-full text-[10px] font-black bg-primary-container text-primary uppercase tracking-tight">Paused</span>
+</div>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<img class="w-12 h-12 rounded-2xl object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 ring-1 ring-outline/20" data-alt="Young girl laughing with pigtails, dynamic and energetic pose with warm sunny lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOpff9qHehDrOW4LoXLmpSoVQ-ftJxrAlPdv0rlq5jyLI2GI9RJPCsIPtvLOb8M9fV4HR_8L8UZqd4SRcRTLveQxnpNSWyPenMDQcQFmIRA2PhlJtN0iMl4mJqe097P7DHtTIytLTUftyokGqoyaIYAuuq9JCMfveviBPR7rYKFoIOZ1Rxa4YvMBa_1L_hsMjJDmUdXkQNMLazQMRIqSYs3s7eMTsZ3GtBzx67L0IoU4n432Hl4xj46O6H45DlLWpRVJdxSAa9gz4f"/>
+<div class="flex-1">
+<h4 class="font-bold text-on-surface text-sm group-hover:text-primary transition-colors">Sophia Lane</h4>
+<p class="text-xs text-on-surface-variant/60">1 week ago</p>
+</div>
+<div class="text-right">
+<span class="block px-3 py-1 rounded-full text-[10px] font-black bg-secondary-container text-secondary uppercase tracking-tight">Active</span>
+</div>
+</div>
+</div>
+<div class="mt-12 bg-surface-container rounded-2xl p-6 relative overflow-hidden border border-outline/10">
+<h4 class="font-extrabold text-on-surface mb-2 relative z-10">Need a Hand?</h4>
+<p class="text-xs text-on-surface-variant mb-4 relative z-10">Our AI Guide is available 24/7 to help with clinical documentation.</p>
+<button class="w-full bg-on-surface text-white py-3 rounded-full text-xs font-bold relative z-10 hover:bg-on-surface/90 transition-colors shadow-lg">Launch Assistant</button>
+<span class="material-symbols-outlined absolute -right-6 -bottom-6 text-7xl text-primary-container opacity-30 transform rotate-12">smart_toy</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

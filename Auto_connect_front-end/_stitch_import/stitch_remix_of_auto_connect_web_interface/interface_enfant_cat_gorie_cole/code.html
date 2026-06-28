@@ -1,0 +1,325 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#392e26",
+                        "surface-variant": "#f1dfd3",
+                        "error": "#ba1a1a",
+                        "secondary": "#006e2f",
+                        "primary-fixed-dim": "#89ceff",
+                        "surface": "#fff8f5",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#f1dfd3",
+                        "inverse-primary": "#89ceff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#007432",
+                        "surface-container-high": "#f7e5d8",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#fff1e8",
+                        "surface-container": "#fdebde",
+                        "on-surface": "#231a12",
+                        "primary": "#006591",
+                        "on-tertiary-container": "#986000",
+                        "on-background": "#231a12",
+                        "secondary-fixed": "#6bff8f",
+                        "surface-tint": "#006591",
+                        "on-primary-container": "#0073a5",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#2a1700",
+                        "primary-fixed": "#c9e6ff",
+                        "tertiary-fixed": "#ffddb8",
+                        "inverse-on-surface": "#ffeee1",
+                        "secondary-container": "#6bff8f",
+                        "tertiary": "#855300",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#4ae176",
+                        "primary-container": "#e3f1ff",
+                        "outline-variant": "#c3c7cb",
+                        "outline": "#73787b",
+                        "on-primary-fixed-variant": "#004c6e",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-surface-variant": "#43474b",
+                        "background": "#fff8f5",
+                        "on-primary-fixed": "#001e2f",
+                        "surface-bright": "#fff8f5",
+                        "on-secondary-fixed": "#002109",
+                        "surface-dim": "#e8d7ca",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#005321",
+                        "tertiary-container": "#ffecda"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1.5rem;
+        }
+        @media (max-width: 640px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3 max-w-5xl mx-auto bg-[#ffffff]/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-full mt-4 mx-4 shadow-[0_24px_24px_rgba(35,26,18,0.06)]">
+<div class="flex items-center gap-3">
+<span class="text-xl font-bold text-[#006591] dark:text-sky-300">Serene Connection</span>
+</div>
+<!-- Tablet/Desktop Navigation (Hidden on Mobile) -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#006591] font-bold font-['Plus_Jakarta_Sans'] font-semibold tracking-tight" href="#">School</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Plus_Jakarta_Sans'] font-semibold tracking-tight hover:bg-[#fdebde] transition-colors px-3 py-1 rounded-full" href="#">Feelings</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Plus_Jakarta_Sans'] font-semibold tracking-tight hover:bg-[#fdebde] transition-colors px-3 py-1 rounded-full" href="#">Actions</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Plus_Jakarta_Sans'] font-semibold tracking-tight hover:bg-[#fdebde] transition-colors px-3 py-1 rounded-full" href="#">Home</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="p-2 text-slate-500 hover:bg-[#fdebde] rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="backspace">backspace</span>
+</button>
+</div>
+</header>
+<main class="pt-28 px-4 max-w-5xl mx-auto">
+<!-- Sentence Builder Bar -->
+<section class="mb-6">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_4px_24px_rgba(35,26,18,0.04)] flex flex-col md:flex-row items-center gap-4 border border-outline-variant/15">
+<div class="flex-grow flex items-center gap-3 p-4 bg-surface-container-low rounded-lg w-full min-h-[80px]">
+<div class="flex flex-col items-center gap-1 bg-surface-container rounded-lg p-2 min-w-[64px]">
+<span class="material-symbols-outlined text-primary" data-icon="school">school</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary">School</span>
+</div>
+<div class="w-[2px] h-10 bg-outline-variant/30"></div>
+<span class="text-headline-sm text-on-surface opacity-40 italic">Tap items below to build a sentence...</span>
+</div>
+<div class="flex gap-3 w-full md:w-auto">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-br from-primary to-on-primary-container text-on-primary rounded-full font-bold shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+<span>Speak</span>
+</button>
+<button class="p-4 text-primary bg-primary-container rounded-full hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined" data-icon="backspace">backspace</span>
+</button>
+<button class="p-4 text-error bg-error-container/30 rounded-full hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Emotional Tones -->
+<section class="mb-8 overflow-x-auto pb-2">
+<div class="flex gap-3 min-w-max">
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-low rounded-full text-sm font-medium hover:bg-surface-container transition-all active:scale-95">
+<span class="material-symbols-outlined text-[#006591]" data-icon="sentiment_sad">sentiment_sad</span>
+<span>Sad</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container rounded-full text-sm font-bold text-primary border-2 border-primary/10 transition-all active:scale-95">
+<span class="material-symbols-outlined text-primary" data-icon="sentiment_satisfied">sentiment_satisfied</span>
+<span>Happy</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-low rounded-full text-sm font-medium hover:bg-surface-container transition-all active:scale-95">
+<span class="material-symbols-outlined text-tertiary" data-icon="celebration">celebration</span>
+<span>Excited</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-low rounded-full text-sm font-medium hover:bg-surface-container transition-all active:scale-95">
+<span class="material-symbols-outlined text-error" data-icon="sentiment_very_dissatisfied">sentiment_very_dissatisfied</span>
+<span>Angry</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-low rounded-full text-sm font-medium hover:bg-surface-container transition-all active:scale-95">
+<span class="material-symbols-outlined text-outline" data-icon="face_6">face_6</span>
+<span>Sarcastic</span>
+</button>
+</div>
+</section>
+<!-- Breadcrumb & Search -->
+<section class="flex flex-col md:flex-row items-center gap-4 mb-8">
+<div class="flex items-center gap-2 text-sm font-semibold text-outline py-2 px-4 bg-surface-container-low rounded-full self-start">
+<span>Library</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary">School</span>
+</div>
+<div class="relative w-full flex-grow">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-12 py-3 bg-surface-container-lowest border-none rounded-full focus:ring-2 focus:ring-primary/20 text-on-surface shadow-sm" placeholder="Search school items..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline" data-icon="keyboard">keyboard</span>
+</div>
+</section>
+<!-- Main AAC Grid -->
+<section class="bento-grid mb-12">
+<!-- Pictograms -->
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="person">person</span>
+</div>
+<span class="font-bold text-on-surface">Teacher</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="child_care">child_care</span>
+</div>
+<span class="font-bold text-on-surface">Student</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-tertiary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="menu_book">menu_book</span>
+</div>
+<span class="font-bold text-on-surface">Book</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface text-3xl" data-icon="edit">edit</span>
+</div>
+<span class="font-bold text-on-surface">Pencil</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-primary-container/60 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="backpack">backpack</span>
+</div>
+<span class="font-bold text-on-surface">Backpack</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface text-3xl" data-icon="desk">desk</span>
+</div>
+<span class="font-bold text-on-surface">Desk</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface text-3xl" data-icon="chair">chair</span>
+</div>
+<span class="font-bold text-on-surface">Chair</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="sports_kabaddi">sports_kabaddi</span>
+</div>
+<span class="font-bold text-on-surface">Recess</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-tertiary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="restaurant">restaurant</span>
+</div>
+<span class="font-bold text-on-surface">Lunch</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="calculate">calculate</span>
+</div>
+<span class="font-bold text-on-surface">Math</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="palette">palette</span>
+</div>
+<span class="font-bold text-on-surface">Art</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-tertiary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="music_note">music_note</span>
+</div>
+<span class="font-bold text-on-surface">Music</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="fitness_center">fitness_center</span>
+</div>
+<span class="font-bold text-on-surface">Gym</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface text-3xl" data-icon="meeting_room">meeting_room</span>
+</div>
+<span class="font-bold text-on-surface">Classroom</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface text-3xl" data-icon="rectangle">rectangle</span>
+</div>
+<span class="font-bold text-on-surface">Whiteboard</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-3 p-6 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all duration-300 border border-transparent hover:border-primary/20 active:scale-95">
+<div class="w-16 h-16 rounded-full bg-tertiary-container/60 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="home_work">home_work</span>
+</div>
+<span class="font-bold text-on-surface">Homework</span>
+</button>
+</section>
+</main>
+<!-- Favorites Bar -->
+<section class="fixed bottom-24 left-0 right-0 z-40 px-4 md:px-0">
+<div class="max-w-xl mx-auto bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-lg border border-outline-variant/10 p-2 flex justify-around items-center">
+<button class="flex flex-col items-center p-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="home">home</span>
+<span class="text-[10px] font-bold text-primary">Home</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-on-primary-container text-xl" data-icon="water_drop">water_drop</span>
+<span class="text-[10px] font-bold text-on-primary-container">Water</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-tertiary text-xl" data-icon="fastfood">fastfood</span>
+<span class="text-[10px] font-bold text-tertiary">Hungry</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span class="text-[10px] font-bold text-secondary">Yes</span>
+</button>
+<button class="flex flex-col items-center p-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-error text-xl" data-icon="cancel" data-weight="fill">cancel</span>
+<span class="text-[10px] font-bold text-error">No</span>
+</button>
+</div>
+</section>
+<!-- Global Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#ffffff]/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-4px_24px_rgba(35,26,18,0.04)]">
+<a class="flex flex-col items-center justify-center bg-[#fdebde] dark:bg-sky-900/40 text-[#006591] dark:text-sky-200 rounded-full px-6 py-2 transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-medium">School</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 transition-opacity hover:opacity-80 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="sentiment_satisfied">sentiment_satisfied</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-medium">Feelings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 transition-opacity hover:opacity-80 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="touch_app">touch_app</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-medium">Actions</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 transition-opacity hover:opacity-80 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-medium">Home</span>
+</a>
+</nav>
+</body></html>

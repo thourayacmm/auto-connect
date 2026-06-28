@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Serene Connection - Countries Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#005321",
+                    "outline-variant": "#c3c7cb",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#ffeee1",
+                    "on-primary-container": "#0073a5",
+                    "on-secondary-container": "#007432",
+                    "surface-dim": "#e8d7ca",
+                    "on-surface": "#231a12",
+                    "on-primary-fixed": "#001e2f",
+                    "secondary-fixed": "#6bff8f",
+                    "outline": "#73787b",
+                    "background": "#fff8f5",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#fff1e8",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#f7e5d8",
+                    "tertiary": "#855300",
+                    "surface-container-highest": "#f1dfd3",
+                    "secondary": "#006e2f",
+                    "surface-variant": "#f1dfd3",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#006591",
+                    "primary-fixed-dim": "#89ceff",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "tertiary-fixed": "#ffddb8",
+                    "tertiary-container": "#ffecda",
+                    "surface-container": "#fdebde",
+                    "on-secondary-fixed": "#002109",
+                    "on-background": "#231a12",
+                    "secondary-container": "#6bff8f",
+                    "on-surface-variant": "#43474b",
+                    "primary-container": "#e3f1ff",
+                    "error-container": "#ffdad6",
+                    "surface": "#fff8f5",
+                    "inverse-surface": "#392e26",
+                    "on-tertiary-container": "#986000",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#fff8f5",
+                    "on-tertiary-fixed": "#2a1700",
+                    "secondary-fixed-dim": "#4ae176",
+                    "inverse-primary": "#89ceff",
+                    "primary": "#006591",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "primary-fixed": "#c9e6ff",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 bottom-0 flex flex-col py-8 h-full w-72 rounded-r-xl bg-surface-container-low z-40 hidden md:flex">
+<div class="px-8 mb-12">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up of a smiling child with soft lighting and warm skin tones, high quality photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6koAcTJSCGTmCgqAnZejf9R_MYykU37vmyYxKVO7CKo7sWL2q0sy8hYmVaxKbngmnkDLJ_I7se_iK4B4gY3ev9WbcLFNef61Z1WuqMO_j_T9CHez1UxMZzRVarXo5hs39sAuBstAnCL7FfNXxTVdZXRNwbXGmI-U-kgBgsi46fMBQDdxVEgAO_mRGg-Nd6ju2xb1grzFnBOQVadqSXSYCzJEi13a-glNxOkyf48-yMujNrEZj2fClqSNVadcDxbgRNMXdnX_BxmzG"/>
+</div>
+<div>
+<p class="text-lg font-black text-primary leading-tight">Hello, Alex</p>
+<p class="text-sm font-medium text-on-surface-variant">Ready to talk?</p>
+</div>
+</div>
+<button class="w-full py-4 bg-primary text-white rounded-full font-bold shadow-lg hover:bg-on-primary-container transition-colors active:scale-95 duration-200">
+            Quick Phrases
+        </button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="text-stone-600 dark:text-stone-400 mx-4 py-3 flex items-center gap-4 px-6 hover:bg-surface-container rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-medium">Home</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 mx-4 py-3 flex items-center gap-4 px-6 hover:bg-surface-container rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_emotions">emoji_emotions</span>
+<span class="font-medium">Feelings</span>
+</a>
+<a class="bg-gradient-to-br from-primary to-on-primary-container text-white rounded-full mx-4 py-3 shadow-lg flex items-center gap-4 px-6" href="#">
+<span class="material-symbols-outlined" data-icon="touch_app">touch_app</span>
+<span class="font-medium">Actions</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 mx-4 py-3 flex items-center gap-4 px-6 hover:bg-surface-container rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-medium">People</span>
+</a>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 md:ml-72 flex flex-col min-h-screen">
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 right-0 left-0 md:left-72 h-20 bg-surface/80 backdrop-blur-xl flex justify-between items-center px-8 z-50 shadow-[0_24px_24px_rgba(35,26,18,0.04)] rounded-b-xl">
+<div class="flex items-center gap-6">
+<h1 class="text-2xl font-bold text-primary tracking-tighter">Serene Connection</h1>
+<nav class="hidden lg:flex items-center gap-6">
+<button class="text-primary font-bold border-b-2 border-primary py-1">Speak</button>
+<button class="text-stone-500 font-medium hover:text-primary transition-colors">Clear</button>
+<button class="text-stone-500 font-medium hover:text-primary transition-colors">Delete</button>
+</nav>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-3 text-stone-500 hover:bg-surface-container transition-colors rounded-full active:scale-95">
+<span class="material-symbols-outlined" data-icon="mood">mood</span>
+</button>
+<button class="p-3 text-stone-500 hover:bg-surface-container transition-colors rounded-full active:scale-95">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+<button class="p-3 text-stone-500 hover:bg-surface-container transition-colors rounded-full active:scale-95">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<!-- Content Area -->
+<div class="mt-20 p-8 flex-1 pb-32">
+<!-- Breadcrumbs & Focus Controls -->
+<div class="flex flex-col gap-6 mb-8">
+<div class="flex items-center text-on-surface-variant font-medium tracking-tight text-sm">
+<span class="hover:text-primary cursor-pointer transition-colors">Library</span>
+<span class="material-symbols-outlined mx-2 text-xs">chevron_right</span>
+<span class="text-primary font-bold">Countries</span>
+</div>
+<div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
+<!-- Search Bar -->
+<div class="relative w-full max-w-md group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">keyboard</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container transition-all text-on-surface placeholder:text-outline" placeholder="Search countries..." type="text"/>
+</div>
+<!-- Emotional Tone Buttons -->
+<div class="flex gap-2 overflow-x-auto pb-2 w-full lg:w-auto no-scrollbar">
+<button class="flex items-center gap-2 px-5 py-3 bg-blue-50 text-blue-700 rounded-full font-bold text-sm whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="sentiment_dissatisfied">sentiment_dissatisfied</span> Sad
+                    </button>
+<button class="flex items-center gap-2 px-5 py-3 bg-yellow-50 text-yellow-700 rounded-full font-bold text-sm whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="sentiment_satisfied" style="font-variation-settings: 'FILL' 1;">sentiment_satisfied</span> Happy
+                    </button>
+<button class="flex items-center gap-2 px-5 py-3 bg-orange-50 text-orange-700 rounded-full font-bold text-sm whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="celebration">celebration</span> Excited
+                    </button>
+<button class="flex items-center gap-2 px-5 py-3 bg-red-50 text-red-700 rounded-full font-bold text-sm whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="sentiment_very_dissatisfied">sentiment_very_dissatisfied</span> Angry
+                    </button>
+<button class="flex items-center gap-2 px-5 py-3 bg-purple-50 text-purple-700 rounded-full font-bold text-sm whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="theater_comedy">theater_comedy</span> Sarcastic
+                    </button>
+</div>
+</div>
+</div>
+<!-- Bento Grid of Countries -->
+<section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-4">
+<!-- Macros updated for smaller flags: w-3/4 aspect-[4/3] -->
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Flag of France" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAu-0bLq63lTJBlhRsUNiSO8vuh05upw9ZUQfkc2yM9ECvNDPmhzTKjhlpV3ucxfGLLI1tEidOu-b4ENGDMvb3SGAfGTzYiaPnZn9N_02E-l2U-xHKPUpQZCU3vgDbBSWKi4Qncil_gLutjDUM5nuQuCZY7n235B59X-7ymRE7aAZg0urGYt029Lhe1vg7-bfOgj6a8aUHagyLsvNi4s-I8Oi4011XGi3c1A-f1ys-2LB4LrLTKpB30J4g0Ksd69xYkhNy9MM_NDH6"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">France</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="UK Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVX4-Am1Ak0hlenBXvg-l7FvB9w7d07CTS8vmpb3PvjduCiJMrJqc5o32aYuZgM5CKKlAAiA-T217CvvVscbh1HFMiFGzeslGhlavep2bCv17UaUIT3_0BAHOFq7QGUhLiq3J5Sxg6efL5NDV3CdjuuaXCI_qHZcQV_d_4mLaxUC7bvH1Nw4kix10vs23b4QQxTJ1AFxdsLZaOhhjuYeaspcIDdlX1nx3jeBv4b0LS_2osd9a6mwrekW4Bi3vid_BQsCYU0sz2mru4"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors text-center">United Kingdom</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="USA Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR5Dric2_ciJwA9FxD0ZD-Txn9hAj-RTyr4LJscgWXOnle-aGYTVap1Qp0Lab-9UYTWtEkt5VVbFyeovQ2vM9W82yqJHcg64gGL8ycHT5BWBOv3xzsWiHTDurtWXNFOodyDMzYHbsQot1h6TjPymvY5ZSG2b2TqUjCD5kw44N9NvCM7RNljdyyXG56-6dE2hrodpouNp2WAsNIwXs_80x91Y9vPwDaYei3piWbRcf0jSNRR3LFfLMES9YKHyW5Lkf0poTivIYejdsj"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">USA</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Canada Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD47rLc_9uq1qz3s-rBmpopktIQj3mab0S1YqrEIxzYLYaMVnfDW4HfVWPvugEgCb64WC6OoBZaQqe_IcIKqfNSh8TIWrl0_LcvCova0wnt__6XHoOnka6qKP02EFABfQNheecV70lKKpQmOSxl3dy16Xo6UnFqsJD0H1j8s_MkGPsvL_T44VSJM7KuD4t9BT7Asq47LgqOWTwfNPh91DeBO0YMhM76oaXIUhGuTbpxuzcgf2K22ji8gx9a-2UI8d7OOeZ8w9wqLNEc"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Canada</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Germany Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSTW0sWQUeWrsmfWFEdvjgbWdf7IGX-Jj5cYBPu_Agl4dXoAqgvjHXBNXydVtiIKv3jVNqcx73LzopjHITJMIzl3qoM1pM3LvUfc1S9PCQKdx1DBLYC3tiMGiZkEGc083HUy3O_4SoYY2hbH-aFinJpgCA6SegiKOsX5f1eg-o5-unP2apgRmf3j47YtVMuNrEzmvMXSlREAtAeUpFWrcKQ7M0b8rzVqEKUsFm6ev1HX8etsN3_zxOwVsvViVbzl_LSVeInT3u-stI"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Germany</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Italy Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHTv1ndawQPWuuEPjWOMnOjHeRkiAKTdKGt-gH3vbBLeCiHcp5uyzoWF0bC9qoXKT37IKAlnW0kW74eM2p1brdbmR3r52dwoyj5B8Un8ecyoqAcxLKZLdGBBSKYEaRjEyiikyDSi3J2vhAy3uDczm8-7W375x2zqgKJgpzaCOVUV7ZKEj5dmhMltEZtwPx7bApAVnYCSuMMpTk8SWDpxiFX7ot1NBQhnvHKEGM4YXSFa13i_9ZX-560yDy__THaWbkhU4KktP6xRsl"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Italy</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Portugal Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoF_f-22U_rSYDXGE7B6DsFFIIbJPfacXf2o_cT8v63X1yHYaqDshqvxPXq-NvqOvC5Ew_l9lxY9NHQPtpBnQBG0i4HTubymGxooM1xIWfGKxbY57a-BdjDckT_4ppGQvyTmOYOhwobFoqDM2_FdlDmSkeofpqn8KbmR2jr86edBQpYFWHxL2MRUAa7o9wlBd7q8nj-c86QQWhL_0MOjYetlcdfoviMNpPdZ-vyFpnCkVY0FMvxZZ4cpV9BQQ4TL8yOxYuFBkP-EP8"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Portugal</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Greece Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfs8VcyIot47oXOEmi3dzpCZ1CDTwoAQKmXlSbI_afRJdgMXBzNSO6L87qeZIWLA8Zt_DV6RbPOhSPel1yaYNUDJbW_4HVLj8iLCsIV9btjA5BD2ehenCGs6yqPmkDRX2lx9fedI7sF4BBwZDsBWxKhi6gBqG5vgZ54_iyO8cyPwi-siLOwHQnHx8ZKEQg8LG8CzPrc_d15w1W_hT2aPtOPYBPr6PzSg1uoYbkdegudhxtV4ScCuKWetW9rnGOkHOTUBL0Sjc_BjvQ"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Greece</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Turkey Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB370-e45R4pr0Yy1BRolo7kjdtvqd6y0g2i3Alj8vau2Rn-C6512zixcm5onZdkkuMLp9l1eqLZVWrY_04re9WWSVB3qjTj_pwdTNhdsGB9oSY84yZ6Ujg8jfqdGOafHZznl285L7p3rHAD45aCZNLN0ERLI4vJGxjuNarW1_vEggLiBpjsDZmDTpJkD1HUofmet8NqxfTD-Gnm4ecNWjXmAB1EIMoBcrq1ST29504i3rzdpW3lW9qnTbznJlAxS_SlY550yy5UqgP"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Turkey</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Russia Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASI5tebnF2qipW52DlG_JtVpxAmnyrV_4xWnHrQHoyWAANtJjxKg_kcCkX0Fhdko8_jJhePoCeHp_w-rbp2nGzC1E1-xK2CrWhn8j_bw9msjUYgyiJYXrfvKkWNObtvHTF8jc-w3u5Cpwy7ofozFhn_ISehkRg_phG-6oz2U6u6XKpGhxkAAzXOoleK7VXUrUsS3zbFSpqt-3VBBWhb7Mr4zBkgJm_kmku31aEXizjLXgsqiqtXZtwDb-3r7RFqtHYYiboF0ZBDJXI"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Russia</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="South Korea Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4y4j9wpGoEn1kVwvyxLmEhDUCDOYl5V3Um7OeGwmaPONtcxd2uRln4gXVxWpe-vL4LuaiiQz18NpXhPJVtyX3aD2BubDs32hcfFkgOiMeJT9nR_nrGz9TIuEOeU7xhr14KWR38hflNuQnT8p56C2oVGZFz7tSCq0B5yAXuymPxWlhlr8c9SEUPF_yqcXBYiZR_CZAWjUkSRB1m1v_san4DsbKZ6_vwzruoc1L0n7N7xSKKZzdIIKTSLNQWiDS4kIze_IcNGuwpJaR"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">South Korea</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Thailand Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmbMST7Bqv2n5ePShXnJZcc8T1q-GmWdpn6SrxnlUKqMxAiY9fo_2rm3BehKYKOqYqoBEpbqXAI71-nkLibK7mlBRY8yaSqpA1f8Nb9WrEF-GH7wS-I0fxhufGtFXxuVJQsYWP4LpcLbH8XiI-Bwl8QrpcgrR-bgHAHM5SD5OqHqrov7_SHCqSsX_liEbwfzcQAd0JsjUVVtd29MSAEvJHDXZuur9b2TX6tu41jL3E2lbeccCo79wekG-bWejp-NSZISakdSQFkQlH"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Thailand</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Vietnam Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY9CvWlVLI-ksWdCCdj-o5sihVyYz3UzZ18jMa23TlU0refBtO3JM7PRlAnSCXY_bcSc9MAMPk7CS7HDPvqMr4vmr_w05IhouiEHQeIwZzznPB2OtoruM7ojTAv8Wlis9g_tjJuT2VLrUJJch5O3FFqWmD_3k8DZOZ7J-Se4TwgKvVQIVEH-7AU_ZjXN2S1liqz3nnRmkXKOFK7J-m2A7f3ZcqhNUFIm8PsPREQFBM72O0D0aUmJnng0ZjoJtKffikFWYd3WRWww-0"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Vietnam</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Switzerland Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCowRB46foL8kW2U9XPCYCTfLx_mXxAUpCW_XUD6y6Z7aef5rsiDItMiSJ-aeqxcn4LdG67_iKFu7JnIIdWCXatkAb4UnTEFu3tteOSz8BbEDKNu_xG5NEyWd06tdVsEdPYgx2SRwWsYF2d5LNaFNzUDdGG49UF9-Pff2wFtiGuQZ_XHCE04azPkhz-2qipBtyJPiwovevEaNJNh6c4Y_8bTHAe4wSnDJsNSzeP6IL_9pJ7VEWbDWpNgi1wovtfy1IPjl_MX3mI5TF"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Switzerland</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Sweden Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACiPS6u3nPtNvd_uKSIUs8J8LywG84YfukW2QVmT4tFmNkhnAWLvP-DvpHIzs6WtXFDn2onuKkyyEIMK09utxQRHQ5ltvbYz4OCVGc59VFDxgHHJeDGmFEc23yNedwzGhOI4pgMl4yy7x086Bt7SZ-4rEePgCodrCU08cazhwT4n9pPj8pg0SuTdPDi9gHnz5gweDTsnoExxQEmZXJN5nTWBaQdumEIBzzACEKMvdw5GqU9Cmn6YvzqVHiNgWhDgcC1SLC7KNeRoPr"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Sweden</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Norway Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgZfHHrFszVK-jiqn6wn0dGQWLz6IVrldVGD83glqTv9rcaE6B3hV6PLUFjk579w-oNrfLIceEkI-pfyPEyGkjtqXA25AdqPMMV2Ey-mpYjCNQOM3AUQpBRw64o07-hKOcb8GO0kgMEGBYJAbwkw7gsuxi9H71btGxUgmBsIpezXI_2p4j2uZ0MLjl1CdM3Ie7wh06mjDv6sOWNVUmdRHuHJXjH98SO3CPOs5YowUehMKTxgQ8LRCzj-ypUJvYKQATimnYzxJBwKrO"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Norway</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Argentina Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOAcN3M5NaB2BUH_vH0u3ACN2Vcv_x9_iiencHKbBceilbbD5XHaT6KTX2r74sGy9jnQsR1Ov8f8AciJ7c0PPLBtt2YIz6irRZTUizqPm4W2WYqXFjrdoDumJ4n_Za7yYCCcdQm0ixyIuLT5dtYjGcDv8rEZciJK5xHNknX2Gc4wgV-0x4I30VyyB0CMZHosvzBJLRas_r0HZWUEXTCHVcwHp0naOOgdGVPh5glLlhSZeZr8U_8rmAGHggPyB0DQ7C3RRPcUmCYgdm"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Argentina</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Colombia Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcK-kUJPTA6f7b1ctzZIoKNJOLdfLmkrZO-wQSDAVMLQhXCKoukXhztQptZLuVbQ0wAzrDT4Wr4shsu9QpBUbUoPl4-4achDfsY_CTMlNRcXxmHt9UTBokWOHrzxYg94jGKNiz3BWFeTrBfD4M5JTBBrQywRlwIAMpROnyrR0HmEyWghXajBgKmv4uXysmxat0XgUV5GoSP0NLSva_vk_Vok2pVmJjdkxSa5EsPPr8FsMEkgU9mCdH2MojnV1Ajs-5ihgr0a8IzpB9"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Colombia</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Peru Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaMKV08fCvTjgl88SXJPvU2Qaq6eeCLu18sTmrTKkWMkDxB4WLP-xuuiuU-w7EvO1FTvy9bZCDtUA_8oEn2aC9NT53U0EJg4DosriHt9v3hD6i_Bc-djlE9gJwyassDS6ueTC3IkNipbA45L526VJIe3mmIThvZPsyfAOqbeX8-1xWdPdxLI2QDJxgBq7W9-zH_oP0itxPr8Y7Bp8mKzmtFGf0p1woMLFbNcpUgdRu2xTI1tU4IYx2qIg6W-6DqPE8ma2o9qUDV2Bb"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Peru</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Chile Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIolImgcCO5leQp3BOSJnta39A9s1-gSFm0eL6gM5RyVwOx9NYLkBJUvSZj5LXSy0mLrN9BnWJpVf27GR24JkNjd-jf0PQwCl15vNS7zVLaTJtHlgCj-hhWMHdiG8eHApEgG6tynf4il2t-6bEGM_MJy8N4PUqO_N3AxrCPlDXx82OzRo_xCCxA-ZzG_ijnctmYT_KyMzn203As8xC1GLX-3w_r4nZTZbAgQy6kHgObcK7fjdwsVTSVNAx4BBkJBTMQ71_cYU8X5s2"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Chile</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="South Africa Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvcSZBEqhC_CI0c5ZPq2MG18Qoa4_p0P7snXtpbI92CJNeUjxoVnYLuZkltx4SErnh9uW4A_AT-bkxPq4Yfp-8rgqSO6j6rACHRuR9wDsrTbnpriNJ62RDuo0_oz3oiAFEU_q0n9WvLgR6s3xJPY5shqVT9eJTIxpDxHJ2DcFv0V_oaoPoEK37k0oqI_oCwJ48VRbSEJmFRNmGURcJvfI1MOoM47BOzP3qgMEh0tByf3dzq7zT3kVQ2sit_2XgVnTZVLlUwwzeqS34"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors text-center">South Africa</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Nigeria Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzIvbSRTPxxWzoic3m-Mr5R2xLhkmW4SsDNa17eSCzd2GmVB3QzV4_33Xd4cGLbgQ9S3CpSVeebaAwARZnkwhLapfwtCYU_n4B__EpFCYouf9rYzpIF7ns4qjwTHiWn81beDwgDDkCWvkXeFxqhcYg8GbutUUU9TY7R32UZ5sToV5g9njZ-LiLYEBR1reMl7_omxRgybN8elWeyyTKTLyHLpemIeyWY4AurhZ1a9A3V6o0FbJC-kq9ocIogfUP_6EVDVUD_GBy7vXr"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Nigeria</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Kenya Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3r-uLY_z1_zVGmciXRQHnMnGRd4rcTIcjnZ_Qm0TDyABKvUNil8umT2_59MwXwmj_fUQ0AmNk6W9lwIM-o_9wnZHe6kwWvK1yXTVHdQgc7dt53CdYexVflxj_OwSY4ZiaOhNzF-TrDx52SpTVM_KMebvDtgpBYAKvBbAYjAnM58QWPv0_o1PbDfqkI_cqPkfnHIe44PrfiFEUlY34y7I983qr6nTY56IDxFP2hStlULPApBlP1Ku5mT6Q3khGIi2lKv5Y51y8agMS"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Kenya</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Saudi Arabia Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1prUG7odqetTl4aVcauYn9JIvBcbppJujiv4lb1zXCszRIkxblk9ChIY21qalwPT27iz_Su298JQlh-ZJxl0C4mrHUPiD_2mGAhukTrb5VvAaTZakFXSDiSTLb0TD_Q1WFys9a_jqxh_jDfz2jeb8HInUvbOFKPizTcehORZb1nULO-X7FS_h2KG9q1YGLNzfENWnTW1TPbSsDxV5CEfI-TlQFCEOIpIw5WOAbGaMSWq1rBPKTjuk6MA88hs4cc7_NIJrPYSX-D9-"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors text-center">Saudi Arabia</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="UAE Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWaG4oWSfXRvGh7x8ehhsP8kods8f6zCHVtsp6i2FmiLppOxO50EVuqHzF_Gao1OWkPFInrANht5EaXTAX2us9DjkQ0qnN2bxTnmEzuJE5eVQ99iXvSSklo1e3KpR02SQjd19-zSF0O42SHAuLcpXRNb_RvOEJAnlQxa54qRd3dLnUdTAwgVXogx5Imp2_04t7MyfmHDveGL6r_UFL35oavMIIlviOOc7_HWzVI_lJxSaUT7SqHMAJGnO1rafZwjimH4WVnqqFKszN"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">UAE</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Brazil Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbzv75MqggGH5WchfF3QcQgmkHhp-p0ABd2knW_USn_cpsvfu4D9JJZccpqtQcOvlDoTbOYrbChbN5MhzC7c5LPfDlchsLsSsS7vDs77WcHvq_vxOIC_4PMkC_bokckzoJtfKwgqeGL99OBAcPHrgNwZwf4a5uzec2q4R7J6-o8tft4hB9zbzEnC3n4jjSzDdHhlLaCqVr_KxZy5XYYEKJto6Xn6HF98QIjBmLRvLNEVAR4hTSUXHHJIRf1CoM5aam6XL3H-ZU7mwE"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Brazil</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Australia Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh3yCzuggE2RQOuuAxFFhXFeO5f2Z_zQZtC9wo-U5PniInQB8SK93qPCCd3HXfNNxpuiNvI_X6Y98wbovWbYEbruBSMNMd1G576_uG5JwKJbJZGS8O50D3hMEA-q4tof0l2V-JVb81Vr_HMX6rKB0FS510Y68799Sneee0TQ02huDRa0LCUEhJUYdsMXuDxOEZgUsbQz7TSS9-mxvA5_NUNtchSwu6cBX07db4zMSQsJ3D_dNCH84sLpaaxKyIwXSssTeYQjhgHLKd"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Australia</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="India Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0nCNWfxpq5qSYiqw91MoHW1Xlvf1JTM1Y2hn8jLOVrfde0frn8ymKZhRArvzcsl3ueaDP4GTtKkuDRQjpz9MkgR0HXUhz3H5USRcBcSQgCyqcD4g1H3S7aJ08lVIX6tb7Q9KMdUjRyZ6HqUG9nAJ5KqqcShUkCEOLBeircpNC1-6Rz9cC3fikqJcGAK0BoiuzNFIS5N7n7GosUMgbfyNrUAygf_yaxWK3Xuj0We65hOEmuvKCU6hvwOzB3Pbd-LPQF-xTl3f2zj9V"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">India</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Japan Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5KPbH9yTnzXNA0rQ37dHuTqZe7Y3IW1VSUFX0L8WBnhtBsiCA5FEQpmlIgUiBixNj8NSrnExh39flMmHTixdCCgDbSCtL24OMRmH3Kk9Jly-EeSF_W4rHYWi3_WdYpjhW3MNb9fm6jUVmrvyl3rk6vOdKzgMdkrpSo4km51Nkv9SZ1IhTNiC-f3qD0VyIrqbPs6Ca2nLpGds8-G1vqxYPpJEP8a9YcXmAPGjJlm8AyE6AK5BUmX6-NfvNndPTo7UYVqjaKJth6hGh"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Japan</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Mexico Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD86A_h4qD7_F04QlFstdr94MVGX5CVbWGDBWhgH4Ry8keEaYYs8IXX2O3zD9TkcOZ46DswKXhDR44Dm3S9Z5FXNQ8gu-OKtM2xnv9XuFhnaIfj-Ch0CJ51AFe9eGzNkVBXgg1PCVlKbz_xrY9-hfIv-MKbKJisv4vvij2q26ZIhd6y4tctg8MFFSr3xnVGuYYrJHaMNJR56HdvsNkzKJlmO6cdQ3rckvWW1UkhmkcVva1aaRJ4pFmwXuQF4RuQbpL2-6icehNCC4DX"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Mexico</span>
+</button>
+<button class="group bg-surface-container-low hover:bg-surface-container p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 active:scale-98">
+<div class="w-3/4 aspect-[4/3] rounded-lg overflow-hidden shadow-sm border border-black/5 group-hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover" data-alt="Egypt Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCICiXSH0Lw_5rB_TF5Zp4_UgMzJUzqojw-ZNQ1FGd9Iny7s54FcFDhvbh2Nc6X9Wyqe4lpw0VcDT_elJgHzW47BysWhwvoVSfvkl2GXgwzVNmtN6J2pmN7jtM1wDto6TJSz2Io6DaLBNhlWbw1aC9lvhW5bGRBWMJOM78ebZR4DSylLGGTYvkGDIeKYWRFWpIGgaX83EbBJMLiyfpDzZcTYHQZqhGdK3wMagcxTRVPwsxL4Z9OXj6OvHzhZJsXufKtrKG_b8hOhk8q"/>
+</div>
+<span class="font-bold text-sm text-on-surface group-hover:text-primary transition-colors">Egypt</span>
+</button>
+</section>
+</div>
+<!-- AAC Expression Bar (Bottom) -->
+<div class="fixed bottom-20 md:bottom-0 w-full p-4 md:p-8 flex justify-center z-40 bg-gradient-to-t from-surface via-surface/80 to-transparent">
+<div class="w-full max-w-4xl bg-surface-container-lowest/90 backdrop-blur-xl rounded-full px-8 py-4 shadow-[0_24px_24px_rgba(35,26,18,0.06)] flex items-center justify-between border border-primary/5">
+<div class="flex items-center gap-4 overflow-x-auto no-scrollbar py-2">
+<div class="px-4 py-2 bg-primary-container text-on-primary-container rounded-full font-bold flex items-center gap-2 whitespace-nowrap">
+                    I want to go to <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pl-4 border-l border-surface-container-high">
+<button class="p-4 bg-error-container text-on-error-container rounded-full active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="backspace">backspace</span>
+</button>
+<button class="px-8 py-4 bg-gradient-to-br from-primary to-on-primary-container text-white rounded-full font-bold flex items-center gap-2 shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="volume_up" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+                    Speak
+                </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Navigation Bar -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container-lowest flex justify-around items-center h-20 shadow-[0_-8px_24px_rgba(35,26,18,0.04)] z-50 px-4">
+<button class="flex flex-col items-center gap-1 text-stone-500">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="language" style="font-variation-settings: 'FILL' 1;">language</span>
+<span class="text-[10px] font-bold">Library</span>
+</button>
+<button class="w-14 h-14 -mt-10 bg-primary rounded-full flex items-center justify-center text-white shadow-xl shadow-primary/30 border-4 border-surface">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-stone-500">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[10px] font-bold">Recent</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-stone-500">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</button>
+</nav>
+</body></html>

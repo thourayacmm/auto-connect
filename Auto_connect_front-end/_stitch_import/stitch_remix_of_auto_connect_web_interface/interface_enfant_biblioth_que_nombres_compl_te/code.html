@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#002109",
+                        "on-background": "#231a12",
+                        "on-surface": "#231a12",
+                        "tertiary-fixed": "#ffddb8",
+                        "on-primary-container": "#0073a5",
+                        "inverse-primary": "#89ceff",
+                        "outline-variant": "#c3c7cb",
+                        "primary-container": "#e3f1ff",
+                        "on-secondary-fixed-variant": "#005321",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#007432",
+                        "secondary-fixed-dim": "#4ae176",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fff8f5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#f1dfd3",
+                        "secondary": "#006e2f",
+                        "inverse-surface": "#392e26",
+                        "on-error": "#ffffff",
+                        "background": "#fff8f5",
+                        "on-surface-variant": "#43474b",
+                        "primary-fixed-dim": "#89ceff",
+                        "secondary-fixed": "#6bff8f",
+                        "on-tertiary-container": "#986000",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ffeee1",
+                        "surface-container-highest": "#f1dfd3",
+                        "primary-fixed": "#c9e6ff",
+                        "error": "#ba1a1a",
+                        "outline": "#73787b",
+                        "tertiary": "#855300",
+                        "on-primary-fixed-variant": "#004c6e",
+                        "surface-tint": "#006591",
+                        "surface-bright": "#fff8f5",
+                        "surface-container-low": "#fff1e8",
+                        "surface-container-high": "#f7e5d8",
+                        "primary": "#006591",
+                        "on-primary-fixed": "#001e2f",
+                        "surface-dim": "#e8d7ca",
+                        "secondary-container": "#6bff8f",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#ffecda",
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#fdebde"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full rounded-b-[3rem] bg-[#ffffffcc] dark:bg-slate-900/80 backdrop-blur-xl z-50 shadow-xl shadow-black/5 flex justify-between items-center px-8 py-4">
+<div class="flex items-center gap-6">
+<span class="text-xl font-bold text-sky-800 dark:text-sky-200">Tactile Sanctuary</span>
+<nav class="hidden md:flex gap-4">
+<a class="text-slate-500 hover:text-sky-600 transition-colors font-plus-jakarta text-body-lg tracking-tight" href="#">Library</a>
+<a class="text-sky-900 font-bold border-b-2 border-sky-600 font-plus-jakarta text-body-lg tracking-tight" href="#">Numbers</a>
+<a class="text-slate-500 hover:text-sky-600 transition-colors font-plus-jakarta text-body-lg tracking-tight" href="#">Quick Chat</a>
+</nav>
+</div>
+<div class="flex items-center gap-3">
+<div class="bg-surface-container-low rounded-full px-4 py-2 flex items-center gap-2 border border-outline-variant/10">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" placeholder="Search..." type="text"/>
+<span class="material-symbols-outlined text-outline">keyboard</span>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-sky-50 transition-colors scale-95 active:duration-100">
+<span class="material-symbols-outlined text-sky-700">volume_up</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Side Emotional Navigation (Desktop Only) -->
+<aside class="fixed left-0 top-24 w-64 h-[calc(100vh-6rem)] py-6 bg-[#fff8f5] dark:bg-slate-950 rounded-r-[3rem] hidden lg:block">
+<div class="px-8 mb-8">
+<h2 class="text-lg font-black text-sky-800 font-headline">Emotional Tone</h2>
+<p class="text-sm text-slate-500">Select your voice</p>
+</div>
+<nav class="flex flex-col gap-2">
+<button class="flex items-center gap-4 py-3 px-6 mx-2 hover:bg-orange-50 dark:hover:bg-slate-800 transition-all rounded-full text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">sentiment_satisfied</span>
+<span class="font-medium">Happy</span>
+</button>
+<button class="flex items-center gap-4 py-3 px-6 mx-2 bg-[#fdebde] dark:bg-sky-900/40 text-sky-900 dark:text-sky-100 rounded-full transition-all">
+<span class="material-symbols-outlined">self_improvement</span>
+<span class="font-medium">Calm</span>
+</button>
+<button class="flex items-center gap-4 py-3 px-6 mx-2 hover:bg-orange-50 dark:hover:bg-slate-800 transition-all rounded-full text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">sentiment_dissatisfied</span>
+<span class="font-medium">Sad</span>
+</button>
+<button class="flex items-center gap-4 py-3 px-6 mx-2 hover:bg-orange-50 dark:hover:bg-slate-800 transition-all rounded-full text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">celebration</span>
+<span class="font-medium">Excited</span>
+</button>
+<button class="flex items-center gap-4 py-3 px-6 mx-2 hover:bg-orange-50 dark:hover:bg-slate-800 transition-all rounded-full text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">mood_bad</span>
+<span class="font-medium">Angry</span>
+</button>
+</nav>
+</aside>
+<main class="lg:ml-64 pt-28 pb-32 px-4 md:px-8 max-w-[1600px] mx-auto">
+<!-- Breadcrumb -->
+<div class="mb-6 flex items-center gap-2 text-label-lg text-outline">
+<span>Library</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-bold">Numbers</span>
+</div>
+<!-- Sentence Builder Bar (The Command Center) -->
+<section class="mb-8 bg-surface-container-lowest rounded-xl p-4 shadow-xl shadow-black/5 flex flex-col md:flex-row items-center gap-4 backdrop-blur-xl border border-white/40">
+<div class="flex-grow flex items-center gap-3 bg-surface-container-low rounded-full px-6 py-4 w-full border border-outline-variant/20">
+<div class="flex gap-2 items-center overflow-x-auto hide-scrollbar">
+<span class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">counter_3</span> 3
+                    </span>
+<span class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span> plus
+                    </span>
+<span class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">counter_5</span> 5
+                    </span>
+</div>
+</div>
+<div class="flex gap-2 w-full md:w-auto">
+<button class="bg-primary text-white px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 flex-1 shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">volume_up</span> Speak
+                </button>
+<button class="bg-surface-variant text-on-surface-variant px-6 py-4 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined">backspace</span> Delete
+                </button>
+<button class="bg-error-container text-on-error-container px-6 py-4 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-error hover:text-white transition-colors">
+<span class="material-symbols-outlined">delete</span> Clear
+                </button>
+</div>
+</section>
+<!-- Numbers Grid Layout -->
+<section class="space-y-12">
+<div class="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-4">
+<!-- Number Cards Generation -->
+<!-- First row 0-9 -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">0</span>
+<p class="text-label-md font-medium text-outline">zero</p>
+</div>
+<!-- Numbers 1 to 100 would be here in a loop, showing representative cards -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">1</span>
+<p class="text-label-md font-medium text-outline">one</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">2</span>
+<p class="text-label-md font-medium text-outline">two</p>
+</div>
+<div class="bg-surface-container px-4 py-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border-2 border-primary/50 shadow-inner scale-105">
+<span class="text-4xl font-extrabold text-primary">3</span>
+<p class="text-label-md font-bold text-primary">three</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">4</span>
+<p class="text-label-md font-medium text-outline">four</p>
+</div>
+<div class="bg-surface-container px-4 py-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border-2 border-primary/50 shadow-inner scale-105">
+<span class="text-4xl font-extrabold text-primary">5</span>
+<p class="text-label-md font-bold text-primary">five</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">6</span>
+<p class="text-label-md font-medium text-outline">six</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">7</span>
+<p class="text-label-md font-medium text-outline">seven</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">8</span>
+<p class="text-label-md font-medium text-outline">eight</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">9</span>
+<p class="text-label-md font-medium text-outline">nine</p>
+</div>
+<!-- Tens row -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">10</span>
+<p class="text-label-md font-medium text-outline">ten</p>
+</div>
+<!-- ... other numbers up to 100 ... -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square opacity-40">
+<span class="text-4xl font-extrabold text-primary">...</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">20</span>
+<p class="text-label-md font-medium text-outline">twenty</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">30</span>
+<p class="text-label-md font-medium text-outline">thirty</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">40</span>
+<p class="text-label-md font-medium text-outline">forty</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">50</span>
+<p class="text-label-md font-medium text-outline">fifty</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">60</span>
+<p class="text-label-md font-medium text-outline">sixty</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">70</span>
+<p class="text-label-md font-medium text-outline">seventy</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">80</span>
+<p class="text-label-md font-medium text-outline">eighty</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">90</span>
+<p class="text-label-md font-medium text-outline">ninety</p>
+</div>
+<!-- Last entry Special Cards -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-primary/30 hover:bg-surface-container transition-all cursor-pointer group col-span-1 lg:col-start-1">
+<span class="text-4xl font-extrabold text-primary group-hover:scale-110 transition-transform">100</span>
+<p class="text-label-md font-medium text-outline">hundred</p>
+</div>
+<div class="bg-tertiary-container p-4 rounded-xl flex flex-col items-center justify-center gap-3 aspect-square border border-transparent hover:border-tertiary/30 hover:bg-surface-container transition-all cursor-pointer group">
+<span class="text-4xl font-extrabold text-on-tertiary-container group-hover:scale-110 transition-transform">1000</span>
+<p class="text-label-md font-bold text-on-tertiary-container">thousand</p>
+</div>
+</div>
+<!-- Bento Illustration for Learning Context -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+<div class="col-span-1 md:col-span-2 bg-surface-container-low rounded-xl p-8 flex items-center justify-between overflow-hidden relative min-h-[200px]">
+<div class="z-10 max-w-sm">
+<h3 class="text-2xl font-bold text-sky-800 mb-2">Practice Counting</h3>
+<p class="text-slate-600 mb-6">Select numbers to build equations or tell your age to friends.</p>
+<button class="bg-white px-6 py-3 rounded-full text-primary font-bold shadow-sm hover:shadow-md transition-shadow">Try Math Mode</button>
+</div>
+<img class="absolute -right-10 -bottom-10 w-64 h-64 object-contain opacity-40 grayscale group-hover:grayscale-0 transition-all" data-alt="minimalistic artistic 3D render of soft blue number blocks floating in a warm cream space with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA3ZK4Pk4sufn8lRnm7YodkRjxWMJOoT-a2p0ofRa-F1SwToxJJbTHhmUCfIfJKorRfB9TT8fESQrGLlqt-lTTRu6MCnlc4RhIt4SDKyULwjaia8gn90-rNcbk44JLjYw-xmM6UGiqnsPrE8OiqzVOsFCPBBQWFCPDykIM_A1QjJ77oThUgS0tz3LCmLkYAaALc34nrvpHGPZjvf1m1A4RAtQNgsvCI-Jq5oynAbLH-oIBDu_-sbiFsM9XLBDzrQ6xBvhPlSt70FaW"/>
+</div>
+<div class="bg-secondary-container rounded-xl p-8 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-6xl text-on-secondary-container mb-4">star</span>
+<h3 class="text-xl font-bold text-on-secondary-container">Daily Goal</h3>
+<p class="text-on-secondary-fixed-variant">Learn 5 new numbers today to earn a badge!</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile only visible) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-4 bg-[#ffffffcc] dark:bg-slate-900/80 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-8px_24px_rgba(0,0,0,0.04)]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 scale-98 transition-transform" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-plus-jakarta font-medium text-[12px]">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#fdebde] dark:bg-sky-900/50 text-sky-900 dark:text-sky-100 rounded-2xl px-6 py-2 scale-98 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">counter_1</span>
+<span class="font-plus-jakarta font-medium text-[12px]">Numbers</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 scale-98 transition-transform" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span class="font-plus-jakarta font-medium text-[12px]">Quick Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-6 py-2 scale-98 transition-transform" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-plus-jakarta font-medium text-[12px]">Settings</span>
+</a>
+</nav>
+<!-- Floating Action Button Contextual Suppression: On a detailed list screen like this, it is hidden as per instructions -->
+</body></html>

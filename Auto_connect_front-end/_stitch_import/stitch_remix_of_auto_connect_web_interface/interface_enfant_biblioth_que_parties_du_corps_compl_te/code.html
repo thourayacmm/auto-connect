@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tactile Sanctuary - Body Parts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#f1dfd3",
+                    "background": "#fff8f5",
+                    "inverse-primary": "#89ceff",
+                    "surface-container": "#fdebde",
+                    "outline": "#73787b",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#ffeee1",
+                    "tertiary-fixed": "#ffddb8",
+                    "secondary-fixed": "#6bff8f",
+                    "on-secondary-fixed": "#002109",
+                    "on-primary-container": "#0073a5",
+                    "outline-variant": "#c3c7cb",
+                    "secondary-fixed-dim": "#4ae176",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "on-tertiary-fixed": "#2a1700",
+                    "primary-fixed": "#c9e6ff",
+                    "primary-fixed-dim": "#89ceff",
+                    "tertiary-container": "#ffecda",
+                    "surface-dim": "#e8d7ca",
+                    "inverse-surface": "#392e26",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#43474b",
+                    "surface-container-high": "#f7e5d8",
+                    "primary": "#006591",
+                    "on-secondary-container": "#007432",
+                    "surface-tint": "#006591",
+                    "on-surface": "#231a12",
+                    "on-secondary-fixed-variant": "#005321",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#006e2f",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "tertiary": "#855300",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "surface-container-highest": "#f1dfd3",
+                    "surface-bright": "#fff8f5",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "secondary-container": "#6bff8f",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#001e2f",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fff8f5",
+                    "primary-container": "#e3f1ff",
+                    "on-background": "#231a12",
+                    "surface-container-low": "#fff1e8",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#986000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .tonal-shift-low { background-color: #fff1e8; }
+        .tonal-shift-container-low { background-color: #fdebde; }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container">
+<!-- Top Navigation Bar -->
+<header class="bg-[#ffffff]/80 dark:bg-[#000000]/80 backdrop-blur-xl rounded-b-[3rem] top-0 fixed w-full shadow-xl shadow-black/5 z-50 flex justify-between items-center px-8 py-4">
+<div class="flex items-center gap-6">
+<span class="text-2xl font-bold text-sky-700 dark:text-sky-400">Tactile Sanctuary</span>
+<nav class="hidden md:flex items-center gap-6">
+<span class="text-orange-900/60 dark:text-orange-100/60 font-plus-jakarta-sans text-lg font-semibold tracking-tight hover:bg-orange-100/50 transition-colors px-3 py-1 rounded-full cursor-pointer">Home</span>
+<span class="text-orange-900/60 dark:text-orange-100/60 font-plus-jakarta-sans text-lg font-semibold tracking-tight hover:bg-orange-100/50 transition-colors px-3 py-1 rounded-full cursor-pointer">Feelings</span>
+<span class="text-sky-800 dark:text-sky-200 font-bold border-b-2 border-sky-600 font-plus-jakarta-sans text-lg tracking-tight px-3 py-1 cursor-pointer">Library</span>
+</nav>
+</div>
+<div class="flex items-center gap-4 flex-1 max-w-md ml-12">
+<div class="relative w-full">
+<input class="w-full bg-surface-container-low border-none rounded-full px-6 py-3 focus:ring-2 focus:ring-primary/20 text-on-surface" placeholder="Search body parts..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-primary" data-icon="keyboard">keyboard</span>
+</div>
+</div>
+</header>
+<!-- Side Navigation -->
+<aside class="fixed left-0 top-0 h-full w-72 flex flex-col p-6 z-40 bg-[#fff8f5] rounded-r-[3rem] hidden lg:flex pt-28">
+<div class="flex items-center gap-4 mb-10 px-4">
+<img alt="User" class="w-12 h-12 rounded-full bg-primary-container p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvBYdMRS_EVmzPAx0Lxm3sCupfif_jrqcTb3AAhuYVPHCZNBy1DToDmVKFpkFVkm5_CoOXRccCiBhUftgUk0cgSVSzqSHHC3GYum4VsLcTMYn8yGge2nzGryMSJ65q-83UCWQmCYrdMuoE5f83_NYAV7Tmmzs921sXLFwZzYzUSfT-Dpa8D0McKwoDs-iMD0CpsT6qrA_CdUyIlByVt9fAXyVswIvy3N8Jy8zGhiw1X9V2NYyl3qZau8IEfR6YnhtfPFib0pOgpImh"/>
+<div>
+<p class="text-sky-700 font-extrabold text-xl">Hello, Friend</p>
+<p class="text-orange-900/70 text-sm">Ready to talk?</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-4 text-orange-900/70 px-6 py-3 hover:bg-[#fdebde]/50 rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-medium">Home</span>
+</div>
+<div class="flex items-center gap-4 text-orange-900/70 px-6 py-3 hover:bg-[#fdebde]/50 rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="mood" style="font-variation-settings: 'FILL' 0;">mood</span>
+<span class="font-medium">Feelings</span>
+</div>
+<div class="flex items-center gap-4 text-orange-900/70 px-6 py-3 hover:bg-[#fdebde]/50 rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="touch_app" style="font-variation-settings: 'FILL' 0;">touch_app</span>
+<span class="font-medium">Actions</span>
+</div>
+<div class="flex items-center gap-4 bg-[#fdebde] text-sky-900 rounded-full px-6 py-3 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+<span class="font-medium">Library</span>
+</div>
+</div>
+</aside>
+<main class="lg:ml-72 pt-28 px-8 pb-32">
+<!-- Sentence Builder Bar -->
+<section class="mb-10">
+<div class="bg-surface-container-lowest backdrop-blur-2xl rounded-full p-4 flex items-center gap-4 shadow-xl border border-white/50">
+<div class="flex-1 flex gap-2 overflow-x-auto py-2 px-4 min-h-[64px] items-center">
+<span class="bg-primary text-white px-6 py-2 rounded-full font-bold shadow-md">MY</span>
+<span class="bg-surface-container text-on-surface px-6 py-2 rounded-full font-bold border border-primary/10">STOMACH</span>
+<span class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full font-bold">HURTS</span>
+<div class="w-1 h-8 bg-surface-variant rounded-full mx-2"></div>
+</div>
+<div class="flex items-center gap-3 pr-4">
+<button class="w-12 h-12 rounded-full bg-error-container text-error flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="backspace" style="font-variation-settings: 'FILL' 0;">backspace</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="delete_sweep" style="font-variation-settings: 'FILL' 0;">delete_sweep</span>
+</button>
+<button class="h-12 px-8 rounded-full bg-gradient-to-br from-primary to-on-primary-container text-white font-bold flex items-center gap-2 shadow-lg hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+<span>SPEAK</span>
+</button>
+</div>
+</div>
+<!-- Emotional Tones -->
+<div class="flex justify-center gap-4 mt-6">
+<button class="flex items-center gap-2 px-5 py-2 rounded-full bg-surface-container-low hover:bg-surface-container transition-colors text-on-surface-variant text-sm font-semibold border border-transparent hover:border-primary/20">
+<span class="material-symbols-outlined text-blue-500" data-icon="sentiment_very_dissatisfied">sentiment_very_dissatisfied</span> Sad
+            </button>
+<button class="flex items-center gap-2 px-5 py-2 rounded-full bg-surface-container text-sky-900 font-bold border-2 border-primary shadow-sm">
+<span class="material-symbols-outlined text-yellow-500" data-icon="sentiment_satisfied">sentiment_satisfied</span> Happy
+            </button>
+<button class="flex items-center gap-2 px-5 py-2 rounded-full bg-surface-container-low hover:bg-surface-container transition-colors text-on-surface-variant text-sm font-semibold">
+<span class="material-symbols-outlined text-orange-500" data-icon="celebration">celebration</span> Excited
+            </button>
+<button class="flex items-center gap-2 px-5 py-2 rounded-full bg-surface-container-low hover:bg-surface-container transition-colors text-on-surface-variant text-sm font-semibold">
+<span class="material-symbols-outlined text-red-500" data-icon="mood_bad">mood_bad</span> Angry
+            </button>
+<button class="flex items-center gap-2 px-5 py-2 rounded-full bg-surface-container-low hover:bg-surface-container transition-colors text-on-surface-variant text-sm font-semibold">
+<span class="material-symbols-outlined text-purple-500" data-icon="comedy_mask">comedy_mask</span> Sarcastic
+            </button>
+</div>
+</section>
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-8 text-sm font-medium text-on-surface-variant bg-surface-container-low w-fit px-6 py-2 rounded-full">
+<span class="hover:text-primary cursor-pointer">Library</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+<span class="text-primary font-bold">Body Parts</span>
+</nav>
+<!-- Main Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Standard Body Part Cards -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 hover:shadow-md transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#FFE8D6] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#D97706]" data-icon="face">face</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Head</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#ECFCCB] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#65A30D]" data-icon="spa">face_6</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Hair</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#E0F2FE] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#0284C7]" data-icon="visibility">visibility</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Eyes</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#FCE7F3] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#DB2777]" data-icon="sensors">air</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Nose</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#FEF3C7] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#D97706]" data-icon="oral_disease">oral_disease</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Mouth</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#EDE9FE] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#7C3AED]" data-icon="hearing">hearing</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Ears</span>
+</div>
+<!-- Section Card Re-purposed as a vibrant tile -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#DCFCE7] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#16A34A]" data-icon="hand_gesture">hand_gesture</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Fingers</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#DCFCE7] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#16A34A]" data-icon="pan_tool">pan_tool</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Thumb</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#E0F2FE] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#0284C7]" data-icon="accessibility">accessibility</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Arms</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#FFEDD5] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#EA580C]" data-icon="monitor_heart">monitor_heart</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Chest</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#FEF3C7] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#D97706]" data-icon="child_care">child_care</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Stomach</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#E0F2FE] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#0284C7]" data-icon="directions_walk">directions_walk</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Legs</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#E0F2FE] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#0284C7]" data-icon="steps">steps</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Knees</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/20 transition-all flex flex-col items-center justify-center gap-4 cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-[#F3F4F6] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#4B5563]" data-icon="footprint">footprint</span>
+</div>
+<span class="font-bold text-on-surface uppercase tracking-wide">Feet</span>
+</div>
+<!-- Internal Health Section -->
+<div class="col-span-full mt-8 mb-4">
+<div class="flex items-center gap-4 mb-4">
+<div class="h-[2px] flex-1 bg-gradient-to-r from-transparent to-surface-variant"></div>
+<span class="text-tertiary font-bold uppercase tracking-widest text-xs">Internal Health</span>
+<div class="h-[2px] flex-1 bg-gradient-to-l from-transparent to-surface-variant"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+<div class="bg-white p-6 rounded-xl border border-tertiary/10 hover:shadow-lg transition-all cursor-pointer flex flex-col items-center gap-3 group">
+<div class="w-16 h-16 rounded-full bg-[#FEE2E2] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#DC2626]" data-icon="favorite">favorite</span>
+</div>
+<span class="font-bold text-on-tertiary-container text-sm">HEART</span>
+</div>
+<div class="bg-white p-6 rounded-xl border border-tertiary/10 hover:shadow-lg transition-all cursor-pointer flex flex-col items-center gap-3 group">
+<div class="w-16 h-16 rounded-full bg-[#E0F2FE] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#0EA5E9]" data-icon="air">lungs</span>
+</div>
+<span class="font-bold text-on-tertiary-container text-sm">LUNGS</span>
+</div>
+<div class="bg-white p-6 rounded-xl border border-tertiary/10 hover:shadow-lg transition-all cursor-pointer flex flex-col items-center gap-3 group">
+<div class="w-16 h-16 rounded-full bg-[#EDE9FE] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#8B5CF6]" data-icon="psychology">psychology</span>
+</div>
+<span class="font-bold text-on-tertiary-container text-sm">BRAIN</span>
+</div>
+<div class="bg-white p-6 rounded-xl border border-tertiary/10 hover:shadow-lg transition-all cursor-pointer flex flex-col items-center gap-3 group">
+<div class="w-16 h-16 rounded-full bg-[#F3F4F6] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#6B7280]" data-icon="pulmonology">skeleton</span>
+</div>
+<span class="font-bold text-on-tertiary-container text-sm">BONE</span>
+</div>
+<div class="bg-white p-6 rounded-xl border border-tertiary/10 hover:shadow-lg transition-all cursor-pointer flex flex-col items-center gap-3 group">
+<div class="w-16 h-16 rounded-full bg-[#FEE2E2] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#DC2626]" data-icon="bloodtype">bloodtype</span>
+</div>
+<span class="font-bold text-on-tertiary-container text-sm">BLOOD</span>
+</div>
+<div class="bg-white p-6 rounded-xl border border-tertiary/10 hover:shadow-lg transition-all cursor-pointer flex flex-col items-center gap-3 group">
+<div class="w-16 h-16 rounded-full bg-[#FFEDD5] flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-[#D97706]" data-icon="texture">texture</span>
+</div>
+<span class="font-bold text-on-tertiary-container text-sm">SKIN</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 bg-[#ffffff]/80 dark:bg-[#000000]/80 backdrop-blur-2xl rounded-t-[3rem] shadow-[0_-8px_30px_rgb(0,0,0,0.04)] lg:hidden">
+<div class="flex flex-col items-center justify-center text-orange-900/50 p-4 transition-transform hover:scale-110">
+<span class="material-symbols-outlined" data-icon="backspace" style="font-variation-settings: 'FILL' 0;">backspace</span>
+<span class="font-plus-jakarta-sans text-xs font-bold uppercase tracking-widest mt-1">Delete</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-sky-600 to-sky-800 text-white rounded-full w-20 h-20 -mt-8 shadow-lg transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-3xl" data-icon="volume_up">volume_up</span>
+<span class="font-plus-jakarta-sans text-[10px] font-bold uppercase tracking-widest">Speak</span>
+</div>
+<div class="flex flex-col items-center justify-center text-orange-900/50 p-4 transition-transform hover:scale-110">
+<span class="material-symbols-outlined" data-icon="delete_sweep" style="font-variation-settings: 'FILL' 0;">delete_sweep</span>
+<span class="font-plus-jakarta-sans text-xs font-bold uppercase tracking-widest mt-1">Clear</span>
+</div>
+</footer>
+</body></html>
